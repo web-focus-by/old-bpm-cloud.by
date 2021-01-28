@@ -1,0 +1,57 @@
+.wrap {
+  display: flex;
+  width: 40px;
+}
+
+.wrap:hover .circle {
+  background-color: var(--yellow-color);
+}
+.wrap:hover .rectangles div {
+  background-color: var(--yellow-color);
+}
+
+.circle {
+  width: 18.75px;
+  height: 18.75px;
+  border-radius: 10px;
+  background-color: var(--green-color);
+  margin-right: 2px;
+}
+
+.elemOne {
+  width: 18.75px;
+  height: 18.75px;
+  background-color: var(--green-color);
+  margin-bottom: 2px;
+}
+
+.elemTwo {
+  width: 18.75px;
+  height: 18.75px;
+  background-color: var(--green-color);
+  margin-bottom: 2px;
+}
+.elemThree {
+  width: 18.75px;
+  height: 18.75px;
+  background-color: var(--green-color);
+}
+
+.box {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 500px;
+}
+
+.box:hover .circle {
+  background-color: var(--yellow-color);
+}
+
+.box:hover .rectangles div {
+  background-color: var(--yellow-color);
+}

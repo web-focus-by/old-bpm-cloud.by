@@ -1,0 +1,96 @@
+.formTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  padding-top: 60px;
+  color: #3c424a;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.formText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  color: rgba(60, 66, 74, 0.7);
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.animateWrap {
+  width: 230px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.bodyCircle {
+  position: relative;
+  width: 243px;
+  height: 243px;
+  border-radius: 150px;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.elemOne {
+  position: absolute;
+  top: 74px;
+  left: 0px;
+  width: 243px;
+  height: 243px;
+  border-radius: 150px;
+  background-color: var(--green-color);
+}
+
+.radius {
+  position: absolute;
+  top: 76px;
+  left: 40px;
+  width: 164px;
+  height: 164px;
+  border-radius: 82px;
+  /* border: 1px solid #000; */
+}
+
+.elemTwo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 104px;
+  height: 104px;
+  border-radius: 54px;
+  background-color: #3c424a;
+  animation-name: circle;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.white {
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  width: 22px;
+  height: 22px;
+  border-radius: 14px;
+  background: #fbfafa;
+}
+
+@keyframes circle {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

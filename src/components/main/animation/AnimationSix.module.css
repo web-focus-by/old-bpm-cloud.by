@@ -1,0 +1,92 @@
+.elemOne {
+  position: absolute;
+  top: -47px;
+  left: 0px;
+  animation-name: one;
+  animation-duration: 1s;
+}
+
+.elemTwo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation-name: two;
+  animation-duration: 1s;
+}
+
+.elemThree {
+  position: absolute;
+  top: 47px;
+  left: 0px;
+  animation-name: three;
+  animation-duration: 1s;
+}
+
+#colorTwo {
+  fill: var(--green-color);
+  animation-name: colorTwo;
+  animation-duration: 1s;
+}
+#colorOne {
+  fill: var(--green-color);
+  animation-name: colorOne;
+  animation-duration: 1s;
+}
+#colorThree {
+  fill: var(--green-color);
+  animation-name: colorThree;
+  animation-duration: 1s;
+}
+@keyframes colorThree {
+  0% {
+    fill: #fbfafa;
+  }
+  40% {
+    fill: #fbfafa;
+  }
+  100% {
+    fill: var(--green-color);
+  }
+}
+
+@keyframes colorOne {
+  0% {
+    fill: #fbfafa;
+  }
+  80% {
+    fill: #fbfafa;
+  }
+  100% {
+    fill: var(--green-color);
+  }
+}
+
+@keyframes colorTwo {
+  0% {
+    fill: #fbfafa;
+  }
+  60% {
+    fill: #fbfafa;
+  }
+  100% {
+    fill: var(--green-color);
+  }
+}
+
+@keyframes one {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -47px;
+  }
+}
+
+@keyframes three {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 47px;
+  }
+}

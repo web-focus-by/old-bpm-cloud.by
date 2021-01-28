@@ -1,0 +1,42 @@
+#rectOne {
+  x: 55px;
+  y: 135px;
+  animation-name: one;
+  animation-duration: 1s;
+}
+
+#rectTwo {
+  x: 135px;
+  y: 55px;
+  animation-name: two;
+  animation-duration: 1s;
+}
+@keyframes two {
+  0% {
+    x: 96px;
+    y: 96px;
+  }
+  50% {
+    x: 135px;
+    y: 135px;
+  }
+  100% {
+    x: 135px;
+    y: 55px;
+  }
+}
+
+@keyframes one {
+  0% {
+    x: 96px;
+    y: 96px;
+  }
+  50% {
+    x: 55px;
+    y: 55px;
+  }
+  100% {
+    x: 55px;
+    y: 135px;
+  }
+}

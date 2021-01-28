@@ -1,0 +1,112 @@
+.animat3 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.elemBack {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 168px;
+  height: 168px;
+  background-color: var(--redBG-background);
+}
+
+.elemBackTwo {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 98px;
+  height: 98px;
+  background-color: var(--redBG-background);
+}
+
+.elemBackThree {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 28px;
+  height: 28px;
+  background-color: var(--redBG-background);
+}
+
+.elemBig {
+  position: relative;
+  width: 208px;
+  height: 208px;
+  background-color: #fbfafa;
+}
+
+.elemSmall {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 138px;
+  height: 138px;
+  background-color: #fbfafa;
+}
+
+.elemLiltle {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  background-color: #fbfafa;
+}
+
+.animatOne {
+  height: 40px;
+  width: 100%;
+  background-color: var(--textTitleBG-background);
+  animation-name: one;
+  animation-duration: 0.8s;
+}
+
+.animatTwo {
+  height: 40px;
+  width: 100%;
+  background-color: var(--textTitleBG-background);
+  animation-name: two;
+  animation-duration: 0.8s;
+}
+
+.animatThree {
+  height: 40px;
+  width: 100%;
+  background-color: var(--textTitleBG-background);
+  animation-name: three;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes one {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes two {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes three {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}

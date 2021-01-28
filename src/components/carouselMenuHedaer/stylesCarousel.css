@@ -1,0 +1,31 @@
+/* .slick-current::after {
+  content: url(../../images/Vector.svg);
+  position: relative;
+  bottom: 45px;
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  z-index: 1;
+} */
+
+.slick-vertical .slick-slide {
+  height: 60px !important;
+}
+
+.slick-current {
+  font-weight: 600;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-slide::before {
+  /* content: url(../../images/circleMenu.svg);
+  position: relative;
+  bottom: 24px;
+  z-index: -1; */
+}
+
+div.slick-slide.slick-active.slick-center.slick-current {
+  /* display: none; */
+}

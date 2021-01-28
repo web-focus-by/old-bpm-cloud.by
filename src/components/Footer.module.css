@@ -1,0 +1,67 @@
+.wrapperFooter {
+  width: 100%;
+  height: 595px;
+  padding: 200px 0px 0px 0px;
+  background: #3c424a;
+}
+
+.container {
+  height: 570px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxOne {
+  display: flex;
+  width: 62%;
+  justify-content: space-between;
+}
+
+.bpmIcon {
+  margin-top: 10px;
+}
+
+.wrapContacts {
+  margin-right: 10px;
+}
+
+.boxTwo {
+  display: flex;
+  justify-content: space-between;
+  width: 62%;
+  margin-top: 79px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.065em;
+  color: #fbfafa;
+}
+
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #ffffff;
+  margin: 25px 0px;
+  cursor: pointer;
+}
+
+.bottom {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+
+  color: #ffffff;
+}

@@ -1,0 +1,153 @@
+.wrapper {
+  height: 630px;
+  width: 100%;
+  background: #fbfafa;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 180px;
+  overflow: hidden;
+}
+
+.headReviews {
+  width: 1206px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  width: 593px;
+  height: 68px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 36px;
+  letter-spacing: 0.065em;
+  color: #3c424a;
+  margin-left: 28px;
+}
+
+.button {
+  background-color: #fbfafa;
+  margin-top: 37px;
+}
+
+.wrapperSlider {
+  max-width: 1900px;
+  height: 369px;
+  margin-top: 50px;
+}
+
+/* .container {
+  max-width: 1500px;
+  height: 500px;
+
+  margin: 0 auto;
+} */
+
+.items {
+  position: relative;
+  border-radius: 10px;
+  width: 317px !important;
+  height: 329px !important;
+  background: #ffffff;
+  margin: 40px 40px 0px 40px !important;
+  outline: none;
+  padding: 30px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate3d(335px, 0px, 0px);
+}
+
+.items:hover {
+  width: 317px !important;
+  height: 309px;
+  border: 1px solid var(--green-color);
+}
+
+.kovichki {
+  position: absolute;
+  top: -40px;
+  left: 30px;
+}
+.items:hover #svg {
+  fill: var(--redBG-background);
+}
+.textReview {
+  width: 318px;
+  height: 220px;
+  overflow-y: hidden scroll;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 184%;
+  color: #6a7380;
+}
+
+.border {
+  height: 30px;
+  position: absolute;
+  width: 315px;
+  bottom: 117px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.7987570028011204) 27%
+  );
+}
+
+.mask {
+  position: absolute;
+  bottom: 10px;
+  left: -43px;
+  height: 35px;
+  width: 30px;
+  background-color: #fbfafa;
+  z-index: 2;
+}
+
+.avtorReview {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #6a7380;
+}
+
+.dexcAvtor {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #6a7380;
+  margin-top: 10px;
+}
+
+.wrapperTrack {
+  background: rgba(106, 115, 128, 0.27) !important;
+  width: 2px !important;
+}
+
+.wrapperThumb {
+  display: block;
+  background: #ffcc00 !important;
+  width: 2px !important;
+  height: 60px !important;
+}
+
+.slick-current::after {
+  display: none;
+}

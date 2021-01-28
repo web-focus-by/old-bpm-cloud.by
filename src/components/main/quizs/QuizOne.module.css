@@ -1,0 +1,77 @@
+.formTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  padding-top: 60px;
+  color: #3c424a;
+  margin-top: 15px;
+  margin-left: 17px;
+}
+
+.checkBox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #6a7380;
+  margin-right: 40px;
+}
+
+.activeBox {
+  background: url(../../../images/ArrowCheck.png) no-repeat center bottom 4px;
+  background-color: var(--redColor-color);
+}
+
+.box {
+  display: flex;
+  cursor: pointer;
+  margin-left: 19px;
+}
+
+.box:hover .checkBox {
+  border: 1px solid #fa5c45;
+}
+
+.text {
+  width: 781px;
+  height: 42px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+}
+
+.activeText {
+  width: 781px;
+  height: 42px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.065em;
+  color: #3c424a;
+}
+
+.wrapForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.arrow {
+  background: url(../../../images/arrowButton.png) no-repeat center right;
+}
+
+.button {
+  margin-top: 43px;
+  margin-left: 15px;
+}

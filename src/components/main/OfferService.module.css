@@ -1,0 +1,104 @@
+.wrapper {
+  background-color: #fbfafa;
+  height: 700px;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.box {
+  width: 62%;
+  margin: 0 auto;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.065em;
+  color: var(--textTitle-color);
+  margin-top: 10px;
+}
+
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 30px;
+  max-width: 565px;
+  height: 85px;
+  color: var(--textSubtitle-color);
+}
+
+.animationAndPage {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.boxButtons {
+  margin-top: -25px;
+  width: 400px;
+}
+
+.hoverText {
+  display: flex;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--textTitle-color);
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.hoverText div {
+  margin-right: 42px;
+}
+
+.active {
+  color: var(--redColor-color);
+  margin-left: 0px;
+  animation-name: textActive;
+  animation-duration: 0.5s;
+}
+
+@keyframes textActive {
+  from {
+    margin-left: 40px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+.boxTexts {
+  width: 35%;
+  margin-top: 50px;
+}
+
+.number {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--yellow-color);
+}
+
+.changingText {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  width: 272px;
+  height: 200px;
+  color: #6a7380;
+}
+
+.button {
+  margin-top: 70px;
+}

@@ -1,0 +1,98 @@
+.wrapperKeys {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  width: 33.333%;
+  height: 0px;
+  padding-top: 32%;
+  background-color: #efefef;
+}
+
+.boxLast {
+  position: relative;
+  width: 33.333%;
+  height: 0px;
+  padding-top: 32%;
+  background-color: var(--yellow-color);
+  color: #ffffff;
+}
+
+.boxgrey {
+  position: relative;
+  width: 33.333%;
+  height: 0px;
+  padding-top: 32%;
+  background-color: var(--textSubtitle-color);
+  color: #ffffff;
+}
+
+.button {
+  position: absolute;
+  bottom: 86px;
+  left: 110px;
+}
+
+.buttonGrey {
+  position: absolute;
+  bottom: 86px;
+  left: 105px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: var(--textSubtitle-color);
+}
+
+.title {
+  position: absolute;
+  top: 89px;
+  left: 98px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+}
+
+.nameKeys {
+  position: absolute;
+  top: 120px;
+  left: 98px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  color: #3c424a;
+}
+
+.nameKeysGrey {
+  position: absolute;
+  top: 120px;
+  left: 98px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.titleLast {
+  position: absolute;
+  top: 125px;
+  left: 110px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+
+  letter-spacing: 0.065em;
+
+  color: #ffffff;
+}

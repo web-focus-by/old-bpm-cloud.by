@@ -1,0 +1,23 @@
+@import url(../../fonts/stylesheet.css);
+
+:root {
+  --redBG-background: #fa5c45;
+  --redColor-color: #fa5c45;
+  --yellowBG-background: #ffcc00;
+  --yellow-color: #ffcc00;
+  --greenBG-background: #309195;
+  --green-color: #309195;
+  --textTitleBG-background: #3c424a;
+  --textTitle-color: #3c424a;
+  --textSubtitleBG-background: #6a7380;
+  --textSubtitle-color: #6a7380;
+  --textMainBG-background: rgba(106, 115, 128, 0.7);
+  --textMain-color: rgba(106, 115, 128, 0.7);
+  --textSubBG-background: rgba(106, 115, 128, 0.27);
+  --textSub-color: rgba(106, 115, 128, 0.27);
+}
+
+* {
+  font-family: Montserrat;
+  margin: 0px;
+}

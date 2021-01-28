@@ -1,0 +1,49 @@
+/* #wrap:hover #circle {
+  fill: var(--yellow-color);
+}
+
+#wrap:hover #elemOne {
+  fill: var(--yellow-color);
+}
+#wrap:hover #elemTwo {
+  fill: var(--yellow-color);
+}
+
+#wrap:hover #recOne {
+  fill: var(--yellow-color);
+}
+
+#wrap:hover #recTwo {
+  fill: var(--yellow-color);
+} */
+
+.box {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 500px;
+}
+
+.container:hover #circle {
+  fill: var(--yellow-color);
+}
+
+.container:hover #elemOne {
+  fill: var(--yellow-color);
+}
+
+.container:hover #elemTwo {
+  fill: var(--yellow-color);
+}
+
+.container:hover #recOne {
+  fill: var(--yellow-color);
+}
+
+.container:hover #recTwo {
+  fill: var(--yellow-color);
+}

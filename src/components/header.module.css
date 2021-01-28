@@ -1,0 +1,100 @@
+@import url(../../fonts/stylesheet.css);
+
+.wrapper {
+  max-width: 1950px;
+  height: 779px;
+  margin: 0 auto;
+}
+
+.BpmCloud {
+  width: 183px;
+  height: 70px;
+  margin-left: 96px;
+  margin-right: 78px;
+  margin-top: 18px;
+}
+
+.container {
+  display: flex;
+  height: 100px;
+}
+
+.textBPM {
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 98px;
+  text-transform: uppercase;
+  color: var(--green-color);
+  letter-spacing: 0.065em;
+  white-space: pre-line;
+}
+
+.sabtext {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--green-color);
+  margin-top: 8px;
+}
+
+.boxLogo {
+  margin-top: 40px;
+  margin-right: 50px;
+}
+
+.yellowButton {
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 9px;
+  margin-right: 32px;
+}
+
+.conteinerTwo {
+  height: 500px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 63%;
+  margin: 0 auto;
+}
+
+.active {
+  color: var(--green-color);
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 1366px) {
+  .buttonStyles {
+    width: 213.75px;
+    height: 39px;
+    font-size: 14px;
+  }
+  .BpmCloud {
+    width: 137.25px;
+    height: 52.5px;
+    margin-left: 36px;
+  }
+  .textBPM {
+    width: 429px;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 73px;
+  }
+  .sabtext {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .yellowButton {
+    width: 45%;
+    margin-top: 0px;
+  }
+}

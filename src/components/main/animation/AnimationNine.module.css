@@ -1,0 +1,29 @@
+.oneTreangle {
+  position: absolute;
+  top: 0px;
+  left: -119px;
+  background-color: var(--redColor-color);
+  z-index: 2;
+}
+
+.twoTreangle {
+  overflow: hidden;
+}
+
+.greenTreangle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  animation-name: treangle;
+  animation-duration: 1s;
+}
+
+@keyframes treangle {
+  from {
+    left: -120px;
+  }
+  to {
+    left: 0px;
+  }
+}

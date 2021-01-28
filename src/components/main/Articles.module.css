@@ -1,0 +1,112 @@
+.wrapperArticles {
+  width: 100%;
+  height: 939px;
+  padding: 200px 0px 200px 0px;
+}
+
+.Articles {
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 61%;
+  height: 930px;
+  margin: 0 auto;
+}
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 45px;
+  letter-spacing: 0.065em;
+  color: #3c424a;
+}
+
+.head {
+  width: 104%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.BoxImg {
+  position: relative;
+  width: 377px;
+  height: 236px;
+  background: #e3e3e3;
+  border-radius: 10px;
+}
+
+.footerArticle {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.descArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.wrapArticle {
+  display: flex;
+  margin: 25px 0px 50px 0px;
+  width: 110%;
+}
+
+.titleArticle {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6a7380;
+  text-transform: uppercase;
+}
+
+.textArticle {
+  max-width: 800px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 184%;
+  color: #6a7380;
+}
+
+.buttonImg {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #e3e3e3;
+  border: 2px solid #6a7380;
+}
+
+.avtor {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #6a7380;
+}
+
+.date {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #6a7380;
+}
+
+.bittonTitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #ffffff;
+  text-transform: lowercase;
+}

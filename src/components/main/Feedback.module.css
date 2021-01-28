@@ -1,0 +1,133 @@
+.wrapperFeedback {
+  height: 972px;
+  width: 100%;
+  display: flex;
+}
+
+.boxGreen {
+  width: 50%;
+  height: 572px;
+  background-color: var(--green-color);
+  padding: 200px 0px 200px 0px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.box {
+  margin-left: 210px;
+}
+
+.boxFeedback {
+  width: 50%;
+  background: #fbfafa;
+  padding: 200px 0px 200px 0px;
+  height: 572px;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  width: 343px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.065em;
+  color: #fbfafa;
+  margin-bottom: 30px;
+}
+
+.text {
+  width: 446px;
+  white-space: pre-line;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+  color: #fbfafa;
+}
+
+.icons {
+  margin-top: 45px;
+}
+
+.rowOne svg {
+  margin: 20px 25px 0px 0px;
+}
+
+#wrapSvg:hover #id {
+  fill: var(--yellow-color);
+  cursor: pointer;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+}
+
+.input {
+  width: 425px;
+  height: 52px;
+  border: none;
+  outline: none;
+  margin: 15px 0px;
+  padding-left: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+}
+
+.textarea {
+  width: 425px;
+  height: 97px;
+  border: none;
+  outline: none;
+  padding: 15px 0px 0px 15px;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+}
+
+.button {
+  background-color: #fbfafa;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.addFile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  height: 30px;
+  cursor: pointer;
+  margin: 20px 0px 30px 0px;
+}
+
+.addFile:hover #skrepka {
+  fill: var(--green-color);
+}
+
+.addFile:hover .textAdd {
+  color: var(--green-color);
+}
+
+.textAdd {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #fa5c45;
+}

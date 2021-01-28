@@ -1,0 +1,93 @@
+.animat4 {
+  position: absolute;
+  top: 43px;
+  left: 43px;
+  background-color: var(--redBG-background);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column {
+  height: 150px;
+}
+
+.columntwo {
+  position: absolute;
+  top: 0px;
+  left: 60px;
+}
+
+.columnThree {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #fbfafa;
+}
+
+.circleOne {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #fbfafa;
+  /* animation-name: one;
+  animation-duration: 1s; */
+}
+
+.circleTwo {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #fbfafa;
+  /* animation-name: two; */
+}
+
+.circleThree {
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #fbfafa;
+  /* animation-name: three; */
+}
+
+.circleAnimat {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  animation-name: one;
+  animation-duration: 1s;
+}
+
+#one {
+  width: 20px;
+  animation-name: one;
+  animation-duration: 2s;
+  animation-delay: ;
+}
+
+@keyframes one {
+  from {
+    fill: yellow;
+  }
+
+  to {
+    fill: red;
+  }
+}

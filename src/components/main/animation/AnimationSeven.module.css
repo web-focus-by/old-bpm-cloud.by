@@ -1,0 +1,64 @@
+.animat7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.elemOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 152px;
+  height: 152px;
+  background-color: #fbfafa;
+  border-radius: 80px;
+}
+
+.elemTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97px;
+  height: 97px;
+  background-color: var(--green-color);
+  border-radius: 50px;
+  animation-name: two;
+  animation-duration: 1s;
+}
+
+.elemThree {
+  width: 42px;
+  height: 42px;
+  background-color: var(--yellow-color);
+  border-radius: 24px;
+  animation-name: three;
+  animation-duration: 1s;
+}
+
+@keyframes two {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 97px;
+    height: 97px;
+  }
+}
+
+@keyframes three {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  70% {
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    width: 42px;
+    height: 42px;
+  }
+}

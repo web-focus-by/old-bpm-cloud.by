@@ -1,0 +1,135 @@
+.wrapperFrom {
+  width: 100%;
+  height: 710px;
+  margin: 0 auto;
+  background: #fbfafa;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 1000px;
+  height: 118px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.065em;
+  color: #3c424a;
+  margin-right: 190px;
+}
+
+.form {
+  position: relative;
+  min-width: 1200px;
+  height: 532px;
+  /* margin: 0 auto; */
+  background-color: #ffff;
+  margin-top: 75px;
+}
+
+.boxLine {
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 15px;
+}
+.line {
+  position: absolute;
+  top: 15px;
+  left: 180px;
+  width: 70%;
+  height: 2px;
+  background-color: var(--textSub-color);
+}
+
+.bodyLineOne {
+  background-color: var(--yellow-color);
+  width: 25%;
+  height: 2px;
+  z-index: 2;
+}
+
+.bodyLineTwo {
+  background-color: var(--yellow-color);
+  height: 2px;
+  z-index: 2;
+  width: 50%;
+}
+.bodyLineThree {
+  background-color: var(--yellow-color);
+  height: 2px;
+  z-index: 2;
+  width: 75%;
+}
+
+.bodyLineFour {
+  background-color: var(--yellow-color);
+  height: 2px;
+  z-index: 2;
+  width: 100%;
+}
+
+.xui {
+  background-color: red;
+}
+
+.circleActive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--textSub-color);
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  border: 2px solid var(--textSub-color);
+  background-color: #ffff;
+  z-index: 2;
+}
+.circleBorder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--yellow-color);
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  border: 2px solid var(--yellow-color);
+  background-color: #ffff;
+  z-index: 2;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffff;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: 0px solid var(--textSub-color);
+  background-color: var(--yellow-color);
+  z-index: 2;
+}

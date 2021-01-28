@@ -1,0 +1,18 @@
+#wrap:hover #elem {
+  fill: var(--yellow-color);
+}
+
+.box {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 500px;
+}
+
+.container:hover #elem {
+  fill: var(--yellow-color);
+}

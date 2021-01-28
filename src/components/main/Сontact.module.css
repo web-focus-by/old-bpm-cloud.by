@@ -1,0 +1,238 @@
+.wrapper {
+  background: #fbfafa;
+  padding-bottom: 200px;
+  padding-top: 80px;
+}
+
+.container {
+  width: 1206px;
+  height: 437px;
+  background: #ffcc00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  color: #3c424a;
+}
+
+.text {
+  margin-top: 15px;
+  width: 545px;
+  height: 100px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: rgba(60, 66, 74, 0.7);
+}
+
+.button {
+  width: 231px;
+  height: 52px;
+  background: #fbfafa;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  color: #3c424a;
+  margin-left: 130px;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+
+.textForm {
+  margin-top: 15px;
+  width: 545px;
+  height: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: rgba(60, 66, 74, 0.7);
+}
+
+.wrapContactForm {
+  position: relative;
+  display: flex;
+}
+
+.wrapInputs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.input {
+  width: 396px;
+  height: 52px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: var(--textSubtitle-color);
+  padding: 0px 22px;
+}
+
+.bad {
+  width: 394px;
+  height: 50px;
+  border: 2px solid var(--redColor-color);
+}
+
+.label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.active {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+  color: var(--redColor-color);
+  margin-top: 15px;
+}
+
+.buttonGreen {
+  width: 300px;
+}
+
+.wrapf {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+.textFormik {
+  margin-top: 20px;
+  width: 350px;
+  height: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: rgba(60, 66, 74, 0.7);
+}
+
+.redText {
+  position: absolute;
+  left: 0px;
+  bottom: -70px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+  color: #fa5c45;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -80px;
+  left: -130px;
+  transform: rotate(180deg);
+}
+
+.wrapLastForm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.boxText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.greenBox {
+  background-color: var(--green-color);
+  width: 460px;
+  height: 437px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyCircle {
+  position: relative;
+  width: 243px;
+  height: 243px;
+  border-radius: 150px;
+  background-color: var(--green-color);
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.elemOne {
+  position: absolute;
+  top: 74px;
+  left: 0px;
+  width: 243px;
+  height: 243px;
+  border-radius: 150px;
+  background-color: #ffffff;
+}
+
+.radius {
+  position: absolute;
+  top: 76px;
+  left: 40px;
+  width: 164px;
+  height: 164px;
+  border-radius: 82px;
+  /* border: 1px solid #000; */
+  animation-name: circle;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.elemTwo {
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  width: 104px;
+  height: 104px;
+  border-radius: 54px;
+  background-color: #3c424a;
+}
+
+@keyframes circle {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

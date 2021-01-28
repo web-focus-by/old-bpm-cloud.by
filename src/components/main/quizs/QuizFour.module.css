@@ -1,0 +1,91 @@
+.formTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  padding-top: 60px;
+  color: #3c424a;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.border {
+  margin-top: 15px;
+  height: 20px;
+  width: 1px;
+  background-color: #6a7380;
+}
+
+.buttonOne {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 299px;
+  height: 52px;
+  background: #fbfafa;
+}
+.buttonOne:hover {
+  width: 295px;
+  height: 48px;
+  border: 2px solid var(--green-color);
+  color: var(--green-color);
+  font-weight: 600;
+}
+
+.buttonTwo {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 299px;
+  height: 52px;
+  background: #fbfafa;
+}
+
+.buttonTwo:hover {
+  width: 295px;
+  height: 48px;
+  border: 2px solid var(--green-color);
+  color: var(--green-color);
+  font-weight: 600;
+}
+
+.buttonActive {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #fbfafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 299px;
+  height: 52px;
+  background: var(--green-color);
+  font-weight: 600;
+}
+
+.button {
+  margin: 0 auto;
+  margin-top: 200px;
+}

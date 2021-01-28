@@ -1,0 +1,42 @@
+/* #wrap:hover #circleOne {
+  fill: var(--yellow-color);
+}
+
+#wrap:hover #circleTwo {
+  fill: var(--yellow-color);
+}
+
+#wrap:hover #circleThree {
+  fill: var(--yellow-color);
+}
+
+#wrap:hover #elem {
+  fill: var(--yellow-color);
+} */
+
+.box {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 500px;
+}
+
+.container:hover #circleOne {
+  fill: var(--yellow-color);
+}
+
+.container:hover #circleTwo {
+  fill: var(--yellow-color);
+}
+
+.container:hover #circleThree {
+  fill: var(--yellow-color);
+}
+
+.container:hover #elem {
+  fill: var(--yellow-color);
+}

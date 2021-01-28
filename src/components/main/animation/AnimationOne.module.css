@@ -1,0 +1,44 @@
+.animat1 {
+  position: absolute;
+  top: 54px;
+  left: 41px;
+}
+
+.elemOne {
+  background-color: #fbfafa;
+  width: 110px;
+  height: 71px;
+  padding: 15px 22px 15px 22px;
+}
+
+.elemTwo {
+  background-color: #fbfafa;
+  width: 16px;
+  height: 10px;
+  margin-left: 70px;
+}
+
+.elemThree {
+  background-color: #fbfafa;
+  width: 110px;
+  height: 10px;
+  margin-left: 23px;
+}
+
+.elemAniamt {
+  border-bottom: 72px solid #fbfafa;
+  border-left: 110px solid var(--textTitleBG-background);
+  animation: animat;
+  animation-duration: 1s;
+}
+
+@keyframes animat {
+  from {
+    border-bottom: 0px solid #fbfafa;
+    border-left: 0px solid var(--textTitleBG-background);
+  }
+  to {
+    border-bottom: 72px solid #fbfafa;
+    border-left: 110px solid var(--textTitleBG-background);
+  }
+}

@@ -1,0 +1,39 @@
+.text {
+  z-index: 2;
+}
+
+.buttom {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 285px;
+  height: 52px;
+  background-color: var(--yellowBG-background);
+  border-radius: 40px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+}
+
+.buttom:hover .color {
+  width: 294px;
+}
+
+.color {
+  position: absolute;
+  left: -4px;
+  top: 0px;
+  background-color: var(--green-color);
+  width: 0px;
+  height: 52px;
+  transition: width 1s;
+  transform: skew(30deg);
+  transform: skew(30deg);
+  transform: skew(30deg);
+}

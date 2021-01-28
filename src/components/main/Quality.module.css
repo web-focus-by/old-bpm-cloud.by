@@ -1,0 +1,75 @@
+.wrapperQuality {
+  background: #fbfafa;
+  height: 994px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 1206px;
+  height: 671px;
+}
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.065em;
+  color: #3c424a;
+  margin-left: 15px;
+}
+
+.desc {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  margin-top: 68px;
+  width: 593px;
+  height: 51px;
+}
+
+.string {
+  height: 77px;
+  width: 600px;
+  display: flex;
+  margin: 45px 0px 40px 0px;
+}
+
+.boxString {
+  margin-left: 70px;
+}
+
+.titleElem {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  color: #fa5c45;
+  width: 500px;
+}
+
+.textElem {
+  width: 440px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  margin-top: 10px;
+}
+
+.strings {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 23px;
+  margin-left: 99px;
+}

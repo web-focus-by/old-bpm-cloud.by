@@ -1,0 +1,80 @@
+.animat2 {
+  position: absolute;
+  top: 33px;
+  left: 60px;
+}
+
+.platesOne {
+  width: 118px;
+  height: 59px;
+  background-color: var(--yellowBG-background);
+  border-radius: 0px 0px 60px 60px;
+  transform: rotate(0deg);
+  animation-name: one;
+  animation-duration: 1s;
+}
+
+.platesTwo {
+  width: 118px;
+  height: 59px;
+  background-color: var(--greenBG-background);
+  border-radius: 0px 0px 60px 60px;
+  transform: rotate(0deg);
+  animation-name: two;
+  animation-duration: 1s;
+}
+
+.platesThree {
+  width: 118px;
+  height: 59px;
+  background-color: #fbfafa;
+  border-radius: 0px 0px 60px 60px;
+  transform: rotate(0deg);
+  animation-name: three;
+  animation-duration: 1s;
+}
+
+@keyframes one {
+  0% {
+    transform: rotate(10.44deg);
+  }
+  35% {
+    transform: rotate(-10.44deg);
+  }
+  75% {
+    transform: rotate(10.44deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes two {
+  0% {
+    transform: rotate(-10.44deg);
+  }
+  35% {
+    transform: rotate(10.44deg);
+  }
+  75% {
+    transform: rotate(-10.44deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes three {
+  0% {
+    transform: rotate(10.44deg);
+  }
+  35% {
+    transform: rotate(-10.44deg);
+  }
+  75% {
+    transform: rotate(10.44deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

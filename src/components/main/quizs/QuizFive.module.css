@@ -1,0 +1,75 @@
+.formTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  padding-top: 60px;
+  color: #3c424a;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.wrap {
+  width: 71%;
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.input {
+  width: 390px;
+  height: 52px;
+  background: #fbfafa;
+  border: none;
+  outline: none;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  padding-left: 20px;
+}
+
+.bigInput {
+  width: 370px;
+  height: 94px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  background: #fbfafa;
+  padding: 20px;
+  outline: none;
+  border: none;
+}
+
+.text {
+  width: 390px;
+  height: 51px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.065em;
+  color: rgba(60, 66, 74, 0.7);
+  margin-top: 30px;
+}
+
+.button {
+  margin: 0 auto;
+}
