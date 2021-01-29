@@ -5,17 +5,18 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import "./stylesCarousel.css"
 import { images } from "../../images"
+import { Link } from "gatsby"
 
 import styles from "./CarouselMenu.module.css"
 
 const menuItems = [
-  { name: "SMM" },
-  { name: "Разработка сайтов" },
-  { name: "Seo" },
-  { name: "Главная" },
-  { name: "PPC" },
-  { name: "Брендинг и дизайн" },
-  { name: "Разработка приложений" },
+  { name: "SMM", utl:'about-page' },
+  { name: "Разработка сайтов", utl:'contact-page'  },
+  { name: "Seo", utl:'home-page' },
+  { name: "Главная", utl:'page-after-webhook' },
+  { name: "PPC", utl:'sample-page' },
+  { name: "Брендинг и дизайн", utl:'diz' },
+  { name: "Разработка приложений", utl:'therd-post' },
 ]
 
 const CarouselMenu = ({ data = menuItems }) => {
@@ -64,7 +65,7 @@ const CarouselMenu = ({ data = menuItems }) => {
         {(data || []).map((item, index) => (
           <div key={index} className={styles.itemMenu}>
             <img src={images.circleMenu} alt="" />
-            <div className={styles.text}>{item.name}</div>
+            <Link to={`/${item.utl}`}><div className={styles.text}>{item.name}</div></Link>
           </div>
         ))}
       </Slider>
