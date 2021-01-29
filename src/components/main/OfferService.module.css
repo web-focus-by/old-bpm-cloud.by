@@ -1,12 +1,12 @@
 .wrapper {
   background-color: #fbfafa;
   height: 700px;
-  padding-top: 200px;
+  padding-top: 188px;
   padding-bottom: 100px;
 }
 
 .box {
-  width: 62%;
+  width: 63%;
   margin: 0 auto;
 }
 
@@ -26,7 +26,8 @@
   font-size: 14px;
   line-height: 17px;
   margin-top: 30px;
-  max-width: 565px;
+  max-width: 600px;
+  letter-spacing: 0.065em;
   height: 85px;
   color: var(--textSubtitle-color);
 }
@@ -39,7 +40,7 @@
 
 .boxButtons {
   margin-top: -25px;
-  width: 400px;
+  width: 404px;
 }
 
 .hoverText {
@@ -50,8 +51,9 @@
   line-height: 22px;
   text-transform: uppercase;
   color: var(--textTitle-color);
-  margin-left: 40px;
+  margin-left: 30px;
   cursor: pointer;
+  letter-spacing: 0.065em;
 }
 
 .hoverText div {
@@ -60,17 +62,17 @@
 
 .active {
   color: var(--redColor-color);
-  margin-left: 0px;
+  margin-left: -26px;
   animation-name: textActive;
   animation-duration: 0.5s;
 }
 
 @keyframes textActive {
   from {
-    margin-left: 40px;
+    margin-left: 30px;
   }
   to {
-    margin-left: 0px;
+    margin-left: -26px;
   }
 }
 
@@ -88,7 +90,7 @@
 }
 
 .changingText {
-  margin-top: 20px;
+  margin-top: 33px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -100,5 +102,6 @@
 }
 
 .button {
-  margin-top: 70px;
+  margin-top: 60px;
+  width: 230px;
 }

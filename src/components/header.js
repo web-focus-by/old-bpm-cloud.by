@@ -15,7 +15,7 @@ const Header = () => {
         <div className={styles.box}>
           <HeaderMenu />
           <div className={styles.yellowButton}>
-            <Button className={styles.buttonStyles}>+375 (33) 32 44 000</Button>
+            <Button className={styles.buttonStyles}>+375 (29) 32 44 000</Button>
           </div>
         </div>
       </div>

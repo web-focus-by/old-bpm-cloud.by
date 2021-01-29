@@ -8,16 +8,15 @@
 .box {
   position: relative;
   width: 33.333%;
-  height: 0px;
-  padding-top: 32%;
+  height: 612px;
+
   background-color: #efefef;
 }
 
 .boxLast {
   position: relative;
   width: 33.333%;
-  height: 0px;
-  padding-top: 32%;
+  height: 612px;
   background-color: var(--yellow-color);
   color: #ffffff;
 }
@@ -25,22 +24,21 @@
 .boxgrey {
   position: relative;
   width: 33.333%;
-  height: 0px;
-  padding-top: 32%;
+  height: 612px;
   background-color: var(--textSubtitle-color);
   color: #ffffff;
 }
 
 .button {
   position: absolute;
-  bottom: 86px;
-  left: 110px;
+  bottom: 90px;
+  left: 96px;
 }
 
 .buttonGrey {
   position: absolute;
-  bottom: 86px;
-  left: 105px;
+  bottom: 92px;
+  left: 96px;
   color: #ffffff;
   border: 1px solid #ffffff;
   background-color: var(--textSubtitle-color);
@@ -48,8 +46,8 @@
 
 .title {
   position: absolute;
-  top: 89px;
-  left: 98px;
+  top: 91px;
+  left: 97px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -59,8 +57,8 @@
 
 .nameKeys {
   position: absolute;
-  top: 120px;
-  left: 98px;
+  top: 127px;
+  left: 94px;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -72,8 +70,8 @@
 
 .nameKeysGrey {
   position: absolute;
-  top: 120px;
-  left: 98px;
+  top: 127px;
+  left: 94px;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -85,8 +83,8 @@
 
 .titleLast {
   position: absolute;
-  top: 125px;
-  left: 110px;
+  top: 120px;
+  left: 96px;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;

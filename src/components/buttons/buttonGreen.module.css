@@ -20,6 +20,7 @@
   text-transform: uppercase;
   overflow: hidden;
   border: none;
+  letter-spacing: 0.065em;
 }
 
 .buttom:hover .color {

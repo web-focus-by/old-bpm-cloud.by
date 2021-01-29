@@ -1,6 +1,6 @@
 .wrapperSliderTeam {
   width: 100%;
-  height: 575px;
+  height: 558px;
   background: var(--textTitle-color);
   padding-top: 200px;
 }
@@ -9,10 +9,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 62%;
+  width: 64.5%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 3px;
   margin-bottom: 28px;
+}
+
+.title > button {
+  padding: 0 30px;
 }
 
 .textTitle {
@@ -22,6 +26,7 @@
   line-height: 59px;
   letter-spacing: 0.065em;
   color: #fbfafa;
+  margin-left: 26px;
 }
 
 .descPhoto {

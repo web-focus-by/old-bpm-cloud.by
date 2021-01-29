@@ -1,8 +1,8 @@
 @import url(../../fonts/stylesheet.css);
 
 .wrapper {
-  max-width: 1950px;
-  height: 779px;
+  max-width: 1920px;
+  height: 777px;
   margin: 0 auto;
 }
 
@@ -11,7 +11,7 @@
   height: 70px;
   margin-left: 96px;
   margin-right: 78px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .container {
@@ -35,12 +35,17 @@
   line-height: 22px;
   text-transform: uppercase;
   color: var(--green-color);
-  margin-top: 8px;
+  margin-left: 2px;
+  letter-spacing: 0.065em;
 }
 
 .boxLogo {
-  margin-top: 40px;
-  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+  font-size: 50px;
+  margin-top: 43px;
 }
 
 .yellowButton {
@@ -49,15 +54,17 @@
   align-items: center;
   justify-content: flex-end;
   margin-top: 9px;
-  margin-right: 32px;
+  margin-right: 49px;
 }
-
+.buttonStyles {
+  letter-spacing: 0.065em;
+}
 .conteinerTwo {
   height: 500px;
   justify-content: space-between;
   display: flex;
   align-items: center;
-  width: 63%;
+  width: 63.2vw;
   margin: 0 auto;
 }
 
