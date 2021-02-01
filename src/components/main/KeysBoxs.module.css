@@ -94,3 +94,44 @@
 
   color: #ffffff;
 }
+
+
+@media(max-width:1445px){
+  .boxgrey, .boxLast, .box{
+    height: 460px;
+  }
+  .title{
+    top: 65px;
+    left: 70px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .nameKeys, .nameKeysGrey{
+    top: 95px;
+    left: 72px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .button, .buttonGrey{
+    position: absolute;
+    bottom: 69px;
+    left: 76px;
+    height: 26px;
+    min-width: 0px;
+    padding: 0 18px
+
+  }
+  .button>div, .buttonGrey>div{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .titleLast{
+    top: 87px;
+    left: 67px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .lastButton{
+    height: 50px;
+  }
+}

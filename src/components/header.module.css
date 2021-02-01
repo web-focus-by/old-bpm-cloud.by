@@ -77,6 +77,44 @@
   justify-content: space-between;
   width: 100%;
 }
+@media(max-width:1445px){
+  .wrapper{
+    height: 583px;
+  }
+  .BpmCloud{
+    width: 137px;
+    height: 52px;
+    margin-left: 74px;
+    margin-right: 58px;
+    margin-top: 11px;
+  }
+  .yellowButton {
+    margin-right: 37px;
+  }
+  .container {
+    height: 73px;
+  }
+  .textBPM{
+    font-size: 60px;
+    line-height: 73px;
+    margin-top: -7px;
+  }
+  .sabtext{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .boxLogo{
+    margin-top: 0px;
+    margin-bottom: 22px;
+    height: 90px;
+  }
+  .conteinerTwo{
+    height: 443px;
+    max-width: 912px;
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 1366px) {
   .buttonStyles {

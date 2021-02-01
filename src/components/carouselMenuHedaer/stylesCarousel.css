@@ -8,7 +8,7 @@
 } */
 
 .slick-vertical .slick-slide {
-  height: 60px !important;
+  height: 60px;
 }
 
 .slick-current {
@@ -33,13 +33,10 @@
   line-height: 22px;
 }
 
-.slick-slide::before {
-  /* content: url(../../images/circleMenu.svg);
-  position: relative;
-  bottom: 24px;
-  z-index: -1; */
-}
-
-div.slick-slide.slick-active.slick-center.slick-current {
-  /* display: none; */
+@media(max-width:1445px){
+  .slick-slide{
+    font-size: 14px;
+    line-height: 17px;
+    height: 45px !important;
+  }
 }

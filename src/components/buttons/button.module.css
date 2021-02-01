@@ -37,3 +37,13 @@
   transform: skew(30deg);
   transform: skew(30deg);
 }
+
+
+@media(max-width:1445px){
+  .buttom{
+    width: 214px;
+    height: 38px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
