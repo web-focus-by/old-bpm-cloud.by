@@ -9,7 +9,6 @@
   padding-top: 60px;
   color: #3c424a;
   margin-top: 15px;
-  margin-left: 17px;
 }
 
 .checkBox {
@@ -27,7 +26,6 @@
 .box {
   display: flex;
   cursor: pointer;
-  margin-left: 19px;
 }
 
 .box:hover .checkBox {
@@ -74,5 +72,4 @@
 
 .button {
   margin-top: 24px;
-  margin-left: 15px;
 }

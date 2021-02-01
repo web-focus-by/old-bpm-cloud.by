@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         <div className={styles.boxTwo}>
           <div className={styles.text}>Разработка сайтов</div>
-          <div className={styles.text}>Seo</div>
+          <div className={styles.text}>SEO</div>
           <div className={styles.text}>SMM</div>
           <div className={styles.text}>PPC</div>
           <div className={styles.text}>Брендинг и дизайн</div>

@@ -20,7 +20,7 @@
   line-height: 59px;
   letter-spacing: 0.065em;
   color: #3c424a;
-  margin-right: 190px;
+  margin-right: 206px;
 }
 
 .form {
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   width: 70%;
-  margin-left: 15px;
+  margin-left: 7px;
 }
 .line {
   position: absolute;

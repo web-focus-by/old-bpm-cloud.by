@@ -5,7 +5,7 @@
 }
 
 .boxGreen {
-  width: 50%;
+  width: 48.9%;
   height: 572px;
   background-color: var(--green-color);
   padding: 200px 0px 200px 0px;
@@ -16,7 +16,7 @@
 }
 
 .box {
-  margin-left: 210px;
+  margin-left: 225px;
 }
 
 .boxFeedback {
@@ -68,14 +68,17 @@
   flex-direction: column;
   margin-right: 150px;
 }
+.inputs:first-child{
+  margin-top: 0px;
+}
 
 .input {
   width: 425px;
   height: 52px;
   border: none;
   outline: none;
-  margin: 15px 0px;
-  padding-left: 15px;
+  margin: 14px 0px;
+  padding-left: 28px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -89,7 +92,7 @@
   height: 97px;
   border: none;
   outline: none;
-  padding: 15px 0px 0px 15px;
+  padding: 15px 0px 0px 26px;
   margin-top: 15px;
   font-style: normal;
   font-weight: normal;
@@ -109,10 +112,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 220px;
+  width: 210px;
   height: 30px;
   cursor: pointer;
-  margin: 20px 0px 30px 0px;
+  margin: 23px 0px 28px 8px;
 }
 
 .addFile:hover #skrepka {

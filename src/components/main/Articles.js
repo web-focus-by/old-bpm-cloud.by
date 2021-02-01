@@ -35,7 +35,7 @@ const Article = ({ title, text }) => {
         <div className={styles.footerArticle}>
           <div className={styles.avtor}>Автор:</div>
           <div className={styles.date}>21.01.19</div>
-          <ButtonSmall red>подробнее</ButtonSmall>
+          <ButtonSmall red className={styles.buttonDetailed}>подробнее</ButtonSmall>
         </div>
       </div>
     </div>
