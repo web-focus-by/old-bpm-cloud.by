@@ -1,6 +1,6 @@
 .wrapperArticles {
   width: 100%;
-  height: 939px;
+  height: auto;
   padding: 208px 0px 200px 0px;
 }
 
@@ -10,7 +10,7 @@
 
 .container {
   max-width: 63%;
-  height: 930px;
+  height: auto;
   margin: 0 auto;
 }
 .title {
@@ -23,7 +23,7 @@
 }
 
 .head {
-  width: 104%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -110,6 +110,8 @@
 }
 
 .bittonTitle {
+  width: 250px;
+  height: 36px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -117,5 +119,61 @@
   letter-spacing: 0.065em;
   color: #ffffff;
   text-transform: lowercase;
-  margin: -7px 49px;
+  margin: -7px 0px;
+}
+
+
+@media(max-width:1445px){
+  .wrapperArticles{
+    padding: 137px 0px 116px 0px;
+  }
+  .Articles{
+    margin-top: 50px;
+  }
+  .wrapArticle{
+    margin: 0px 0px 35px 0px;
+  }
+  .descArticle{
+    height: 180px;
+    margin-left: 15px;
+  }
+  .BoxImg{
+    width: 282.75px;
+    height: 177px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .titleArticle{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .textArticle{
+    font-size: 12px;
+    line-height: 22px;
+    margin-top: 0px;
+  }
+  .bittonTitle{
+    width: 185px;
+    height: 28px;
+    margin: 0px;
+  }
+  .buttonImg{
+    padding: 0px 16px;
+    height: 28px;
+    bottom: 12px;
+    left: 16px;
+  }
+  .buttonImg>div{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .buttonDetailed{
+    padding: 0 21px;
+    height: 26px;
+  }
+  .footerArticle{
+    margin-top: 15px;
+  }
 }

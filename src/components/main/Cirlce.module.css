@@ -9,6 +9,10 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+.circle>svg{
+  width: 192px;
+  height: 192px;
+}
 
 @keyframes rotate {
   from {
@@ -16,5 +20,12 @@
   }
   to {
     -webkit-transform: rotate(360deg);
+  }
+}
+
+@media(max-width:1445px){
+  .circle>svg{
+    width: 139.5px;
+    height: 139.5px;
   }
 }

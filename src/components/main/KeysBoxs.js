@@ -77,7 +77,7 @@ const KeysBoxs = () => {
 
       <div className={styles.boxLast}>
         <div className={styles.titleLast}>Все кейсы</div>
-        <ButtonGreen className={styles.button}>смотреть все</ButtonGreen>
+        <ButtonGreen className={classnames(styles.button, styles.lastButton)}>смотреть все</ButtonGreen>
       </div>
     </div>
   )

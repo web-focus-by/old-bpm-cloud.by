@@ -73,3 +73,31 @@
 .button {
   margin-top: 24px;
 }
+
+@media(max-width:1445px){
+  .box{
+    width: 630px;
+  }
+  .wrapForm{
+    margin-top: 37px;
+    height: 240px;
+  }
+  .formTitle{
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 43px;
+  }
+  .text{
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 0px;
+  }
+  .checkBox{
+    min-width: 15px;
+    height: 15px;
+    margin-right: 27px;
+  }
+  .button{
+    margin: 10px 0;
+  }
+}

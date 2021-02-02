@@ -8,7 +8,9 @@
 }
 
 .box {
-  width: 1206px;
+  margin: 0 auto;
+  max-width: 1206px;
+  width: auto;
   height: 682px;
 }
 .title {
@@ -75,4 +77,43 @@
   width: 100%;
   margin-top: 19px;
   margin-left: 90px;
+}
+
+@media(max-width:1440px){
+  .wrapperQuality{
+    height: 760px;
+  }
+  .box{
+    max-width: 938px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 114px;
+    margin-left: 13px;
+  }
+  .desc{
+    font-size: 11px;
+    line-height: 13px;
+    width: 483px;
+    margin-top: 22px;
+    margin-left: 16px;
+  }
+  .string{
+    margin: 25px 0;
+    width: auto;
+  }
+  .strings{
+    width: 90%;
+  }
+  .titleElem{
+    font-size: 14px;
+    line-height: 17px;
+    width: 323px;
+  }
+  .textElem{
+    font-size: 12px;
+    line-height: 15px;
+    width: 301px;
+  }
 }

@@ -5,7 +5,7 @@
 }
 
 .boxGreen {
-  width: 48.9%;
+  width: 50%;
   height: 572px;
   background-color: var(--green-color);
   padding: 200px 0px 200px 0px;
@@ -133,4 +133,65 @@
   line-height: 20px;
   letter-spacing: 0.065em;
   color: #fa5c45;
+}
+
+@media(max-width:1445px){
+  .wrapperFeedback{
+    height: auto;
+  }
+  .boxGreen{
+    padding: 0;
+    padding-top: 150px;
+  }
+  .box{
+    margin-left: 171px;
+  }
+  .boxFeedback{
+    padding: 0;
+    padding-top: 137px;
+    height: 585px;
+  }
+  .inputs{
+    margin-right: 94px;
+  }
+  .input{
+    width: 330px;
+    height: 39px;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 10px 0px;
+    padding-left: 13px;
+  }
+  .textarea{
+    width: 330px;
+    height: 81.5px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 9px 0px 0px 14px
+  }
+  .addFile{
+    margin: 6px -1px;
+    width: 156px;
+  }
+  .textAdd{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+    width: 183px;
+    margin-bottom: 21px;
+  }
+  .text{
+    font-size: 11px;
+    line-height: 13px;
+    width: 335px;
+  }
+  .button{
+    height: 38px;
+    width: 328px;
+    margin-top: 11px;
+    font-weight: 700;
+  }
 }

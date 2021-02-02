@@ -39,3 +39,31 @@
   margin-top: 20px;
   height: 529px;
 }
+
+@media(max-width:1440px){
+  .wrapper{
+    padding: 0px 0px 173px 0px;
+  }
+  .container{
+    padding-top: 100px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
+  .text{
+    font-size: 12px;
+    line-height: 15px;
+    height: 344px;
+    width: 405px;
+    border-left: 3px solid var(--redColor-color);
+    padding-left: 22.5px;
+  }
+  .photo{
+    width: 330px;
+    height: 396.75px;
+    margin-left: 143px;
+    margin-top: 10px;
+  }
+}

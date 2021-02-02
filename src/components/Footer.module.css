@@ -65,3 +65,40 @@
 
   color: #ffffff;
 }
+
+
+@media(max-width:1445px){
+  .container{
+    height: 460px;
+  }
+  .wrapperFooter{
+    height: auto;
+    padding: 140px 0px 0px 0px;
+  }
+  .wrapContacts{
+    margin-right: 20px;
+    margin-top: 14px;
+  }
+  .bpmIcon{
+    width: 329px;
+    margin-top: 2px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
+  .text{
+    font-size: 12px;
+    line-height: 15px;
+    margin: 18px 0px;
+  }
+  .boxTwo{
+    margin-top: 56px;
+  }
+  .bottom{
+    margin-bottom: 10px;
+    font-size: 10.5px;
+    line-height: 13px;
+  }
+}

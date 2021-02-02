@@ -1,7 +1,7 @@
 .wrapperAboutUs {
   background-color: #ffffff;
   width: 100%;
-  height: 749px;
+  height: auto;
   display: flex;
   flex-direction: row;
 }
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   display: flex;
   width: 749px;
-  height: 749px;
+  height: auto;
 }
 
 .description {
@@ -45,4 +45,38 @@
   letter-spacing: 0.065em;
   color: var(--textSubtitle-color);
   margin-left: 29px;
+}
+
+@media(max-width:1445px){
+  .wrapperAboutUs{
+    height: auto;
+  }
+  .description{
+    justify-content: flex-start;
+    padding-right: 154px;
+    width: 31%;
+  }
+  .photo{
+    height: auto;
+    max-width: 570px;
+
+  }
+  .photo>img{
+    width: 186.75px;
+    height: 281.25px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 151px;
+    margin-bottom: 23px
+  }
+  .text{
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 19px;
+  }
+  .box {
+    border-left: 3px solid var(--yellowBG-background);
+  }
 }

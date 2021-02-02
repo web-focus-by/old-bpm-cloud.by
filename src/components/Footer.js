@@ -41,7 +41,7 @@ const Footer = () => {
           <div className={styles.text}>Прочие услуги</div>
           <div className={styles.text}>О нас</div>
         </div>
-        <div className={styles.bottom} style={{ margin: "0px" }}>
+        <div className={styles.bottom}>
           © 2020 bpm-cloud.by
         </div>
       </div>

@@ -157,3 +157,55 @@
 .slick-slide{
   margin: 4px -8px !important;
 }
+
+@media(max-width:1445px){
+  .wrapper{
+    padding-bottom: 0px;
+  }
+  .headReviews{
+    width: 904px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 0px;
+  }
+  .text{
+    width: 445px;
+    margin-top: 23px;
+    margin-left: 0px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .button{
+    margin-top: 20px;
+    height: 27px;
+    padding: 0 16px;
+  }
+  .button>div{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .wrapperSlider{
+    margin-top: 15px;
+  }
+  .items{
+/*     width: 282px !important;
+    height: 276px !important; */
+    transform: translate3d(480px, 0px, 0px);
+/*     padding: 20px;
+    box-sizing: border-box; */
+  }
+/*   .textReview{
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .avtorReview{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .dexcAvtor{
+    font-size: 11px;
+    line-height: 13px;
+  } */
+}

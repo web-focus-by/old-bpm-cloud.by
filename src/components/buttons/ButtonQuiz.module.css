@@ -35,3 +35,21 @@
 .activeButton {
   background-color: #309195;
 }
+
+@media(max-width:1445px){
+  .button{
+    width: 140px;
+    height: 40px;
+  }
+  .text{
+    font-size: 12px;
+    line-height: 15px;
+    left: 40px;
+    top: 11px;
+  }
+  .button>img{
+    right: 28px;
+    top: 11px;
+    height: 15px;
+  }
+}

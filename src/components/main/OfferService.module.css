@@ -105,3 +105,32 @@
   margin-top: 60px;
   width: 230px;
 }
+
+
+@media(max-width:1445px){
+  .box{
+    width: 70%;
+  }
+  .wrapper{
+    padding-top: 136px;
+    padding-bottom: 0px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px
+  }
+  .text{
+    font-size: 11px;
+    line-height: 13px;
+    max-width: 450px;
+    margin-top: 25px;
+  }
+  .changingText{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .hoverText{
+    font-size: 14px;
+  line-height: 17px;
+  }
+}

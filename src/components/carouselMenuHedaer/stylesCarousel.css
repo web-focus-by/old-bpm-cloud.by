@@ -34,9 +34,9 @@
 }
 
 @media(max-width:1445px){
-  .slick-slide{
+  .slick-vertical .slick-slide {
     font-size: 14px;
     line-height: 17px;
-    height: 45px !important;
+    height: 51.5px;
   }
 }

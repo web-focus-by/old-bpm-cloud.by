@@ -50,8 +50,6 @@ const Articles = () => {
           <div className={styles.title}>Интересное</div>
           <ButtonGreen
             className={styles.bittonTitle}
-            height="36px"
-            width="250px"
           >
             все статьи и новости
           </ButtonGreen>

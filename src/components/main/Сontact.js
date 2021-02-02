@@ -102,7 +102,7 @@ const ContactForm = ({ handlerGetForm }) => {
 const FrirstForm = ({ handlerGetForm }) => {
   return (
     <>
-      <div>
+      <div className={styles.wrapContenContactForm}>
         <div className={styles.title}>Хотите узнать больше?</div>
         <div className={styles.text}>
           Свяжитесь с консультантом веб-студии — и мы раскроем каждый нюанс

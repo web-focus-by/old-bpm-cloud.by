@@ -69,7 +69,7 @@ const SliderTeam = ({ data = menuItems }) => {
     <div className={styles.wrapperSliderTeam}>
       <div className={styles.title}>
         <div className={styles.textTitle}>Наша команда</div>
-        <ButtonSmall green>вся команда </ButtonSmall>
+        <ButtonSmall green className={styles.titleButton}>вся команда </ButtonSmall>
       </div>
       <Slider {...settings}>
         {(data || []).map((item, index) => {

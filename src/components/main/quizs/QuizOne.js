@@ -75,8 +75,8 @@ const QuizOne = ({ handlerLine }) => {
         >
           Далее
         </ButtonQuiz>
+        </div>
       </div>
-    </div>
   )
 }
 

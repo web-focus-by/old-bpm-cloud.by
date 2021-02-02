@@ -116,3 +116,31 @@
   color: #ffffff;
   margin-top: 7px;
 }
+
+@media(max-width:1445px){
+  .wrapperSliderTeam{
+    height: 450px;
+    padding-top: 120px;
+  }
+  .title{
+    width: 62.6%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .textTitle{
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 3px;
+  }
+  .title > button {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0px 7px;
+    height: 30px;
+    margin-top: 6px;
+  }
+  .photo{
+    width: 181.5px;
+    height: 336px;
+  }
+}

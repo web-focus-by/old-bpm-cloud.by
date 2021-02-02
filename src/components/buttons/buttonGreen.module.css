@@ -41,3 +41,10 @@
 .noAnimation {
   display: none;
 }
+
+@media(max-width:1445px){
+  .text{
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

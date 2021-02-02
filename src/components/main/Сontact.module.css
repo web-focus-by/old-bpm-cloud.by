@@ -236,3 +236,36 @@
     -webkit-transform: rotate(360deg);
   }
 }
+
+@media(max-width:1440px){
+  .wrapper{
+    padding-top: 0px;
+    padding-bottom: 150px
+  }
+  .container{
+    width: 904px;
+    height: 328px;
+    justify-content: start;
+  }
+  .title{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .text{
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 9px;
+    width: 415px;
+  }
+  .wrapContenContactForm{
+    margin-left: 114px;
+    margin-top: 29px;
+  }
+  .button{
+    width: 175px;
+    height: 40px;
+    margin-left: 87px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

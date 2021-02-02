@@ -132,3 +132,26 @@
   background-color: var(--yellow-color);
   z-index: 2;
 }
+
+
+@media(max-width:1445px){
+  .wrapperFrom{
+    justify-content: start;
+    padding-top: 150px;
+    height: 386.25px;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 44px;
+    margin-right: 186px;
+    width: 718px;
+  }
+  .form{
+    margin-top: 55px;
+    min-width: 904.5px;
+    padding-bottom: 30px;
+  }
+  .boxLine{
+    left: 130px;
+  }
+}

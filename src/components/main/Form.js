@@ -22,7 +22,7 @@ const Form = () => {
   const getQuiz = state => {
     switch (state) {
       case 0:
-        return <QuizOne handlerLine={handlerLine} />
+        return <QuizOne handlerLine={handlerLine}/>
       case 1:
         return <QuizTwo handlerLine={handlerLine} />
       case 2:
@@ -89,11 +89,6 @@ const Form = () => {
           </div>
         </div>
         {getQuiz(state)}
-        {/* <QuizFive handlerLine={handlerLine} /> */}
-        {/* <QuizFour handlerLine={handlerLine} /> */}
-        {/* <QuizThree handlerLine={handlerLine} /> */}
-        {/* <QuizTwo handlerLine={handlerLine} /> */}
-        {/* <QuizOne handlerLine={handlerLine} /> */}
       </div>
     </div>
   )
