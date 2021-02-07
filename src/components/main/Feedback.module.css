@@ -68,7 +68,7 @@
   flex-direction: column;
   margin-right: 150px;
 }
-.inputs:first-child{
+.inputs:first-child {
   margin-top: 0px;
 }
 
@@ -135,26 +135,26 @@
   color: #fa5c45;
 }
 
-@media(max-width:1445px){
-  .wrapperFeedback{
+@media (max-width: 1445px) {
+  .wrapperFeedback {
     height: auto;
   }
-  .boxGreen{
+  .boxGreen {
     padding: 0;
     padding-top: 150px;
   }
-  .box{
+  .box {
     margin-left: 171px;
   }
-  .boxFeedback{
+  .boxFeedback {
     padding: 0;
     padding-top: 137px;
     height: 585px;
   }
-  .inputs{
+  .inputs {
     margin-right: 94px;
   }
-  .input{
+  .input {
     width: 330px;
     height: 39px;
     font-size: 12px;
@@ -162,36 +162,45 @@
     margin: 10px 0px;
     padding-left: 13px;
   }
-  .textarea{
+  .textarea {
     width: 330px;
     height: 81.5px;
     font-size: 12px;
     line-height: 15px;
-    padding: 9px 0px 0px 14px
+    padding: 9px 0px 0px 14px;
   }
-  .addFile{
+  .addFile {
     margin: 6px -1px;
     width: 156px;
   }
-  .textAdd{
+  .textAdd {
     font-size: 12px;
     line-height: 15px;
   }
-  .title{
+  .title {
     font-size: 36px;
     line-height: 44px;
     width: 183px;
     margin-bottom: 21px;
   }
-  .text{
+  .text {
     font-size: 11px;
     line-height: 13px;
     width: 335px;
   }
-  .button{
+  .button {
     height: 38px;
     width: 328px;
     margin-top: 11px;
     font-weight: 700;
+  }
+}
+
+@media (max-width: 1050px) {
+  .box {
+    margin-left: 0px;
+  }
+  .inputs {
+    margin-right: 0px;
   }
 }

@@ -33,10 +33,33 @@
   line-height: 22px;
 }
 
-@media(max-width:1445px){
-  .slick-vertical .slick-slide {
+@media (max-width: 1445px) {
+  header .slick-vertical .slick-slide {
     font-size: 14px;
     line-height: 17px;
     height: 51.5px;
+  }
+  header .slick-track {
+    transform: translate3d(0px, -202px, 0px) !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  header .slick-list {
+    padding: 120px 0px !important;
+    height: 221.89px !important;
+    box-sizing: border-box;
+  }
+  header .slick-track {
+    transform: translate3d(0px, -224px, 0px) !important;
+  }
+  header .slick-vertical .slick-slide {
+    font-size: 10.5px;
+    line-height: 13px;
+    height: 34px;
+  }
+
+  header .slick-current > div > div > a > div {
+    margin-left: 20px;
   }
 }

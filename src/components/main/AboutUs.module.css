@@ -47,36 +47,48 @@
   margin-left: 29px;
 }
 
-@media(max-width:1445px){
-  .wrapperAboutUs{
+@media (max-width: 1445px) {
+  .wrapperAboutUs {
     height: auto;
   }
-  .description{
+  .description {
     justify-content: flex-start;
     padding-right: 154px;
     width: 31%;
   }
-  .photo{
+  .photo {
     height: auto;
     max-width: 570px;
-
   }
-  .photo>img{
+  .photo > img {
     width: 186.75px;
     height: 281.25px;
   }
-  .title{
+  .title {
     font-size: 36px;
     line-height: 44px;
     margin-top: 151px;
-    margin-bottom: 23px
+    margin-bottom: 23px;
   }
-  .text{
+  .text {
     font-size: 12px;
     line-height: 15px;
     margin-left: 19px;
   }
   .box {
     border-left: 3px solid var(--yellowBG-background);
+  }
+}
+
+@media (max-width: 1050px) {
+  .title {
+    margin-top: 19px;
+  }
+  .photo {
+    max-width: 440px;
+  }
+  .photo > img {
+    width: 140.56px;
+    height: 210.83px;
   }
 }

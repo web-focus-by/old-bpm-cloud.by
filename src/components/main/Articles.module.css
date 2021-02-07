@@ -89,7 +89,7 @@
   padding: 0px 23px;
   letter-spacing: 0.065em;
 }
-.buttonDetailed{
+.buttonDetailed {
   padding: 0 28px;
 }
 
@@ -122,58 +122,62 @@
   margin: -7px 0px;
 }
 
-
-@media(max-width:1445px){
-  .wrapperArticles{
+@media (max-width: 1445px) {
+  .wrapperArticles {
     padding: 137px 0px 116px 0px;
   }
-  .Articles{
+  .Articles {
     margin-top: 50px;
   }
-  .wrapArticle{
+  .wrapArticle {
     margin: 0px 0px 35px 0px;
   }
-  .descArticle{
+  .descArticle {
     height: 180px;
     margin-left: 15px;
   }
-  .BoxImg{
+  .BoxImg {
     width: 282.75px;
     height: 177px;
   }
-  .title{
+  .title {
     font-size: 36px;
     line-height: 44px;
   }
-  .titleArticle{
+  .titleArticle {
     font-size: 14px;
     line-height: 17px;
   }
-  .textArticle{
+  .textArticle {
     font-size: 12px;
     line-height: 22px;
     margin-top: 0px;
   }
-  .bittonTitle{
+  .bittonTitle {
     width: 185px;
     height: 28px;
     margin: 0px;
   }
-  .buttonImg{
+  .buttonImg {
     padding: 0px 16px;
     height: 28px;
     bottom: 12px;
     left: 16px;
   }
-  .buttonImg>div{
+  .buttonImg > div {
     font-size: 12px;
     line-height: 15px;
   }
-  .buttonDetailed{
+  .buttonDetailed {
     padding: 0 21px;
     height: 26px;
   }
-  .footerArticle{
+  .footerArticle {
     margin-top: 15px;
+  }
+}
+@media (max-width: 1050px) {
+  .container {
+    max-width: 83%;
   }
 }

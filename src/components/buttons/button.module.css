@@ -47,3 +47,9 @@
     line-height: 17px;
   }
 }
+
+@media(max-width:1050px){
+  .buttom{
+    
+  }
+}

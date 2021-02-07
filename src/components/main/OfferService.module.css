@@ -106,31 +106,36 @@
   width: 230px;
 }
 
-
-@media(max-width:1445px){
-  .box{
+@media (max-width: 1445px) {
+  .box {
     width: 70%;
   }
-  .wrapper{
+  .wrapper {
     padding-top: 136px;
     padding-bottom: 0px;
   }
-  .title{
+  .title {
     font-size: 36px;
-    line-height: 44px
+    line-height: 44px;
   }
-  .text{
+  .text {
     font-size: 11px;
     line-height: 13px;
     max-width: 450px;
     margin-top: 25px;
   }
-  .changingText{
+  .changingText {
     font-size: 12px;
     line-height: 15px;
   }
-  .hoverText{
+  .hoverText {
     font-size: 14px;
-  line-height: 17px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 1445px) {
+  .box {
+    width: 95%;
   }
 }

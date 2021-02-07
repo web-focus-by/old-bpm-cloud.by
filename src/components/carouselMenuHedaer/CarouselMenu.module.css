@@ -54,24 +54,27 @@
 
 .arrow {
   position: absolute;
-  top: 190px;
+  top: 50%; /* 3 */
+  transform: translate(0, -50%); /* 4 */
   left: -10px;
   /* border-right: 20px solid #ffffff; */
   z-index: 2;
   background-color: #ffffff;
 }
 
-@media (max-width: 1445px){
-  .wrapperCarouselMenu{
+@media (max-width: 1445px) {
+  .wrapperCarouselMenu {
     width: 397px;
     margin-top: -60px;
   }
-  .arrow{
-    top: 161px;
+  .arrow {
     left: 0px;
   }
-  .arrow>img{
+  .arrow > img {
     height: 18px;
+  }
+  .itemMenu {
+    margin: 6px 23px;
   }
 }
 
@@ -83,5 +86,28 @@
   .itemMenu {
     font-size: 14px;
     line-height: 17px;
+  }
+}
+@media (max-width: 1050px) {
+  .wrapperCarouselMenu {
+    margin-left: 0px;
+    margin-top: -46px;
+  }
+  .itemMenu {
+    font-size: 10.5px;
+    line-height: 13px;
+    margin: 0 17px;
+  }
+  .text {
+    margin-left: 9px;
+  }
+  .itemMenu > img {
+    width: 5px;
+  }
+  .arrow {
+    left: -4px;
+  }
+  .arrow > img {
+    height: 17px;
   }
 }

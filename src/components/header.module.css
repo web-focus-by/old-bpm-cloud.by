@@ -77,11 +77,11 @@
   justify-content: space-between;
   width: 100%;
 }
-@media(max-width:1445px){
-  .wrapper{
+@media (max-width: 1445px) {
+  .wrapper {
     height: 583px;
   }
-  .BpmCloud{
+  .BpmCloud {
     width: 137px;
     height: 52px;
     margin-left: 74px;
@@ -94,27 +94,26 @@
   .container {
     height: 73px;
   }
-  .textBPM{
+  .textBPM {
     font-size: 60px;
     line-height: 73px;
     margin-top: -7px;
   }
-  .sabtext{
+  .sabtext {
     font-size: 14px;
     line-height: 17px;
   }
-  .boxLogo{
+  .boxLogo {
     margin-top: 0px;
     margin-bottom: 22px;
     height: 90px;
   }
-  .conteinerTwo{
+  .conteinerTwo {
     height: 443px;
     max-width: 912px;
     width: 100%;
   }
 }
-
 
 @media (max-width: 1366px) {
   .buttonStyles {
@@ -141,5 +140,45 @@
   .yellowButton {
     width: 45%;
     margin-top: 0px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .wrapper {
+    height: 438px;
+  }
+  .conteinerTwo {
+    height: 305px;
+  }
+  .BpmCloud {
+    width: 104.25px;
+    margin-left: 26px;
+    margin-top: 2px;
+    margin-right: 43px;
+  }
+  .buttonStyles {
+    width: 160.23px;
+    height: 29.24px;
+    font-size: 10px;
+    line-height: 13px;
+  }
+  .yellowButton {
+    margin-right: 26px;
+  }
+  .textBPM {
+    width: auto;
+    font-size: 45px;
+    line-height: 55px;
+    margin-top: 0px;
+  }
+  .boxLogo {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    margin-left: 111px;
+    height: 74px;
+  }
+  .sabtext {
+    font-size: 10.5px;
+    line-height: 13px;
   }
 }
