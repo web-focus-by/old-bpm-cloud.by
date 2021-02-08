@@ -139,3 +139,64 @@
     width: 95%;
   }
 }
+
+@media(max-width:950px){
+  .wrapper{
+    padding-top: 120px;
+    height: auto;
+  }
+  .box {
+    width: 92%;
+    padding-bottom: 55px;
+  }
+  .text{
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 23px;
+  }
+  .animationAndPage{
+    flex-wrap: wrap;
+  }
+  .boxTexts{
+    order: 3;
+  }
+  .boxButtons{
+    order: 2;
+    margin-top: 32px;
+    width: 45%;
+  }
+  .active{
+    margin-left: -11px;
+  }
+  .hoverText{
+    margin-right: 0px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .hoverText > div{
+    margin-right: 30px;
+  }
+  .boxTexts{
+    margin-top: -24px;
+    position: relative;
+  }
+  .number{
+    font-size: 27px;
+    line-height: 33px;
+  }
+  .changingText{
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 17px;
+    width: 365px;
+  }
+  .button{
+    position: absolute;
+    margin-top: 0px;
+    right: -384px;
+    top: 64px;
+    height: 47px;
+    width: 173px;
+  }
+}

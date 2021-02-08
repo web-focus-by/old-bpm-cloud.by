@@ -120,9 +120,61 @@
 
 @media (max-width: 1050px) {
   .wrapperQuality {
+    min-height: 682px;
+    height: auto;
+  }
+  .box{
     height: auto;
   }
   .title {
     margin-top: 70px;
+  }
+}
+
+@media(max-width: 950px){
+  .wrapperQuality{
+    padding-bottom: 90px;
+  }
+  .title{
+    margin-top: 130px;
+    margin-left: 28px;
+  }
+  .desc{
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 28px;
+    width: 450px;
+    height: auto;
+  }
+  .strings{
+    width: 86.8%;
+    padding-left: 53px;
+    padding-top: 26px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .boxString{
+    margin-left: 48px;
+    margin-top: 6px;
+  }
+  .string>div:first-child{
+    transform: scale(.75);
+  }
+  .titleElem{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 242px;
+  }
+  .textElem{
+    font-size: 14px;
+    line-height: 17px;
+    width: 240px;
+  }
+  .string {
+    margin: 0px;
+    margin-bottom: 27px;
+    height: auto;
+    width: auto;
   }
 }

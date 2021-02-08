@@ -182,3 +182,47 @@
     line-height: 13px;
   }
 }
+@media(max-width:950px){
+  .wrapper{
+    height: auto;
+  }
+  .conteinerTwo{
+    height: auto;
+    padding-top: 130px;
+    align-items: start;
+    padding-left: 30px;
+  }
+  .BpmCloud{
+    width: 135px;
+    margin-left: 31px;
+    margin-top: 16px;
+    margin-right: 43px;
+  }
+  .boxLogo{
+    margin: 0;
+    height: 129px;
+    margin-bottom: 104px
+  }
+  .conteinerTwo{
+    flex-direction: column;
+  }
+  .textBPM{
+    font-size: 80px;
+    line-height: 98px;
+  }
+  .sabtext{
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .yellowButton{
+    margin-right: 31px;
+    align-items: flex-end;
+  }
+  .buttonStyles{
+    width: 213px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 13px;
+    margin-bottom: 4px;
+  }
+}

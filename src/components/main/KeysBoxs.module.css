@@ -187,3 +187,53 @@
     line-height: 11px;
   }
 }
+@media(max-width:950px){
+  .wrapperKeys>.box{
+    display: none;
+  }
+  .box:nth-child(-n+5){
+    display: block !important;
+  }
+  .box{
+    width: 50%;
+    height: 368px;
+  }
+  .boxLast{
+    width: 50%;
+    height: 368px;
+  }
+  .title{
+    top: 31px;
+    left: 29px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .nameKeys{
+    top: 58px;
+    left: 32px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .button{
+    bottom: 31px;
+    left: 31px;
+    height: 27px;
+  }
+  .button>div{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .titleLast{
+    top: 30px;
+    left: 30px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .lastButton{
+    height: 44px;
+    width: 175px;
+    margin-left: -2px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

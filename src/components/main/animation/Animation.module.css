@@ -12,3 +12,12 @@
     margin-right: 50px;
   }
 }
+
+@media(max-width:950px){
+  .boxRed{
+    margin-top: 62px;
+    margin-left: 54px;
+    margin-right: 0px;
+    order: 1;
+  }
+}

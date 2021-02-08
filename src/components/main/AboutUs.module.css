@@ -92,3 +92,25 @@
     height: 210.83px;
   }
 }
+
+@media(max-width: 950px){
+  .photo{
+    max-width: 336px;
+  }
+  .photo>img{
+    width: 160px;
+    height: 241px;
+  }
+  .title{
+    margin-top: 130px;
+  }
+  .description{
+    width: 41%;
+    padding-right: 0px;
+    padding-left: 17px;
+  }
+  .text{
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

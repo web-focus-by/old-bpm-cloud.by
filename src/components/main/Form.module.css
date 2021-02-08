@@ -155,3 +155,36 @@
     left: 130px;
   }
 }
+
+@media(max-width:950px){
+  .wrapperFrom{
+    padding-top: 130px;
+  }
+  .title{
+    width: 93%;
+    margin-right: 0px;
+    margin-left: 6px;
+  }
+  .form{
+    margin-top: 64px;
+    min-width: 300px;
+    width: 92%;
+  }
+  .boxLine{
+    left: 36px;
+    width: 88%;
+  }
+  .circleActive{
+    box-sizing: border-box;
+  }
+  .circle, .circleActive{
+    width: 22.81px;
+    height: 22.81px;
+    font-size: 10.5px;
+    line-height: 13px;
+  }
+  .line{
+    top: 11px;
+    
+  }
+}

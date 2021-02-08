@@ -44,6 +44,9 @@
   height: 600px;
   width: 1200px;
 }
+.burgerMenu{
+  display: none;
+}
 @media (max-width: 1445px) {
   .menu {
     font-family: Montserrat;
@@ -74,5 +77,22 @@
   .menu {
     width: 356px;
     height: 65px;
+  }
+}
+
+@media (max-width: 925px){
+  .burgerMenu{
+    display: block;
+  }
+  .menu>.item{
+    display: none;
+  }
+  .menu{
+    width: auto;
+    height: 90px;
+  }
+  .yellowButton{
+    margin-right: 31px;
+    align-items: flex-end;
   }
 }

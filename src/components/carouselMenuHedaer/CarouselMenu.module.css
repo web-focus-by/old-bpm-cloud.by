@@ -111,3 +111,29 @@
     height: 17px;
   }
 }
+
+@media(max-width:950px){
+  .wrapperCarouselMenu{
+    margin-bottom: 98px;
+  }
+  .itemMenu{
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 32px;
+  }
+  .itemMenu > img {
+    width: 10px;
+  }
+  .arrow{
+    left: -2px;
+  }
+  .arrow > img {
+    height: 27px;
+  }
+  .colorTop{
+    height: 33%;
+  }
+  .colorBottom{
+    height: 33%;
+  }
+}

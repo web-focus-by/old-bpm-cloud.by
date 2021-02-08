@@ -154,3 +154,26 @@
     padding-top: 30px;
   }
 }
+
+@media(max-width: 950px){
+  .wrapperSliderTeam{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 742px;
+  }
+  .title{
+    width: 92%;
+    margin-top: 100px;
+  }
+  .textTitle{
+    margin-left: 0px;
+  }
+  .title > button{
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0px 21px;
+    height: 28px;
+    margin-top: 7px;
+  }
+}

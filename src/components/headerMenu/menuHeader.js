@@ -45,6 +45,9 @@ const HeaderMenu = () => {
 
   return (
     <div className={styles.menu}>
+      <div className={styles.burgerMenu}>
+        <img src={images.burgerMenu} alt="" />
+      </div>
       <div
         onMouseOver={() => handlerShowMenu(1)}
         className={classnames(styles.item, { [styles.active]: active === 1 })}
