@@ -58,7 +58,6 @@
     line-height: 13px;
     height: 34px;
   }
-
   header .slick-current > div > div > a > div {
     margin-left: 20px;
   }
@@ -74,9 +73,21 @@
     height: 60px;
   }
   header .slick-track {
-    transform: translate3d(0px, -94px, 0px) !important;
+    transform: translate3d(0px, -155px, 0px) !important;
   }
   header .slick-current {
     margin-left: -5px;
+  }
+}
+
+@media(max-width:750px){
+  header .slick-list {
+    height: 214px !important;
+  }
+  header .slick-vertical .slick-slide {
+    height: 34px;
+  }
+  header .slick-track {
+    transform: translate3d(0px, -82px, 0px) !important;
   }
 }

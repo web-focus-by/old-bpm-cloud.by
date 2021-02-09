@@ -200,3 +200,27 @@
     width: 173px;
   }
 }
+
+@media(max-width:500px){
+  .wrapper{
+    padding-top: 41px;
+  }
+  .title{
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .text{
+    height: auto;
+    margin-top: 20px;
+  }
+  .box{
+    width: 87%;
+  }
+  .animationAndPage{
+    flex-direction: column;
+  }
+  .boxButtons{
+    order: 1;
+  }
+  
+}

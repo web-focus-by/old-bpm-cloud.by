@@ -226,7 +226,7 @@
   .wrapperSlider{
     margin-top: 70px;
   }
-  .wrapperSlider .slick-track{
-    transform: translate3d(98px, 0px, 0px);
+  .wrapperSlider > div > div > div{
+    transform: translate3d(98px, 0px, 0px) !important;
   }
 }

@@ -137,3 +137,21 @@
     height: 33%;
   }
 }
+@media(max-width:750px){
+  .wrapperCarouselMenu{
+    width: 262px;
+  }
+  .itemMenu{
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .itemMenu > img {
+    width: 6px;
+  }
+  .arrow {
+    left: 17px;
+  }
+  .arrow > img {
+    height: 17px;
+  }
+}

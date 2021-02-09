@@ -21,3 +21,8 @@
     order: 1;
   }
 }
+@media(max-width:500px){
+  .boxRed{
+    order: 2;
+  }
+}

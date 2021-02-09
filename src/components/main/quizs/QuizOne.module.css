@@ -127,5 +127,9 @@
     height: 50px;
     width: 520px;
   }
-
+  .checkBox{
+    min-width: 15px;
+    height: 20px;
+    margin-right: 27px;
+  }
 }

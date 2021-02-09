@@ -228,3 +228,45 @@
     margin-bottom: 4px;
   }
 }
+
+@media(max-width:750px){
+  .yellowButton{
+    display: none;
+  }
+  .container{
+    justify-content: space-between;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 90%;
+    background-color: white;
+    padding: 0 5%;
+  }
+  .wrapper{
+    background-color: #fbfafa;
+  }
+  .BpmCloud{
+    width: 107px;
+    margin: 0px;
+  }
+  .conteinerTwo{
+    align-items: center;
+    padding-left: 0px;
+    padding-bottom: 53px;
+    padding-top: 40px;
+  }
+  .box{
+    width: auto;
+  }
+  .boxLogo{
+    height: auto;
+  }
+  .textBPM{
+    font-size: 37px;
+    line-height: 45px;
+  }
+  .sabtext{
+    font-size: 9px;
+    line-height: 11px;
+  }
+}
