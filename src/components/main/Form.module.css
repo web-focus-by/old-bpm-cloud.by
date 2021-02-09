@@ -159,6 +159,7 @@
 @media(max-width:950px){
   .wrapperFrom{
     padding-top: 130px;
+    height: 530px;
   }
   .title{
     width: 93%;
@@ -167,6 +168,7 @@
   }
   .form{
     margin-top: 64px;
+    padding-bottom: 55px;
     min-width: 300px;
     width: 92%;
   }

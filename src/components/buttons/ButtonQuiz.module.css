@@ -53,3 +53,27 @@
     height: 15px;
   }
 }
+
+@media(max-width:950px){
+  .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button>img{
+    height: 17px;
+    position: inherit;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+  .text{
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 13px;
+    position: inherit;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+}

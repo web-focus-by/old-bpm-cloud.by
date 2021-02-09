@@ -22,7 +22,7 @@
 
 .text {
   width: 500px;
-  height: 459px;
+  height: auto;
   white-space: pre-line;
   border-left: 4px solid var(--redColor-color);
   padding-left: 30px;
@@ -55,7 +55,6 @@
   .text{
     font-size: 12px;
     line-height: 15px;
-    height: 344px;
     width: 405px;
     border-left: 3px solid var(--redColor-color);
     padding-left: 22.5px;
@@ -65,5 +64,28 @@
     height: 396.75px;
     margin-left: 143px;
     margin-top: 10px;
+  }
+}
+
+@media(max-width:950px){
+  .wrapper{
+    padding: 0px 0px 261px 0px;
+  }
+  .photo{
+    margin-left: 30px;
+    margin-top: 41px;
+    width: 290px;
+    height: 349px;
+  }
+  .text{
+    width: 311px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .text > p{
+    padding-bottom: 3px;
+  }
+  .text > p:nth-last-child(-n+2){
+    width: 680px;
   }
 }

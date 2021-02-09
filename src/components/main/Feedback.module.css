@@ -204,3 +204,34 @@
     margin-right: 0px;
   }
 }
+
+@media(max-width:950px){
+  .boxGreen{
+    padding-top: 130px;
+    padding-bottom: 156px;
+  }
+  .boxFeedback{
+    padding-top: 230px;
+    padding-bottom: 43px;
+    background-color: var(--green-color);
+  }
+  .box{
+    margin-left: 14px;
+  }
+  .title{
+    margin-bottom: 27px;
+  }
+  .text{
+    font-size: 14px;
+    line-height: 17px;
+    width: 337px;
+  }
+  .input{
+    height: 45px;
+    width: 308px;
+  }
+  .textarea{
+    width: 309px;
+    height: 102px;
+  }
+}

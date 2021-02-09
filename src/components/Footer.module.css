@@ -110,3 +110,45 @@
     width: 84%;
   }
 }
+
+@media(max-width: 950px){
+  .bpmIcon{
+    width: 177px;
+    height: 100px;
+    margin-left: 63px;
+  }
+  .title{
+    line-height: 36px;
+  }
+  .text{
+    font-size: 14px;
+    line-height: 17px;
+    margin: 17px 0;
+  }
+  .container{
+    height: 423px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .wrapContacts{  
+    margin-right: -27px;
+  }
+  .boxOne{
+    margin-bottom: 30px;
+  }
+  .boxTwo{
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .boxTwo .text{
+    font-size: 12px;
+    line-height: 15px;
+    margin: 10px 16px;
+  }
+  .bottom{
+    margin-top: 57px;
+  }
+}

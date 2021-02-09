@@ -181,3 +181,55 @@
     max-width: 83%;
   }
 }
+
+
+@media (max-width: 950px){
+  .wrapperArticles{
+    padding: 244px 0px 92px 0px;
+  }
+  .wrapArticle{
+    width: auto;
+  }
+  .container{
+    max-width: 92%;
+  }
+  .Articles{
+    margin-top: 42px;
+  }
+  .head{
+    margin-bottom: 0px;
+  }
+  .descArticle{
+    margin-left: 24px;
+  }
+  .titleArticle{
+    margin-top: 0px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .textArticle{
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .bittonTitle{
+    margin-bottom: 9px;
+  }
+  .bittonTitle>div{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .textArticle{
+    max-width: 400px;
+  }
+  .buttonDetailed{
+    display: none;
+  }
+  .footerArticle{
+    font-size: 12px;
+    line-height: 15px;
+    width: 95%;
+  }
+  .BoxImg{
+    width: 300px;
+  }
+}

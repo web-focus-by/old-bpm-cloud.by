@@ -205,6 +205,8 @@
   }
   .conteinerTwo{
     flex-direction: column;
+    max-width: 768px;
+    box-sizing: border-box;
   }
   .textBPM{
     font-size: 80px;

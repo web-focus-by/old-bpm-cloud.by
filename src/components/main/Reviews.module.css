@@ -209,3 +209,24 @@
     line-height: 13px;
   } */
 }
+
+@media(max-width:950px){
+  .headReviews{
+    width: 100%;
+    max-width: 710px;
+  }
+  .text{
+    font-size: 14px;
+    line-height: 17px;
+    width: 525px;
+  }
+  .button{
+    margin-top: -77px;
+  }
+  .wrapperSlider{
+    margin-top: 70px;
+  }
+  .wrapperSlider .slick-track{
+    transform: translate3d(98px, 0px, 0px);
+  }
+}
