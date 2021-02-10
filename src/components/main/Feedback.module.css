@@ -235,3 +235,19 @@
     height: 102px;
   }
 }
+@media(max-width:500px){
+  .wrapperFeedback{
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .wrapperFeedback > div{
+    width: 100%;
+  }
+  .boxGreen{
+    padding: 0;
+  }
+  .boxFeedback{
+    padding: 0;
+  }
+}

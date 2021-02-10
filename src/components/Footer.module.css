@@ -152,3 +152,19 @@
     margin-top: 57px;
   }
 }
+
+@media(max-width:500px){
+  .container{
+    height: auto;
+  }
+  .boxOne{
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapperFooter{
+    padding: 0;
+  }
+  .bpmIcon{
+    margin-left: 0px;
+  }
+}

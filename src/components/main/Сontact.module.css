@@ -302,3 +302,21 @@
     margin: 0;
   }
 }
+@media(max-width:950px){
+  .wrapContenContactForm{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .container{
+    height: 381px;
+  }
+  .text{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .button{
+    width: 90%;
+    margin-top: 64px;
+  }
+}

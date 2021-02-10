@@ -230,3 +230,37 @@
     transform: translate3d(98px, 0px, 0px) !important;
   }
 }
+@media(max-width:500px){
+  .wrapper{
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 80px;
+  }
+  .title{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .text{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: auto;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .button{
+    display: none;
+  }
+  .wrapperSlider{
+    margin-top: -25px;
+  }
+  .wrapperSlider > div > div > div{
+    transform: translate3d(354px, 0px, 0px) !important;
+  }
+  .wrapperSlider > div > div > div > div{
+    transform: scale(.8);
+  }
+}

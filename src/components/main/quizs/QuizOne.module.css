@@ -133,3 +133,29 @@
     margin-right: 27px;
   }
 }
+@media(max-width:500px){
+  .wrapForm{
+    height: 368px;
+  }
+  .formTitle{
+    padding-top: 25px;
+    font-size: 13px;
+    line-height: 16px;
+    width: 80%;
+    margin-left: 30px;
+  }
+  .box{
+    width: 100%;
+  }
+  .text{
+    font-size: 13px;
+    line-height: 17px;
+    width: 240px;
+  }
+  .button{
+    margin-top: 45px;
+    margin-bottom: -10px;
+    height: 50px;
+    width: 80%;
+  }
+}

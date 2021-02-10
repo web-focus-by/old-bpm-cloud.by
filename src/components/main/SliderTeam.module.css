@@ -177,3 +177,21 @@
     margin-top: 7px;
   }
 }
+@media(max-width:950px){
+  .wrapperSliderTeam{
+    height: 538px;
+  }
+  .title{
+    flex-direction: column;
+    margin-top: 20px;
+    
+  }
+  .textTitle{
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .title > button{
+    margin-top: 27px;
+    padding: 0px 100px;
+  }
+}

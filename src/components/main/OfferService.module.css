@@ -221,6 +221,52 @@
   }
   .boxButtons{
     order: 1;
+    display: flex;
+    margin-top: 28px;
+    width: 100%;
+    overflow-x: auto;
   }
-  
+  .hoverText{
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 0px;
+    padding: 8px 12px 9px;
+    margin-right: 10px;
+    border-radius: 30px;
+    background: white;
+  }
+  .changingText{
+    width: 280px;
+  }
+  .hoverText > div{
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .hoverText > span{
+    width: max-content;
+  }
+  .number{
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .active{
+    animation-name: none;
+    margin-left: auto;
+  }
+  .boxTexts{
+    margin-top: -78px;
+  }
+  .button{
+    position: relative;
+    right: auto;
+    top:auto;
+    margin-top: 40px;
+    width: 280px;
+    height: 47px;
+  }
+  .button>div:last-child{
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

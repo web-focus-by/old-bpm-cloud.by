@@ -233,3 +233,44 @@
     width: 300px;
   }
 }
+
+@media(max-width:500px){
+  .wrapperArticles{
+    padding: 89px 0px 92px 0px;
+  }
+  .title{
+    font-size: 30px;
+    line-height: 37px;
+    margin-left: 8px;
+  }
+  .bittonTitle{
+    display: none;
+  }
+  .Articles{
+    display: flex;
+  }
+  .wrapArticle{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  .descArticle{
+    height: auto;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .Articles{
+    overflow-x: auto;
+  }
+  .titleArticle{
+    position: absolute;
+    top: -160px;
+    width: 200px;
+    font-size: 13px;
+    line-height: 16px;
+    margin-left: 20px;
+  }
+}

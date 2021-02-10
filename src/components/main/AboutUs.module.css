@@ -114,3 +114,40 @@
     line-height: 17px;
   }
 }
+
+@media(max-width:500px){
+  .wrapperAboutUs{
+    flex-direction: column-reverse;
+  }
+  .description{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .box{
+    border-left: none;
+    margin-bottom: 30px;
+  }
+  .title{
+    margin-top: 50px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .text{
+    margin-left: 0;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .photo{
+    overflow-x: auto;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: max-content;
+    box-sizing: border-box;
+  }
+  .photo > img{
+    width: 139px;
+    height: 211px;
+  }
+}

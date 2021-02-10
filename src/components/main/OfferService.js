@@ -110,7 +110,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(1)}
             >
-              <div>01</div> разработка сайтов
+              <div>01</div> <span>разработка сайтов</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -118,7 +118,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(2)}
             >
-              <div>02</div> Дизайн и брендинг
+              <div>02</div> <span>Дизайн и брендинг</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -126,7 +126,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(3)}
             >
-              <div>03</div> SEO-продвижение
+              <div>03</div> <span>SEO-продвижение</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -134,7 +134,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(4)}
             >
-              <div>04</div>копирайтинг
+              <div>04</div> <span>копирайтинг</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -142,7 +142,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(5)}
             >
-              <div>05</div>контекстная реклама
+              <div>05</div> <span>контекстная реклама</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -150,7 +150,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(6)}
             >
-              <div>06</div>SMM
+              <div>06</div><span>SMM</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -158,7 +158,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(7)}
             >
-              <div>07</div>SERM
+              <div>07</div><span>SERM</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -166,7 +166,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(8)}
             >
-              <div>08</div>Разработка приложений
+              <div>08</div><span>Разработка приложений</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -174,7 +174,7 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(9)}
             >
-              <div>09</div>другие услуги
+              <div>09</div><span>другие услуги</span>
             </div>
           </div>
         </div>

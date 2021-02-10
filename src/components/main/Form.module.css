@@ -190,3 +190,20 @@
     
   }
 }
+@media(max-width:500px){
+  .wrapperFrom{
+    padding-top: 49px;
+  }
+  .title{
+    font-size: 30px;
+    line-height: 37px;
+    margin-left: 16px;
+  }
+  .form{
+    margin-top: 72px;
+  }
+  .boxLine{
+    left: 2px;
+    width: 93%;
+  }
+}

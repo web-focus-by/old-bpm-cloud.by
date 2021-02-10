@@ -24,5 +24,8 @@
 @media(max-width:500px){
   .boxRed{
     order: 2;
+    transform: scale(.67);
+    width: 236px;
+    margin-top: 0px;
   }
 }
