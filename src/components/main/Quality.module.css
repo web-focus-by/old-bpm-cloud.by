@@ -232,4 +232,7 @@
     font-size: 12px;
     line-height: 15px;
   }
+  .string > div:first-child > div{
+    width: 100%;
+  }
 }

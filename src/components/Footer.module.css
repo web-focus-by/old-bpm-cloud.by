@@ -167,4 +167,14 @@
   .bpmIcon{
     margin-left: 0px;
   }
+  .wrapContacts{
+    box-sizing: border-box;
+    max-width: 280px;
+  }
+  .boxTwo{
+    box-sizing: border-box;
+    padding-left: 20px;
+    width: 100%;
+    justify-content: start;
+  }
 }

@@ -250,4 +250,20 @@
   .boxFeedback{
     padding: 0;
   }
+  .input{
+    box-sizing: border-box;
+    max-width: 280px;
+  }
+  .textarea{
+    box-sizing: border-box;
+    max-width: 280px;
+  }
+  .button{
+    box-sizing: border-box;
+    max-width: 280px;
+  }
+  .text{
+    box-sizing: border-box;
+    max-width: 280px;
+  }
 }
