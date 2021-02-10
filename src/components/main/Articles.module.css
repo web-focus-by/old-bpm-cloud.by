@@ -57,9 +57,14 @@
 .wrapArticle {
   display: flex;
   margin: 25px 0px 50px 0px;
-  width: 110%;
+  padding: 6px;
+  border-radius: 10px;
+  width: 100%;
 }
-
+.wrapArticle:hover{
+  background-color: #fbfafa;
+  transition: all .8s;
+}
 .titleArticle {
   margin-top: 10px;
   font-style: normal;

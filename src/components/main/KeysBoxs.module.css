@@ -9,8 +9,15 @@
   position: relative;
   width: 33.333%;
   height: 612px;
-
+  box-sizing: border-box;
   background-color: #efefef;
+  border: 19px solid transparent;
+}
+.box:hover{
+  box-sizing: border-box;
+  border: 19px solid #FFCC00;
+  transition: all .8s;
+  cursor: pointer;
 }
 
 .boxLast {
