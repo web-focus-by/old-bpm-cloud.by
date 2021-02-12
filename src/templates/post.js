@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 class Post extends Component {
   render() {
     const post = this.props.data.wpPost
-
+    console.log(post)
     return (
       <Layout>
         <h1

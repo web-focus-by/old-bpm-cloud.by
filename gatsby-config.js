@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress-experimental",
       options:{
-        url:`https://um2020.by/graphql`,
+        url:`https://wp-server.bpm-cloud.by/graphql`, //  https://um2020.by/graphql https://wp-server.bpm-cloud.by/graphql
         }
     },
   ],

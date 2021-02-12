@@ -8,12 +8,14 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
+    "gatsby-plugin-emotion": "^5.4.0",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-sharp": "^2.8.0",
+    "gatsby-plugin-typography": "^2.12.0",
     "gatsby-source-filesystem": "^2.5.0",
-    "gatsby-source-wordpress-experimental": "^7.0.3",
+    "gatsby-source-wordpress-experimental": "^7.0.6",
     "gatsby-transformer-sharp": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -21,9 +23,14 @@
     "react-helmet": "^6.1.0",
     "react-scrollbars-custom": "^4.0.25",
     "react-slick": "^0.28.0",
-    "slick-carousel": "^1.8.1"
+    "react-typography": "^0.16.19",
+    "slick-carousel": "^1.8.1",
+    "typography": "^0.16.19",
+    "typography-theme-kirkham": "^0.16.19"
   },
   "devDependencies": {
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "prettier": "2.2.1"
   },
   "keywords": [

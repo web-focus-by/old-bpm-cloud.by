@@ -10,12 +10,14 @@ import Quality from "../components/main/Quality"
 import Reviews from "../components/main/Reviews"
 import SliderTeam from "../components/main/SliderTeam"
 import Сontact from "../components/main/Сontact"
+import ComponentName from "../components/main/getCases"
 
 import styles from "./Main.module.css"
 
 const Main = () => {
   return (
     <div className={styles.wrapperMain}>
+{/*       <ComponentName /> */}
       <KeysBoxs />
       <OfferService />
       <AboutUs />

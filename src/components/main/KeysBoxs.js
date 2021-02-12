@@ -1,82 +1,85 @@
 import React from "react"
 import classnames from "classnames"
 import { ButtonGreen, ButtonSmall } from "../buttons"
-// import useGetPosts from "../hooks"
 import styles from "./KeysBoxs.module.css"
-import SEO from "../seo"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
-const dataFaik = [
-  {
-    id: 1,
-    title: "keys1",
-  },
-  {
-    id: 2,
-    title: "keys2",
-  },
-  {
-    id: 3,
-    title: "keys3",
-  },
-  {
-    id: 4,
-    title: "keys4",
-  },
-  {
-    id: 5,
-    title: "keys5",
-  },
-  {
-    id: 6,
-    title: "keys6",
-  },
-  {
-    id: 7,
-    title: "keys7",
-  },
-  {
-    id: 8,
-    title: "keys8",
-  },
-]
+function tagsArea(arr){
+  const tags = arr.length>2?arr.slpice(0, 2):arr;
+  const tegsArr = tags.map(tag => {
+    
+  })
+} 
 
 const KeysBoxs = () => {
-  // console.log(data)
-  // const data = useGetPosts()
-  // const { nodes } = data.allWordpressPost
-
+  const data = useStaticQuery(graphql`
+  {
+    allWpPost(filter: {categories: {nodes: {elemMatch: {name: {eq: "cases"}}}}}, sort: {order: DESC, fields: date}, limit: 8) {
+      nodes {
+        id
+        uri
+        tags {
+          nodes {
+            name
+          }
+        }
+        featuredImage {
+          node {
+            link
+            sourceUrl
+            id
+            uri
+          }
+        }
+        title
+        categories {
+          nodes {
+            id
+            name
+          }
+        }
+      }
+    }
+  }
+  `)
   return (
     <div className={styles.wrapperKeys}>
-      {dataFaik.map((i, index) => {
+      {data.allWpPost.nodes.map((item) => {
+        console.log(item.tags.nodes)
+        const divStyle = {
+          backgroundImage: 'url(' + 'https://wp-server.bpm-cloud.by/' + item.featuredImage.node.uri + ')',
+          backgroundSize: '100%',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }
         return (
+
           <div
-            key={i.id}
-            className={classnames(styles.box, {
-              [styles.boxgrey]: index % 2 ? true : false,
-            })}
+            key={item.id}
+            className={classnames(styles.box)}
+            style={divStyle}
           >
-            <div className={styles.title}>{i.title}</div>
+          <Link to={`${item.uri}`}>
+            <div className={styles.title}>Кейсы</div>
             <div
-              className={classnames(styles.nameKeys, {
-                [styles.nameKeysGrey]: index % 2 ? true : false,
-              })}
+              className={classnames(styles.nameKeys)}
             >
-              название
+              {item.title}
             </div>
             <ButtonSmall
               grey
-              className={classnames(styles.button, {
-                [styles.buttonGrey]: index % 2 ? true : false,
-              })}
+              className={classnames(styles.button)}
             >
-              #dfsgf
+              {item.tags.nodes[0].name}
             </ButtonSmall>
+            </Link>
           </div>
+          
         )
       })}
 
       <div className={styles.boxLast}>
-        <div className={styles.titleLast}>Все кейсы</div>
+        <div className={classnames(styles.titleLast)}>Все кейсы</div>
         <ButtonGreen className={classnames(styles.button, styles.lastButton)}>смотреть все</ButtonGreen>
       </div>
     </div>
@@ -84,3 +87,4 @@ const KeysBoxs = () => {
 }
 
 export default KeysBoxs
+
