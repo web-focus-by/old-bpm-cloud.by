@@ -36,7 +36,7 @@ const QuizFive = ({ handlerLine }) => {
   }
 
   return (
-    <div>
+    <div className={styles.form}>
       <div className={styles.formTitle}>Укажите информацию о Вас</div>
       <div className={styles.wrap}>
         <div className={styles.inputs}>

@@ -1,6 +1,6 @@
 import React from "react"
 import { ButtonGreen, ButtonSmall } from "../buttons"
-
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styles from "./Articles.module.css"
 
 const data = [
@@ -21,21 +21,59 @@ const data = [
   },
 ]
 
-const Article = ({ title, text }) => {
+
+const Article = ({ title, text, count }) => {
+  const data = useStaticQuery(graphql`
+  {
+    allWpPost(filter: {categories: {nodes: {elemMatch: {name: {in:["Статьи", "news"]}}}}}, sort: {fields: date, order: DESC}, limit: 3) {
+      nodes {
+        id
+        author {
+          node {
+            name
+          }
+        }
+        date(formatString: "L", locale: "ru")
+        featuredImage {
+          node {
+            uri
+          }
+        }
+        title
+        excerpt
+        uri
+        tags {
+          nodes {
+            name
+          }
+        }
+      }
+    }
+  }
+  `)
+  console.log(data.allWpPost.nodes[count].featuredImage.node.uri)
+  const divStyle = {
+    backgroundImage: 'url(' + 'https://wp-server.bpm-cloud.by/' + data.allWpPost.nodes[count].featuredImage.node.uri + ')',
+    backgroundSize: '100%',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  }
+  
+  const tag = data.allWpPost.nodes[count].tags.nodes.length !== 0 ? data.allWpPost.nodes[count].tags.nodes[0].name : '#интересное'
   return (
     <div className={styles.wrapArticle}>
-      <div className={styles.BoxImg}>
-        <ButtonSmall grey className={styles.buttonImg}>
-          #новости
+      <div className={styles.BoxImg} style={divStyle}>
+        <ButtonSmall grey className={styles.buttonImg} displayNone>
+          {tag}
         </ButtonSmall>
       </div>
       <div className={styles.descArticle}>
-        <div className={styles.titleArticle}>{title}</div>
-        <div className={styles.textArticle}>{text}</div>
+        <div className={styles.titleArticle}>{data.allWpPost.nodes[count].title}</div>
+        <div className={styles.textArticle} dangerouslySetInnerHTML={{ __html: data.allWpPost.nodes[count].excerpt }}></div>
         <div className={styles.footerArticle}>
-          <div className={styles.avtor}>Автор:</div>
-          <div className={styles.date}>21.01.19</div>
-          <ButtonSmall red className={styles.buttonDetailed}>подробнее</ButtonSmall>
+          <div className={styles.avtor}>Автор: {data.allWpPost.nodes[count].author.node.name}</div>
+          <div className={styles.date}>{data.allWpPost.nodes[count].date}</div>
+          <Link to={`${data.allWpPost.nodes[count].uri}`}><ButtonSmall red className={styles.buttonDetailed}>подробнее</ButtonSmall></Link>
         </div>
       </div>
     </div>
@@ -56,7 +94,7 @@ const Articles = () => {
         </div>
         <div className={styles.Articles}>
           {(data || []).map((i, index) => (
-            <Article key={index} title={i.title} text={i.text} />
+            <Article key={index} title={i.title} text={i.text} count={index}/>
           ))}
         </div>
       </div>

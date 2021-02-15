@@ -19,9 +19,10 @@ const QuizThree = ({ handlerLine }) => {
     }
   }
   return (
-    <>
+    <div className={styles.form}>
       <div className={styles.formTitle}>Какая услуга Вас интересует?</div>
       <div className={styles.wrap}>
+        <div>
         <div className={styles.box} onClick={() => handler(1)}>
           <div
             className={classnames(styles.checkBox, {
@@ -78,6 +79,8 @@ const QuizThree = ({ handlerLine }) => {
             Разработка приложений
           </div>
         </div>
+        </div>
+        <div>
         <div className={styles.box} onClick={() => handler(5)}>
           <div
             className={classnames(styles.checkBox, {
@@ -134,6 +137,7 @@ const QuizThree = ({ handlerLine }) => {
             Другое
           </div>
         </div>
+        </div>
       </div>
       <ButtonQuiz
         activeButton={activeButton}
@@ -142,7 +146,7 @@ const QuizThree = ({ handlerLine }) => {
       >
         Далее
       </ButtonQuiz>
-    </>
+    </div>
   )
 }
 

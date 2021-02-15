@@ -4,27 +4,25 @@ import { useStaticQuery, graphql } from "gatsby"
 const ComponentName = () => {
   const data = useStaticQuery(graphql`
   {
-    allWpPost(filter: {categories: {nodes: {elemMatch: {name: {eq: "cases"}}}}}, sort: {order: DESC, fields: date}, limit: 8) {
+    allWpPost(filter: {categories: {nodes: {elemMatch: {name: {eq: "news"}}}}}, sort: {fields: date, order: DESC}, limit: 3) {
       nodes {
         id
-        uri
-        tags {
-          nodes {
+        author {
+          node {
             name
           }
         }
+        date
         featuredImage {
           node {
-            link
-            sourceUrl
-            id
             uri
           }
         }
-        title
-        categories {
+        slug
+        excerpt
+        uri
+        tags {
           nodes {
-            id
             name
           }
         }

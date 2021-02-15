@@ -11,7 +11,10 @@
   width: 60%;
   margin: 0 auto;
 }
-
+.form{
+  display: flex;
+  flex-direction: column;
+}
 .wrap {
   display: flex;
   justify-content: center;
@@ -75,7 +78,7 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.065em;
-  color: #fbfafa;
+  color: #fbfafa !important;
   display: flex;
   justify-content: center;
   align-items: center;

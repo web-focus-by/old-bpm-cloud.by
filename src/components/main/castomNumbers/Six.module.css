@@ -10,9 +10,15 @@
   position: absolute;
   top: 0px;
   bottom: 0px;
-  width: auto;
+  width: 500px;
 }
 
 .container:hover #elem {
   fill: var(--yellow-color);
+}
+
+@media(max-width:1440px){
+  .container{
+    width: 370px;
+  }
 }

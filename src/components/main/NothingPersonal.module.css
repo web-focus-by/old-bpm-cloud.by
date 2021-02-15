@@ -44,9 +44,6 @@
   .wrapper{
     padding: 0px 0px 173px 0px;
   }
-  .container{
-    padding-top: 100px;
-  }
   .title{
     font-size: 36px;
     line-height: 44px;
@@ -89,7 +86,7 @@
     width: 680px;
   }
 }
-@media(max-width:500px){
+@media(max-width:580px){
   .wrapper{
     height: auto;
     padding-bottom: 50px;

@@ -10,6 +10,10 @@
   color: #3c424a;
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+}
 .wrap {
   width: 80%;
   display: flex;
@@ -66,5 +70,5 @@
 }
 
 .button {
-  margin: 0 auto;
+  margin: 20px auto;
 }

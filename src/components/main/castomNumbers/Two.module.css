@@ -47,3 +47,9 @@
 .container:hover #recTwo {
   fill: var(--yellow-color);
 }
+
+@media(max-width:1440px){
+  .container{
+    width: 370px;
+  }
+}

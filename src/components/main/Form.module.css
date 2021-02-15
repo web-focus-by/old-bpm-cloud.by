@@ -1,6 +1,6 @@
 .wrapperFrom {
   width: 100%;
-  height: 710px;
+  height: auto;
   margin: 0 auto;
   background: #fbfafa;
   padding-top: 200px;
@@ -26,10 +26,12 @@
 .form {
   position: relative;
   min-width: 1200px;
-  height: 532px;
+  height: auto;
   /* margin: 0 auto; */
   background-color: #ffff;
   margin-top: 75px;
+  padding: 10px;
+  padding-bottom: 60px;
 }
 
 .boxLine {
@@ -138,7 +140,6 @@
   .wrapperFrom{
     justify-content: start;
     padding-top: 150px;
-    height: 386.25px;
   }
   .title{
     font-size: 36px;
@@ -159,7 +160,7 @@
 @media(max-width:950px){
   .wrapperFrom{
     padding-top: 130px;
-    height: 530px;
+    padding-bottom: 105px;
   }
   .title{
     width: 93%;

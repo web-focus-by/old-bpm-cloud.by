@@ -9,7 +9,11 @@
   padding-top: 60px;
   color: #3c424a;
 }
-
+.form{
+  display: flex;
+  flex-direction: column;
+  
+}
 .wrap {
   display: flex;
   flex-wrap: wrap;

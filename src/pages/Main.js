@@ -17,7 +17,6 @@ import styles from "./Main.module.css"
 const Main = () => {
   return (
     <div className={styles.wrapperMain}>
-{/*       <ComponentName /> */}
       <KeysBoxs />
       <OfferService />
       <AboutUs />
@@ -27,6 +26,7 @@ const Main = () => {
       <NothingPersonal />
       <Сontact />
       <Reviews />
+{/*       <ComponentName /> */}
       <Articles />
       <Feedback />
     </div>

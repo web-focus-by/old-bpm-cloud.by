@@ -1,5 +1,6 @@
 .boxRed {
   margin-top: 50px;
+  margin-right: 10px;
   position: relative;
   min-width: 236px;
   height: 236px;
@@ -21,7 +22,7 @@
     order: 1;
   }
 }
-@media(max-width:500px){
+@media(max-width:580px){
   .boxRed{
     order: 2;
     transform: scale(.67);

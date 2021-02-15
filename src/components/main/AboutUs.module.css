@@ -47,6 +47,11 @@
   margin-left: 29px;
 }
 
+@media (max-width: 1700px){
+  .description {
+    padding-right: 0;
+  }
+}
 @media (max-width: 1445px) {
   .wrapperAboutUs {
     height: auto;

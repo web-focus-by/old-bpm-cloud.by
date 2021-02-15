@@ -25,6 +25,7 @@ const QuizTwo = ({ handlerLine }) => {
         Укажите область деятельности пердприятия?
       </div>
       <div className={styles.wrap}>
+        <div>
         <div className={styles.box} onClick={() => handler(1)}>
           <div
             className={classnames(styles.checkBox, {
@@ -75,6 +76,9 @@ const QuizTwo = ({ handlerLine }) => {
             Образование
           </div>
         </div>
+        
+        </div>
+        <div>
         <div
           className={styles.box}
           className={styles.box}
@@ -129,6 +133,7 @@ const QuizTwo = ({ handlerLine }) => {
           >
             Другое
           </div>
+        </div>
         </div>
       </div>
       <ButtonQuiz

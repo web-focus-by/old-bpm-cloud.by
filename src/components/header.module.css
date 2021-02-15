@@ -64,7 +64,8 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
-  width: 63.2vw;
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
 }
 

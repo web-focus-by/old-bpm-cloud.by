@@ -20,7 +20,7 @@ const QuizFour = ({ handlerLine }) => {
   }
 
   return (
-    <>
+    <div className={styles.form}>
       <div className={styles.formTitle}>
         Был ли у Вас опыт сотрудничества с компаниями области
         интернет-маркетинга?
@@ -51,7 +51,7 @@ const QuizFour = ({ handlerLine }) => {
       >
         Далее
       </ButtonQuiz>
-    </>
+    </div>
   )
 }
 

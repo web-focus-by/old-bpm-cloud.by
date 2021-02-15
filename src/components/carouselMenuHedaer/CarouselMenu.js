@@ -10,13 +10,13 @@ import { Link } from "gatsby"
 import styles from "./CarouselMenu.module.css"
 
 const menuItems = [
-  { name: "SMM", utl:'about-page' },
-  { name: "Разработка сайтов", utl:'contact-page'  },
-  { name: "Seo", utl:'home-page' },
-  { name: "Главная", utl:'page-after-webhook' },
-  { name: "PPC", utl:'sample-page' },
-  { name: "Брендинг и дизайн", utl:'diz' },
-  { name: "Разработка приложений", utl:'therd-post' },
+  { name: "SMM", utl:'' },
+  { name: "Разработка сайтов", utl:''  },
+  { name: "Seo", utl:'' },
+  { name: "Главная", utl:'' },
+  { name: "PPC", utl:'' },
+  { name: "Брендинг и дизайн", utl:'' },
+  { name: "Разработка приложений", utl:'' },
 ]
 
 const CarouselMenu = ({ data = menuItems }) => {
