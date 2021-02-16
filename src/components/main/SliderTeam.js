@@ -40,7 +40,7 @@ const SliderTeam = ({ data = menuItems }) => {
     // touchMove: true,
     infinite: true,
     slidesToShow: 6,
-    slidesToScroll: 7,
+    slidesToScroll: 6,
     cssEase: "linear",
     // focusOnSelect: false,
     arrows: false,
@@ -49,17 +49,31 @@ const SliderTeam = ({ data = menuItems }) => {
 
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1445,
         settings: {
-          arrows: true,
-          centerMode: false,
+          slidesToShow: 5,
+          slidesToScroll: 5,
         },
       },
       {
-        breakpoint: 425,
+        breakpoint: 1050,
         settings: {
-          arrows: true,
-          centerMode: false,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -77,7 +91,7 @@ const SliderTeam = ({ data = menuItems }) => {
             <div key={index} className={styles.itemMenu}>
               <img className={styles.photo} src={item.photo} alt="" />
               <ShowDesc elem={true} job={item.job} name={item.name} />
-              <div className={styles.mask}></div>
+              {/* <div className={styles.mask}></div> */}
             </div>
           )
         })}

@@ -22,6 +22,11 @@
     order: 1;
   }
 }
+@media(max-width:730px){
+  .boxRed{
+    margin-left: 20px;
+  }
+}
 @media(max-width:580px){
   .boxRed{
     order: 2;

@@ -7,24 +7,24 @@
   z-index: 1;
 } */
 
-.slick-vertical .slick-slide {
+header .slick-vertical .slick-slide {
   height: 60px;
 }
 
-.slick-current {
+header  .slick-current {
   font-weight: 600;
   margin-left: -22px;
   font-size: 18px;
 }
 
-.slick-current > div > div > img {
+header .slick-current > div > div > img {
   display: none !important;
 }
-.slick-slide > div > div > img {
+header .slick-slide > div > div > img {
   padding-left: 1px;
 }
 
-.slick-slide {
+header .slick-slide {
   outline: none;
   letter-spacing: 0.065em;
   font-size: 18px;

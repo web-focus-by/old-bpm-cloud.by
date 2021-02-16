@@ -200,7 +200,11 @@
     width: 173px;
   }
 }
-
+@media(max-width:720px){
+  .button{
+    right: -345px;
+  }
+}
 @media(max-width:580px){
   .wrapper{
     padding-top: 41px;

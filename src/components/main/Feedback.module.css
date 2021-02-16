@@ -235,6 +235,11 @@
     height: 102px;
   }
 }
+@media(max-width:730px){
+  .input, .textarea, .button, .text{
+    width: 270px;
+  }
+}
 @media(max-width:580px){
   .wrapperFeedback{
     display: flex;

@@ -86,6 +86,17 @@
     width: 680px;
   }
 }
+@media(max-width:730px){
+  .text > p:nth-last-child(-n+2){
+    width: 480px;
+  }
+  .text{
+    width: 250px;
+  }
+  .photo{
+    margin-left: 0px;
+  }
+}
 @media(max-width:580px){
   .wrapper{
     height: auto;

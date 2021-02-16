@@ -47,8 +47,7 @@ const KeysBoxs = () => {
       {data.allWpPost.nodes.map((item) => {
         console.log(item.tags.nodes)
         const divStyle = {
-          backgroundImage: 'url(' + 'https://wp-server.bpm-cloud.by/' + item.featuredImage.node.uri + ')',
-          backgroundSize: '100%',
+          backgroundImage: `url(https://wp-server.bpm-cloud.by/${item.featuredImage.node.uri})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }

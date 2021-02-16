@@ -133,6 +133,17 @@
     margin-right: 27px;
   }
 }
+@media(max-width:730px){
+  .box{
+    width: auto;
+  }
+  .text{
+    width: 90%;
+  }
+  .button{
+    width: 90%;
+  }
+}
 @media(max-width:500px){
   .wrapForm{
     height: 368px;

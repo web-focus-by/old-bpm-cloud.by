@@ -53,8 +53,7 @@ const Article = ({ title, text, count }) => {
   `)
   console.log(data.allWpPost.nodes[count].featuredImage.node.uri)
   const divStyle = {
-    backgroundImage: 'url(' + 'https://wp-server.bpm-cloud.by/' + data.allWpPost.nodes[count].featuredImage.node.uri + ')',
-    backgroundSize: '100%',
+    backgroundImage: `url(https://wp-server.bpm-cloud.by/${data.allWpPost.nodes[count].featuredImage.node.uri})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   }
