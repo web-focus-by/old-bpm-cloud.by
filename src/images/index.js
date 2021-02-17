@@ -23,6 +23,7 @@ import BpmFooter from "./BpmFooter.svg"
 import circleMenu from "./circleMenu.svg"
 import Vector from "./Vector.svg"
 import burgerMenu from "./burgerMenusvg.svg"
+import readSpeed from './readSpeed.svg'
 
 export const images = {
   CloseMenuYellow,
@@ -50,4 +51,5 @@ export const images = {
   circleMenu,
   Vector,
   burgerMenu,
+  readSpeed,
 }

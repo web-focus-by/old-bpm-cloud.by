@@ -1,0 +1,24 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+
+    div{
+      padding: 8px 25px;
+      border: 1.5px solid #6A7380;
+      box-sizing: border-box;
+      border-radius: 40px;
+      margin-right: 20px;
+
+      span{
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.065em;
+        text-align: left;
+        color: #6A7380;
+      }
+    }
+}

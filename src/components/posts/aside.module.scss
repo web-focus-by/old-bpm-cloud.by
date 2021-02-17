@@ -1,0 +1,29 @@
+.wrapper{
+    width: 100%;
+    max-width: 323px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: sticky;
+    height: min-content;
+    top: 20px;
+}
+.title{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+    text-align: left;
+    color: #FA5C45;
+    margin-bottom: 30px;
+}
+.tagsArea{
+    margin-bottom: 40px;
+}
+.articleArea{
+    margin-bottom: 70px;
+}

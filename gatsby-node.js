@@ -75,7 +75,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   
-    const postTemplate = path.resolve(`./src/templates/post.js`)
+    const postTemplate = path.resolve(`./src/templates/post-tempate/post.js`)
     // We want to create a detailed page for each post node.
     // The path field stems from the original WordPress link
     // and we use it for the slug to preserve url structure.

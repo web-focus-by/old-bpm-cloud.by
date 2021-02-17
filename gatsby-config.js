@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,9 +29,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-wordpress-experimental",
+      resolve: "gatsby-source-wordpress",
       options:{
         url:`https://wp-server.bpm-cloud.by/graphql`, //  https://um2020.by/graphql https://wp-server.bpm-cloud.by/graphql
+        develop: {
+          nodeUpdateInterval: process.env.NODE_ENV === `development`? 3000 : 600000,
+        },
         }
     },
   ],
