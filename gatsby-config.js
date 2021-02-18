@@ -33,7 +33,7 @@ module.exports = {
       options:{
         url:`https://wp-server.bpm-cloud.by/graphql`, //  https://um2020.by/graphql https://wp-server.bpm-cloud.by/graphql
         develop: {
-          nodeUpdateInterval: process.env.NODE_ENV === `development`? 3000 : 600000,
+          nodeUpdateInterval:600000,
         },
         }
     },
