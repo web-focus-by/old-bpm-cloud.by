@@ -27,7 +27,7 @@ const ShareWithFriends = ({})=>{
     }]
     const socialNetworksLinks = presetsArr.map(item =>{
         return(
-            <div><Link to={item.url}><img src={item.imgSrc}></img></Link></div>
+            <div key={item.name}><Link to={item.url}><img src={item.imgSrc}></img></Link></div>
         )
     })
     return(

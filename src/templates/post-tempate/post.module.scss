@@ -84,6 +84,7 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 38px;
 }
 .postImage{
     max-width: 715px;
@@ -163,4 +164,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+.otherPostsArea{
+    margin-bottom: 200px;
 }

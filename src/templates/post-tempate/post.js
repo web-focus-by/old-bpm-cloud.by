@@ -10,6 +10,7 @@ import AuthorArea from "../../components/posts/authorArea"
 import ShareWithFriends from "../../components/posts/share"
 import AddCommentArea from "../../components/posts/addCommentArea"
 import ShowCommentArea from "../../components/posts/showCommentArea"
+import OtherPostsArea from "../../components/posts/otherPostsArea"
 import style from'./post.module.scss'
 import { images } from "../../images"
 
@@ -59,6 +60,9 @@ class Post extends Component {
           <div className={style.commentArea}>
             <AddCommentArea />
             <ShowCommentArea />
+          </div>
+          <div className={style.otherPostsArea}>
+            <OtherPostsArea />
           </div>
           </div>
       </Layout>

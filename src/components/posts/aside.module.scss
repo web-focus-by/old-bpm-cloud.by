@@ -24,6 +24,8 @@
 .tagsArea{
     margin-bottom: 40px;
 }
-.articleArea{
-    margin-bottom: 70px;
+.wrapper{
+    >div:nth-child(3){
+        margin-bottom: 70px;
+    } 
 }

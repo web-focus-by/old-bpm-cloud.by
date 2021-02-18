@@ -1,5 +1,11 @@
 @import url(../../fonts/stylesheet.css);
 
+header{
+  background: #FBFAFA;
+}
+main{
+  background: #FBFAFA;
+}
 .wrapper {
   max-width: 1920px;
   height: 777px;

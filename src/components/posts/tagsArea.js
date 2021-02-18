@@ -18,7 +18,7 @@ const TagsArea = ({tagsArr})=>{
     
     const TagsAreaContent = infoTegArr.slice(0, 5).map((tag, index)=>{
         return(
-            <Link to={tag.uri}><div key={tag.id}><span>{tag.name}</span></div></Link>
+            <Link to={tag.uri} key={index}><div key={tag.id}><span>{tag.name}</span></div></Link>
         )
     })
 

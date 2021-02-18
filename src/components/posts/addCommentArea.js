@@ -33,6 +33,7 @@ class AddCommentArea extends React.Component {
               value={this.state.firstName}
               onChange={this.handleInputChange}
               placeholder="Имя"
+              required 
             />
           </label>
           <label>
@@ -42,6 +43,7 @@ class AddCommentArea extends React.Component {
               value={this.state.lastName}
               onChange={this.handleInputChange}
               placeholder="E-mail"
+              required
             />
           </label>
           <label>
@@ -50,9 +52,10 @@ class AddCommentArea extends React.Component {
               value={this.state.comment}
               onChange={this.handleInputChange}
               placeholder="Добавьте комментарий..."
+              required
             />
           </label>
-          <button type="submit">Submit</button>
+          <button type="submit">отправить</button>
         </form>
       )
     }

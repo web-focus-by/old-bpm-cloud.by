@@ -6,7 +6,7 @@ const Tags = ({tagsArr})=>{
     const TagsArea = tagsArr.slice(0, 3).map((tag) => {
         let {name, uri, id} = tag
         return(
-            <Link to={uri}><div key={id}><span>{name}</span></div></Link>
+            <Link to={uri} key={id}><div><span>{name}</span></div></Link>
         )
     })
 
