@@ -24,6 +24,14 @@ import circleMenu from "./circleMenu.svg"
 import Vector from "./Vector.svg"
 import burgerMenu from "./burgerMenusvg.svg"
 import readSpeed from './readSpeed.svg'
+import telegram from './telegram.svg'
+import whatsapp from './whatsapp.svg'
+import viber from './viber.svg'
+import vk from './vk.svg'
+import shareLink from './shareLink.svg'
+import telegramSubscr from './telegramSubscr.svg'
+import instagramSubscr from './instagramSubscr.svg'
+import vkSubscr from './vkSubscr.svg'
 
 export const images = {
   CloseMenuYellow,
@@ -52,4 +60,13 @@ export const images = {
   Vector,
   burgerMenu,
   readSpeed,
+  telegram,
+  whatsapp,
+  viber,
+  vk,
+  shareLink,
+  telegramSubscr,
+  instagramSubscr,
+  vkSubscr,
+  
 }

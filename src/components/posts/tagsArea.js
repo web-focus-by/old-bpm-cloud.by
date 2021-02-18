@@ -4,18 +4,21 @@ import {Link} from 'gatsby'
 
 const TagsArea = ({tagsArr})=>{
     const tegArr = []
+    const infoTegArr = []
     console.log(tagsArr.posts)
     tagsArr.posts.nodes.map((item) => {
         item.tags.nodes.map((elem) =>{
             if(!tegArr.includes(elem.name)){
                 tegArr.push(elem.name)
+                infoTegArr.push(elem)
             }
         })
     })
+    console.log(infoTegArr)
     
-    const TagsAreaContent = tegArr.map((tag, index)=>{
+    const TagsAreaContent = infoTegArr.slice(0, 5).map((tag, index)=>{
         return(
-            <Link to={'/'}><div key={tag}><span>{tag}</span></div></Link>
+            <Link to={tag.uri}><div key={tag.id}><span>{tag.name}</span></div></Link>
         )
     })
 

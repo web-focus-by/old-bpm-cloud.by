@@ -19,6 +19,12 @@
         margin-bottom: 42px;
     }
 
+    
+}
+
+.post{
+    max-width: 715px;
+
     h2{
         font-family: Montserrat;
         font-size: 18px;
@@ -31,12 +37,6 @@
         margin-bottom: 20px;
         margin-top: 50px;
     }
-}
-
-
-.post{
-    max-width: 715px;
-
     li{
         margin-bottom: 15px;
         list-style: none;
@@ -112,4 +112,55 @@
     >div:last-child{
         color: #309195;
     }
+}
+.authorArea{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.subscribeArea{
+    background-color: #FFCC00;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 120px;
+    margin-bottom: 200px;
+    h2{
+        font-family: Montserrat;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 59px;
+        letter-spacing: 0.065em;
+        text-align: left;
+        color: #3C424A;
+        margin-bottom: 30px;
+    }
+    span{
+        display: block;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: uppercase;
+        color: #3C424A;
+        margin-bottom: 60px;
+    }
+    .iconArea{
+        img{
+            width: 68px;
+            height: 68px;
+            margin-right: 50px;
+        }
+    }
+}
+.commentArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }

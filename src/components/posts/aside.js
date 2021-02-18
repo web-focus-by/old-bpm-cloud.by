@@ -16,6 +16,8 @@ const Aside = ({})=>{
                 tags {
                   nodes {
                     name
+                    id
+                    uri
                   }
                 }
               }

@@ -1,0 +1,23 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.iconsArea{
+    display: flex;
+    flex-direction: row;
+    div{
+        margin-right: 30px;
+    }
+}
+.title{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    color: #6A7380;
+    margin-bottom: 30px;
+}
