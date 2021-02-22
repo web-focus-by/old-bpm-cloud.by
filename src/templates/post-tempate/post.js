@@ -108,17 +108,6 @@ export const postQuery = graphql`
         nodes {
           id
           content
-          author {
-            node {
-              name
-              ... on WpUser {
-                id
-                avatar {
-                  url
-                }
-              }
-            }
-          }
           date(formatString: "L", locale: "ru")
         }
       }
