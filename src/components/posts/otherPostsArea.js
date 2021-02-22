@@ -48,7 +48,7 @@ const OtherPostsArea = ()=>{
                 <Tags tagsArr={item.tags.nodes}/>
               </div>
                 <div className={style.textArea}>
-                    <h3 className={style.title}>{item.title}</h3>
+                    <Link  to={item.uri} ><h3 className={style.title}>{item.title}</h3></Link>
                     <div dangerouslySetInnerHTML={{ __html: item.excerpt.split('').slice(0, 110).join('')+'...' }} className={style.content}></div>
                     <div className={style.authorArea}>
                         <div>Автор: {item.author.node.name}</div>

@@ -21,3 +21,16 @@
     color: #6A7380;
     margin-bottom: 30px;
 }
+
+
+@media(max-width: 768px){
+    .iconsArea{
+        img{
+            width: 29px;
+            height: 29px;
+        }
+    }
+    .title{
+        font-size: 13.5px;
+    }
+}

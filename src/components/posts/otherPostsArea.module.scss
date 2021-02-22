@@ -7,9 +7,11 @@
     .itemWrapper{
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: space-between;
         max-width: 385px;
-        margin-right: 20px;
+        &:nth-child(2){
+            padding: 0 20px;
+        }
     }
     .title{
         font-family: Montserrat;
@@ -41,6 +43,7 @@
         min-height: 195px;
     }
     .postImage{
+        position: relative;
         background-repeat: no-repeat;
         background-size: cover;
         height: 266px;
@@ -64,4 +67,13 @@
     color: #6A7380;
 
 
+}
+
+@media(max-width :1020px){
+    .wrapper{
+        overflow-x: scroll;
+    }
+    .itemWrapper{
+        min-width: 342px;
+    }
 }

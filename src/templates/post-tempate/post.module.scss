@@ -88,7 +88,7 @@
 }
 .postImage{
     max-width: 715px;
-    height: 477px;
+    padding-bottom: 62.5%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,7 +164,88 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 200px;
 }
 .otherPostsArea{
     margin-bottom: 200px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+@media(max-width :1020px){
+    .wrapper{
+        max-width: 768px;
+    }
+    .subscribeArea{
+        padding: 90px 30px;
+        h2{
+            font-size: 36px;
+        }
+        span{
+            font-size: 14px;
+        }
+        .iconArea{
+            img{
+                width: 46px;
+                height: 46px;
+                margin-right: 40px;
+            }
+        }
+    }
+}
+@media(max-width: 800px){
+    .subscribeArea{
+        width: calc(100vw - 17px);
+        margin-left: -20px;
+    }
+}
+@media(max-width: 768px){
+    .commentArea{
+        flex-direction: column;
+        >form:first-child{
+            margin-bottom: 50px;
+        }
+    }
+    .post{
+        p{
+            font-size: 12px;
+        }
+        h2{
+            font-size: 14px;
+        }
+    }
+    .postInfo{
+        flex-direction: column;
+        >div:first-child{
+            margin-bottom: 40px;
+        }
+        .dateInfo{
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+    }
+    .authorArea{
+        flex-direction: column;
+        >div:first-child{
+            margin-bottom: 30px;
+        }
+    }
+    .subscribeArea{
+        padding: 50px 20px;
+        margin-bottom: 50px;
+        h2{
+            font-size: 30px;
+        }
+        span{
+            font-size: 14px;
+        }
+        .iconArea{
+            img{
+                width: 46px;
+                height: 46px;
+                margin-right: 40px;
+            }
+        }
+    }
 }

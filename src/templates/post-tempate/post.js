@@ -11,6 +11,7 @@ import ShareWithFriends from "../../components/posts/share"
 import AddCommentArea from "../../components/posts/addCommentArea"
 import ShowCommentArea from "../../components/posts/showCommentArea"
 import OtherPostsArea from "../../components/posts/otherPostsArea"
+import DecsrptionContent from "../../components/posts/decsrptionContent"
 import style from'./post.module.scss'
 import { images } from "../../images"
 
@@ -40,6 +41,7 @@ class Post extends Component {
               <div className={style.postImage} style={{backgroundImage:backgroundImageUrl}}>
                 <Tags tagsArr={post.tags.nodes}/>
               </div>
+              <DecsrptionContent content={post.content} />
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
               </div>
               <Aside />  
@@ -59,7 +61,7 @@ class Post extends Component {
           </div>
           <div className={style.commentArea}>
             <AddCommentArea />
-            <ShowCommentArea />
+            <ShowCommentArea comentArr={post.comments}/>
           </div>
           <div className={style.otherPostsArea}>
             <OtherPostsArea />
@@ -100,6 +102,24 @@ export const postQuery = graphql`
         breadcrumbs {
           text
           url
+        }
+      }
+      comments {
+        nodes {
+          id
+          content
+          author {
+            node {
+              name
+              ... on WpUser {
+                id
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+          date(formatString: "L", locale: "ru")
         }
       }
       author {
