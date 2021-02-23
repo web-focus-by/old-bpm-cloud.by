@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import classnames from "classnames"
-
+import {flatListToHierarchical} from "../utils/utils"
 import { images } from "../../images"
 import styles from "./menuHeader.module.css"
-
+import {Link, useStaticQuery, graphql} from 'gatsby'
 import MenuTwo from "./MenuTwo"
 
 const HeaderMenu = () => {
@@ -15,6 +15,29 @@ const HeaderMenu = () => {
     setShowOne(false)
     setActive(0)
   }
+
+  const getMenuData = useStaticQuery(graphql`{
+    allWpMenuItem(
+      sort: { fields: order, order: ASC }
+
+    ) {
+      nodes {
+        id
+        title: label
+        path
+        target
+        parent: parentId
+      }
+    }
+  }`)
+
+
+let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
+  idKey: "id",
+  childrenKey: "routes",
+  parentKey: "parent",
+})
+  console.log(tree)
 
   const handlerShowMenu = itemCase => {
     if (showOne === false) {

@@ -10,12 +10,14 @@ import Footer from "./Footer"
 import Header from "./header"
 import styles from "./layout.module.css"
 import Cirlce from "./main/Cirlce"
+import MenuHeader from "./newHeaderMenu/menu"
 import "./styles.css"
 
 const Layout = ({ children }) => {
   return (
     <div className={styles.wrap}>
       <Header />
+      <MenuHeader />
       <Cirlce />
       <main>{children}</main>
       <Footer />
