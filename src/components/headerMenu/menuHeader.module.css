@@ -11,6 +11,7 @@
   width: 585px;
   position: relative;
   z-index: 4;
+  visibility: visible;
 }
 
 .item {
@@ -38,10 +39,9 @@
 
 .wrapper {
   position: absolute;
-  left: -5px;
   top: 100px;
   background-color: #ffff;
-  height: 600px;
+  height: 710px;
   width: 1200px;
 }
 .burgerMenu{

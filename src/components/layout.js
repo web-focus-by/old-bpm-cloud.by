@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.wrap}>
       <Header />
-      <MenuHeader />
+{/*       <MenuHeader /> */}
       <Cirlce />
       <main>{children}</main>
       <Footer />

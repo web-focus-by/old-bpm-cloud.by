@@ -1,0 +1,35 @@
+.title{
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.065em;
+    text-align: left;
+    color: #F1F1F1;
+    margin-bottom: 40px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    
+}
+.secondMenuItems{
+    margin-right: 134px;
+}
+
+.listItem{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #979DA6;
+    margin-bottom: 20px;
+}
+
+.active{
+    color: #309195;
+}

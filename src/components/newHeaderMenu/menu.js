@@ -1,12 +1,35 @@
-import React from "react"
+import React, {useState} from "react"
 import classnames from "classnames"
 import {Link, useStaticQuery, graphql} from 'gatsby'
 import {flatListToHierarchical} from "../utils/utils"
 import styles from "./menu.module.scss"
+import SecondMenu from './secondMenu'
+import { images } from '../../images'
+import { element } from "prop-types"
 
 
 
-const MenuHeader = ({}) =>{
+
+const MenuHeader = () =>{
+
+  const [isShow, setShowItems] = useState(false)
+  const [active, setActive] = useState(0)
+  
+    const setShowActiveItems = (state, index)=>{
+      const element = document.querySelectorAll(`.${styles.itemWrap}`)[index]
+      const indicator = document.querySelector(`.${styles.indicator}`)
+
+      indicator.style.left = `${element.offsetLeft}px`
+      indicator.style.width = `${element.offsetWidth}px`
+
+
+      console.log('active: ' + active)
+      console.log('index: ' + index)
+      
+      setShowItems(state)
+      setActive(index)
+    }
+    
     const getMenuData = useStaticQuery(graphql`{
         allWpMenuItem(
           sort: { fields: order, order: ASC }
@@ -27,19 +50,27 @@ const MenuHeader = ({}) =>{
         childrenKey: "routes",
         parentKey: "parent",
       })
-      
-      function getMenuItemsInfo(arr){
-        console.log(arr.routes)
-          if(arr.routes){
-              getMenuItemsInfo(arr.routes)
-          }else{
-              console.log(arr.title)
-              return false
-          }
-      }
-      getMenuItemsInfo(menuItems)
+      menuItems.pop()
+
+
+    const upperItems = menuItems.map((elem, index) => {
       return(
-          <div>newMenu</div>
+        <div className={classnames(styles.itemWrap, { [styles.active]: active === index })} onMouseOver={() => setShowActiveItems(true, index)} key={elem.id}>
+          <div><Link to={elem.path}>{elem.title}</Link></div>
+        </div>
+      )
+    })
+      
+      return(
+        <div className={styles.wrapper}>
+          <div className={styles.labelWrapper}>
+          <div className={styles.indicator}></div>
+            {upperItems}
+          </div>
+          <div>
+            <SecondMenu itemIndex={active} contetnArr={menuItems} isShow={isShow}/>
+          </div>
+        </div>
       )
 
 }

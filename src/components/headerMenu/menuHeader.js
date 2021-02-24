@@ -4,6 +4,7 @@ import {flatListToHierarchical} from "../utils/utils"
 import { images } from "../../images"
 import styles from "./menuHeader.module.css"
 import {Link, useStaticQuery, graphql} from 'gatsby'
+import MenuHeader from '../newHeaderMenu/menu'
 import MenuTwo from "./MenuTwo"
 
 const HeaderMenu = () => {
@@ -12,6 +13,8 @@ const HeaderMenu = () => {
   const [active, setActive] = useState(0)
 
   const closeMenu = () => {
+    document.querySelector('header').style.background = '#FBFAFA';
+    document.querySelector('header>div:last-child').style.visibility = 'visible'
     setShowOne(false)
     setActive(0)
   }
@@ -40,11 +43,14 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
   console.log(tree)
 
   const handlerShowMenu = itemCase => {
+    document.querySelector('header').style.background = 'white';
+    document.querySelector('header>div:last-child').style.visibility = 'hidden'
     if (showOne === false) {
       setShowOne(!showOne)
       setActive(itemCase)
     }
     if (showOne === true) {
+
       return setActive(itemCase)
     }
   }
@@ -52,20 +58,12 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
   const getMenuOne = active => {
     switch (active) {
       case 1:
-        return <MenuTwo />
-      case 2:
-        return <div>2</div>
-      case 3:
-        return <div>3</div>
-      case 4:
-        return <div>4</div>
-      case 5:
-        return <div>5</div>
+        return <MenuHeader />
       default:
         return ""
     }
   }
-
+  
   return (
     <div className={styles.menu}>
       <div className={styles.burgerMenu}>
@@ -78,25 +76,25 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
         Услуги
       </div>
       <div
-        onMouseOver={() => handlerShowMenu(2)}
+
         className={classnames(styles.item, { [styles.active]: active === 2 })}
       >
         Кейсы
       </div>
       <div
-        onMouseOver={() => handlerShowMenu(3)}
+
         className={classnames(styles.item, { [styles.active]: active === 3 })}
       >
         Цены
       </div>
       <div
-        onMouseOver={() => handlerShowMenu(4)}
+
         className={classnames(styles.item, { [styles.active]: active === 4 })}
       >
         О нас
       </div>
       <div
-        onMouseOver={() => handlerShowMenu(5)}
+
         className={classnames(styles.item, { [styles.active]: active === 5 })}
       >
         Интересное
