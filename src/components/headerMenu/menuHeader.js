@@ -104,7 +104,7 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
       {showOne && (
         <div className={styles.wrapper}>
           {getMenuOne(active)}
-          <div className={styles.close}>
+          <div className={styles.close} onClick={closeMenu}>
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.335938" y="2.12109" width="3" height="33" transform="rotate(-45 0.335938 2.12109)" fill="#D1D9E3"/>
             <rect x="23.3359" y="0.121094" width="3" height="33" transform="rotate(45 23.3359 0.121094)" fill="#D1D9E3"/>
