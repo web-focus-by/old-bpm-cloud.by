@@ -10,7 +10,7 @@
   align-items: center;
   width: 585px;
   position: relative;
-  z-index: 4;
+  z-index: 100;
   visibility: visible;
 }
 
@@ -26,15 +26,16 @@
 .close {
   position: absolute;
   bottom: 10px;
-  right: 580px;
+  right: 50%;
+  transform: translate(-50%, 0);
 }
 
-.close img {
+.close svg {
   cursor: pointer;
 }
 
-.close img:hover {
-  background: url(../../images/CloseMenuYellow.png);
+.close  svg:hover rect{
+  fill: #FFCC00;
 }
 
 .wrapper {
@@ -42,7 +43,8 @@
   top: 100px;
   background-color: #ffff;
   height: 710px;
-  width: 1200px;
+  max-width: 1200px;
+  width: 70vw;
 }
 .burgerMenu{
   display: none;
@@ -67,6 +69,10 @@
   }
   .item {
     margin-top: 0px;
+  }
+  .wrapper{
+    left: -15vw;
+    width: 85vw;
   }
 }
 

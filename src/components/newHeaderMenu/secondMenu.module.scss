@@ -15,6 +15,7 @@
     
 }
 .secondMenuItems{
+    max-width: 308px;
     margin-right: 134px;
 }
 
@@ -32,4 +33,17 @@
 
 .active{
     color: #309195;
+}
+
+@media(max-width:1300px){
+    .secondMenuItems{
+        max-width: 308px;
+        margin-right: 50px;
+    }
+}
+@media(max-width:1100px){
+    .secondMenuItems{
+        max-width: 308px;
+        margin-right: 10px;
+    }
 }

@@ -8,11 +8,9 @@ import { images } from '../../images'
 import { element } from "prop-types"
 
 
-
-
 const MenuHeader = () =>{
 
-  const [isShow, setShowItems] = useState(false)
+  const [isShow, setShowItems] = useState(true)
   const [active, setActive] = useState(0)
   
     const setShowActiveItems = (state, index)=>{
@@ -21,10 +19,6 @@ const MenuHeader = () =>{
 
       indicator.style.left = `${element.offsetLeft}px`
       indicator.style.width = `${element.offsetWidth}px`
-
-
-      console.log('active: ' + active)
-      console.log('index: ' + index)
       
       setShowItems(state)
       setActive(index)

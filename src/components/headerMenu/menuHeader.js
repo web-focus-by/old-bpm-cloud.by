@@ -14,6 +14,7 @@ const HeaderMenu = () => {
 
   const closeMenu = () => {
     document.querySelector('header').style.background = '#FBFAFA';
+    document.querySelector('header').style.minHeight = 'auto';
     document.querySelector('header>div:last-child').style.visibility = 'visible'
     setShowOne(false)
     setActive(0)
@@ -41,9 +42,10 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
   parentKey: "parent",
 })
   console.log(tree)
-
+  
   const handlerShowMenu = itemCase => {
     document.querySelector('header').style.background = 'white';
+    document.querySelector('header').style.minHeight = '840px';
     document.querySelector('header>div:last-child').style.visibility = 'hidden'
     if (showOne === false) {
       setShowOne(!showOne)
@@ -103,12 +105,10 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
         <div className={styles.wrapper}>
           {getMenuOne(active)}
           <div className={styles.close}>
-            <img
-              onClick={closeMenu}
-              src={images.CloseMenuHeader}
-              alt=""
-              height="25.8px"
-            />
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.335938" y="2.12109" width="3" height="33" transform="rotate(-45 0.335938 2.12109)" fill="#D1D9E3"/>
+            <rect x="23.3359" y="0.121094" width="3" height="33" transform="rotate(45 23.3359 0.121094)" fill="#D1D9E3"/>
+          </svg>
           </div>
         </div>
       )}
