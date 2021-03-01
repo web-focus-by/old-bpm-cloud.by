@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import { images } from "../images"
 
@@ -11,7 +12,7 @@ const Header = () => {
   return (
     <header className={styles.wrapper}>
       <div className={styles.container}>
-        <img className={styles.BpmCloud} src={images.bpmCloud} alt="" />
+        <Link to={'/'}><img className={styles.BpmCloud} src={images.bpmCloud} alt="" /></Link>
         <div className={styles.box}>
           <HeaderMenu />
           <div className={styles.yellowButton}>

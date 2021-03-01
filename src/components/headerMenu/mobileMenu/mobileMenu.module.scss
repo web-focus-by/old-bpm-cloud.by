@@ -1,0 +1,42 @@
+.mobileMenuWrapper{
+    height: auto;
+    position: fixed;
+    background-color: #fff;
+    width: 100vw;
+    left: 0;
+    transition: all 1s;
+    transform: translateY(-200vh);
+    min-height: 900px;
+  }
+  
+  .showMobileMenu{
+    transform: translateY(-60%);
+  }
+
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 540px;
+    >div{
+        box-sizing: border-box;
+        padding: 25px 40px;
+    }
+  }
+
+  .goBackWrapper{
+    display: flex;
+    margin: 50px 40px;
+
+    .goBack{
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0.065em;
+        text-align: left;
+        color: #6A7380;
+      }
+  }

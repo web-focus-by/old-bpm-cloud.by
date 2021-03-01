@@ -1,0 +1,10 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 540px;
+    >div{
+        box-sizing: border-box;
+        padding: 25px 40px;
+    }
+}

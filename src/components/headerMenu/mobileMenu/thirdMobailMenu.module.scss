@@ -1,0 +1,50 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 540px;
+    >div{
+        box-sizing: border-box;
+        padding: 25px 40px;
+    }
+}
+.mobileMenuWrapper{
+    height: auto;
+    position: fixed;
+    background-color: #fff;
+    width: 100vw;
+    left: 0;
+    transition: all 1s;
+    transform: translateY(-235vh);
+    min-height: 900px;
+  }
+  
+  .showMobileMenu{
+    transform: translateY(-76%);
+  }
+  .goBackWrapper{
+    display: flex;
+    margin: 50px 40px;
+    
+    .goBack{
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0.065em;
+        text-align: left;
+        color: #6A7380;
+      }
+  }
+  .cardTitle{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.065em;
+    text-align: left;
+    color: #3C424A;
+    margin-left: 40px;
+  }

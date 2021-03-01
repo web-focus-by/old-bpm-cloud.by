@@ -1,15 +1,16 @@
 import React, { useState } from "react"
+import { useMediaQuery } from 'react-responsive'
 import classnames from "classnames"
 import {flatListToHierarchical} from "../utils/utils"
 import { images } from "../../images"
 import styles from "./menuHeader.module.css"
 import {Link, useStaticQuery, graphql} from 'gatsby'
 import MenuHeader from '../newHeaderMenu/menu'
-import MenuTwo from "./MenuTwo"
+import MobileMenu from './mobileMenu/mobileMenu'
 
 const HeaderMenu = () => {
   const [showOne, setShowOne] = useState(false)
-
+  const [isMobileMenuOpen, setShowMobileMenu] = useState(false)
   const [active, setActive] = useState(0)
 
   const closeMenu = () => {
@@ -18,7 +19,12 @@ const HeaderMenu = () => {
     document.querySelector('header>div:last-child').style.visibility = 'visible'
     setShowOne(false)
     setActive(0)
+    isMobileMenuOpen && setShowMobileMenu(false);
   }
+
+  const isDesckpotOrLaptop = useMediaQuery({
+    query: '(min-width: 1050px)'
+  })
 
   const getMenuData = useStaticQuery(graphql`{
     allWpMenuItem(
@@ -41,7 +47,7 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
   childrenKey: "routes",
   parentKey: "parent",
 })
-  console.log(tree)
+
   
   const handlerShowMenu = itemCase => {
     document.querySelector('header').style.background = 'white';
@@ -57,20 +63,8 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
     }
   }
 
-  const getMenuOne = active => {
-    switch (active) {
-      case 1:
-        return <MenuHeader />
-      default:
-        return ""
-    }
-  }
-  
-  return (
-    <div className={styles.menu}>
-      <div className={styles.burgerMenu}>
-        <img src={images.burgerMenu} alt="" />
-      </div>
+  const ShowMenu = ()=>{
+    return(<div className={styles.menuTitleWrapper}>
       <div
         onMouseOver={() => handlerShowMenu(1)}
         className={classnames(styles.item, { [styles.active]: active === 1 })}
@@ -101,6 +95,28 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
       >
         Интересное
       </div>
+    </div>)
+  }
+  const getMenuOne = active => {
+    switch (active) {
+      case 1:
+        return <MenuHeader />
+      default:
+        return ""
+    }
+  }
+  
+  return (
+    <div className={styles.menu}>
+      <div className={styles.burgerMenu} onMouseDown={() => setShowMobileMenu(!isMobileMenuOpen)}>
+        <img src={images.burgerMenu} alt="" />
+      </div>
+      {isDesckpotOrLaptop && <ShowMenu />}
+      {!isDesckpotOrLaptop && (
+        <div className={classnames(styles.mobileMenuWrapper, {[styles.showMobileMenu]: isMobileMenuOpen})}>
+          <MobileMenu parantState = {isMobileMenuOpen} />
+        </div>
+      )}
       {showOne && (
         <div className={styles.wrapper}>
           {getMenuOne(active)}
