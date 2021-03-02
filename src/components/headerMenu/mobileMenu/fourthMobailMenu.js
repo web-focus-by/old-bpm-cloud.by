@@ -4,12 +4,6 @@ import classnames from 'classnames'
 import {Link} from 'gatsby'
 
 const FourtMobailMenu = ({items})=>{
-    console.log(items)
-    if(items.routes.length>16){
-        document.querySelectorAll(`.${style.list}>div`).forEach(elem =>{
-            elem.style.padding = '18px 40px';
-        })
-    }
     const renderItems = items.routes.map((elem, i) => {
         let isSmallCountItems = true;
         if(items.routes.length>16){
