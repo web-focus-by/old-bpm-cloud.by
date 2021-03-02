@@ -111,7 +111,7 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
       <div className={styles.burgerMenu} onMouseDown={() => setShowMobileMenu(!isMobileMenuOpen)}>
         <img src={images.burgerMenu} alt="" />
       </div>
-      {isDesckpotOrLaptop && <ShowMenu />}
+      <ShowMenu />
       {!isDesckpotOrLaptop && (
         <div className={classnames(styles.mobileMenuWrapper, {[styles.showMobileMenu]: isMobileMenuOpen})}>
           <MobileMenu parantState = {isMobileMenuOpen} />

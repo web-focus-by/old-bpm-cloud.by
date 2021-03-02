@@ -20,7 +20,7 @@ const SecondMobileMenu = ({items})=>{
                 <div className={style.goBackWrapper}>
                     <div>
                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.17969 1L2.00049 8.1792L9.17969 15.3584" stroke="#6A7380" stroke-width="1.5"/>
+                            <path d="M9.17969 1L2.00049 8.1792L9.17969 15.3584" stroke="#6A7380" strokeWidth="1.5"/>
                         </svg>
                     </div>
                     <div onMouseDown={() => ShowThirdItems(!isShowThirdItems)} className={style.goBack}>{items[active].title}</div>
