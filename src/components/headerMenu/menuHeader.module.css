@@ -48,6 +48,7 @@
 }
 .burgerMenu{
   display: none;
+  padding-left: 20px;
 }
 .menuTitleWrapper{
   display: flex;

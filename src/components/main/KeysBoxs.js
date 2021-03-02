@@ -45,7 +45,6 @@ const KeysBoxs = () => {
   return (
     <div className={styles.wrapperKeys}>
       {data.allWpPost.nodes.map((item) => {
-        console.log(item.tags.nodes)
         const divStyle = {
           backgroundImage: `url(${item.featuredImage.node.sourceUrl})`, //sourceUrl url(https://wp-server.bpm-cloud.by/${item.featuredImage.node.uri})
           backgroundRepeat: 'no-repeat',

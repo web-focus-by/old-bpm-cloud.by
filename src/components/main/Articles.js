@@ -52,7 +52,6 @@ const Article = ({ title, text, count }) => {
     }
   }
   `)
-  console.log(data.allWpPost.nodes[count].featuredImage.node.uri)
   const divStyle = {
     backgroundImage: `url(${data.allWpPost.nodes[count].featuredImage.node.sourceUrl})`, // url(https://wp-server.bpm-cloud.by/${data.allWpPost.nodes[count].featuredImage.node.uri})
     backgroundRepeat: 'no-repeat',
