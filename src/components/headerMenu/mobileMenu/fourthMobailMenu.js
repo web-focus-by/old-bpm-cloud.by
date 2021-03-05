@@ -14,7 +14,7 @@ const FourtMobailMenu = ({items})=>{
         )
     })
     return(
-        <div className={style.wrapper} className={style.list}>
+        <div className={classnames(style.list, style.wrapper)}>
             {renderItems}
         </div>
     )

@@ -50,3 +50,13 @@
       color: #6A7380;
     }
 }
+
+@media(max-width:500px){
+  .mobileMenuWrapper{
+    transform: translateY(-220%);
+  }
+  .showMobileMenu{
+    transform: translateY(-72%);
+  }
+  
+}

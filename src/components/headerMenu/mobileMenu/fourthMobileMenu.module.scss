@@ -12,3 +12,19 @@
 .smallPadding{
     padding: 18px 40px !important;
 }
+
+@media(max-width:500px){
+    .list{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        >div{
+            box-sizing: border-box;
+            padding: 10px 40px;
+        }
+    }
+
+    .smallPadding{
+        padding: 10px 40px !important;
+    }
+  }

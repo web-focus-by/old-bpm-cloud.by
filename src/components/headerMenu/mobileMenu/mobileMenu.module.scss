@@ -40,3 +40,12 @@
         color: #6A7380;
       }
   }
+  @media(max-width:500px){
+    .mobileMenuWrapper{
+      transform: translateY(-210%);
+    }
+    .showMobileMenu{
+      transform: translateY(-60%);
+    }
+    
+  }
