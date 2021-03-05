@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 import classnames from "classnames"
 import {flatListToHierarchical} from "../utils/utils"
 import { images } from "../../images"
-import styles from "./menuHeader.module.css"
+import styles from "./menuHeader.module.scss"
 import {Link, useStaticQuery, graphql} from 'gatsby'
 import MenuHeader from '../newHeaderMenu/menu'
 import MobileMenu from './mobileMenu/mobileMenu'
@@ -109,11 +109,12 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
   return (
     <div className={styles.menu}>
       <div className={styles.burgerMenu} onMouseDown={() => setShowMobileMenu(!isMobileMenuOpen)}>
-        <img src={images.burgerMenu} alt="" />
+        {/* <img src={images.burgerMenu} alt="" /> */}
       </div>
       <ShowMenu />
       {!isDesckpotOrLaptop && (
         <div className={classnames(styles.mobileMenuWrapper, {[styles.showMobileMenu]: isMobileMenuOpen})}>
+          {showOne && closeMenu()}
           <MobileMenu parantState = {isMobileMenuOpen} />
         </div>
       )}

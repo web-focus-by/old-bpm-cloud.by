@@ -49,7 +49,37 @@
 .burgerMenu{
   display: none;
   padding-left: 20px;
+  height: 30px;
+  width: 20px;
+
+  &:before{
+    content: '';
+    box-shadow: 0 6px #93cce6,0 12px #93cce6;
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #93cce6;
+    top: 30%;
+    left: 25%;
+    border-radius: 10px;
+    transition: all .4s linear;
+
+    &:hover:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: #93cce6;
+      top: 44%;
+      left: 25%;
+      border-radius: 10px;
+      transform: rotate(-45deg);
+      box-shadow: none;
+  
+  }
 }
+}
+
 .menuTitleWrapper{
   display: flex;
   justify-content: space-between;
