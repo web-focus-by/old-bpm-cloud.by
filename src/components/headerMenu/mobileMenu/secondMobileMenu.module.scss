@@ -34,6 +34,7 @@
   color: #3C424A;
   margin-left: 40px;
   padding-bottom: 25px;
+  padding-right: 20px;
 }
 .goBackWrapper{
   display: flex;
@@ -55,8 +56,15 @@
   .mobileMenuWrapper{
     transform: translateY(-220%);
   }
-  .showMobileMenu{
-    transform: translateY(-72%);
+    .showMobileMenu{
+    transform: translateY(0);
+    bottom: 0;
+    min-height: auto;
+    top: 0;
+    overflow: auto;
   }
-  
+    .list{
+      height: auto;
+      flex-wrap: unset;
+    } 
 }

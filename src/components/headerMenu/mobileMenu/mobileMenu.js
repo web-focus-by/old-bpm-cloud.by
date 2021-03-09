@@ -34,8 +34,8 @@ const MobileMenu = ({parantState})=>{
 
 
     return(
-        <div className={style.wrapper}>
-            <div className={style.list}>
+        <div className={style.relative}>
+          <div className={style.list}>
                 <div className={style.listItem} onMouseDown={() => ShowSecondItems(!isShowSecondItems)}>Услуги</div>
                 <div>Кейсы</div>
                 <div>Цены</div>
@@ -55,7 +55,7 @@ const MobileMenu = ({parantState})=>{
               </div>
               <SecondMobileMenu items={menuItems}/>
             </div>
-        </div>
+          </div>
     )
 }
 

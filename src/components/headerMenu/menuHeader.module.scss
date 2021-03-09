@@ -50,34 +50,53 @@
   display: none;
   padding-left: 20px;
   height: 30px;
-  width: 20px;
+  width: 50px;
 
-  &:before{
+  &::before{
     content: '';
-    box-shadow: 0 6px #93cce6,0 12px #93cce6;
     position: absolute;
-    width: 50%;
+    width: 26px;
+    top:50%;
     height: 3px;
-    background: #93cce6;
-    top: 30%;
-    left: 25%;
+    background: #3C424A;
     border-radius: 10px;
     transition: all .4s linear;
-
-    &:hover:after {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 3px;
-      background: #93cce6;
-      top: 44%;
-      left: 25%;
-      border-radius: 10px;
-      transform: rotate(-45deg);
-      box-shadow: none;
-  
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    width: 26px;
+    top:50%;
+    margin-top: 5px;
+    height: 3px;
+    background: #3C424A;
+    border-radius: 10px;
+    transition: all .4s linear;
   }
 }
+
+.burgerMenu.burgerMenuIsOpen{
+  &:before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    background: #3C424A;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    margin: 0;
+    background: #3C424A;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
 }
 
 .menuTitleWrapper{
@@ -162,7 +181,14 @@
 
 @media(max-width:500px){
     .showMobileMenu{
-    transform: translateY(52%);
+    transform: translateY(0);
+    bottom: 0;
+    min-height: auto;
+    top: 50px;
+    overflow: auto;
   }
-  
+    .list{
+      height: auto;
+      flex-wrap: unset;
+    } 
 }

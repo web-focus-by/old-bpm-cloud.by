@@ -13,6 +13,9 @@
     transform: translateY(-60%);
   }
 
+  .relative{
+    position: relative;
+  }
 
   .list{
     display: flex;
@@ -49,3 +52,20 @@
     }
     
   }
+  @media(max-width:500px){
+    .mobileMenuWrapper{
+      transform: translateY(-200%);
+      min-height: auto;
+    }
+    .showMobileMenu{
+      transform: translateY(0);
+      bottom: 0;
+      min-height: auto;
+      top: 0;
+      overflow: auto;
+    }
+    .list{
+      height: auto;
+      flex-wrap: unset;
+    } 
+}

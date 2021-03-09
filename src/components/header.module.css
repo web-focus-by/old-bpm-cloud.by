@@ -248,6 +248,8 @@ main{
     max-width: 90%;
     background-color: white;
     padding: 0 5%;
+    position: fixed;
+    z-index: 1000000;
   }
   .wrapper{
     background-color: #fbfafa;
@@ -260,7 +262,7 @@ main{
     align-items: center;
     padding-left: 0px;
     padding-bottom: 53px;
-    padding-top: 40px;
+    padding-top: 90px;
   }
   .box{
     width: auto;

@@ -108,7 +108,7 @@ let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
   
   return (
     <div className={styles.menu}>
-      <div className={styles.burgerMenu} onMouseDown={() => setShowMobileMenu(!isMobileMenuOpen)}>
+      <div className={classnames(styles.burgerMenu, {[styles.burgerMenuIsOpen]: isMobileMenuOpen})} onMouseDown={() => setShowMobileMenu(!isMobileMenuOpen)}>
         {/* <img src={images.burgerMenu} alt="" /> */}
       </div>
       <ShowMenu />
