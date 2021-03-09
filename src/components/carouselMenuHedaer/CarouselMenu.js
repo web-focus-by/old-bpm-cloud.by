@@ -20,8 +20,8 @@ const menuItems = [
   { name: "Разработка приложений", url:'/razrabotka-prilozhenij/' },
 ]
 
-const CarouselMenu = ({ data = menuItems }, {item}) => {
-  const [currentItem, setCurrentItem] = useState(item)
+const CarouselMenu = ({ data = menuItems }) => {
+  const [currentItem, setCurrentItem] = useState(0)
   console.log(currentItem)
   const settings = {
     centerMode: true,
