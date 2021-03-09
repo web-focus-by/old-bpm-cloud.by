@@ -5,7 +5,6 @@ import {Link} from 'gatsby'
 const TagsArea = ({tagsArr})=>{
     const tegArr = []
     const infoTegArr = []
-    console.log(tagsArr.posts)
     tagsArr.posts.nodes.map((item) => {
         item.tags.nodes.map((elem) =>{
             if(!tegArr.includes(elem.name)){
@@ -13,9 +12,7 @@ const TagsArea = ({tagsArr})=>{
                 infoTegArr.push(elem)
             }
         })
-    })
-    console.log(infoTegArr)
-    
+    })    
     const TagsAreaContent = infoTegArr.slice(0, 5).map((tag, index)=>{
         return(
             <Link to={tag.uri} key={index}><div key={tag.id}><span>{tag.name}</span></div></Link>

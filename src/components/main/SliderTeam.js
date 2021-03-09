@@ -40,7 +40,7 @@ const SliderTeam = ({ data = menuItems }) => {
     // touchMove: true,
     infinite: true,
     slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToScroll: 1,
     cssEase: "linear",
     // focusOnSelect: false,
     arrows: false,
@@ -52,21 +52,21 @@ const SliderTeam = ({ data = menuItems }) => {
         breakpoint: 1445,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 5,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1050,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 700,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         },
       },
       {

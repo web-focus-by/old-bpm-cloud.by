@@ -4,7 +4,6 @@ import {Link} from 'gatsby'
 
 
 const AuthorArea =({authorInfo})=>{
-    console.log(authorInfo)
     return(
         <div className={style.wrapper}>
             <div className={style.title}>Автор Статьи</div>

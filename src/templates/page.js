@@ -6,7 +6,6 @@
  class PageTemplate extends Component {
     render() {
       const StaticPage = this.props.data.wpPage
-      console.log(StaticPage)
       return (
         <Layout>
             <div>

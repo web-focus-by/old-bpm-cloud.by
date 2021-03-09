@@ -7,7 +7,6 @@ import {Link} from 'gatsby'
 const ThirdMobailMenu = ({items})=>{
     const [active, setActive] = useState(0)
     const [isShowFourtItems, ShowFourtItems] = useState(false)
-    console.log(items)
     const renderItems = items.routes.map((elem, i) => {
         const childLength = elem.routes.length > 0;
         const renerContent = childLength ? <div key={elem.id} onMouseDown={() => setActive(i)}>{elem.title}</div> : <div key={elem.id}><Link to={elem.path}>{elem.title}</Link></div>;

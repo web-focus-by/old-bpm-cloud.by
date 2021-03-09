@@ -54,10 +54,9 @@
 
 .arrow {
   position: absolute;
-  top: 50%; /* 3 */
-  transform: translate(0, -50%); /* 4 */
+  top: 50%; 
+  transform: translate(0, -50%); 
   left: -10px;
-  /* border-right: 20px solid #ffffff; */
   z-index: 2;
   background-color: #ffffff;
 }

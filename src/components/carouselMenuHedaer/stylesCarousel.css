@@ -39,8 +39,8 @@ header .slick-slide {
     line-height: 17px;
     height: 51.5px;
   }
-  header .slick-track {
-    transform: translate3d(0px, -202px, 0px) !important;
+  header .slick-slider .slick-track, .slick-slider .slick-list {
+      transform: translate3d(0, 13px, 0);
   }
 }
 
@@ -50,9 +50,9 @@ header .slick-slide {
     height: 221.89px !important;
     box-sizing: border-box;
   }
-  header .slick-track {
-    transform: translate3d(0px, -224px, 0px) !important;
-  }
+  header .slick-slider .slick-track, .slick-slider .slick-list {
+    transform: translate3d(0, 13px, 0);
+}
   header .slick-vertical .slick-slide {
     font-size: 10.5px;
     line-height: 13px;

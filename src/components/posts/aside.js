@@ -27,7 +27,6 @@ const Aside = ({})=>{
       }
       
   `)
-  console.log(data)
     return(
         <aside className={style.wrapper}>
             <div className={style.title}>Статьи</div>

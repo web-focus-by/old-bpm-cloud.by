@@ -7,7 +7,6 @@ import ThirdMobailMenu from './thirdMobailMenu'
 const SecondMobileMenu = ({items})=>{
     const [isShowThirdItems, ShowThirdItems] = useState(false)
     const [active, setActive] = useState(0)
-    console.log(items)
     const renderItems = items.map((elem, i) => {
         return(
             <div key={elem.id} onMouseDown={() => setActive(i)}>{elem.title}</div>
