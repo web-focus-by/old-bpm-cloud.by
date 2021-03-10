@@ -3,7 +3,7 @@ import React from "react"
 import { images } from "../images"
 
 import { Button } from "./buttons"
-import CarouselMenu from "./carouselMenuHedaer/CarouselMenu"
+import ScrolMenuHeder from "./scrolMenuHeder/scrolMenuHeder"
 import styles from "./header.module.css"
 
 import HeaderMenu from "./headerMenu/menuHeader"
@@ -27,7 +27,7 @@ const Header = () => {
             Реально работающий интернет-маркетинг
           </div>
         </div>
-        <CarouselMenu />
+        <ScrolMenuHeder />
       </div>
     </header>
   )
