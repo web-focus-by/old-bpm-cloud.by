@@ -2,9 +2,10 @@ import React, {useState} from "react"
 import style from'./scrolMenuHeder.module.scss'
 import { images } from "../../images"
 import ScrollContainer from 'react-indiana-drag-scroll'
+import classnames from "classnames"
 import InfiniteScroll from 'react-infinite-scroll-component'
 import {Link} from 'gatsby'
-import { doc } from "prettier"
+
 
 const menuItems = [
     { name: "SMM", url:'/smm/' },
@@ -26,24 +27,21 @@ const menuItems = [
 const ScrolMenuHeder = ()=>{
     const [arr, setArr] = useState(menuItems)
     const [isClick, setClick] = useState(false)
+    const [activeItem, setActiveItem] = useState(3)
     const items = arr.map((elem, index) =>{
         return(
-            <div key={index} className={style.listItem}><Link to={elem.url}><img src={images.circleMenu} alt="" /><span>{elem.name}</span></Link></div>
+            <div key={index} className={classnames(style.listItem, {[style.active]: index == activeItem})}><Link to={elem.url}><img src={images.circleMenu} alt="" /><span>{elem.name}</span></Link></div>
         )
     })
-
-    let _temp = false;
-    let some = 0;
     function setStyleInItems (args){
         document.querySelector(`.${style.scrollContainer}`).style.scrollSnapType = 'y mandatory';
             document.querySelectorAll(`.${style.listItem}`).forEach(elem =>{
-                elem.classList.remove(`${style.active}`)
                 elem.style.scrollSnapAlign = 'center'
             })
+
             let height = document.querySelector(`.${style.listItem}`).clientHeight    
-            document.querySelectorAll(`.${style.listItem}`)[Math.round(args[1]/height)+3].classList.add(`${style.active}`)
-            some++
-/*             console.log(some) */
+            setActiveItem(Math.round(args[1]/height)+3)
+
             if(args[3] - args[1] < 600){
                 getMoreData()
             }
@@ -54,21 +52,22 @@ const ScrolMenuHeder = ()=>{
             document.querySelectorAll(`.${style.listItem}`).forEach(elem =>{
                 elem.style.scrollSnapAlign = ''
             })
-            some--
-/*             console.log(some) */
-
     }
+
     function getMoreData(){
         setArr(arr.concat(menuItems))
     }
+
     return(
         <div className={style.wrapper}>
+            <div className={style.colorTop}></div>
             <div className={style.arrow}>
                 <img src={images.Vector} alt="" />
             </div>
-            <ScrollContainer className={style.scrollContainer} hideScrollbars={false} onClick={() => setClick(true)} onEndScroll={(...args) => {setStyleInItems(args)}} onStartScroll={(...args) => {removeStyleInItems()}}>
+            <ScrollContainer className={style.scrollContainer} hideScrollbars={true} onClick={() => setClick(true)} onEndScroll={(...args) => {setStyleInItems(args)}} onStartScroll={(...args) => {removeStyleInItems()}}>
                    {items}
             </ScrollContainer>
+            <div className={style.colorBottom}></div>
         </div>
     )
 }
