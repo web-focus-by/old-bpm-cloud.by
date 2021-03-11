@@ -1,7 +1,7 @@
 import React from "react"
 import classnames from "classnames"
 import { ButtonGreen, ButtonSmall } from "../buttons"
-import styles from "./KeysBoxs.module.css"
+import styles from "./KeysBoxs.module.scss"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 function tagsArea(arr){
@@ -47,30 +47,38 @@ const KeysBoxs = () => {
       {data.allWpPost.nodes.map((item) => {
         const divStyle = {
           backgroundImage: `url(${item.featuredImage.node.sourceUrl})`, //sourceUrl url(https://wp-server.bpm-cloud.by/${item.featuredImage.node.uri})
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
         }
         return (
 
           <div
             key={item.id}
             className={classnames(styles.box)}
-            style={divStyle}
           >
-          <Link to={`${item.uri}`}>
-            <div className={styles.title}>Кейсы</div>
             <div
-              className={classnames(styles.nameKeys)}
-            >
-              {item.title}
-            </div>
-            <ButtonSmall
-              grey
-              className={classnames(styles.button)}
-            >
-              {item.tags.nodes[0].name}
-            </ButtonSmall>
-            </Link>
+              className={styles.caseBgImg}
+              style={divStyle}></div>
+            <div className={styles.title}>Кейсы</div>
+              <div
+                className={classnames(styles.nameKeys)}
+              >
+                {item.title}
+              </div>
+              <ButtonSmall
+                grey
+                className={classnames(styles.button)}
+              >
+                {item.tags.nodes[0].name}
+              </ButtonSmall>
+              <div className={styles.linkWrapper}>
+                <Link to={`${item.uri}`}>
+                  <div className={styles.linkArrowWrapper}>
+                    <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.0469 1.7002L53.0469 28.7002L26.0469 55.7002" stroke="white" strokeWidth="3"/>
+                        <path d="M52.0469 28.7002L0.0468764 28.7002" stroke="white" strokeWidth="3"/>
+                    </svg>
+                  </div>
+                </Link>
+              </div>
           </div>
           
         )

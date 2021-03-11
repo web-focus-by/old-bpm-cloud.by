@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 import styles from "./SliderTeam.module.css"
+import { func } from "prop-types"
 
 const menuItems = [
   { photo: images.anastasiy, name: "Анастасия", job: "Project-менеджер" },
@@ -18,23 +19,15 @@ const menuItems = [
   { photo: images.y, name: "Саша", job: "Веб-дизайнер" },
   { photo: images.yriy, name: "Юрий", job: "CEO" },
 ]
-const ShowDesc = ({ name, job, elem }) => {
-  return (
-    <div
-      className={classnames(styles.descPhoto, {
-        [styles.active]: elem,
-      })}
-    >
-      <div className={styles.name}>{name}</div>
-      <div className={styles.job}>{job}</div>
-    </div>
-  )
-}
+
 
 const SliderTeam = ({ data = menuItems }) => {
+  const [isRight, setIsRight] = useState(false)
+  const [isLeft, setIsLeft] = useState(false)
+
   const settings = {
     speed: 5000,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 0,
     centerMode: true,
     // touchMove: true,
@@ -79,6 +72,30 @@ const SliderTeam = ({ data = menuItems }) => {
     ],
   }
 
+  const ShowDesc = ({ name, job, elem }) => {
+    return (
+      <div
+        className={classnames(styles.descPhoto, {
+          [styles.active]: elem,
+        },{
+          [styles.isRight]: isRight,
+        },{
+          [styles.isLeft]: isLeft,
+        })}
+      >
+        <div className={styles.name}>{name}</div>
+        <div className={styles.job}>{job}</div>
+      </div>
+    )
+  }
+
+
+  function getSlidePosition(arg){
+    let isPart = document.documentElement.clientWidth/arg[0].clientX > 2? false : true;
+    setIsRight(isPart)
+    setIsLeft(!isPart)
+  }
+
   return (
     <div className={styles.wrapperSliderTeam}>
       <div className={styles.title}>
@@ -89,8 +106,8 @@ const SliderTeam = ({ data = menuItems }) => {
         {(data || []).map((item, index) => {
           return (
             <div key={index} className={styles.itemMenu}>
-              <img className={styles.photo} src={item.photo} alt="" />
-              <ShowDesc elem={true} job={item.job} name={item.name} />
+              <img className={styles.photo} src={item.photo} alt="" onMouseOver={(...arg) => {getSlidePosition(arg)}}/>
+              <ShowDesc elem={true} job={item.job} name={item.name}/>
               {/* <div className={styles.mask}></div> */}
             </div>
           )

@@ -1,3 +1,5 @@
+$hoverAnimationTime: .8s;
+
 .wrapperKeys {
   display: flex;
   flex-direction: row;
@@ -28,7 +30,7 @@
     z-index: 10;
 }
 
-.box::after{
+/* .box::after{
   position: absolute;
   content: '';
   width: 100%;
@@ -42,12 +44,75 @@
 .box:hover::after{
   opacity: 1;
 }
-
+ */
 .boxLast {
   position: relative;
   width: 33.333%;
   background-color: var(--yellow-color);
   color: #ffffff;
+}
+.box:hover{
+  .caseBgImg{
+    border: 19px solid #FFCC00;
+  }
+  .linkWrapper{
+    opacity: 1;
+    svg{
+      animation-name: rotate;
+      animation-duration: 4s;
+      animation-timing-function: ease;
+    }
+  }
+  .button{
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(1800deg);
+  }
+}
+
+
+.caseBgImg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: all $hoverAnimationTime;
+  box-sizing: border-box;
+  border-color: #FFCC00;
+}
+
+
+.linkWrapper{
+  opacity: 0;
+  transition: opacity $hoverAnimationTime;
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+.linkArrowWrapper{
+  position: relative;
+  width: 81.09px;
+  height: 81.09px;
+  background: #309195;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.linkArrowWrapper > svg{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .boxgrey {
@@ -57,12 +122,15 @@
   color: #ffffff;
 }
 
-.button {
+.button{
   position: absolute;
+  transition: all $hoverAnimationTime;
   bottom: 90px;
   left: 96px;
 }
-
+.button:not(.lastButton) {
+  background: transparent;
+}
 .buttonGrey {
   position: absolute;
   bottom: 92px;
@@ -81,6 +149,7 @@
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.065em;
+  color: #FFFFFF;
 }
 
 .nameKeys {
@@ -93,7 +162,7 @@
   line-height: 22px;
   letter-spacing: 0.065em;
   text-transform: uppercase;
-  color: #3c424a;
+  color: #FFFFFF;
 }
 
 .nameKeysGrey {
@@ -138,7 +207,7 @@
     line-height: 17px;
   }
   .button,
-  .buttonGrey {
+  .buttonGrey{
     position: absolute;
     bottom: 69px;
     left: 76px;
@@ -208,6 +277,18 @@
     width: 134px;
     font-size: 9px;
     line-height: 11px;
+  }
+  .linkWrapper{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    .linkArrowWrapper{
+      width: 100%;
+      height: 100%;
+      border-radius: unset;
+      background: transparent;
+    }
   }
 }
 @media(max-width:950px){

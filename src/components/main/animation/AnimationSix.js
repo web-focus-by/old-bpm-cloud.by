@@ -35,7 +35,7 @@ const AnimationSix = () => {
           viewBox="0 0 236 236"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="da"
+          className="da"
         >
           <path
             d="M67.8735 96.5H92.7471L67.8735 144.75L43 96.5H67.8735Z"

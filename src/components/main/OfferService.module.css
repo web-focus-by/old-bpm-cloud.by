@@ -205,7 +205,7 @@
     right: -345px;
   }
 }
-@media(max-width:580px){
+@media(max-width:615px){
   .wrapper{
     padding-top: 41px;
   }
@@ -240,7 +240,7 @@
     background: white;
   }
   .changingText{
-    width: 280px;
+    width: auto;
   }
   .hoverText > div{
     margin-right: 10px;
@@ -253,6 +253,7 @@
   .number{
     font-size: 36px;
     line-height: 44px;
+    margin-left: -80%;
   }
   .active{
     animation-name: none;
@@ -260,6 +261,11 @@
   }
   .boxTexts{
     margin-top: -78px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
   .button{
     position: relative;
@@ -272,5 +278,10 @@
   .button>div:last-child{
     font-size: 12px;
     line-height: 15px;
+  }
+}
+@media(max-width:400px){
+  .boxTexts{
+   max-width: 280px; 
   }
 }

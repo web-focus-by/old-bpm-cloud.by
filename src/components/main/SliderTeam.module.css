@@ -42,7 +42,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  transition: all 0.5s;
 }
+
 
 .itemMenu {
   position: relative;
@@ -50,12 +52,26 @@
   margin-top: 19px;
 }
 
-.itemMenu:hover .descPhoto {
-  display: flex;
-  width: 230px;
-  z-index: -1;
-  animation-name: name;
-  animation-duration: 0.5s;
+@media(min-width:1050px){
+  .descPhoto.isRight{
+    align-items: flex-start;
+  }
+  .itemMenu:hover .descPhoto.isLeft {
+    display: flex;
+    width: 250px;
+    z-index: -1;
+    animation-name: name;
+    animation-duration: 0.5s;
+  }
+  
+  .itemMenu:hover .descPhoto.isRight {
+    display: flex;
+    width: 250px;
+    z-index: -1;
+    transform: translateX(-100%);
+    animation-name: name;
+    animation-duration: 0.5s;
+  }
 }
 
 @keyframes name {
@@ -63,9 +79,10 @@
     width: 0px;
   }
   to {
-    width: 230px;
+    width: 250px;
   }
 }
+
 
 .itemMenu:hover .photo {
   z-index: -1;
@@ -175,6 +192,17 @@
     padding: 0px 21px;
     height: 28px;
     margin-top: 7px;
+  }
+  .itemMenu{
+    display: flex;
+    flex-direction: column;
+  }
+  .descPhoto{
+    display: flex;
+    align-items: center;
+    position: unset;
+    width: 100px;
+    z-index: 2;
   }
 }
 @media(max-width:950px){
