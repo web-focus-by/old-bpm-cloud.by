@@ -100,6 +100,7 @@ main{
   }
   .container {
     height: 73px;
+    margin-bottom: 30px;
   }
   .textBPM {
     font-size: 60px;
@@ -152,7 +153,7 @@ main{
 
 @media (max-width: 1050px) {
   .wrapper {
-    height: 438px;
+    height: 480px;
   }
   .conteinerTwo {
     height: 305px;
@@ -198,10 +199,11 @@ main{
     padding-top: 130px;
     align-items: start;
     padding-left: 30px;
+    align-items: flex-start;
+    margin-bottom: 100px;
   }
   .container>a{
     z-index: 9999999;
-    background: white;
   }
   .BpmCloud{
     width: 135px;
@@ -212,7 +214,7 @@ main{
   .boxLogo{
     margin: 0;
     height: 129px;
-    margin-bottom: 104px
+    margin-bottom: 64px
   }
   .conteinerTwo{
     flex-direction: column;
@@ -281,5 +283,8 @@ main{
   .sabtext{
     font-size: 9px;
     line-height: 11px;
+  }
+  .container>a{
+    background: white;
   }
 }

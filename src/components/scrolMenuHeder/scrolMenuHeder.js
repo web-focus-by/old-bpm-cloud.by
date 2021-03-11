@@ -41,7 +41,6 @@ const ScrolMenuHeder = ()=>{
 
             let height = document.querySelector(`.${style.listItem}`).clientHeight    
             setActiveItem(Math.round(args[1]/height)+3)
-
             if(args[3] - args[1] < 600){
                 getMoreData()
             }
@@ -61,13 +60,12 @@ const ScrolMenuHeder = ()=>{
     return(
         <div className={style.wrapper}>
             <div className={style.colorTop}></div>
-            <div className={style.arrow}>
                 <img src={images.Vector} alt="" />
-            </div>
             <ScrollContainer className={style.scrollContainer} hideScrollbars={true} onClick={() => setClick(true)} onEndScroll={(...args) => {setStyleInItems(args)}} onStartScroll={(...args) => {removeStyleInItems()}}>
                    {items}
             </ScrollContainer>
             <div className={style.colorBottom}></div>
+            <div className={style.mobileActiveArea}></div>
         </div>
     )
 }
