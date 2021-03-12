@@ -47,10 +47,9 @@ const Reviews = ({ data = menuItems }) => {
     cssEase: "linear",
     focusOnSelect: true,
     arrows: false,
-
     swipeToSlide: true,
 
-    responsive: [
+   /*  responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -65,7 +64,7 @@ const Reviews = ({ data = menuItems }) => {
           centerMode: false,
         },
       },
-    ],
+    ], */
   }
   return (
     <div className={styles.wrapper}>

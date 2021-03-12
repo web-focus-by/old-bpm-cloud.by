@@ -18,6 +18,16 @@ const numbers = [
   { number: "09", id: 9 },
 ]
 
+/* const links = [
+  { name: "SMM", url:'/smm/' },
+  { name: "Разработка сайтов", url:'/razrabotka-sajtov/'  },
+  { name: "Seo", url:'/seo/' },
+  { name: "Главная", url:'/' },
+  { name: "PPC", url:'/ppc/' },
+  { name: "Брендинг и дизайн", url:'/brending-i-dizajn/' },
+  { name: "Разработка приложений", url:'/razrabotka-prilozhenij/' },
+] */
+
 const text = [
   {
     text:
@@ -84,6 +94,10 @@ const OfferService = () => {
     })
   }
 
+/*   const getButtonLink = (state) =>{
+
+  }
+ */
   const handler = elem => setState(elem)
   return (
     <div className={styles.wrapper}>

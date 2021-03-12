@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import classnames from "classnames"
 
+import stylesGeneral from "./QuizGeneral.module.scss"
 import styles from "./QuizTwo.module.css"
 import { ButtonQuiz } from "../../buttons"
 
@@ -20,8 +21,8 @@ const QuizTwo = ({ handlerLine }) => {
   }
 
   return (
-    <div className={styles.form}>
-      <div className={styles.formTitle}>
+    <div className={stylesGeneral.wrapForm}>
+      <div className={stylesGeneral.formTitle}>
         Укажите область деятельности пердприятия?
       </div>
       <div className={styles.wrap}>

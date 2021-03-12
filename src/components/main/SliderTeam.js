@@ -27,7 +27,7 @@ const SliderTeam = ({ data = menuItems }) => {
 
   const settings = {
     speed: 5000,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 0,
     centerMode: true,
     // touchMove: true,

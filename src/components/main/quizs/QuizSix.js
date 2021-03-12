@@ -1,10 +1,10 @@
 import React from "react"
-
+import stylesGeneral from "./QuizGeneral.module.scss"
 import styles from "./QuizSix.module.css"
 
 const QuizSix = () => {
   return (
-    <div>
+    <div className={stylesGeneral.wrapForm}>
       <div className={styles.formTitle}>Спасибо за ваши ответы</div>
       <div className={styles.formText}>
         В ближайшее время мы свяжемся с Вами!

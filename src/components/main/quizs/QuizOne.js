@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import classnames from "classnames"
 
+import stylesGeneral from "./QuizGeneral.module.scss"
 import styles from "./QuizOne.module.css"
 import { ButtonQuiz } from "../../buttons"
 
@@ -20,9 +21,9 @@ const QuizOne = ({ handlerLine }) => {
   }
 
   return (
-    <div>
-      <div className={styles.formTitle}>Вы определились с объемом затрат?</div>
-      <div className={styles.wrapForm}>
+    <div className={stylesGeneral.wrapForm}>
+      <div className={stylesGeneral.formTitle}>Вы определились с объемом затрат?</div>
+      <div className={styles.wrap}>
         <div className={styles.box} onClick={() => handler(1)}>
           <div
             className={classnames(styles.checkBox, {

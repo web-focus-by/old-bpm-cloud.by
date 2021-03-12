@@ -194,6 +194,7 @@
 @media(max-width:500px){
   .wrapperFrom{
     padding-top: 49px;
+    padding-bottom: 50px;
   }
   .title{
     font-size: 30px;

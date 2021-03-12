@@ -54,7 +54,12 @@ const Form = () => {
               })}
             ></div>
           </div>
-          <div className={classnames(styles.circle)}>1</div>
+          <div
+            className={classnames(styles.circleActive, {
+              [styles.circle]: 1 <= state,
+              [styles.circleBorder]: 0 <= state,
+            })}
+          >1</div>
           <div
             className={classnames(styles.circleActive, {
               [styles.circle]: 2 <= state,

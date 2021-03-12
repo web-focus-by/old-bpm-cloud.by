@@ -75,6 +75,7 @@
 
 .button {
   margin: 0 auto;
+  margin-top: 3px !important;
 }
 
 @media(max-width:1450px){
@@ -94,10 +95,16 @@
 
 @media(max-width:500px){
   .input{
-    width: 350px;
+    width: 240px;
   }
   .bigInput{
-    width: 330px;
-    margin-left: 10px;
+    width: 220px;
+    margin-left: 0px;
+  }
+  .text{
+    width: 240px;
+  }
+  .button{
+    margin-top: 35px !important;
   }
 }

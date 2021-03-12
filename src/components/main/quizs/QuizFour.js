@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import classnames from "classnames"
 
+import stylesGeneral from "./QuizGeneral.module.scss"
 import styles from "./QuizFour.module.css"
 import { ButtonQuiz } from "../../buttons"
 
@@ -20,8 +21,8 @@ const QuizFour = ({ handlerLine }) => {
   }
 
   return (
-    <div className={styles.form}>
-      <div className={styles.formTitle}>
+    <div className={stylesGeneral.wrapForm}>
+      <div className={stylesGeneral.formTitle}>
         Был ли у Вас опыт сотрудничества с компаниями области
         интернет-маркетинга?
       </div>

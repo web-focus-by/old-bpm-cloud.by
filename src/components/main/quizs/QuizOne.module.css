@@ -6,9 +6,8 @@
   text-align: center;
   letter-spacing: 0.065em;
   text-transform: uppercase;
-  padding-top: 60px;
+  padding-top: 15px;
   color: #3c424a;
-  margin-top: 15px;
 }
 
 .checkBox {
@@ -26,6 +25,7 @@
 .box {
   display: flex;
   cursor: pointer;
+  padding-bottom: 30px;
 }
 
 .box:hover .checkBox {
@@ -35,7 +35,6 @@
 .text {
   width: 781px;
   height: 42px;
-  margin-bottom: 30px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -47,7 +46,6 @@
 .activeText {
   width: 781px;
   height: 42px;
-  margin-bottom: 30px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -56,14 +54,12 @@
   color: #3c424a;
 }
 
-.wrapForm {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.wrap{
   align-items: center;
-  margin-top: 51px;
-  height: 310px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
 }
 
 .arrow {
@@ -71,17 +67,14 @@
 }
 
 .button {
-  margin-top: 24px;
+  margin-top: 40px !important;
 }
 
 @media(max-width:1445px){
   .box{
     width: 630px;
   }
-  .wrapForm{
-    margin-top: 37px;
-    height: 240px;
-  }
+
   .formTitle{
     font-size: 14px;
     line-height: 17px;
@@ -109,10 +102,7 @@
     line-height: 20px;
     margin-left: -76px;
   }
-  .wrapForm{
-    margin-top: 56px;
-    height: 364px;
-  }
+
   .box{
     width: 613px;
   }
@@ -145,9 +135,6 @@
   }
 }
 @media(max-width:500px){
-  .wrapForm{
-    height: 368px;
-  }
   .formTitle{
     padding-top: 25px;
     font-size: 13px;
@@ -162,6 +149,7 @@
     font-size: 13px;
     line-height: 17px;
     width: 240px;
+    height: auto;
   }
   .button{
     margin-top: 45px;
