@@ -51,6 +51,13 @@ $hoverAnimationTime: .8s;
   background-color: var(--yellow-color);
   color: #ffffff;
 }
+
+.button{
+  &:hover{
+    background-color: #309195 !important;
+    border-color: transparent !important;
+  }
+}
 .box:hover{
   .caseBgImg{
     border: 19px solid #FFCC00;
@@ -59,7 +66,7 @@ $hoverAnimationTime: .8s;
     opacity: 1;
     svg{
       animation-name: rotate;
-      animation-duration: 4s;
+      animation-duration: 1.5s;
       animation-timing-function: ease;
     }
   }
@@ -74,7 +81,7 @@ $hoverAnimationTime: .8s;
     -webkit-transform: translate(-50%, -50%) rotate(0deg);
   }
   to {
-    -webkit-transform: translate(-50%, -50%) rotate(1800deg);
+    -webkit-transform: translate(-50%, -50%) rotate(1080deg);
   }
 }
 
