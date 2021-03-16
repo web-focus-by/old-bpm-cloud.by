@@ -10,7 +10,7 @@ $hoverAnimationTime: .8s;
 .box {
   position: relative;
   width: 33.333%;
-  height: calc(100vw / 3);
+  height: calc((100vw/3) - 27px);
   box-sizing: border-box;
   background-color: #efefef;
 /*   border: 19px solid transparent; */
