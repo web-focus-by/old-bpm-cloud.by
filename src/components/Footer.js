@@ -18,8 +18,8 @@ const Footer = () => {
           />
           <div className={styles.wrapContacts}>
             <div className={styles.title}>Контакты</div>
-            <div className={styles.text}>+375 (ХХ) ХХХ-ХХ-ХХ</div>
-            <div className={styles.text}>info@bpmcloud.by</div>
+            <div className={styles.text}><a href='tel:+375293244000'>+375 (29) 32-44-000</a></div>
+            <div className={styles.text}><a href='mailto:info@bpmcloud.by'>info@bpmcloud.by</a></div>
             <div className={styles.text}>
               Пр-т Независимости, дом 77, офис 53
             </div>
@@ -42,7 +42,8 @@ const Footer = () => {
           <div className={styles.text}>О нас</div>
         </div>
         <div className={styles.bottom}>
-          © 2020 bpm-cloud.by
+          <span>© 2010-2021 bpm-cloud.by</span>
+          <span>Политика конфиденциальности</span>
         </div>
       </div>
     </div>

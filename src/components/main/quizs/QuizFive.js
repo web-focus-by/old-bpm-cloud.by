@@ -1,43 +1,63 @@
 import React, { useState } from "react"
+import { useForm, ValidationError } from '@formspree/react';
+
 import classnames from "classnames"
 
 import stylesGeneral from "./QuizGeneral.module.scss"
 import styles from "./QuizFive.module.css"
 import { ButtonQuiz } from "../../buttons"
 
-const QuizFive = ({ handlerLine }) => {
+const QuizFive = ({handlerLine, answer}) => {
   const [activeButton, setActiveButton] = useState(false)
-  const [state, setState] = useState({
+  const [stateInfo, setState] = useState({
     name: "",
     phone: "",
     email: "",
     prim: "",
   })
 
-  const handlerOnClick = () => {
-    if (activeButton) {
-      handlerLine()
-    }
+  const [state, handleSubmit] = useForm("mwkwgjej");
+  if (state.succeeded) {
+      setTimeout(handlerLine,0)
   }
 
   const handlerInput = e => {
-    if (state.name !== "" && state.email !== "" && state.phone !== "") {
+    if (stateInfo.name !== "" && stateInfo.email !== "" && stateInfo.phone !== "") {
       setActiveButton(true)
     }
-    if (state.name.trim() === "") {
+    if (stateInfo.name.trim() === "") {
       setActiveButton(false)
     }
-    if (state.email.trim() === "") {
+    if (stateInfo.email.trim() === "") {
       setActiveButton(false)
     }
-    if (state.phone.trim() === "") {
+    if (stateInfo.phone.trim() === "") {
       setActiveButton(false)
     }
-    setState({ ...state, [e.target.name]: e.target.value })
+    setState({ ...stateInfo, [e.target.name]: e.target.value })
   }
 
+  const InvokeInputs = () =>{
+    console.log(answer[0])
+    return(
+      <div className={styles.invokeInputs}>
+        {answer[0].map((items, index) =>{
+          console.log(items)
+            return(
+                <input
+                  readOnly
+                  type='text'
+                  key={index}
+                  name={items !== undefined?items[0]:'name'}
+                  value={items !== undefined?items[1]:'name'}
+                />
+            )
+          })}
+      </div>
+    )
+  }
   return (
-    <div className={stylesGeneral.wrapForm}>
+    <form className={stylesGeneral.wrapForm} onSubmit={handleSubmit}>
       <div className={stylesGeneral.formTitle}>Укажите информацию о Вас</div>
       <div className={styles.wrap}>
         <div className={styles.inputs}>
@@ -47,6 +67,7 @@ const QuizFive = ({ handlerLine }) => {
             className={styles.input}
             type="text"
             placeholder="Имя"
+            required
           />
           <input
             name="phone"
@@ -54,6 +75,7 @@ const QuizFive = ({ handlerLine }) => {
             className={styles.input}
             type="text"
             placeholder="Номер телефона"
+            required
           />
           <input
             name="email"
@@ -61,7 +83,9 @@ const QuizFive = ({ handlerLine }) => {
             className={styles.input}
             type="text"
             placeholder="E-mail"
+            required
           />
+          <InvokeInputs/>
         </div>
         <div>
           <div>
@@ -79,14 +103,10 @@ const QuizFive = ({ handlerLine }) => {
           </div>
         </div>
       </div>
-      <ButtonQuiz
-        activeButton={activeButton}
-        onClick={() => handlerOnClick()}
-        className={styles.button}
-      >
-        Далее
-      </ButtonQuiz>
-    </div>
+      <button type='submit' className={styles.button} disabled={state.submitting}>
+      Отправить
+      </button>
+    </form>
   )
 }
 

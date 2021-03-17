@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import classnames from "classnames"
 import { ButtonGreen } from "../buttons"
 import { images } from "../../images"
+import { useForm, ValidationError } from '@formspree/react';
 
 import styles from "./Сontact.module.css"
 
@@ -12,6 +13,10 @@ const ContactForm = ({ handlerGetForm }) => {
     name: "",
     phone: "",
   })
+  const [formState, handleSubmit] = useForm("mjvpndyv");
+  if (formState.succeeded) {
+    setTimeout(handlerGetForm,0)
+  }
 
   const handlerOnClick = () => {
     if (state.phone.trim() === "") {
@@ -29,7 +34,7 @@ const ContactForm = ({ handlerGetForm }) => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
   return (
-    <div className={styles.wrapContactForm}>
+    <form className={styles.wrapContactForm} onSubmit={handleSubmit}>
       <div>
         <div className={styles.title}>Заказать звонок</div>
         <div className={styles.textForm}>
@@ -51,6 +56,7 @@ const ContactForm = ({ handlerGetForm }) => {
             })}
             placeholder="Имя"
             type="text"
+            required
           />
           <div
             className={classnames(styles.label, {
@@ -67,6 +73,7 @@ const ContactForm = ({ handlerGetForm }) => {
             })}
             placeholder="Номер телефона"
             type="text"
+            required
           />
           {(checkPhone || checkName) && (
             <div className={styles.redText}>
@@ -76,14 +83,10 @@ const ContactForm = ({ handlerGetForm }) => {
           )}
         </div>
       </div>
-      <div className={styles.wrapf}>
-        <ButtonGreen
-          onClick={() => handlerOnClick()}
-          noAnimation
-          className={styles.buttonGreen}
-        >
-          Перезвоните мне
-        </ButtonGreen>
+      <div className={styles.wrapf} >
+        <button type="submit" disabled={formState.submitting} className={styles.button}>
+          Позвоните мне
+        </button>
         <div className={styles.textFormik}>
           Заполняя форму обратной связи, Вы соглашаетесь на обработку Ваших
           персональных данных
@@ -95,7 +98,7 @@ const ContactForm = ({ handlerGetForm }) => {
         className={styles.arrow}
         alt=""
       />
-    </div>
+    </form>
   )
 }
 

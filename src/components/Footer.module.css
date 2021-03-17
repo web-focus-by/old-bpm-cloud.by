@@ -6,7 +6,7 @@
 }
 
 .container {
-  height: 570px;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -26,14 +26,17 @@
 }
 
 .wrapContacts {
-  margin-right: 29px;
+  margin-right: 14px;
+  margin-top: -2px;
 }
 
 .boxTwo {
   display: flex;
   justify-content: space-between;
-  width: 62%;
+  width: 100%;
+  max-width: 1200px;
   margin-top: 79px;
+  margin-left: 19px;
 }
 
 .title {
@@ -57,13 +60,19 @@
 }
 
 .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.065em;
-
   color: #ffffff;
+  margin-bottom: 17px;
+  margin-left: 19px;
 }
 
 @media (max-width: 1445px) {

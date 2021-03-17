@@ -50,7 +50,9 @@
   height: 2px;
   background-color: var(--textSub-color);
 }
-
+.bodyLine{
+  transition: all .5s;
+}
 .bodyLineOne {
   background-color: var(--yellow-color);
   width: 25%;

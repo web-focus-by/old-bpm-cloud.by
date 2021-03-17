@@ -16,7 +16,7 @@ const QuizFour = ({ handlerLine }) => {
 
   const handlerOnClick = () => {
     if (activeButton) {
-      handlerLine()
+      handlerLine([document.querySelector(`.${stylesGeneral.formTitle}`).innerText, document.querySelectorAll(`.${styles.buttonActive}`)[0].innerText])
     }
   }
 

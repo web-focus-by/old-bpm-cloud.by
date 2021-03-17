@@ -54,13 +54,16 @@
   margin-top: 45px;
 }
 
+.icons a:hover{
+  cursor: pointer;
+}
+
 .rowOne svg {
   margin: 20px 25px 0px 0px;
 }
 
-#wrapSvg:hover #id {
+.wrapSvg:hover .svgItems {
   fill: var(--yellow-color);
-  cursor: pointer;
 }
 
 .inputs {

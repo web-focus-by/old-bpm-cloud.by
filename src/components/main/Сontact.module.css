@@ -53,6 +53,12 @@
   margin-left: 130px;
   margin-bottom: 12px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.button:disabled{
+  background-color: gray;
+  border-color: gray;
+  color:white;
 }
 
 .textForm {

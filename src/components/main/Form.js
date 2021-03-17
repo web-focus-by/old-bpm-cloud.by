@@ -9,10 +9,14 @@ import QuizFour from "./quizs/QuizFour"
 import QuizFive from "./quizs/QuizFive"
 import QuizSix from "./quizs/QuizSix"
 
+
 const Form = () => {
   const [state, setState] = useState(0)
+  const [answer, setAnswer] = useState([])
 
-  const handlerLine = () => {
+  const handlerLine = (arg) => {
+    answer.push(arg)
+    console.log(answer)
     setState(state + 1)
     if (state === 5) {
       setState(0)
@@ -30,7 +34,7 @@ const Form = () => {
       case 3:
         return <QuizFour handlerLine={handlerLine} />
       case 4:
-        return <QuizFive handlerLine={handlerLine} />
+        return <QuizFive handlerLine={handlerLine} answer={[answer]}/>
       case 5:
         return <QuizSix />
       default:

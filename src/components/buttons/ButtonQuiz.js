@@ -3,13 +3,14 @@ import classnames from "classnames"
 import { images } from "../../images"
 import styles from "./ButtonQuiz.module.css"
 
-export default ({ children, activeButton, onClick, className }) => {
+export default ({ children, activeButton, onClick, className, disable }) => {
   return (
     <button
       onClick={onClick}
       className={classnames(styles.button, className, {
         [styles.activeButton]: activeButton,
       })}
+      disabled={disable}     
     >
       <div
         className={classnames(styles.text, {
