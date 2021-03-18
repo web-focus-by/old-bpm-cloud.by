@@ -50,7 +50,7 @@ const Header = () => {
               </g>
             </svg>
             <div className={styles.displayNone}>
-              {setTimeout(rotateArrow, 0)}
+              {/* {setTimeout(rotateArrow, 1000)} */}
             </div>
             
           </div>

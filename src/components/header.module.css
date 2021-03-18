@@ -84,12 +84,13 @@ main{
 .displayNone{
   display: none;
 }
-#arrowGroupWrapper{
+/* #arrowGroupWrapper{
   animation-name: rotate;
   animation-delay: .5s;
   animation-duration: 1.5s;
   animation-timing-function: ease;
 }
+
 @keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
@@ -98,7 +99,7 @@ main{
     -webkit-transform: rotate(1080deg);
   }
 }
-
+ */
 @media (max-width: 1445px) {
   .wrapper {
     height: 583px;
