@@ -237,3 +237,9 @@
     width: 100%;
   }
 }
+
+@media(max-width:500px){
+  .boxString{
+    margin-left: 40px;
+  }
+}

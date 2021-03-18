@@ -130,6 +130,7 @@ main{
     margin-top: 0px;
     margin-bottom: 22px;
     height: auto;
+    transform: scale(.9);
   }
   .conteinerTwo {
     height: 443px;
@@ -197,7 +198,6 @@ main{
   .boxLogo {
     margin-top: 0px;
     margin-bottom: 32px;
-    margin-left: 111px;
     height: auto;
   }
   .sabtext {
@@ -296,10 +296,34 @@ main{
     line-height: 45px;
   }
   .sabtext{
-    font-size: 9px;
+    font-size: 14px;
     line-height: 11px;
   }
   .container>a{
     background: white;
+  }
+}
+
+@media(max-width: 560px){
+  .boxLogo{
+    transform: scale(.7);
+  }
+}
+
+@media(max-width: 430px){
+  .boxLogo{
+    transform: scale(.6);
+  }
+  .sabtext{
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 375px){
+  .boxLogo{
+    transform: scale(.5);
+  }
+  .sabtext{
+    font-size: 18px;
   }
 }

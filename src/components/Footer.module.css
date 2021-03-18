@@ -76,9 +76,6 @@
 }
 
 @media (max-width: 1445px) {
-  .container {
-    height: 460px;
-  }
   .wrapperFooter {
     height: auto;
     padding: 140px 0px 0px 0px;
@@ -103,11 +100,13 @@
   }
   .boxTwo {
     margin-top: 56px;
+    max-width: 950px;
   }
   .bottom {
     margin-bottom: 10px;
     font-size: 10.5px;
     line-height: 13px;
+    max-width: 850px;
   }
 }
 
@@ -135,7 +134,6 @@
     margin: 17px 0;
   }
   .container{
-    height: 423px;
     margin-top: 0px;
     margin-left: 0px;
   }
@@ -159,6 +157,16 @@
   }
   .bottom{
     margin-top: 57px;
+    max-width: 500px;
+  }
+}
+
+@media(max-width:700px){
+  .bottom{
+    max-width: 420px;
+  }
+  .boxTwo{
+    margin-left: 0px;
   }
 }
 
@@ -178,12 +186,15 @@
   }
   .wrapContacts{
     box-sizing: border-box;
-    max-width: 280px;
+    max-width: 270px;
   }
   .boxTwo{
     box-sizing: border-box;
     padding-left: 20px;
     width: 100%;
     justify-content: start;
+  }
+  .bottom{
+    max-width: 280px;
   }
 }

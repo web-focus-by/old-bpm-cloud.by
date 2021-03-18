@@ -55,10 +55,25 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+
+form .button{
+  width: auto;
+  background: #309195;
+  border-color: #309195;
+  color: #ffffff;
+  margin-left: 0px;
+}
+
+form .button:not(:disabled):hover{
+  background: #FA5C45;
+  border-color: #FA5C45;
+  color: #ffffff;
+}
+
 .button:disabled{
-  background-color: gray;
-  border-color: gray;
-  color:white;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #309195;
 }
 
 .textForm {

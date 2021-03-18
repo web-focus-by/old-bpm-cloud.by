@@ -19,7 +19,7 @@ const Footer = () => {
           <div className={styles.wrapContacts}>
             <div className={styles.title}>Контакты</div>
             <div className={styles.text}><a href='tel:+375293244000'>+375 (29) 32-44-000</a></div>
-            <div className={styles.text}><a href='mailto:info@bpmcloud.by'>info@bpmcloud.by</a></div>
+            <div className={styles.text}><a href='mailto:info@bpm-cloud.by'>info@bpm-cloud.by</a></div>
             <div className={styles.text}>
               Пр-т Независимости, дом 77, офис 53
             </div>

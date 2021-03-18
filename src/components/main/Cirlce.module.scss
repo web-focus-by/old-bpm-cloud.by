@@ -1,0 +1,208 @@
+.circle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000;
+  cursor: pointer;
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.circle>svg{
+  width: 192px;
+  height: 192px;
+}
+.modalWrapper{
+  position: absolute;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: 1050px;
+  max-height: 585px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 70px;
+}
+.modalForm{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 325px;
+}
+.modalContentWrapper{
+  h2{
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 59px;
+    letter-spacing: 0.065em;
+    text-align: left;
+    color: #3C424A;
+    margin-bottom: 60px;
+  }
+}
+.closeModal{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.input {
+  width: 440px;
+  height: 52px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  margin: 15px 0px;
+  padding-left: 28px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  background-color: #FBFAFA;
+  margin-right: 30px;
+}
+
+.textarea {
+  width: 440px;
+  height: 97px;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  padding: 15px 0px 0px 26px;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #6a7380;
+  background-color: #FBFAFA;
+}
+
+.invisibleInput{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.button {
+  background-color: #fbfafa;
+  font-weight: bold;
+  font-size: 16px;
+  height: 52px;
+  border: 2px solid #FA5C45;
+  border-radius: 40px;
+  color: #FA5C45;
+  transition: all .3s;
+  max-width: 440px;
+
+  &:disabled{
+    color: #fbfafa;
+    border: 2px solid var(--green-color);
+    background: var(--green-color);
+  }
+
+  &:not(:disabled):hover{
+    cursor: pointer;
+    background-color: #FA5C45;
+    color: #fbfafa;
+  }
+}
+
+.addFile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+  height: 30px;
+  cursor: pointer;
+  margin: 20px 0px;
+}
+.successPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.successPageText{
+  h2{
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 59px;
+    letter-spacing: 0.065em;
+    text-align: left;
+    color: #3C424A;
+    margin-bottom: 30px;
+  }
+  span{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.065em;
+    text-align: left;
+    color: #6A7380;
+    max-width: 420px;
+    display: block;
+  }
+}
+.modalButton{
+  width: 100%;
+}
+.buttonWrapper{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.modalButton{
+  align-items: flex-end;
+}
+.addFile:hover #modalSkrepka {
+  fill: var(--green-color);
+}
+
+.addFile:hover .textAdd {
+  color: var(--green-color);
+}
+
+.textAdd{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.065em;
+  color: #fa5c45;
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@media(max-width:1445px){
+  .circle>svg{
+    width: 139.5px;
+    height: 139.5px;
+  }
+}

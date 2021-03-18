@@ -93,12 +93,30 @@
   display: none;
 }
 
+@media (max-width: 1445px){
+  .wrapper{
+    transform: scale(.9); 
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 1050px){
+  .wrapper{
+    transform: scale(.8); 
+  }
+  .active{
+    transform: translateX(-10px);
+  }
+}
+
 @media(max-width:750px){
   .scrollContainer{
     height: 271px;
     width: 220px;
   }
   .wrapper{
+    transform: scale(1.0); 
     >img{
       z-index: 5;
       height: 17px;

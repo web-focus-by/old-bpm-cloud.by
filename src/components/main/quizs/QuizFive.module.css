@@ -93,9 +93,9 @@
 }
 
 .button:disabled{
-  background-color: gray;
-  border-color: gray;
-  color:white;
+  background-color: #ffffff;
+  border-color: #309195;
+  color:#309195;
 }
 .invokeInputs{
   visibility: hidden;
