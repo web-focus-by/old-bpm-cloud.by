@@ -289,6 +289,20 @@
     width: 309px;
     height: 102px;
   }
+  .button{
+    border-color: #FFCC00;
+    color: #ffff;
+    background-color: #FFCC00;
+    font-size: 14px;
+    line-height: 17px;
+    height: 47px;
+
+    &:hover{
+      border-color: var(--green-color) !important;
+      background-color: #ffff !important;
+      color: var(--green-color) !important;
+    }
+  }
 }
 @media(max-width:730px){
   .input, .textarea, .button, .text{

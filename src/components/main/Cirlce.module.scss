@@ -206,3 +206,15 @@
     height: 139.5px;
   }
 }
+
+@media(max-width:1050px){
+  .modalWrapper{
+    padding: 50px;
+  }
+  .input, .textarea{
+    width: 300px;
+  }
+  .button{
+    max-width: 300px;
+  }
+}
