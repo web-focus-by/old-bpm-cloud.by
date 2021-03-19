@@ -59,6 +59,10 @@
   cursor: pointer;
 }
 
+.text:hover a{
+  color: #FFCC00;
+}
+
 .bottom {
   display: flex;
   flex-direction: row;
@@ -73,6 +77,10 @@
   color: #ffffff;
   margin-bottom: 17px;
   margin-left: 19px;
+}
+.bottom a:hover{
+  cursor: pointer;
+  color: #FFCC00;
 }
 
 @media (max-width: 1445px) {

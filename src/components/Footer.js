@@ -32,18 +32,18 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.boxTwo}>
-          <div className={styles.text}>Разработка сайтов</div>
-          <div className={styles.text}>SEO</div>
-          <div className={styles.text}>SMM</div>
-          <div className={styles.text}>PPC</div>
-          <div className={styles.text}>Брендинг и дизайн</div>
-          <div className={styles.text}>Разработка приложений</div>
-          <div className={styles.text}>Прочие услуги</div>
-          <div className={styles.text}>О нас</div>
+          <div className={styles.text}><a>Разработка сайтов</a></div>
+          <div className={styles.text}><a>SEO</a></div>
+          <div className={styles.text}><a>SMM</a></div>
+          <div className={styles.text}><a>PPC</a></div>
+          <div className={styles.text}><a>Брендинг и дизайн</a></div>
+          <div className={styles.text}><a>Разработка приложений</a></div>
+          <div className={styles.text}><a>Прочие услуги</a></div>
+          <div className={styles.text}><a>О нас</a></div>
         </div>
         <div className={styles.bottom}>
           <span>© 2010-2021 bpm-cloud.by</span>
-          <span>Политика конфиденциальности</span>
+          <span><a>Политика конфиденциальности</a></span>
         </div>
       </div>
     </div>

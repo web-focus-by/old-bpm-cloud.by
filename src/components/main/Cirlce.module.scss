@@ -99,7 +99,7 @@
 
 
 .button {
-  background-color: #fbfafa;
+  background-color: #ffff;
   font-weight: bold;
   font-size: 16px;
   height: 52px;
@@ -110,7 +110,7 @@
   max-width: 440px;
 
   &:disabled{
-    color: #fbfafa;
+    color: #ffff;
     border: 2px solid var(--green-color);
     background: var(--green-color);
   }

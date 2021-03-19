@@ -338,17 +338,26 @@ form .button:not(:disabled):hover{
     flex-direction: column;
   }
   .container{
-    height: 381px;
+    height: auto;
+    padding: 75px 85px 68px;
+    box-sizing: border-box;
+
   }
   .text{
     width: 100%;
     box-sizing: border-box;
   }
+  .textForm{
+    width: auto;
+  }
   .button{
     width: 90%;
-    margin-top: 64px;
+    margin-top: 0px;
   }
-
+  .wrapf{
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
   .boxText{
     align-items: center;
   }

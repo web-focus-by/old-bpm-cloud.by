@@ -34,6 +34,7 @@
 .activeBox {
   background: url(../../../images/ArrowCheck.png) no-repeat center bottom 4px;
   background-color: var(--redColor-color);
+  border: 1px solid transparent;
 }
 
 .box {
@@ -77,5 +78,20 @@
   .text{
     width: 160px;
     font-size: 13px;
+  }
+}
+
+@media(max-width:950px){
+  .wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+  .text{
+    width: max-content !important;
   }
 }

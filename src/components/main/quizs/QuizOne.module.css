@@ -20,6 +20,7 @@
 .activeBox {
   background: url(../../../images/ArrowCheck.png) no-repeat center bottom 4px;
   background-color: var(--redColor-color);
+  border: 1px solid transparent;
 }
 
 .box {
@@ -66,9 +67,7 @@
   background: url(../../../images/arrowButton.png) no-repeat center right;
 }
 
-.button {
-  margin-top: 40px !important;
-}
+
 
 @media(max-width:1445px){
   .box{
@@ -90,9 +89,6 @@
     height: 15px;
     margin-right: 27px;
   }
-  .button{
-    margin: 10px 0;
-  }
 }
 
 @media(max-width:950px){
@@ -105,17 +101,12 @@
 
   .box{
     width: 613px;
+    padding-bottom: 50px
   }
   .text{
     width: 540px;
     font-size: 14px;
     line-height: 18px;
-  }
-  .button{
-    margin: 10px 0;
-    margin-top: 40px;
-    height: 50px;
-    width: 520px;
   }
   .checkBox{
     min-width: 15px;
@@ -128,9 +119,6 @@
     width: auto;
   }
   .text{
-    width: 90%;
-  }
-  .button{
     width: 90%;
   }
 }
@@ -150,11 +138,5 @@
     line-height: 17px;
     width: 240px;
     height: auto;
-  }
-  .button{
-    margin-top: 45px;
-    margin-bottom: -10px;
-    height: 50px;
-    width: 80%;
   }
 }

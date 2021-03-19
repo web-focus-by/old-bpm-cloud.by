@@ -103,7 +103,7 @@ const QuizFive = ({handlerLine, answer}) => {
           </div>
         </div>
       </div>
-      <button type='submit' className={styles.button} disabled={state.submitting}>
+      <button type='submit' className={classnames(styles.button, stylesGeneral.button)} disabled={state.submitting}>
       Отправить
       </button>
     </form>

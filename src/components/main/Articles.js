@@ -1,7 +1,8 @@
 import React from "react"
 import { ButtonGreen, ButtonSmall } from "../buttons"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import styles from "./Articles.module.css"
+import { useMediaQuery } from 'react-responsive'
+import styles from "./Articles.module.scss"
 
 const data = [
   {
@@ -58,6 +59,13 @@ const Article = ({ title, text, count }) => {
     backgroundSize: 'cover',
   }
   
+  
+  const isDesktop = useMediaQuery({
+    query: '(max-width: 950px)'
+  })
+
+
+
   const tag = data.allWpPost.nodes[count].tags.nodes.length !== 0 ? data.allWpPost.nodes[count].tags.nodes[0].name : '#интересное'
   return (
     <div className={styles.wrapArticle}>
@@ -72,9 +80,10 @@ const Article = ({ title, text, count }) => {
         <div className={styles.footerArticle}>
           <div className={styles.avtor}>Автор: {data.allWpPost.nodes[count].author.node.name}</div>
           <div className={styles.date}>{data.allWpPost.nodes[count].date}</div>
-          <Link to={`${data.allWpPost.nodes[count].uri}`}><ButtonSmall red className={styles.buttonDetailed}>подробнее</ButtonSmall></Link>
+          <Link to={data.allWpPost.nodes[count].uri}><ButtonSmall red className={styles.buttonDetailed}>подробнее</ButtonSmall></Link>
         </div>
       </div>
+      {isDesktop && <Link to={data.allWpPost.nodes[count].uri} className={styles.laptopAndMobileLink}></Link>}
     </div>
   )
 }

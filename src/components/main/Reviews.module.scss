@@ -72,6 +72,7 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translate3d(335px, 0px, 0px);
+  border: 1px solid transparent;
 }
 
 .items:hover {
@@ -138,10 +139,15 @@
   color: #6a7380;
   margin-top: 10px;
 }
-
+.items:hover{
+  .wrapperTrack{
+    display: block;
+  }
+}
 .wrapperTrack {
   background: rgba(106, 115, 128, 0.27) !important;
   width: 2px !important;
+  display: none;
 }
 
 .wrapperThumb {
@@ -224,10 +230,13 @@
     margin-top: -77px;
   }
   .wrapperSlider{
+    margin-left: 140px;
     margin-top: 70px;
+    height: auto;
+    margin-bottom: 130px;
   }
-  .wrapperSlider > div > div > div{
-    transform: translate3d(98px, 0px, 0px) !important;
+  .wrapper{
+    height: auto;
   }
 }
 @media(max-width:500px){

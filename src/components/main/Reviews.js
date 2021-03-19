@@ -5,7 +5,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-import styles from "./Reviews.module.css"
+import styles from "./Reviews.module.scss"
 
 const menuItems = [
   {
@@ -48,23 +48,6 @@ const Reviews = ({ data = menuItems }) => {
     focusOnSelect: true,
     arrows: false,
     swipeToSlide: true,
-
-   /*  responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          centerMode: false,
-        },
-      },
-      {
-        breakpoint: 425,
-        settings: {
-          arrows: true,
-          centerMode: false,
-        },
-      },
-    ], */
   }
   return (
     <div className={styles.wrapper}>
@@ -136,7 +119,6 @@ const Reviews = ({ data = menuItems }) => {
                     Немецкий писатель, мыслитель, философ и естествоиспытатель
                   </div>
                 </div>
-                <div className={styles.mask}></div>
               </div>
             )
           })}
