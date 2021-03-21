@@ -16,7 +16,6 @@ const Form = () => {
 
   const handlerLine = (arg) => {
     answer.push(arg)
-    console.log(answer)
     setState(state + 1)
     if (state === 5) {
       setState(0)

@@ -22,7 +22,6 @@ const menuItems = [
 
 const CarouselMenu = ({ data = menuItems }) => {
   const [currentItem, setCurrentItem] = useState(0)
-  console.log(currentItem)
   const settings = {
     centerMode: true,
     infinite: true,
@@ -39,7 +38,6 @@ const CarouselMenu = ({ data = menuItems }) => {
     afterChange: function(currentSlide) {
       setCurrentItem(currentSlide)
     
-/*       console.log(currentSlide, menuItems[currentSlide].name) */
     },
 /*     responsive: [
       {

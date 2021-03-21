@@ -16,7 +16,6 @@ const ShowCommentArea = ({comentArr})=>{
 export default ShowCommentArea
 
 
-// console.log(comentArr)
 // const ComentsAreaContent = comentArr.nodes.length !== 0 ? comentArr.nodes.slice(0, 3).map((elem) => {
 //     return(
 //         <div key={elem.id} className={style.commentWrapper}>

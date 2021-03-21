@@ -228,3 +228,39 @@
     max-width: 300px;
   }
 }
+@media (max-width: 500px) {
+  .modalContentWrapper {
+    h2 {
+      font-family: Montserrat;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0.065em;
+      text-align: left;
+      color: #3c424a;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+  }
+  .modalWrapper {
+    padding: 20px;
+  }
+  .input,
+  .textarea {
+    width: 280px;
+  }
+  .modalForm,
+  .modalWrapper {
+    max-height: none;
+  }
+  .modalWrapper {
+    transform: translate(-50%, -45%);
+    overflow: scroll;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+  .button {
+    width: 100%;
+  }
+}

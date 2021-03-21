@@ -45,15 +45,14 @@
   transition: all 0.5s;
 }
 
-
 .itemMenu {
   position: relative;
   outline: none;
   margin-top: 19px;
 }
 
-@media(min-width:1050px){
-  .descPhoto.isRight{
+@media (min-width: 1050px) {
+  .descPhoto.isRight {
     align-items: flex-start;
   }
   .itemMenu:hover .descPhoto.isLeft {
@@ -63,7 +62,7 @@
     animation-name: name;
     animation-duration: 0.5s;
   }
-  
+
   .itemMenu:hover .descPhoto.isRight {
     display: flex;
     width: 250px;
@@ -82,7 +81,6 @@
     width: 250px;
   }
 }
-
 
 .itemMenu:hover .photo {
   z-index: -1;
@@ -172,32 +170,32 @@
   }
 }
 
-@media(max-width: 950px){
-  .wrapperSliderTeam{
+@media (max-width: 950px) {
+  .wrapperSliderTeam {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 742px;
   }
-  .title{
+  .title {
     width: 92%;
     margin-top: 100px;
   }
-  .textTitle{
+  .textTitle {
     margin-left: 0px;
   }
-  .title > button{
+  .title > button {
     font-size: 12px;
     line-height: 15px;
     padding: 0px 21px;
     height: 28px;
     margin-top: 7px;
   }
-  .itemMenu{
+  .itemMenu {
     display: flex;
     flex-direction: column;
   }
-  .descPhoto{
+  .descPhoto {
     display: flex;
     align-items: center;
     position: unset;
@@ -205,29 +203,31 @@
     z-index: 2;
   }
 }
-@media(max-width:950px){
-  .wrapperSliderTeam{
+@media (max-width: 950px) {
+  .wrapperSliderTeam {
     height: 771px;
     padding-top: 116px;
     box-sizing: border-box;
   }
-  .title{
+  .title {
     flex-direction: row;
     margin-top: 13px;
   }
-  .textTitle{
+  .textTitle {
     font-size: 36px;
     line-height: 44px;
   }
-  .title > button{
+  .title > button {
     margin-top: 11px;
     padding: 0px 25px;
   }
 }
 
-@media(max-width:750px){
-  .title{
+@media (max-width: 750px) {
+  .title {
     flex-direction: column;
-
+  }
+  .wrapperSliderTeam {
+    height: 620px;
   }
 }

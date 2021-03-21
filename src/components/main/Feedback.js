@@ -97,7 +97,6 @@ const Form = () => {
   const handleChange = event => {
     const fileUploaded = event.target.files[0];
     setFileName(fileUploaded.name)
-    console.log(fileUploaded)
   };
   return (
     <form className={styles.inputs} onSubmit={handleSubmit} encType="multipart/form-data">

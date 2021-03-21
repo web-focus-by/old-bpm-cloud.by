@@ -38,11 +38,9 @@ const QuizFive = ({handlerLine, answer}) => {
   }
 
   const InvokeInputs = () =>{
-    console.log(answer[0])
     return(
       <div className={styles.invokeInputs}>
         {answer[0].map((items, index) =>{
-          console.log(items)
             return(
                 <input
                   readOnly

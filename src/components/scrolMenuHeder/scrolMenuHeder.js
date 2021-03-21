@@ -41,7 +41,6 @@ const ScrolMenuHeder = ()=>{
 
             let height = document.querySelector(`.${style.listItem}`).clientHeight    
             setActiveItem(Math.round(args[1]/height)+3)
-            console.log(args[3], args[1])
             if(args[3] - args[1] < 600){
                 getMoreData()
             }

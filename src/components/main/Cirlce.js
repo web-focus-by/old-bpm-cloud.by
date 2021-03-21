@@ -100,7 +100,6 @@ const Form = ({closeModal}) =>{
   const handleChange = event => {
     const fileUploaded = event.target.files[0];
     setFileName(fileUploaded.name)
-    console.log(fileUploaded)
   };
   return(
     <div className={classnames(styles.modalContentWrapper)}>

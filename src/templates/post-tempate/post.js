@@ -18,7 +18,6 @@ import { images } from "../../images"
 class Post extends Component {
   render() {
     const post = this.props.data.wpPost
-    console.log(post.featuredImage)
     const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`;
     return (
       <Layout>
@@ -129,7 +128,6 @@ export const postQuery = graphql`
 
 
 // const PostTemplate = props => {
-//   console.log(props, "post")
 //   return (
 //     <div>
 //       <h1

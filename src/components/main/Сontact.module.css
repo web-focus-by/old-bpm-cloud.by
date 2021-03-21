@@ -56,7 +56,7 @@
   transition: all 0.3s;
 }
 
-form .button{
+form .button {
   width: auto;
   background: #309195;
   border-color: #309195;
@@ -64,13 +64,13 @@ form .button{
   margin-left: 0px;
 }
 
-form .button:not(:disabled):hover{
-  background: #FA5C45;
-  border-color: #FA5C45;
+form .button:not(:disabled):hover {
+  background: #fa5c45;
+  border-color: #fa5c45;
   color: #ffffff;
 }
 
-.button:disabled{
+.button:disabled {
   background-color: #ffffff;
   border-color: #ffffff;
   color: #309195;
@@ -262,31 +262,31 @@ form .button:not(:disabled):hover{
   }
 }
 
-@media(max-width:1440px){
-  .wrapper{
+@media (max-width: 1440px) {
+  .wrapper {
     padding-top: 0px;
-    padding-bottom: 150px
+    padding-bottom: 150px;
   }
-  .container{
+  .container {
     width: 904px;
     height: 328px;
     justify-content: start;
   }
-  .title{
+  .title {
     font-size: 14px;
     line-height: 17px;
   }
-  .text{
+  .text {
     font-size: 12px;
     line-height: 15px;
     margin-top: 9px;
     width: 415px;
   }
-  .wrapContenContactForm{
+  .wrapContenContactForm {
     margin-left: 114px;
     margin-top: 29px;
   }
-  .button{
+  .button {
     width: 175px;
     height: 40px;
     margin-left: 87px;
@@ -295,111 +295,121 @@ form .button:not(:disabled):hover{
   }
 }
 
-@media(max-width:950px){
-  .wrapper{
+@media (max-width: 950px) {
+  .wrapper {
     padding-bottom: 131px;
   }
-  .wrapContactForm{
+  .wrapContactForm {
     flex-direction: column;
     align-items: center;
   }
-  .container{
+  .container {
     width: 100%;
     max-width: 710px;
     height: 357px;
     flex-direction: column;
     justify-content: center;
   }
-  .wrapContenContactForm{
+  .wrapContenContactForm {
     width: 520px;
     height: 168px;
     margin: 0;
   }
-  .title{
+  .title {
     font-size: 16px;
     line-height: 20px;
   }
-  .text{
+  .text {
     font-size: 14px;
     line-height: 17px;
     width: 500px;
   }
-  .button{
+  .button {
     font-size: 14px;
     line-height: 17px;
     width: 519px;
     height: 47px;
     margin: 0;
   }
-  .wrapContenContactForm{
+  .wrapContenContactForm {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
     flex-direction: column;
   }
-  .container{
+  .container {
     height: auto;
     padding: 75px 85px 68px;
     box-sizing: border-box;
-
   }
-  .text{
+  .text {
     width: 100%;
     box-sizing: border-box;
   }
-  .textForm{
+  .textForm {
     width: auto;
   }
-  .button{
+  .button {
     width: 90%;
     margin-top: 0px;
   }
-  .wrapf{
+  .wrapf {
     margin-bottom: 20px;
     margin-top: 30px;
   }
-  .boxText{
+  .boxText {
     align-items: center;
   }
 }
 
-@media(max-width:500px){
-  .wrapper{
+@media (max-width: 500px) {
+  .wrapper {
     padding-bottom: 50px;
   }
-  .wrapContenContactForm{
+  .wrapContenContactForm {
     padding-top: 20px;
   }
-  .button{
+  .button {
     margin-bottom: 20px;
   }
-  .container{
+  .container {
     height: auto;
   }
-  .textForm{
+  .textForm {
     width: 240px;
     height: auto;
   }
-  .wrapInputs{
+  .wrapInputs {
     width: 290px;
   }
-  .input{
+  .input {
     width: 240px;
   }
-  .textFormik{
-   width: 280px;
-   height: auto;
+  .textFormik {
+    width: 280px;
+    height: auto;
   }
-  .wrapLastForm{
+  .wrapLastForm {
     flex-direction: column;
   }
 
-  .wrapf{
+  .wrapf {
     margin-top: 80px;
   }
 
-  .greenBox{
+  .greenBox {
     width: auto;
     height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .wrapContenContactForm {
+    padding: 0px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .wrapf {
+    margin-top: 30px;
   }
 }

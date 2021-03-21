@@ -1,10 +1,10 @@
 @import url(../../fonts/stylesheet.css);
 
-header{
-  background: #FBFAFA;
+header {
+  background: #fbfafa;
 }
-main{
-  background: #FBFAFA;
+main {
+  background: #fbfafa;
 }
 .wrapper {
   max-width: 1920px;
@@ -38,7 +38,7 @@ main{
   /* or 40px */
   letter-spacing: 0.065em;
   text-transform: uppercase;
-  color: #6A7380;
+  color: #6a7380;
   max-width: 540px;
   margin-top: -5px;
 }
@@ -81,7 +81,7 @@ main{
   justify-content: space-between;
   width: 100%;
 }
-.displayNone{
+.displayNone {
   display: none;
 }
 /* #arrowGroupWrapper{
@@ -100,6 +100,9 @@ main{
   }
 }
  */
+.mobileButton {
+  display: none;
+}
 @media (max-width: 1445px) {
   .wrapper {
     height: 583px;
@@ -131,7 +134,7 @@ main{
     margin-top: 0px;
     margin-bottom: 22px;
     height: auto;
-    transform: scale(.9);
+    transform: scale(0.9);
   }
   .conteinerTwo {
     height: 443px;
@@ -206,11 +209,11 @@ main{
     line-height: 13px;
   }
 }
-@media(max-width:950px){
-  .wrapper{
+@media (max-width: 950px) {
+  .wrapper {
     height: auto;
   }
-  .conteinerTwo{
+  .conteinerTwo {
     height: auto;
     padding-top: 48px;
     align-items: start;
@@ -218,38 +221,38 @@ main{
     align-items: flex-start;
     margin-bottom: 100px;
   }
-  .container>a{
+  .container > a {
     z-index: 9999999;
   }
-  .BpmCloud{
+  .BpmCloud {
     width: 135px;
     margin-left: 31px;
     margin-top: 16px;
     margin-right: 23px;
   }
-  .boxLogo{
+  .boxLogo {
     margin: 0;
     height: auto;
-    margin-bottom: 64px
+    margin-bottom: 64px;
   }
-  .conteinerTwo{
+  .conteinerTwo {
     flex-direction: column;
     max-width: 768px;
     box-sizing: border-box;
   }
-  .textBPM{
+  .textBPM {
     font-size: 80px;
     line-height: 98px;
   }
-  .sabtext{
+  .sabtext {
     font-size: 18px;
     line-height: 22px;
   }
-  .yellowButton{
+  .yellowButton {
     margin-right: 31px;
     align-items: flex-end;
   }
-  .buttonStyles{
+  .buttonStyles {
     width: 213px;
     height: 48px;
     font-size: 14px;
@@ -258,11 +261,11 @@ main{
   }
 }
 
-@media(max-width:750px){
-  .yellowButton{
+@media (max-width: 750px) {
+  .yellowButton {
     display: none;
   }
-  .container{
+  .container {
     justify-content: space-between;
     margin: 0 auto;
     height: auto;
@@ -273,58 +276,70 @@ main{
     position: fixed;
     z-index: 1000000;
   }
-  .wrapper{
+  .wrapper {
     background-color: #fbfafa;
   }
-  .BpmCloud{
+  .BpmCloud {
     width: 107px;
     margin: 0px;
   }
-  .conteinerTwo{
+  .conteinerTwo {
     align-items: center;
     padding-left: 0px;
     padding-bottom: 53px;
     padding-top: 90px;
   }
-  .box{
+  .box {
     width: auto;
   }
-  .boxLogo{
+  .boxLogo {
     height: auto;
   }
-  .textBPM{
+  .textBPM {
     font-size: 37px;
     line-height: 45px;
   }
-  .sabtext{
+  .sabtext {
     font-size: 14px;
     line-height: 11px;
   }
-  .container>a{
+  .container > a {
     background: white;
   }
 }
 
-@media(max-width: 560px){
-  .boxLogo{
-    transform: scale(.7);
+@media (max-width: 560px) {
+  .boxLogo {
+    transform: scale(0.7);
+  }
+  .mobileButton {
+    display: block;
+    margin-top: 70px;
+    margin-left: -22px;
+  }
+  .boxLogo {
+    margin-bottom: 0px;
+  }
+  .conteinerTwo {
+    padding-bottom: 0;
+    margin-bottom: 25px;
   }
 }
 
-@media(max-width: 430px){
-  .boxLogo{
-    transform: scale(.6);
+@media (max-width: 430px) {
+  .boxLogo {
+    transform: scale(0.6);
   }
-  .sabtext{
+  .sabtext {
     font-size: 16px;
   }
 }
 
-@media(max-width: 375px){
-  .boxLogo{
-    transform: scale(.5);
+@media (max-width: 375px) {
+  .boxLogo {
+    transform: scale(0.5);
   }
-  .sabtext{
+  .sabtext {
     font-size: 18px;
   }
 }

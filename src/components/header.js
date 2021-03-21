@@ -1,12 +1,13 @@
 import { Link } from "gatsby"
 import React, {useState} from "react"
 import { images } from "../images"
-
+import classnames from "classnames"
 import { Button } from "./buttons"
 import ScrolMenuHeder from "./scrolMenuHeder/scrolMenuHeder"
 import styles from "./header.module.css"
 
 import HeaderMenu from "./headerMenu/menuHeader"
+import classNames from "classnames"
 
 const Header = () => {
   function rotateArrow(){
@@ -59,6 +60,9 @@ const Header = () => {
           </div>
         </div>
         <ScrolMenuHeder />
+        <div className={classnames(styles.yellowButton, styles.mobileButton)}>
+            <Button className={styles.buttonStyles}>+375 (29) 32 44 000</Button>
+        </div>
       </div>
     </header>
   )

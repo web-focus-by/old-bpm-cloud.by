@@ -1,4 +1,4 @@
-$hoverAnimationTime: .8s;
+$hoverAnimationTime: 0.8s;
 
 .wrapperKeys {
   display: flex;
@@ -10,24 +10,23 @@ $hoverAnimationTime: .8s;
 .box {
   position: relative;
   width: 33.333%;
-  height: calc((100vw/3) - 27px);
+  height: calc((100vw / 3) - 27px);
   box-sizing: border-box;
   background-color: #efefef;
-/*   border: 19px solid transparent; */
+  /*   border: 19px solid transparent; */
 }
-.box:hover{
+.box:hover {
   box-sizing: border-box;
   /* border: 19px solid #FFCC00; */
-  transition: border .8s;
+  transition: border 0.8s;
   cursor: pointer;
-  
 }
-.box>a{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    z-index: 10;
+.box > a {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
 /* .box::after{
@@ -52,27 +51,33 @@ $hoverAnimationTime: .8s;
   color: #ffffff;
 }
 
-.button{
-  &:hover{
-    background-color: #309195 !important;
-    border-color: transparent !important;
+.button.lastButton {
+  background-color: #309195;
+  &:hover {
+    background-color: transparent;
+    border-color: transparent;
   }
 }
-.box:hover{
-  .caseBgImg{
-    border: 19px solid #FFCC00;
+
+.box:hover {
+  .caseBgImg {
+    border: 19px solid #ffcc00;
   }
-  .linkWrapper{
+  .linkWrapper {
     opacity: 1;
-    svg{
+    svg {
       animation-name: rotate;
       animation-duration: 1.5s;
       animation-timing-function: ease;
     }
   }
-  .button{
+  .button {
     color: #ffffff;
     border-color: #ffffff;
+    &:hover {
+      background-color: #309195;
+      border-color: transparent;
+    }
   }
 }
 
@@ -85,19 +90,17 @@ $hoverAnimationTime: .8s;
   }
 }
 
-
-.caseBgImg{
+.caseBgImg {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
   transition: all $hoverAnimationTime;
   box-sizing: border-box;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
 }
 
-
-.linkWrapper{
+.linkWrapper {
   opacity: 0;
   transition: opacity $hoverAnimationTime;
   position: absolute;
@@ -105,7 +108,7 @@ $hoverAnimationTime: .8s;
   right: 60px;
 }
 
-.linkArrowWrapper{
+.linkArrowWrapper {
   position: relative;
   width: 81.09px;
   height: 81.09px;
@@ -114,7 +117,7 @@ $hoverAnimationTime: .8s;
   z-index: 6;
 }
 
-.linkArrowWrapper > svg{
+.linkArrowWrapper > svg {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -129,7 +132,7 @@ $hoverAnimationTime: .8s;
   color: #ffffff;
 }
 
-.button{
+.button {
   position: absolute;
   transition: all $hoverAnimationTime;
   bottom: 90px;
@@ -156,7 +159,7 @@ $hoverAnimationTime: .8s;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.065em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .nameKeys {
@@ -169,7 +172,7 @@ $hoverAnimationTime: .8s;
   line-height: 22px;
   letter-spacing: 0.065em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .nameKeysGrey {
@@ -214,7 +217,7 @@ $hoverAnimationTime: .8s;
     line-height: 17px;
   }
   .button,
-  .buttonGrey{
+  .buttonGrey {
     position: absolute;
     bottom: 69px;
     left: 76px;
@@ -285,12 +288,12 @@ $hoverAnimationTime: .8s;
     font-size: 9px;
     line-height: 11px;
   }
-  .linkWrapper{
+  .linkWrapper {
     width: 100%;
     height: 100%;
     bottom: 0;
     right: 0;
-    .linkArrowWrapper{
+    .linkArrowWrapper {
       width: 100%;
       height: 100%;
       border-radius: unset;
@@ -298,45 +301,46 @@ $hoverAnimationTime: .8s;
     }
   }
 }
-@media(max-width:950px){
-  .wrapperKeys>.box{
+@media (max-width: 950px) {
+  .wrapperKeys > .box {
     display: none;
   }
-  .box:nth-child(-n+5){
+  .box:nth-child(-n + 5) {
     display: block !important;
   }
-  .box,.boxLast{
+  .box,
+  .boxLast {
     width: 50%;
     height: calc(100vw / 2 - 18px);
   }
-  .title{
+  .title {
     top: 31px;
     left: 29px;
     font-size: 11px;
     line-height: 13px;
   }
-  .nameKeys{
+  .nameKeys {
     top: 58px;
     left: 32px;
     font-size: 14px;
     line-height: 17px;
   }
-  .button{
+  .button {
     bottom: 31px;
     left: 31px;
     height: 27px;
   }
-  .button>div{
+  .button > div {
     font-size: 12px;
     line-height: 15px;
   }
-  .titleLast{
+  .titleLast {
     top: 30px;
     left: 30px;
     font-size: 36px;
     line-height: 44px;
   }
-  .lastButton{
+  .lastButton {
     height: 44px;
     width: 175px;
     margin-left: -2px;
@@ -345,36 +349,37 @@ $hoverAnimationTime: .8s;
   }
 }
 
-@media(max-width:500px){
-  .wrapperKeys>.box{
+@media (max-width: 500px) {
+  .wrapperKeys > .box {
     display: none !important;
   }
-  .box:nth-child(-n+4){
+  .box:nth-child(-n + 4) {
     display: block !important;
   }
-  .box, .boxLast{
+  .box,
+  .boxLast {
     width: 100%;
-    height: 100vw;;
+    height: 100vw;
   }
-  .title{
+  .title {
     top: 20px;
     left: 20px;
   }
-  .nameKeys{
+  .nameKeys {
     top: 50px;
     left: 20px;
   }
-  .button{
+  .button {
     bottom: 20px;
     left: 20px;
   }
-  .titleLast{
+  .titleLast {
     top: 20px;
     left: 20px;
     font-size: 30px;
     line-height: 37px;
   }
-  .lastButton{
+  .lastButton {
     height: 47px;
     width: 280px;
     margin-left: 0px;

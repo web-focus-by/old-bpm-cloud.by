@@ -139,8 +139,8 @@
   color: #6a7380;
   margin-top: 10px;
 }
-.items:hover{
-  .wrapperTrack{
+.items:hover {
+  .wrapperTrack {
     display: block;
   }
 }
@@ -160,49 +160,49 @@
 .slick-current::after {
   display: none;
 }
-.slick-slide{
+.slick-slide {
   margin: 4px -8px !important;
 }
 
-@media(max-width:1445px){
-  .wrapper{
+@media (max-width: 1445px) {
+  .wrapper {
     padding-bottom: 0px;
   }
-  .headReviews{
+  .headReviews {
     width: 904px;
   }
-  .title{
+  .title {
     font-size: 36px;
     line-height: 44px;
     margin-left: 0px;
   }
-  .text{
+  .text {
     width: 445px;
     margin-top: 23px;
     margin-left: 0px;
     font-size: 11px;
     line-height: 13px;
   }
-  .button{
+  .button {
     margin-top: 20px;
     height: 27px;
     padding: 0 16px;
   }
-  .button>div{
+  .button > div {
     font-size: 12px;
     line-height: 15px;
   }
-  .wrapperSlider{
+  .wrapperSlider {
     margin-top: 15px;
   }
-  .items{
-/*     width: 282px !important;
+  .items {
+    /*     width: 282px !important;
     height: 276px !important; */
     transform: translate3d(480px, 0px, 0px);
-/*     padding: 20px;
+    /*     padding: 20px;
     box-sizing: border-box; */
   }
-/*   .textReview{
+  /*   .textReview{
     font-size: 12px;
     line-height: 22px;
   }
@@ -216,43 +216,43 @@
   } */
 }
 
-@media(max-width:950px){
-  .headReviews{
+@media (max-width: 950px) {
+  .headReviews {
     width: 100%;
     max-width: 710px;
   }
-  .text{
+  .text {
     font-size: 14px;
     line-height: 17px;
     width: 525px;
   }
-  .button{
+  .button {
     margin-top: -77px;
   }
-  .wrapperSlider{
+  .wrapperSlider {
     margin-left: 140px;
     margin-top: 70px;
     height: auto;
     margin-bottom: 130px;
   }
-  .wrapper{
+  .wrapper {
     height: auto;
   }
 }
-@media(max-width:500px){
-  .wrapper{
+@media (max-width: 500px) {
+  .wrapper {
     height: auto;
     padding-top: 5px;
     padding-bottom: 80px;
   }
-  .title{
+  .title {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
     font-size: 30px;
     line-height: 37px;
   }
-  .text{
+  .text {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
@@ -260,16 +260,25 @@
     font-size: 12px;
     line-height: 15px;
   }
-  .button{
+  .button {
     display: none;
   }
-  .wrapperSlider{
+  .wrapperSlider {
     margin-top: -25px;
   }
-  .wrapperSlider > div > div > div{
-    transform: translate3d(354px, 0px, 0px) !important;
+  .wrapperSlider {
+    margin-left: 650px;
   }
-  .wrapperSlider > div > div > div > div{
-    transform: scale(.8);
+  .wrapperSlider > div > div > div > div {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    padding-bottom: 0px;
+  }
+  .wrapperSlider {
+    margin-bottom: 30px;
   }
 }
