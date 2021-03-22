@@ -21,15 +21,21 @@
   font-family: Montserrat;
   margin: 0px;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 a { 
   text-decoration: none;
-  color: inherit;
+  color: inherit!important;
+  cursor: pointer;
  }
 
  button:active{
   outline: none;
   }
-  .ReactModal__Overlay{
+.ReactModal__Overlay{
     z-index: 1000;
     background-color: rgba(251, 250, 250, .9) !important;
-  }
+}

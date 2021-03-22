@@ -130,7 +130,7 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.065em;
-  color: #ffffff;
+  color: var(--redColor-color);
   text-transform: lowercase;
   margin: -7px 0px;
 }
@@ -171,7 +171,7 @@
     margin-top: 0px;
   }
   .bittonTitle {
-    width: 185px;
+    width: 205px;
     height: 28px;
     margin: 0px;
   }

@@ -98,17 +98,19 @@ const Form = () => {
     const fileUploaded = event.target.files[0];
     setFileName(fileUploaded.name)
   };
+  
   return (
     <form className={styles.inputs} onSubmit={handleSubmit} encType="multipart/form-data">
-    <input className={styles.input} placeholder="Имя" type="text" required />
+    <input className={styles.input} id="TextInput-4" placeholder="Имя" type="text" required />
     <input
       className={styles.input}
       placeholder="Номер телефона"
       type="text"
       name='phone'
+      type='tel'
       required
     />
-    <input className={styles.input} placeholder="E-mail" name='E-mail' type="text" required/>
+    <input className={styles.input} placeholder="E-mail" name='E-mail' type="email" required/>
     <input className={styles.input} placeholder="Компания" type="text" name='Компания'/>
     <textarea placeholder="Опишите задачу" className={styles.textarea} name='Описание задачи' required/>
     <input className={styles.invisibleInput} type="file" name='file' id='fileInput' onChange={handleChange}/>
@@ -132,10 +134,10 @@ const Form = () => {
 const IconNew = ({socialNetwork}) => {
   const socialNetworkArr =socialNetwork.map((element, index) => {
     return(
-      <div className={styles.iconWrapper}>
-        <Link to={element.url} key={index}>
+      <div className={styles.iconWrapper} key={index}>
+        <a href={element.url}>
           <FontAwesomeIcon icon={['fab', `${element.iconName}`]}/>
-        </Link>
+        </a>
       </div>
     )
   })

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Digital-агентство "BPM-Cloud": разработка и продвижение сайтов`,
+    description: `Digital-агентство полного цикла предлагает разработку, дизайн, сопровождение и продвижение сайтов 🏆 Поднимем сайт в ТОП выдачи ☎ +375 (33) 32-44-000 `,
+    author: `@bpm-cloud.by`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `bpm-cloud.by`,
+        short_name: `bpm-cloud.by`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

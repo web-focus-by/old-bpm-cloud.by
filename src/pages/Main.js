@@ -26,9 +26,7 @@ const Main = () => {
       <NothingPersonal />
       <Сontact />
       <Reviews />
-{/*       <ComponentName /> */}
       <Articles />
-      <Feedback />
     </div>
   )
 }

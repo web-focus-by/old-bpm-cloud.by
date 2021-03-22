@@ -71,7 +71,7 @@ const QuizFive = ({handlerLine, answer}) => {
             name="phone"
             onChange={handlerInput}
             className={styles.input}
-            type="text"
+            type="tel"
             placeholder="Номер телефона"
             required
           />
@@ -79,7 +79,7 @@ const QuizFive = ({handlerLine, answer}) => {
             name="email"
             onChange={handlerInput}
             className={styles.input}
-            type="text"
+            type="email"
             placeholder="E-mail"
             required
           />

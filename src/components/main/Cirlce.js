@@ -109,11 +109,11 @@ const Form = ({closeModal}) =>{
         <input
           className={styles.input}
           placeholder="Номер телефона"
-          type="text"
+          type="tel"
           name='phone'
           required
         />
-        <input className={styles.input} placeholder="E-mail" name='E-mail' type="text" required/>
+        <input className={styles.input} placeholder="E-mail" name='E-mail' type="email" required/>
         <input className={styles.input} placeholder="Компания" type="text" name='Компания'/>
         <textarea placeholder="Опишите задачу" className={styles.textarea} name='Описание задачи' required/>
         <input className={styles.invisibleInput} type="file" name='file' id='modalFileInput' onChange={handleChange}/>

@@ -94,11 +94,9 @@ const Articles = () => {
       <div className={styles.container}>
         <div className={styles.head}>
           <div className={styles.title}>Интересное</div>
-          <ButtonGreen
-            className={styles.bittonTitle}
-          >
-            все статьи и новости
-          </ButtonGreen>
+          <ButtonSmall red className={styles.bittonTitle}>
+          все статьи и новости
+        </ButtonSmall>
         </div>
         <div className={styles.Articles}>
           {(data || []).map((i, index) => (

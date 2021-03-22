@@ -11,16 +11,20 @@ import ShareWithFriends from "../../components/posts/share"
 import AddCommentArea from "../../components/posts/addCommentArea"
 import ShowCommentArea from "../../components/posts/showCommentArea"
 import OtherPostsArea from "../../components/posts/otherPostsArea"
-import DecsrptionContent from "../../components/posts/decsrptionContent"
+import DescriptionContent from "../../components/posts/decsrptionContent"
+import SEO from "../../components/seo"
 import style from'./post.module.scss'
 import { images } from "../../images"
+import Content from "../../components/posts/content"
 
 class Post extends Component {
   render() {
     const post = this.props.data.wpPost
     const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`;
+    //description, lang, meta, title
     return (
       <Layout>
+        <SEO title={post.title} description={post.seo.opengraphDescription} />
         <div className={style.wrapper}>
             <Breadcrumbs breadcrumbsArr={post.seo.breadcrumbs} />
             <h1
@@ -40,22 +44,22 @@ class Post extends Component {
               <div className={style.postImage} style={{backgroundImage:backgroundImageUrl}}>
                 <Tags tagsArr={post.tags.nodes}/>
               </div>
-              <DecsrptionContent content={post.content} />
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
-              </div>
+              <DescriptionContent content={post.content} />
+              <Content content={post.content}/>
+              </div> 
               <Aside />  
             </div>
             <div className={style.authorArea}>
               <AuthorArea authorInfo={post.author.node} />
-              <ShareWithFriends />
+              <ShareWithFriends url={post.link}/>
           </div>
           <div className={style.subscribeArea}>
               <h2>Понравилась статья?</h2>
               <span>ПОДПИШИСЬ НА НАШИ НОВОСТИ</span>
               <div className={style.iconArea}>
-                <Link to={'/'}><img src={images.vkSubscr}></img></Link>
-                <Link to={'/'}><img src={images.instagramSubscr}></img></Link>
-                <Link to={'/'}><img src={images.telegramSubscr}></img></Link>
+                <a href={'https://vk.com/bpm_cloud'} target='_blank'><img src={images.vkSubscr}></img></a>
+                <a href={'https://www.instagram.com/bpm_claud_minsk/'} target='_blank'><img src={images.instagramSubscr}></img></a>
+                <a href={'https://telegram.me/375293244000'} target='_blank'><img src={images.telegramSubscr}></img></a>
               </div>
           </div>
           <div className={style.commentArea}>
@@ -84,6 +88,7 @@ export const postQuery = graphql`
     wpPost(id: { eq: $id }) {
       title
       content
+      link
       date(formatString: "L", locale: "ru")
       featuredImage {
         node {
@@ -102,6 +107,8 @@ export const postQuery = graphql`
           text
           url
         }
+        title
+        opengraphDescription
       }
       comments {
         nodes {

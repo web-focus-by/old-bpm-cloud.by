@@ -12,14 +12,15 @@ import styles from "./layout.module.css"
 import Cirlce from "./main/Cirlce"
 import MenuHeader from "./newHeaderMenu/menu"
 import "./styles.css"
+import Feedback from "./main/Feedback"
 
 const Layout = ({ children }) => {
   return (
     <div className={styles.wrap}>
       <Header />
-{/*       <MenuHeader /> */}
       <Cirlce />
       <main>{children}</main>
+      <Feedback />
       <Footer />
     </div>
   )

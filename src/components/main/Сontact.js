@@ -72,7 +72,7 @@ const ContactForm = ({ handlerGetForm }) => {
               [styles.bad]: checkPhone,
             })}
             placeholder="Номер телефона"
-            type="text"
+            type="tel"
             required
           />
           {(checkPhone || checkName) && (

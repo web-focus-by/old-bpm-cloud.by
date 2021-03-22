@@ -67,7 +67,6 @@ const Reviews = ({ data = menuItems }) => {
       </div>
       <div className={styles.wrapperSlider}>
         <Slider {...settings}>
-          {/* <div className={styles.container}> */}
           {(data || []).map((item, index) => {
             return (
               <div key={index} className={styles.items}>
@@ -122,7 +121,6 @@ const Reviews = ({ data = menuItems }) => {
               </div>
             )
           })}
-          {/* </div> */}
         </Slider>
       </div>
     </div>

@@ -1,26 +1,28 @@
 import React from "react"
 import style from'./decsrptionContent.module.scss'
-import {Link} from 'gatsby'
+import { Link, animateScroll as scroll } from "react-scroll";
 
-const DecsrptionContent = ({content})=>{
+
+const DescriptionContent = ({content})=>{
     let counter = 0;
-    const DecsrptionContentItem =  content.split('\n').map((elem, i) =>{       
+  
+    const DescriptionContentItem =  content.split('\n').map((elem, i) =>{       
 
         let content = elem.includes('<h2>')?elem:'false';
         
         if(content !== 'false'){
             counter++
             return (
-                <div key={i} className={style.listItem}>{counter + '. ' + content.replace(/<\/?[^>]+>/g,'')}</div>
+                <div key={i} className={style.listItem}><Link to={`${counter}`}>{counter + '. ' + content.replace(/<\/?[^>]+>/g,'')}</Link></div>
             )
         }
         
     })
-    const filtredDecsrptionContentArr = DecsrptionContentItem.filter(function(x) {
+    const filteredDescriptionContentArr = DescriptionContentItem.filter(function(x) {
         return x !== undefined && x !== null; 
     })
     
-    const additionalStyle = filtredDecsrptionContentArr.length !== 0 ? {
+    const additionalStyle = filteredDescriptionContentArr.length !== 0 ? {
         display: 'block'
     } : {
         display: 'none'
@@ -30,10 +32,10 @@ const DecsrptionContent = ({content})=>{
         <div className={style.wrapper} style = {additionalStyle}>
             <div className={style.content}>
                 <h3>Содержание:</h3>
-                {filtredDecsrptionContentArr}
+                {filteredDescriptionContentArr}
             </div>
         </div>
     )
 }
 
-export default DecsrptionContent
+export default DescriptionContent
