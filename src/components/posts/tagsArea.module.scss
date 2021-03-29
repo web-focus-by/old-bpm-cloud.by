@@ -11,7 +11,16 @@
       border-radius: 40px;
       margin-right: 20px;
       margin-bottom: 20px;
+      transition: all .3s;
 
+      &:hover{
+        background: #309195;
+        border: 1.5px solid #309195;
+
+        span{
+          color: #fff;
+        }
+      }
 
       span{
         font-family: Montserrat;
@@ -22,6 +31,25 @@
         letter-spacing: 0.065em;
         text-align: left;
         color: #6A7380;
+        transition: all .3s;
+      }
+    }
+
+    >a:last-child{
+      div{
+        border: 2px solid #FA5C45;
+
+        span{
+          color: #FA5C45;
+        }
+
+        &:hover{
+          background: #FA5C45;
+
+          span{
+            color: #fff;
+          }
+        }
       }
     }
 }

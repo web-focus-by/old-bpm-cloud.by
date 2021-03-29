@@ -29,3 +29,10 @@
         }
     }
 }
+
+.title{
+    transition: all 0.3s;
+    &:hover{
+        color: #309195;
+    }
+}

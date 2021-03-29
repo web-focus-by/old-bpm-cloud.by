@@ -50,7 +50,7 @@ const KeysBoxs = () => {
         }
         return (
 
-          <div
+          <Link to={`${item.uri}`}
             key={item.id}
             className={classnames(styles.box)}
           >
@@ -69,17 +69,7 @@ const KeysBoxs = () => {
               >
                 {item.tags.nodes[0].name}
               </ButtonSmall>
-              <div className={styles.linkWrapper}>
-                <Link to={`${item.uri}`}>
-                  <div className={styles.linkArrowWrapper}>
-                    <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M26.0469 1.7002L53.0469 28.7002L26.0469 55.7002" stroke="white" strokeWidth="3"/>
-                        <path d="M52.0469 28.7002L0.0468764 28.7002" stroke="white" strokeWidth="3"/>
-                    </svg>
-                  </div>
-                </Link>
-              </div>
-          </div>
+          </Link>
           
         )
       })}
