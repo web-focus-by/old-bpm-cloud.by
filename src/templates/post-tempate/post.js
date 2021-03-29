@@ -16,6 +16,7 @@ import SEO from "../../components/seo"
 import style from'./post.module.scss'
 import { images } from "../../images"
 import Content from "../../components/posts/content"
+import SearchArea from "../../components/posts/searchArea"
 
 class Post extends Component {
   render() {
@@ -23,17 +24,20 @@ class Post extends Component {
     const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`;
     //description, lang, meta, title
 
-    console.log(post)
+
     return (
       <Layout>
         <SEO title={post.title} description={post.seo.opengraphDescription} />
         <div className={style.wrapper}>
             <Breadcrumbs breadcrumbsArr={post.seo.breadcrumbs} />
-            <h1
-              dangerouslySetInnerHTML={{
-                __html: post.title,
-              }}
-            />
+            <div className={style.headerAndSearchWrapper}>
+              <h1
+                dangerouslySetInnerHTML={{
+                  __html: post.title,
+                }}
+              />
+              <SearchArea />
+            </div>
             <div className={style.contentArea}>
               <div className={style.post}>
               <div className={style.postInfo}>

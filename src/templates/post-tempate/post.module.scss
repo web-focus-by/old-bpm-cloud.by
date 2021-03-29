@@ -17,11 +17,17 @@
         text-align: left;
         color: #3C424A;
         margin-bottom: 42px;
+        max-width: 715px;
     }
 
     
 }
-
+.headerAndSearchWrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
 .post{
     max-width: 715px;
 
