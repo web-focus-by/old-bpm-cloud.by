@@ -37,7 +37,7 @@ const AddCommentArea =({post}) => {
       target: '_blank',
     }
   ]
-
+  /*eslint-disable */
   useEffect(() => {
     window.fbAsyncInit = function() {
       FB.init({
@@ -54,7 +54,7 @@ const AddCommentArea =({post}) => {
 
 
   },[]);
-  /*eslint-disable */
+
 
 
   async function authorization(name){
