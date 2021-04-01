@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import VK from 'vk-openapi'
 import style from'./addCommentArea.module.scss'
 import classnames from 'classnames'
 import { images } from "../../images"
