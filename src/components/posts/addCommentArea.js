@@ -19,7 +19,7 @@ const AddCommentArea =({post}) => {
     {
       name: 'vk',
       imgSrc: images.vk,
-      url: `https://oauth.vk.com/authorize?client_id=7807660&display=page&redirect_uri=${document.location.href}&scope=friends&response_type=code&v=5.130`,
+      url: ``,
       target: '_blank',
       id:'7807660',
       securityKey: 'EreTN84q1gqwrZI2Z2CH',
