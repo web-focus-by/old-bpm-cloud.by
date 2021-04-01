@@ -34,6 +34,7 @@ import instagramSubscr from './instagramSubscr.svg'
 import vkSubscr from './vkSubscr.svg'
 import fb from './fb.svg'
 import ok from './ok.svg'
+import vk_is_login from './vk_is_login.svg'
 
 
 export const images = {
@@ -73,5 +74,6 @@ export const images = {
   vkSubscr,
   fb,
   ok,
+  vk_is_login,
   
 }

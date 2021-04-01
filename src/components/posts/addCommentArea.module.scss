@@ -70,6 +70,80 @@
     }
 }
 
+.userDataWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    margin-top: 30px;
+
+    >span{
+        margin-right: 5px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+        color: #6A7380;
+        margin-top: 20px;
+    }
+}
+
+.inputFieldWrapper{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    outline:none;
+    
+    >textarea{
+        width: 100%;
+        height: 145px;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        outline:none;
+        
+        &::placeholder{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height */
+            letter-spacing: 0.065em;
+            color: #6A7380;
+        }
+    }
+
+    >button{
+        width: 100%;
+        height: 52px;
+        border: 2px solid #FA5C45;
+        box-sizing: border-box;
+        border-radius: 40px;
+        outline:none;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: 0.065em;
+        text-transform: uppercase;
+        color: #FA5C45;
+    }
+}
+.isLogInSocialNetworkWrapper{
+    display: flex;
+    align-items: center;
+
+    >img{
+        margin-left: 30px;
+    }
+}
+
 @media(max-width :1020px){
     .form{
         max-width: 330px;
@@ -84,6 +158,15 @@
 
         }
     }
+}
+
+.userPhoto{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 20px;
 }
 
 @media(max-width: 768px){
