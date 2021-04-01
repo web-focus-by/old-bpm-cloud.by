@@ -69,7 +69,7 @@ class Post extends Component {
               </div>
           </div>
           <div className={style.commentArea}>
-            <AddCommentArea />
+            <AddCommentArea post={post} />
             <ShowCommentArea comentArr={post.comments}/>
           </div>
           <div className={style.otherPostsArea}>

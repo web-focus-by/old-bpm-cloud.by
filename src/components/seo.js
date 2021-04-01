@@ -69,7 +69,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
+    </Helmet>
   )
 }
 

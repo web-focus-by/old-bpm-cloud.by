@@ -32,6 +32,9 @@ import shareLink from './shareLink.svg'
 import telegramSubscr from './telegramSubscr.svg'
 import instagramSubscr from './instagramSubscr.svg'
 import vkSubscr from './vkSubscr.svg'
+import fb from './fb.svg'
+import ok from './ok.svg'
+
 
 export const images = {
   CloseMenuYellow,
@@ -68,5 +71,7 @@ export const images = {
   telegramSubscr,
   instagramSubscr,
   vkSubscr,
+  fb,
+  ok,
   
 }
