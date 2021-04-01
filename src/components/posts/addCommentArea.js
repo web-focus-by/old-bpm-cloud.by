@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import VK from 'vk-openapi'
 import style from'./addCommentArea.module.scss'
 import classnames from 'classnames'
@@ -38,12 +38,12 @@ const AddCommentArea =({post}) => {
     }
   ]
 
+  
   /*eslint-disable */
   VK.init({
     apiId: 7807660
   });
 
-  
   async function authorization(name){
     console.log(name)
     if(name == 'vk'){
@@ -74,29 +74,31 @@ const AddCommentArea =({post}) => {
       }
     });
     }else if(name == 'fb'){
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId            : 484774379541257,
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v10.0'
-        });
-      };
-
-      FB.login(function(response) {
-        if (response.authResponse) {
-         console.log('Welcome!  Fetching your information.... ');
-         FB.api('/me', function(response) {
-           console.log('Good to see you, ' + response.name + '.');
-         });
-        } else {
-         console.log('User cancelled login or did not fully authorize.');
+        if(typeof window !== 'undefined'){
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId            : 484774379541257,
+              autoLogAppEvents : true,
+              xfbml            : true,
+              version          : 'v10.0'
+            });
+          };
+  
+  
+        FB.login(function(response) {
+          if (response.authResponse) {
+           console.log('Welcome!  Fetching your information.... ');
+           FB.api('/me', function(response) {
+             console.log('Good to see you, ' + response.name + '.');
+           });
+          } else {
+           console.log('User cancelled login or did not fully authorize.');
+          }
+      });
         }
-    });
-
-
     }
   }
+ 
 /*eslint-enable */
   const socialLInkArea = loginIcons.map(item =>{
     return(
