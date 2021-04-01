@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import VK from 'vk-openapi'
+/* import VK from 'vk-openapi' */
 import style from'./addCommentArea.module.scss'
 import classnames from 'classnames'
 import { images } from "../../images"
@@ -38,51 +38,58 @@ const AddCommentArea =({post}) => {
     }
   ]
 
-  
+  useEffect(() => {
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : 484774379541257,
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v10.0'
+      });
+    };
+
+    VK.init({
+      apiId: 7807660
+    });
+
+
+  },[]);
   /*eslint-disable */
-  VK.init({
-    apiId: 7807660
-  });
+
 
   async function authorization(name){
     console.log(name)
     if(name == 'vk'){
       
-    VK.Auth.login(function(response) {
-      if (response.session) {
-        console.log("Пользователь успешно авторизовался")
-        VK.Api.call('users.get', {user_ids: response.session.user.id,  fields: 'crop_photo', v:"5.73"}, function(r) {
-          if(r.response) {
-            console.log(r)
-            console.log(r.response)
-            setUserData({
-              firstName:r.response[0].first_name,
-              lastName:r.response[0].last_name,
-              imgUrl:r.response[0].crop_photo.photo.photo_604,
-              socialNetwork:'vk',
-            })
-            setLogin(true)
-          }
-        });
-        if (response.settings) {
-          /* Выбранные настройки доступа пользователя, если они были запрошены */
-          console.log("Выбранные настройки доступа пользователя, если они были запрошены")
-        }
-      } else {
-        /* Пользователь нажал кнопку Отмена в окне авторизации */
-        console.log("Пользователь нажал кнопку Отмена в окне авторизации")
-      }
-    });
+    // VK.Auth.login(function(response) {
+    //   if (response.session) {
+    //     console.log("Пользователь успешно авторизовался")
+    //     VK.Api.call('users.get', {user_ids: response.session.user.id,  fields: 'crop_photo', v:"5.73"}, function(r) {
+    //       if(r.response) {
+    //         console.log(r)
+    //         console.log(r.response)
+    //         setUserData({
+    //           firstName:r.response[0].first_name,
+    //           lastName:r.response[0].last_name,
+    //           imgUrl:r.response[0].crop_photo.photo.photo_604,
+    //           socialNetwork:'vk',
+    //         })
+    //         setLogin(true)
+    //       }
+    //     });
+    //     if (response.settings) {
+    //       /* Выбранные настройки доступа пользователя, если они были запрошены */
+    //       console.log("Выбранные настройки доступа пользователя, если они были запрошены")
+    //     }
+    //   } else {
+    //     /* Пользователь нажал кнопку Отмена в окне авторизации */
+    //     console.log("Пользователь нажал кнопку Отмена в окне авторизации")
+    //   }
+    // });
+
     }else if(name == 'fb'){
         if(typeof window !== 'undefined'){
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId            : 484774379541257,
-              autoLogAppEvents : true,
-              xfbml            : true,
-              version          : 'v10.0'
-            });
-          };
+          
   
   
         FB.login(function(response) {

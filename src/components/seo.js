@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      {/* <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script> */}
+      <script async defer crossorigin="anonymous" src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     </Helmet>
   )
