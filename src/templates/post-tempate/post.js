@@ -92,6 +92,7 @@ export default Post
 export const postQuery = graphql`
   query($id: String!) {
     wpPost(id: { eq: $id }) {
+      databaseId
       title
       content
       link

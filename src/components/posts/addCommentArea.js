@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
-/* import VK from 'vk-openapi' */
 import style from'./addCommentArea.module.scss'
 import classnames from 'classnames'
 import { images } from "../../images"
-import {Link} from 'gatsby'
 // import FacebookLogin from 'react-facebook-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+
+import {useStaticQuery, qraphql, Link} from 'gatsby'
 
 
 
@@ -18,7 +18,7 @@ const AddCommentArea =({post}) => {
     imgUrl:'',
     socialNetwork:'',
   })
-  console.log(comment)
+  console.log(post.databaseId)
 
   const responseFacebook = (response) => {
     if(response){
@@ -133,6 +133,26 @@ const AddCommentArea =({post}) => {
       comment,
       userData,
     })
+
+    const data = useStaticQuery(graphql`
+    mutation CREATE_COMMENT {
+      createComment(input: {commentOn: 290, content: "This is a test comment, yo tyu", author: "Jason"}) {
+        success
+        comment {
+          id
+          content
+          author {
+            node {
+              name
+            }
+          }
+          agent
+          approved
+        }
+      }
+    }
+  `)
+  console.log(data)
 
   }
 
