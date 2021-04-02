@@ -4,6 +4,9 @@ import style from'./addCommentArea.module.scss'
 import classnames from 'classnames'
 import { images } from "../../images"
 import {Link} from 'gatsby'
+// import FacebookLogin from 'react-facebook-login';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+
 
 
 const AddCommentArea =({post}) => {
@@ -16,6 +19,20 @@ const AddCommentArea =({post}) => {
     socialNetwork:'',
   })
   console.log(comment)
+
+  const responseFacebook = (response) => {
+    if(response){
+      setUserData({
+        firstName:response.name.split(' ')[0],
+        lastName:response.name.split(' ')[1],
+        imgUrl:response.picture.data.url,
+        socialNetwork:'fb',
+      })
+      setLogin(true)
+    }
+    console.log(response);
+  }
+
   const loginIcons = [
     {
       name: 'vk',
@@ -33,29 +50,31 @@ const AddCommentArea =({post}) => {
     },{
       name: 'ok',
       imgSrc: images.ok,
-      url: ``,
+      url: `https://connect.ok.ru/oauth/authorize?client_id=512001003099&scope=VALUABLE_ACCESS;LONG_ACCESS_TOKEN&response_type=token&redirect_uri=https://new-bpm-cloud.netlify.app/`,
       target: '_blank',
     }
   ]
   /*eslint-disable */
   useEffect(() => {
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId            : 484774379541257,
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v10.0'
-      });
-    };
-
     VK.init({
       apiId: 7807660
     });
-
-
   },[]);
 
 
+  //ОК начало
+  var config = {
+    app_id: 512001003099,      // <-- insert APP ID here
+    app_key: 'CMFPEEKGDIHBABABA'     // <-- insert APP PUBLIC KEY here
+  };
+
+  let requestOptions = {
+    applicationSecretKey: '4fe8d242617467f4bb8312b9d14c70c5',
+    applicationKey: 'CMFPEEKGDIHBABABA',
+    applicationId: 512001003099,
+  }
+
+  //ОК конец
 
   async function authorization(name){
     console.log(name)
@@ -66,8 +85,6 @@ const AddCommentArea =({post}) => {
         console.log("Пользователь успешно авторизовался")
         VK.Api.call('users.get', {user_ids: response.session.user.id,  fields: 'crop_photo', v:"5.73"}, function(r) {
           if(r.response) {
-            console.log(r)
-            console.log(r.response)
             setUserData({
               firstName:r.response[0].first_name,
               lastName:r.response[0].last_name,
@@ -88,21 +105,9 @@ const AddCommentArea =({post}) => {
     });
 
     }else if(name == 'fb'){
-        if(typeof window !== 'undefined'){
-          
-  
-  
-        FB.login(function(response) {
-          if (response.authResponse) {
-           console.log('Welcome!  Fetching your information.... ');
-           FB.api('/me', function(response) {
-             console.log('Good to see you, ' + response.name + '.');
-           });
-          } else {
-           console.log('User cancelled login or did not fully authorize.');
-          }
-      });
-        }
+
+
+      console.log(fb)
     }
   }
  
@@ -130,27 +135,7 @@ const AddCommentArea =({post}) => {
     })
 
   }
-    // <div key={item.name} className={style.socialLinItemWrapper}><a href={item.url}><img src={item.imgSrc}></img></a></div>
 
-    // state = {
-    //   firstName: "",
-    //   lastName: "",
-    //   comment: "",
-    // }
-    // handleInputChange = event => {
-    //   const target = event.target
-    //   const value = target.value
-    //   const name = target.name
-    //   const comment = target.comment
-    //   this.setState({
-    //     [name]: value,
-    //   })
-    // }
-    
-    // handleSubmit = event => {
-    //     event.preventDefault()
-    //     alert(`Welcome ${this.state.firstName} ${this.state.lastName} ${this.state.comment}!`)
-    // }
       return (
         <div className={style.form}>
           <h2 className={style.title}>Добавьте комментарий</h2>
@@ -158,7 +143,18 @@ const AddCommentArea =({post}) => {
             <div>
               <div className={style.subTitleText}>Выберите социальную сеть, чтобы оставить комментарий</div>
               <div className={style.socialLinkAreaWrapper}>
-                {socialLInkArea}
+                <div className={style.socialLinItemWrapper} onClick={() => authorization(loginIcons[0].name)}><img src={loginIcons[0].imgSrc}></img></div>
+                <FacebookLogin
+                  appId="484774379541257"
+                  // autoLoad={true}
+                  fields="name,email,picture.height(480)"
+                  callback={responseFacebook}
+                  cssClass={style.myFacebookButton}
+                  render={renderProps => (
+                    <div className={style.socialLinItemWrapper} onClick={renderProps.onClick}><img src={loginIcons[1].imgSrc}></img></div>
+                  )}
+                />
+                <div className={style.socialLinItemWrapper}><a href={loginIcons[2].url} target='_blank'><img src={loginIcons[2].imgSrc}></img></a></div>
               </div>
             </div>
           )}
@@ -179,39 +175,6 @@ const AddCommentArea =({post}) => {
               </div>
           </div>)}
         </div>
-        // <form onSubmit={this.handleSubmit} className={style.form}>
-        //   <h2 className={style.title}>Добавьте комментарий</h2>
-        //   <label>
-        //     <input
-        //       type="text"
-        //       name="firstName"
-        //       value={this.state.firstName}
-        //       onChange={this.handleInputChange}
-        //       placeholder="Имя"
-        //       required 
-        //     />
-        //   </label>
-        //   <label>
-        //     <input
-        //       type="text"
-        //       name="lastName"
-        //       value={this.state.lastName}
-        //       onChange={this.handleInputChange}
-        //       placeholder="E-mail"
-        //       required
-        //     />
-        //   </label>
-        //   <label>
-        //     <textarea
-        //       name="comment"
-        //       value={this.state.comment}
-        //       onChange={this.handleInputChange}
-        //       placeholder="Добавьте комментарий..."
-        //       required
-        //     />
-        //   </label>
-        //   <button type="submit">отправить</button>
-        // </form>
       )
     }
 export default AddCommentArea

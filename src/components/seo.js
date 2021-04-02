@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -71,7 +72,9 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <script async defer src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
-      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+      {/* <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> */}
+      {/* <script type="text/javascript" src="//api.ok.ru/js/fapi5.js" defer="defer"></script> */}
+
     </Helmet>
   )
 }
