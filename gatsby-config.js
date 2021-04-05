@@ -32,6 +32,10 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options:{
         url:`https://wp-server.bpm-cloud.by/graphql`, //  https://um2020.by/graphql https://wp-server.bpm-cloud.by/graphql
+        },
+        schema: {
+          requestConcurrency: 5, // currently set to 15
+          previewRequestConcurrency: 2, // currently set to 5
         }
     },
     {

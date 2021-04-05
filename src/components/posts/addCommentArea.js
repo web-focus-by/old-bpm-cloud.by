@@ -4,10 +4,29 @@ import classnames from 'classnames'
 import { images } from "../../images"
 // import FacebookLogin from 'react-facebook-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import { client } from '../../context/ApolloContext';
 
 import {useStaticQuery, qraphql, Link} from 'gatsby'
 
+import { gql, useMutation } from '@apollo/client';
 
+const ADD_COMMENT = gql`
+mutation CREATE_COMMENT($commentOn: Int!, $content: String!, $author: String!, $authorEmail: String!, $authorUrl: String!) {
+  createComment(input: {commentOn: $commentOn, content: $content, author: $author, authorEmail: $authorEmail, authorUrl: $authorUrl}) {
+    success
+  }
+}
+`
+
+
+const TEST_LOG_IN = gql`
+mutation LoginUser {
+  createComment(input: {commentOn: 290, content: "zxcaweghjhj", authorUrl: "", author: "qweqwczxghjhgjc"}) {
+    clientMutationId
+    success
+  }
+}
+`
 
 const AddCommentArea =({post}) => {
   const [isLogin, setLogin] = useState(false)
@@ -18,7 +37,13 @@ const AddCommentArea =({post}) => {
     imgUrl:'',
     socialNetwork:'',
   })
+  const [addComment, { data }] = useMutation(ADD_COMMENT);
+  // const [addComment, { data }] = useMutation(TEST_LOG_IN);
+
   console.log(post.databaseId)
+
+
+
 
   const responseFacebook = (response) => {
     if(response){
@@ -134,26 +159,10 @@ const AddCommentArea =({post}) => {
       userData,
     })
 
-    const data = useStaticQuery(graphql`
-    mutation CREATE_COMMENT {
-      createComment(input: {commentOn: 290, content: "This is a test comment, yo tyu", author: "Jason"}) {
-        success
-        comment {
-          id
-          content
-          author {
-            node {
-              name
-            }
-          }
-          agent
-          approved
-        }
-      }
-    }
-  `)
-  console.log(data)
+    addComment({ variables: { commentOn: post.databaseId,  content: comment, author:`${userData.firstName} ${userData.lastName}`, authorEmail:'test@mail.ru', authorUrl: `userData.imgUrl` }});
+    // addComment();
 
+    //$commentOn: Number!, $content: String!, $author: String!, $authorEmail: String!, $authorUrl: String!
   }
 
       return (
