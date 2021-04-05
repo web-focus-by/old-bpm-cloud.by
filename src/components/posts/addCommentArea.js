@@ -9,6 +9,7 @@ import { client } from '../../context/ApolloContext';
 import {useStaticQuery, qraphql, Link} from 'gatsby'
 
 import { gql, useMutation } from '@apollo/client';
+import { faLeaf } from "@fortawesome/free-solid-svg-icons"
 
 const ADD_COMMENT = gql`
 mutation CREATE_COMMENT($commentOn: Int!, $content: String!, $author: String!, $authorEmail: String!, $authorUrl: String!) {
@@ -30,7 +31,9 @@ mutation LoginUser {
 
 const AddCommentArea =({post}) => {
   const [isLogin, setLogin] = useState(false)
+  const [commentIsSend, setSend] = useState(false)
   const [comment, changeComment] = useState('')
+  const [disabled, setDisable] = useState(false)
   const [userData, setUserData] = useState({
     firstName:'',
     lastName:'',
@@ -41,6 +44,7 @@ const AddCommentArea =({post}) => {
   // const [addComment, { data }] = useMutation(TEST_LOG_IN);
 
   console.log(post.databaseId)
+
 
 
 
@@ -145,8 +149,6 @@ const AddCommentArea =({post}) => {
 
   const loginSocialNetwork = (socialNetwork)=>{
     const socialIconUrl = socialNetwork == 'vk'?images.vk_is_login:socialNetwork == 'fb'?images.fb:socialNetwork == 'ok'?images.ok:false;
-    console.log(socialNetwork)
-    console.log(socialIconUrl)
     
     return(
       <div className={classnames(style.subTitleText, style.isLogInSocialNetworkWrapper)}>Вы вошли через: <img src={socialIconUrl}></img></div>
@@ -154,12 +156,14 @@ const AddCommentArea =({post}) => {
   }
 
   const sendComment = () =>{
+    setDisable(true);
     console.log({
       comment,
       userData,
     })
 
-    addComment({ variables: { commentOn: post.databaseId,  content: comment, author:`${userData.firstName} ${userData.lastName}`, authorEmail:'test@mail.ru', authorUrl: `userData.imgUrl` }});
+    addComment({ variables: { commentOn: post.databaseId,  content: comment, author:`${userData.firstName} ${userData.lastName}`, authorEmail:'test@mail.ru', authorUrl: `userData.imgUrl` }})
+    .then(data => setSend(data.data.createComment.success));
     // addComment();
 
     //$commentOn: Number!, $content: String!, $author: String!, $authorEmail: String!, $authorUrl: String!
@@ -187,7 +191,7 @@ const AddCommentArea =({post}) => {
               </div>
             </div>
           )}
-          {isLogin && (<div>
+          {(isLogin && !commentIsSend) && (<div>
             <div>
               {loginSocialNetwork(userData.socialNetwork)}
             </div>
@@ -198,11 +202,15 @@ const AddCommentArea =({post}) => {
               <span>{userData.firstName}</span>
               <span>{userData.lastName}</span>
             </div>
+            
               <div className={style.inputFieldWrapper}>
               <textarea placeholder='Добавьте комментарий...'value={comment} onChange={(e)=> changeComment(e.target.value)}></textarea>
-              <button onClick={()=> sendComment()}>отправить</button>
+              <button onClick={()=> sendComment()} disabled={disabled}>отправить</button>
               </div>
           </div>)}
+          {commentIsSend && (
+              <div className={style.thxMessage}>Спасибо за Ваш комментарий! Вскоре он будет опубликован!</div>
+          )}
         </div>
       )
     }

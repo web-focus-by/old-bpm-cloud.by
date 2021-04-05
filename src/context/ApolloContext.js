@@ -1,8 +1,10 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import fetch from 'isomorphic-fetch'
 import { graphql, Link } from "gatsby"
 
 const httpLink = createHttpLink({
+  fetch,
   uri: 'https://wp-server.bpm-cloud.by/graphql',
 });
 
@@ -13,9 +15,6 @@ console.log(httpLink)
 //
 
 const authLink = setContext((_, { headers }) => {
-  // get the authentication token from local storage if it exists
-  const token = 'super-secret-key';
-  // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
