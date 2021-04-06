@@ -25,7 +25,7 @@ class Post extends Component {
     //description, lang, meta, titles
     return (
       <Layout>
-        <SEO title={post.title} description={post.seo.opengraphDescription} />
+        <SEO title={post.seo.title} description={post.seo.opengraphDescription} />
         <div className={style.wrapper}>
             <Breadcrumbs breadcrumbsArr={post.seo.breadcrumbs} />
             <div className={style.headerAndSearchWrapper}>

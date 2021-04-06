@@ -17,7 +17,7 @@ import Breadcrumbs from "../../components/posts/breadcrumbs"
       const StaticPage = this.props.data.wpPage
       return (
         <Layout>
-          <SEO title={StaticPage.title} description={StaticPage.seo.opengraphDescription} />
+          <SEO title={StaticPage.seo.title} description={StaticPage.seo.opengraphDescription} />
             <div className={style.wrapper}>
             <Breadcrumbs breadcrumbsArr={StaticPage.seo.breadcrumbs} />
                 <div className={style.contentArea}>
