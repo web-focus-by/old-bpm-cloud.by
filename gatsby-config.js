@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Digital-агентство "BPM-Cloud": разработка и продвижение сайтов`,
-    description: `Digital-агентство полного цикла предлагает разработку, дизайн, сопровождение и продвижение сайтов 🏆 Поднимем сайт в ТОП выдачи ☎ +375 (33) 32-44-000 `,
+    description: `Digital-агентство полного цикла предлагает разработку, дизайн, сопровождение и продвижение сайтов 🏆 Поднимем сайт в ТОП выдачи`,
     author: `@bpm-cloud.by`,
   },
   plugins: [
@@ -49,6 +49,34 @@ module.exports = {
         // See http://reactcommunity.org/react-modal/#usage
         modalProps: { },
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-NTFQWLW",
+  
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // // datalayer to be set before GTM is loaded
+        // // should be an object or a function that is executed in the browser
+        // //
+        // // Defaults to null
+        // defaultDataLayer: { platform: "gatsby" },
+  
+        // // Specify optional GTM environment details.
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
+        // dataLayerName: "YOUR_DATA_LAYER_NAME",
+  
+        // // Name of the event that is triggered
+        // // on every Gatsby route change.
+        // //
+        // // Defaults to gatsby-route-change
+        // routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
+      },
     },
   ],
 }
