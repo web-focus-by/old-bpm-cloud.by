@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const { allWpPage, allWpPost } = result.data
   
     // Create Page pages.
-    const pageTemplate = path.resolve(`./src/templates/page.js`)
+    const pageTemplate = path.resolve(`./src/templates/page-template/page.js`)
     // We want to create a detailed page for each page node.
     // The path field contains the relative original WordPress link
     // and we use it for the slug to preserve url structure.
