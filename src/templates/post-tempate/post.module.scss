@@ -82,6 +82,13 @@
         text-align: left;
         margin-bottom: 20px;
     }
+    a{
+        color: var(--green-color) !important;
+
+        &:hover{
+            color: var(--redColor-color) !important;
+        }
+    }
 }
 .contentArea{
     display: flex;
