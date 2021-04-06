@@ -5,7 +5,7 @@ import { graphql, Link } from "gatsby"
 
 const httpLink = createHttpLink({
   fetch,
-  uri: 'https://wp-server.bpm-cloud.by/graphql',
+  uri: 'https://wp-server-bpm-cloud.webfocus.by/graphql',
 });
 
 
@@ -29,6 +29,6 @@ export const client = new ApolloClient({
 });
 
 // export const client = new ApolloClient({
-//   uri: `https://wp-server.bpm-cloud.by/graphql`, // https://48p1r2roz4.sse.codesandbox.io https://wp-server.bpm-cloud.by/graphql
+//   uri: `https://wp-server-bpm-cloud.webfocus.by/graphql`, // https://48p1r2roz4.sse.codesandbox.io https://wp-server-bpm-cloud.webfocus.by/graphql
 //   cache: new InMemoryCache(),
 // })
