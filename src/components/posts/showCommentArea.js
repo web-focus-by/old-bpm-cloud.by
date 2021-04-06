@@ -3,7 +3,6 @@ import style from'./showCommentArea.module.scss'
 import {Link} from 'gatsby'
 
 const ShowCommentArea = ({commentArr})=>{
-console.log(commentArr)
 
 const CommentsAreaContent = commentArr.nodes.length !== 0 ? commentArr.nodes.slice(0, 3).map((elem) => {
     return(

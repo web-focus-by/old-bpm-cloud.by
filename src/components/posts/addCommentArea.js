@@ -43,7 +43,6 @@ const AddCommentArea =({post}) => {
   const [addComment, { data }] = useMutation(ADD_COMMENT);
   // const [addComment, { data }] = useMutation(TEST_LOG_IN);
 
-  console.log(post.databaseId)
 
 
 
@@ -59,7 +58,7 @@ const AddCommentArea =({post}) => {
       })
       setLogin(true)
     }
-    console.log(response);
+
   }
 
   const loginIcons = [
@@ -106,7 +105,7 @@ const AddCommentArea =({post}) => {
   //ОК конец
 
   async function authorization(name){
-    console.log(name)
+
     if(name == 'vk'){
       
     VK.Auth.login(function(response) {
@@ -135,8 +134,6 @@ const AddCommentArea =({post}) => {
 
     }else if(name == 'fb'){
 
-
-      console.log(fb)
     }
   }
  

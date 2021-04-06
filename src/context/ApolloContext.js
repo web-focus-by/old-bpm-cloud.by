@@ -8,7 +8,7 @@ const httpLink = createHttpLink({
   uri: 'https://wp-server.bpm-cloud.by/graphql',
 });
 
-console.log(httpLink)
+
 
 //
 
@@ -27,9 +27,6 @@ export const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
 });
-
-
-console.log(client)
 
 // export const client = new ApolloClient({
 //   uri: `https://wp-server.bpm-cloud.by/graphql`, // https://48p1r2roz4.sse.codesandbox.io https://wp-server.bpm-cloud.by/graphql
