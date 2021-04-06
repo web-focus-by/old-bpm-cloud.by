@@ -22,9 +22,7 @@ class Post extends Component {
   render() {
     const post = this.props.data.wpPost
     const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`;
-    //description, lang, meta, title
-
-    console.log(post)
+    //description, lang, meta, titles
     return (
       <Layout>
         <SEO title={post.title} description={post.seo.opengraphDescription} />

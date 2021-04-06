@@ -23,7 +23,6 @@ import Aside from "../../components/posts/aside"
                 <Aside /> 
               </div>
             </div>
-
         </Layout>
       )
     }
