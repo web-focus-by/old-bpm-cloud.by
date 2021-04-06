@@ -3,7 +3,6 @@ import style from'./content.module.scss'
 import {Link} from 'gatsby'
 
 const Content = ({content})=>{
-    console.log(content)
     if(content == null){
         return(
             <div>

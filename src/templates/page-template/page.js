@@ -3,26 +3,31 @@
  import Layout from "../../components/layout"
  import style from '../post-tempate/post.module.scss'
  import Content from "../../components/posts/content"
-import Aside from "../../components/posts/aside"
+ import Aside from "../../components/posts/aside"
+ import SEO from "../../components/seo"
+import Breadcrumbs from "../../components/posts/breadcrumbs"
+
 
  import { graphql } from "gatsby"
  
 
  class PageTemplate extends Component {
     render() {
+      console.log(this.props.data.wpPage)
       const StaticPage = this.props.data.wpPage
-      console.log(StaticPage)
       return (
         <Layout>
+          <SEO title={StaticPage.title} description={StaticPage.seo.opengraphDescription} />
             <div className={style.wrapper}>
-              <div className={style.contentArea}>
-                <div className={style.post}> 
-                  <h1 dangerouslySetInnerHTML={{ __html: StaticPage.title }} />
-                  <Content  content={StaticPage.content}/>
+            <Breadcrumbs breadcrumbsArr={StaticPage.seo.breadcrumbs} />
+                <div className={style.contentArea}>
+                  <div className={style.post}> 
+                    <h1 dangerouslySetInnerHTML={{ __html: StaticPage.title }} />
+                    <Content  content={StaticPage.content}/>
+                  </div>
+                  <Aside /> 
                 </div>
-                <Aside /> 
               </div>
-            </div>
         </Layout>
       )
     }
@@ -36,6 +41,14 @@ export const pageQuery = graphql`
       title
       content
       slug
+      seo {
+        breadcrumbs {
+          text
+          url
+        }
+        title
+        opengraphDescription
+      }
     }
     site {
       id
