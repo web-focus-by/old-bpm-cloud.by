@@ -29,7 +29,6 @@ const HeaderMenu = () => {
   const getMenuData = useStaticQuery(graphql`{
     allWpMenuItem(
       sort: { fields: order, order: ASC }
-
     ) {
       nodes {
         id

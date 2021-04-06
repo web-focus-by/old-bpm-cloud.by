@@ -17,7 +17,7 @@ import Feedback from "./main/Feedback"
 const Layout = ({ children }) => {
   return (
     <div className={styles.wrap}>
-      <Header />
+      <Header/>
       <Cirlce />
       <main>{children}</main>
       <Feedback />

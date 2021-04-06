@@ -11,7 +11,7 @@ function tagsArea(arr){
   })
 } 
 
-const KeysBoxs = () => {
+const KeysBoxs = ({casesNumber}) => {
   const data = useStaticQuery(graphql`
   {
     allWpPost(filter: {categories: {nodes: {elemMatch: {name: {eq: "cases"}}}}}, sort: {order: DESC, fields: date}, limit: 8) {
@@ -42,17 +42,17 @@ const KeysBoxs = () => {
     }
   }
   `)
+  // console.log(casesNumber)
   return (
     <div className={styles.wrapperKeys}>
-      {data.allWpPost.nodes.map((item) => {
+      {data.allWpPost.nodes.map((item, index) => {
         const divStyle = {
           backgroundImage: `url(${item.featuredImage.node.sourceUrl})`, //sourceUrl url(https://wp-server.bpm-cloud.by/${item.featuredImage.node.uri})
         }
         return (
-
-          <Link to={`${item.uri}`}
+          <Link to={item.uri}
             key={item.id}
-            className={classnames(styles.box)}
+            className={classnames(styles.box, {[styles.blockNone]: casesNumber && casesNumber > index})}
           >
             <div
               className={styles.caseBgImg}
@@ -70,7 +70,6 @@ const KeysBoxs = () => {
                 {item.tags.nodes[0].name}
               </ButtonSmall>
           </Link>
-          
         )
       })}
 

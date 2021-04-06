@@ -59,7 +59,7 @@ const Header = () => {
             Реально работающий интернет-маркетинг
           </div>
         </div>
-        <ScrolMenuHeder />
+        <ScrolMenuHeder/>
         <div className={classnames(styles.yellowButton, styles.mobileButton)}>
             <Button className={styles.buttonStyles}>+375 (29) 32 44 000</Button>
         </div>

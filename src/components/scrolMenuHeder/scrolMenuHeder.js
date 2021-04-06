@@ -21,6 +21,7 @@ const menuItems = [
     { name: "Главная", url:'/' },
     { name: "PPC", url:'/ppc/' },
     { name: "Брендинг и дизайн", url:'/brending-i-dizajn/' },
+    { name: "Разработка приложений", url:'/razrabotka-prilozhenij/' },
   ]
 
 
@@ -28,6 +29,23 @@ const ScrolMenuHeder = ()=>{
     const [arr, setArr] = useState(menuItems)
     const [isClick, setClick] = useState(false)
     const [activeItem, setActiveItem] = useState(3)
+    // const currentItem = localStorage.getItem('currentItem');
+
+    let customArr = [
+        { name: "SMM", url:'/smm/' },
+        { name: "Разработка сайтов", url:'/razrabotka-sajtov/'  },
+        { name: "Seo", url:'/seo/' },
+        { name: "Главная", url:'/' },
+        { name: "PPC", url:'/ppc/' },
+        { name: "Брендинг и дизайн", url:'/brending-i-dizajn/' },
+        { name: "Разработка приложений", url:'/razrabotka-prilozhenij/' },
+    ]
+    // if(currentItem){
+    //     console.log(currentItem)
+    //     customArr.reverse().forEach((e,i) =>{
+    //         menuItems.unshift(e)
+    //     })
+    // }
     const items = arr.map((elem, index) =>{
         return(
             <div key={index} className={classnames(style.listItem, {[style.active]: index == activeItem})}><Link to={elem.url}><img src={images.circleMenu} alt="" /><span>{elem.name}</span></Link></div>

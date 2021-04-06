@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import { images } from "../../../images"
 import Layout from "../../../components/layout"
-import style from '../../post-tempate/post.module.scss'
+import commonStyle from '../../post-tempate/post.module.scss'
+import style from './developPage.module.scss'
 
 import Content from "../../../components/posts/content"
 import Aside from "../../../components/posts/aside"
@@ -10,25 +11,38 @@ import Breadcrumbs from "../../../components/posts/breadcrumbs"
 
 
 import { graphql } from "gatsby"
+import KeysBoxs from "../../../components/main/KeysBoxs"
+import classNames from "classnames"
+import Prise from "../../../components/pagesElem/prise"
+import SubSubsectionItems from "../../../components/pagesElem/subSubsectionItems"
 
 
 class PageTemplate extends Component {
+  componentDidMount(){
+    localStorage.setItem('currentPage', 1)
+  };
    render() {
-     console.log(this.props.data.wpPage)
-     const StaticPage = this.props.data.wpPage
+    //  console.log(this.props.data.wpPage)
+     const StaticPage = this.props.data.wpPage;
      return (
        <Layout>
          <SEO title={StaticPage.seo.title} description={StaticPage.seo.opengraphDescription} />
-           <div className={style.wrapper}>
-               новый шаблон
-           <Breadcrumbs breadcrumbsArr={StaticPage.seo.breadcrumbs} />
-               <div className={style.contentArea}>
-                 <div className={style.post}> 
-                   <h1 dangerouslySetInnerHTML={{ __html: StaticPage.title }} />
-                   <Content  content={StaticPage.content}/>
-                 </div>
-                 <Aside /> 
-               </div>
+          <KeysBoxs casesNumber={3} />
+           <div className={classNames(commonStyle.wrapper, style.wrapper)}>
+            <div className={style.breadcrumbsAndPriseWrapper}> 
+              <Breadcrumbs breadcrumbsArr={StaticPage.seo.breadcrumbs} />
+              <div className={style.priseAreaWrapper}>
+                <Prise text={StaticPage.title} cost={600}/>
+                <button  className={style.bottom}>заказать</button>
+              </div>
+            </div>
+            <SubSubsectionItems title={StaticPage.title}/>
+            <div className={commonStyle.contentArea}>
+              <div className={commonStyle.post}> 
+                <h1 dangerouslySetInnerHTML={{ __html: StaticPage.title }} />
+                <Content  content={StaticPage.content}/>
+              </div>
+            </div>
              </div>
        </Layout>
      )
