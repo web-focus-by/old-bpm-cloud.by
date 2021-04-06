@@ -38,6 +38,7 @@ export default PageTemplate
 export const pageQuery = graphql`
   query($id: String!) {
     wpPage(id: { eq: $id }) {
+      id
       title
       content
       slug
