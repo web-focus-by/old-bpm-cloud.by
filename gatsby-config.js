@@ -2,11 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Digital-агентство "BPM-Cloud": разработка и продвижение сайтов`,
     description: `Digital-агентство полного цикла предлагает разработку, дизайн, сопровождение и продвижение сайтов 🏆 Поднимем сайт в ТОП выдачи`,
+    siteUrl: `https://bpm-cloud.by/`,
     author: `@bpm-cloud.by`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -78,5 +80,6 @@ module.exports = {
         // routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
       },
     },
+
   ],
 }
