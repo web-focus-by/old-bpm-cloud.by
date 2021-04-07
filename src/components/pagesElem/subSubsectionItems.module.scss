@@ -1,13 +1,15 @@
 .wrapper {
-  max-width: 900px;
+  max-width: 910px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto 150px;
 }
 .item {
   box-sizing: border-box;
   position: relative;
   height: auto;
+  max-height: 67.5px;
   border-radius: 10px;
   border: 2px solid #fa5c45;
 
@@ -23,9 +25,11 @@
   margin-top: 10px;
   margin-right: 15px;
   color: #fa5c45;
+  flex-grow: 1;
 
   &.active {
     padding-bottom: 54px;
+    max-height: min-content;
   }
 }
 .arrow {
@@ -44,6 +48,10 @@
 .active {
   color: #3c424a;
   border-color: #3c424a;
+
+  a:hover {
+    color: #fa5c45 !important;
+  }
 
   svg {
     transition: all 0.3s;

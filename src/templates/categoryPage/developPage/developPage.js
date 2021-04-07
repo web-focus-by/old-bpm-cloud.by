@@ -15,15 +15,14 @@ import KeysBoxs from "../../../components/main/KeysBoxs"
 import classNames from "classnames"
 import Prise from "../../../components/pagesElem/prise"
 import SubSubsectionItems from "../../../components/pagesElem/subSubsectionItems"
+import { fractionContent } from "../../../components/utils/fractionContent"
 
 
 class PageTemplate extends Component {
-  componentDidMount(){
-    localStorage.setItem('currentPage', 1)
-  };
    render() {
     //  console.log(this.props.data.wpPage)
      const StaticPage = this.props.data.wpPage;
+     fractionContent(StaticPage.content)
      return (
        <Layout>
          <SEO title={StaticPage.seo.title} description={StaticPage.seo.opengraphDescription} />
