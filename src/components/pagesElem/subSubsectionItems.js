@@ -47,7 +47,7 @@ const SubSubsectionItems = ({title}) => {
         <div className={style.wrapper}>
             {workArray[0].routes.map((item, index) =>{
                 return(
-                    <div key={item.id} className={classnames(style.item, {[style.active]: index == listIndex})}>
+                    <div key={item.id} className={classnames(style.item, {[style.active]: (subMenuIsShow && index == listIndex)})}>
                         <Link to={item.path}>{item.title}</Link>
                         <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" className={style.arrow} onClick={() => clickHandler(index)}>
                             <path d="M29 28L1 28L1 -2.06041e-06" stroke="#FA5C45" strokeWidth="2"/>

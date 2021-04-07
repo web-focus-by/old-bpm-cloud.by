@@ -19,10 +19,14 @@
   letter-spacing: 0em;
   text-align: left;
 
-  padding: 33px 115px 10px 15px;
+  padding: 33px 115px 10px 25px;
   margin-top: 10px;
   margin-right: 15px;
   color: #fa5c45;
+
+  &.active {
+    padding-bottom: 54px;
+  }
 }
 .arrow {
   position: absolute;
@@ -34,10 +38,21 @@
   margin-top: 30px;
 }
 .listItem {
-  margin-left: 10px;
+  margin-left: 25px;
   margin-top: 20px;
 }
 .active {
   color: #3c424a;
   border-color: #3c424a;
+
+  svg {
+    transition: all 0.3s;
+    transform: rotate(90deg);
+    bottom: 10px;
+    top: auto;
+
+    path {
+      stroke: #3c424a;
+    }
+  }
 }
