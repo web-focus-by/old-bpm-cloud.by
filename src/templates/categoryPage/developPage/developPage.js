@@ -16,33 +16,61 @@ import classNames from "classnames"
 import Prise from "../../../components/pagesElem/prise"
 import SubSubsectionItems from "../../../components/pagesElem/subSubsectionItems"
 import { fractionContent } from "../../../components/utils/fractionContent"
+import AnimateModule from "../../../components/pagesElem/animateModule"
+import GraphicSection from "../../../components/pagesElem/graphicSection"
+import AnimationList from "../../../components/pagesElem/animationList"
+import Сontact from "../../../components/main/Сontact"
+import SomePersons from "../../../components/pagesElem/somePersons"
+import Brief from "../../../components/pagesElem/brief"
+import ThreeColumn from "../../../components/pagesElem/threeColumn"
+import TwoRows from "../../../components/pagesElem/twoRows"
 
 
 class PageTemplate extends Component {
    render() {
     //  console.log(this.props.data.wpPage)
      const StaticPage = this.props.data.wpPage;
-     fractionContent(StaticPage.content)
+     const content = fractionContent(StaticPage.content)
+     console.log(content)
      return (
        <Layout>
          <SEO title={StaticPage.seo.title} description={StaticPage.seo.opengraphDescription} />
           <KeysBoxs casesNumber={3} />
-           <div className={classNames(commonStyle.wrapper, style.wrapper)}>
-            <div className={style.breadcrumbsAndPriseWrapper}> 
+            <div className={classNames(style.breadcrumbsAndPriseWrapper, style.wrapper)}> 
               <Breadcrumbs breadcrumbsArr={StaticPage.seo.breadcrumbs} />
               <div className={style.priseAreaWrapper}>
                 <Prise text={StaticPage.title} cost={600}/>
                 <button  className={style.bottom}>заказать</button>
               </div>
             </div>
-            <SubSubsectionItems title={StaticPage.title}/>
-            <div className={commonStyle.contentArea}>
-              <div className={commonStyle.post}> 
+              <SubSubsectionItems title={StaticPage.title}/>
+              <section className={classNames(style.mainSection,  style.wrapper)}> 
                 <h1 dangerouslySetInnerHTML={{ __html: StaticPage.title }} />
-                <Content  content={StaticPage.content}/>
-              </div>
-            </div>
-             </div>
+                <AnimateModule content={content[0]} title={StaticPage.title} />
+              </section>
+              <section  className={classNames(style.secondSection, style.section)}>
+                <div className={style.wrapper}>
+                <GraphicSection />
+                </div>
+              </section>
+              <section className={classNames(style.thirdSection, style.wrapper, style.section)}>
+                <AnimationList content={content[1]}/>
+              </section>
+              <section>
+                <Сontact />
+              </section>
+              <section className={classNames(style.wrapper, style.section)}>
+                <SomePersons content={content[2]}/>
+              </section>
+              <section className={classNames(style.section, style.secondSection)}>
+                <div className={style.wrapper}>
+                  <Brief />
+                </div>
+              </section>
+              <section className={classNames(style.wrapper, style.section)}>
+                  <ThreeColumn content={content[3]}/>
+                  <TwoRows content={content[4]}/>
+              </section>
        </Layout>
      )
    }
