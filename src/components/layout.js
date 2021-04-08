@@ -20,7 +20,6 @@ const Layout = ({ children }) => {
       <Header/>
       <Cirlce />
       <main>{children}</main>
-      <Feedback />
       <Footer />
     </div>
   )

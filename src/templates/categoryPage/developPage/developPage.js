@@ -24,6 +24,9 @@ import SomePersons from "../../../components/pagesElem/somePersons"
 import Brief from "../../../components/pagesElem/brief"
 import ThreeColumn from "../../../components/pagesElem/threeColumn"
 import TwoRows from "../../../components/pagesElem/twoRows"
+import Reviews from "../../../components/main/Reviews"
+import Articles from "../../../components/main/Articles"
+import Feedback from "../../../components/main/Feedback"
 
 
 class PageTemplate extends Component {
@@ -70,6 +73,15 @@ class PageTemplate extends Component {
               <section className={classNames(style.wrapper, style.section)}>
                   <ThreeColumn content={content[3]}/>
                   <TwoRows content={content[4]}/>
+              </section>
+              <section>
+                <Reviews />
+              </section>
+              <section>
+                <Articles />
+              </section>
+              <section>
+                <Feedback content={content[4].content[15]} />
               </section>
        </Layout>
      )

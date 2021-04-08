@@ -9,6 +9,7 @@ import Breadcrumbs from "../../components/posts/breadcrumbs"
 
 
  import { graphql } from "gatsby"
+import Feedback from "../../components/main/Feedback"
  
 
  class PageTemplate extends Component {
@@ -28,6 +29,7 @@ import Breadcrumbs from "../../components/posts/breadcrumbs"
                   <Aside /> 
                 </div>
               </div>
+              <Feedback />
         </Layout>
       )
     }

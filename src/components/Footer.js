@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 
 import { images } from ".././images"
@@ -32,14 +33,14 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.boxTwo}>
-          <div className={styles.text}><a>Разработка сайтов</a></div>
-          <div className={styles.text}><a>SEO</a></div>
-          <div className={styles.text}><a>SMM</a></div>
-          <div className={styles.text}><a>PPC</a></div>
-          <div className={styles.text}><a>Брендинг и дизайн</a></div>
-          <div className={styles.text}><a>Разработка приложений</a></div>
-          <div className={styles.text}><a>Прочие услуги</a></div>
-          <div className={styles.text}><a>О нас</a></div>
+          <div className={styles.text}><Link to={'/razrabotka-sajtov/'}>Разработка сайтов</Link></div>
+          <div className={styles.text}><Link to={'/seo/'}>SEO</Link></div>
+          <div className={styles.text}><Link to={'/smm/'}>SMM</Link></div>
+          <div className={styles.text}><Link to={'/ppc/'}>PPC</Link></div>
+          <div className={styles.text}><Link to={'/brending-i-dizajn/'}>Брендинг и дизайн</Link></div>
+          <div className={styles.text}><Link to={'/razrabotka-prilozhenij/'}>Разработка приложений</Link></div>
+          <div className={styles.text}><Link to={'/prochie-uslugi/'}>Прочие услуги</Link></div>
+          <div className={styles.text}><Link to={'/'}>О нас</Link></div>
         </div>
         <div className={styles.bottom}>
           <span>© 2010-2021 bpm-cloud.by</span>

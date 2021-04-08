@@ -1,21 +1,35 @@
-import React from "react"
+import React, {useRef, useEffect} from "react"
 import style from'./animationList.module.scss'
 import {Link} from 'gatsby'
+import { images } from '../../images/index'
+
+const cardArray=[images.someSVG1,images.someSVG2, images.someSVG3,images.someSVG4,images.someSVG5, images.someSVG6,images.someSVG7,images.someSVG8]
 
 const AnimationList = ({content})=>{
-    console.log(content)
+    const itemsRef = useRef([...new Array(8)].map(() => React.createRef()));
     const __tempArr = []
-    const __secondTempArr = []
     content.content.map((e, i) =>{
         if(e.includes(0)){
             __tempArr.push(            {
                 listNumber: content.content[i],
                 listTitle: content.content[i + 1],
-                listContent: content.content[i + 2],                
+                listContent: content.content[i + 2], 
             })
         }
     })
-    console.log(__tempArr)
+    useEffect(() => {
+        itemsRef.current.map(elem =>{
+            elem.current.addEventListener('mousemove', function(e){
+                const [rotateX, rotateY] = [(e.offsetX - e.target.offsetWidth / 2) / 6, (e.offsetY - e.target.offsetHeight / 2) / -3]
+                elem.current.firstChild.style.transform = `scale(1.1) rotateX(${rotateY}deg) rotateY(${rotateX}deg)`
+            })
+        })
+        itemsRef.current.map(elem =>{
+            elem.current.addEventListener('mouseout', function(e){
+                elem.current.firstChild.style.transform = `scale(1) rotateX(0deg) rotateY(0deg)`
+            })
+        })
+    }, [])
     return(
         <div className={style.wrapper}>
             <div className={style.title}  dangerouslySetInnerHTML={{ __html: content.title}}></div>
@@ -23,8 +37,10 @@ const AnimationList = ({content})=>{
             <div className={style.itemAreaWrapper}>
                 {__tempArr.map((e, i) =>{
                         return(
-                            <div key={i} className={style.itemWrapper}>
-                                <div className={style.animation}></div>
+                            <div key={i} className={style.itemWrapper} >
+                                <div ref={itemsRef.current[i]}>
+                                    <div className={style.animation} style={{backgroundImage:`url(${cardArray[i]})`}}></div>
+                                </div>
                                 <div className={style.textWrapper}>
                                     <div className={style.textNumber}  dangerouslySetInnerHTML={{ __html: e.listNumber }}></div>
                                     <div className={style.textTitle} dangerouslySetInnerHTML={{ __html: e.listTitle }}></div>

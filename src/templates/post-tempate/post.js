@@ -17,6 +17,7 @@ import style from'./post.module.scss'
 import { images } from "../../images"
 import Content from "../../components/posts/content"
 import SearchArea from "../../components/posts/searchArea"
+import Feedback from "../../components/main/Feedback"
 
 class Post extends Component {
   render() {
@@ -74,6 +75,7 @@ class Post extends Component {
             <OtherPostsArea />
           </div>
           </div>
+          <Feedback/>
       </Layout>
     )
   }

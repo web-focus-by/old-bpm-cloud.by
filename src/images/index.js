@@ -35,6 +35,16 @@ import vkSubscr from './vkSubscr.svg'
 import fb from './fb.svg'
 import ok from './ok.svg'
 import vk_is_login from './vk_is_login.svg'
+import someSVG1 from './Frame 311.svg'
+import someSVG2 from './Group 195.svg'
+import someSVG3 from './Group 197.svg'
+import someSVG4 from './Group 199.svg'
+import someSVG5 from './Group 200.svg'
+import someSVG6 from './Group 201.svg'
+import someSVG7 from './Group 204.svg'
+import someSVG8 from './Frame 312.svg'
+
+
 
 
 export const images = {
@@ -75,5 +85,13 @@ export const images = {
   fb,
   ok,
   vk_is_login,
+  someSVG1,
+  someSVG2,
+  someSVG3,
+  someSVG4,
+  someSVG5,
+  someSVG6,
+  someSVG7,
+  someSVG8,
   
 }

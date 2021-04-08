@@ -11,7 +11,7 @@ const ThreeColumn = ({content})=>{
             <div className={style.contentArea}>
                 {content.content.map((e, i) =>{
                     return(
-                        <div className={style.contentColumn} dangerouslySetInnerHTML={{ __html: e }}></div>
+                        <div className={style.contentColumn} dangerouslySetInnerHTML={{ __html: e }} key={i}></div>
                     )
                 })}
             </div>
