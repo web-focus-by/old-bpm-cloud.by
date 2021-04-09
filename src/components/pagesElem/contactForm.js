@@ -5,6 +5,7 @@ import NameStepForm from "./contactFormSteps/NameStepForm"
 import EmailStepForm from "./contactFormSteps/EmailStepForm"
 import PhoneStepForm from "./contactFormSteps/PhoneStepForm"
 import FileStepForm from "./contactFormSteps/FileStepForm"
+import encode from "../utils/encodeEmailContent"
 
 
 const ContactForm = ()=>{
@@ -31,29 +32,25 @@ const ContactForm = ()=>{
         setState({ ...state, [e.target.name]: e.target.files[0] })
       }
 
-      function encode(data) {
-        return Object.keys(data)
-          .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-          .join('&')
-      }
+
     const  handleSubmit = event => {
         event.preventDefault()
         const form = event.target
-        // const { email, name, phone } = state
-        // alert(`Your registration detail: \n 
-        //        Email: ${email} \n 
-        //        Name: ${name} \n
-        //        Phone: ${phone}`)
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({
-            'form-name': form.getAttribute('name'),
-            ...state,
-          }),
-        })
-          .then(() => alert('success')
-          .catch((error) => alert(error)))
+        const { email, name, phone } = state
+        alert(`Your registration detail: \n 
+               Email: ${email} \n 
+               Name: ${name} \n
+               Phone: ${phone}`)
+        // fetch('/', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        //   body: encode({
+        //     'form-name': form.getAttribute('name'),
+        //     ...state,
+        //   }),
+        // })
+        //   .then(() => alert('success')
+        //   .catch((error) => alert(error)))
     }
 
 
@@ -108,7 +105,7 @@ const ContactForm = ()=>{
              <h1>React Wizard Form 🧙‍♂️</h1>
             <p>Step {state.currentStep} </p> 
 
-            <form name="contact" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" method="post">
+            <form onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             {/* 
                 render the form steps and pass required props in
