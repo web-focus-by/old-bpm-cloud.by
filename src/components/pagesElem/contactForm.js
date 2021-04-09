@@ -85,7 +85,7 @@ const ContactForm = ()=>{
     
     return(
         <div className={style.wrapper}>
-             <h1>React Wizard Form 🧙‍♂️</h1>
+             <h1>React Wizard Form</h1>
             <p>Step {state.currentStep} </p> 
 
             <form onSubmit={handleSubmit}>
