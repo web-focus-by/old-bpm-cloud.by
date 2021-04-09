@@ -4,7 +4,7 @@ const NameStepForm = props => {
   if (props.currentStep !== 1) {
     return null
   }
-  console.log(props)
+  // console.log(props)
   return (
     <div className="form-group">
       <label htmlFor="name">name</label>

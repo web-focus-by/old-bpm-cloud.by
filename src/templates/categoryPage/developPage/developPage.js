@@ -32,7 +32,6 @@ class PageTemplate extends Component {
     //  console.log(this.props.data.wpPage)
     const StaticPage = this.props.data.wpPage
     const content = fractionContent(StaticPage.content)
-    console.log(content)
     return (
       <Layout>
         <SEO
