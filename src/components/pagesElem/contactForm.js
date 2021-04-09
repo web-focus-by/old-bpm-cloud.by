@@ -106,7 +106,6 @@ const ContactForm = ()=>{
             <p>Step {state.currentStep} </p> 
 
             <form onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="contact" />
             {/* 
                 render the form steps and pass required props in
             */}
@@ -135,7 +134,6 @@ const ContactForm = ()=>{
             </form>
         </div>
     )
-    
 }
 
 
