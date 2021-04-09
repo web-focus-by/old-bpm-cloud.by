@@ -44,7 +44,7 @@ const ContactForm = ()=>{
         //        Email: ${email} \n 
         //        Name: ${name} \n
         //        Phone: ${phone}`)
-        fetch('https://develop-bpm-cloud.netlify.app//no-cache=1', {
+        fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
