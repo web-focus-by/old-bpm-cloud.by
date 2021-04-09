@@ -94,7 +94,7 @@ const OfferService = () => {
     })
   }
 
-/*   const getButtonLink = (state) =>{
+  /*   const getButtonLink = (state) =>{
 
   }
  */
@@ -164,7 +164,8 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(6)}
             >
-              <div>06</div><span>SMM</span>
+              <div>06</div>
+              <span>SMM</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -172,7 +173,8 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(7)}
             >
-              <div>07</div><span>SERM</span>
+              <div>07</div>
+              <span>SERM</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -180,7 +182,8 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(8)}
             >
-              <div>08</div><span>Разработка приложений</span>
+              <div>08</div>
+              <span>Разработка приложений</span>
             </div>
             <div
               className={classnames(styles.hoverText, {
@@ -188,7 +191,8 @@ const OfferService = () => {
               })}
               onMouseOver={() => handler(9)}
             >
-              <div>09</div><span>другие услуги</span>
+              <div>09</div>
+              <span>другие услуги</span>
             </div>
           </div>
         </div>

@@ -9,12 +9,11 @@ import QuizFour from "./quizs/QuizFour"
 import QuizFive from "./quizs/QuizFive"
 import QuizSix from "./quizs/QuizSix"
 
-
 const Form = () => {
   const [state, setState] = useState(0)
   const [answer, setAnswer] = useState([])
 
-  const handlerLine = (arg) => {
+  const handlerLine = arg => {
     answer.push(arg)
     setState(state + 1)
     if (state === 5) {
@@ -25,7 +24,7 @@ const Form = () => {
   const getQuiz = state => {
     switch (state) {
       case 0:
-        return <QuizOne handlerLine={handlerLine}/>
+        return <QuizOne handlerLine={handlerLine} />
       case 1:
         return <QuizTwo handlerLine={handlerLine} />
       case 2:
@@ -33,7 +32,7 @@ const Form = () => {
       case 3:
         return <QuizFour handlerLine={handlerLine} />
       case 4:
-        return <QuizFive handlerLine={handlerLine} answer={[answer]}/>
+        return <QuizFive handlerLine={handlerLine} answer={[answer]} />
       case 5:
         return <QuizSix />
       default:
@@ -62,7 +61,9 @@ const Form = () => {
               [styles.circle]: 1 <= state,
               [styles.circleBorder]: 0 <= state,
             })}
-          >1</div>
+          >
+            1
+          </div>
           <div
             className={classnames(styles.circleActive, {
               [styles.circle]: 2 <= state,

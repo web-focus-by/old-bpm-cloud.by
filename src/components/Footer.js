@@ -19,8 +19,12 @@ const Footer = () => {
           />
           <div className={styles.wrapContacts}>
             <div className={styles.title}>Контакты</div>
-            <div className={styles.text}><a href='tel:+375293244000'>+375 (29) 32-44-000</a></div>
-            <div className={styles.text}><a href='mailto:info@bpm-cloud.by'>info@bpm-cloud.by</a></div>
+            <div className={styles.text}>
+              <a href="tel:+375293244000">+375 (29) 32-44-000</a>
+            </div>
+            <div className={styles.text}>
+              <a href="mailto:info@bpm-cloud.by">info@bpm-cloud.by</a>
+            </div>
             <div className={styles.text}>
               Пр-т Независимости, дом 77, офис 53
             </div>
@@ -33,18 +37,36 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.boxTwo}>
-          <div className={styles.text}><Link to={'/razrabotka-sajtov/'}>Разработка сайтов</Link></div>
-          <div className={styles.text}><Link to={'/seo/'}>SEO</Link></div>
-          <div className={styles.text}><Link to={'/smm/'}>SMM</Link></div>
-          <div className={styles.text}><Link to={'/ppc/'}>PPC</Link></div>
-          <div className={styles.text}><Link to={'/brending-i-dizajn/'}>Брендинг и дизайн</Link></div>
-          <div className={styles.text}><Link to={'/razrabotka-prilozhenij/'}>Разработка приложений</Link></div>
-          <div className={styles.text}><Link to={'/prochie-uslugi/'}>Прочие услуги</Link></div>
-          <div className={styles.text}><Link to={'/'}>О нас</Link></div>
+          <div className={styles.text}>
+            <Link to={"/razrabotka-sajtov/"}>Разработка сайтов</Link>
+          </div>
+          <div className={styles.text}>
+            <Link to={"/seo/"}>SEO</Link>
+          </div>
+          <div className={styles.text}>
+            <Link to={"/smm/"}>SMM</Link>
+          </div>
+          <div className={styles.text}>
+            <Link to={"/ppc/"}>PPC</Link>
+          </div>
+          <div className={styles.text}>
+            <Link to={"/brending-i-dizajn/"}>Брендинг и дизайн</Link>
+          </div>
+          <div className={styles.text}>
+            <Link to={"/razrabotka-prilozhenij/"}>Разработка приложений</Link>
+          </div>
+          <div className={styles.text}>
+            <Link to={"/prochie-uslugi/"}>Прочие услуги</Link>
+          </div>
+          <div className={styles.text}>
+            <Link to={"/"}>О нас</Link>
+          </div>
         </div>
         <div className={styles.bottom}>
           <span>© 2010-2021 bpm-cloud.by</span>
-          <span><a>Политика конфиденциальности</a></span>
+          <span>
+            <a>Политика конфиденциальности</a>
+          </span>
         </div>
       </div>
     </div>
