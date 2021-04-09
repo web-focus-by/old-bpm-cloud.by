@@ -27,6 +27,10 @@ const ContactForm = ()=>{
         })    
       }
 
+      const handleAttachment = (e) => {
+        setState({ ...state, [e.target.name]: e.target.files[0] })
+      }
+
       function encode(data) {
         return Object.keys(data)
           .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -40,7 +44,7 @@ const ContactForm = ()=>{
         //        Email: ${email} \n 
         //        Name: ${name} \n
         //        Phone: ${phone}`)
-        fetch('/no-cache=1', {
+        fetch('https://develop-bpm-cloud.netlify.app//no-cache=1', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
@@ -126,7 +130,7 @@ const ContactForm = ()=>{
                 />
                 <FileStepForm 
                 currentStep={state.currentStep} 
-                handleChange={handleChange}
+                handleChange={handleAttachment}
                 technicalTask={state.technicalTask}
                 />
                 {previousButton()}
