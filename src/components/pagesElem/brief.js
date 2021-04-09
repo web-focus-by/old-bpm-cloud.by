@@ -12,7 +12,7 @@ const Brief = ({text, cost})=>{
                 <a className={style.phone} href='tel:+375291234567'>+375 (29) 123-45-67</a>
             </div>
             <div className={style.briefWrapper}>
-                {/* <ContactForm/> */}
+                <ContactForm/>
             </div>
         </div>
     )
