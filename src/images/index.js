@@ -43,6 +43,16 @@ import someSVG5 from './Group 200.svg'
 import someSVG6 from './Group 201.svg'
 import someSVG7 from './Group 204.svg'
 import someSVG8 from './Frame 312.svg'
+import developYuri from './developYuri.png'
+import firstSvg22 from './svg/Frame 22.svg'
+import firstSvg23 from './svg/Frame 23.svg'
+import firstSvg24 from './svg/Frame 24.svg'
+import firstSvg210 from './svg/Group 210.svg'
+import firstSvg211 from './svg/Group 211.svg'
+import firstSvg212 from './svg/Group 212.svg'
+
+
+
 
 
 
@@ -93,5 +103,12 @@ export const images = {
   someSVG6,
   someSVG7,
   someSVG8,
+  developYuri,
+  firstSvg22,
+  firstSvg23,
+  firstSvg24,
+  firstSvg210,
+  firstSvg211,
+  firstSvg212,
   
 }

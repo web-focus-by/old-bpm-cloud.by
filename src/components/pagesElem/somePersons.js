@@ -2,12 +2,12 @@ import React from "react"
 import style from'./somePersons.module.scss'
 import {Link} from 'gatsby'
 
-const SomePersons = ({content})=>{
-console.log(content)
-
+const SomePersons = ({content, image})=>{
     return(
         <div className={style.wrapper}>
-            <div className={style.imageWrapper}></div>
+            <div className={style.imageWrapper}>
+                <img src={image}/>
+            </div>
             <div className={style.textWrapper}>
                 <div className={style.title} dangerouslySetInnerHTML={{ __html: content.title }}></div>
                 <div className={style.textWrapperContent}>

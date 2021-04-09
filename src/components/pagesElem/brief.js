@@ -1,10 +1,9 @@
 import React from "react"
 import style from'./brief.module.scss'
 import {Link} from 'gatsby'
+import ContactForm from "./contactForm"
 
 const Brief = ({text, cost})=>{
-    console.log(text, cost)
-
     return(
         <div className={style.wrapper}>
             <div className={style.textWrapper}>
@@ -13,7 +12,7 @@ const Brief = ({text, cost})=>{
                 <a className={style.phone} href='tel:+375291234567'>+375 (29) 123-45-67</a>
             </div>
             <div className={style.briefWrapper}>
-
+                <ContactForm/>
             </div>
         </div>
     )

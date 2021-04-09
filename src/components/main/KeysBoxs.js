@@ -42,7 +42,6 @@ const KeysBoxs = ({casesNumber}) => {
     }
   }
   `)
-  // console.log(casesNumber)
   return (
     <div className={styles.wrapperKeys}>
       {data.allWpPost.nodes.map((item, index) => {

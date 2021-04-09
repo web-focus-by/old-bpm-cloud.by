@@ -7,24 +7,16 @@ import { Visible } from "../utils/visibleElement"
 
 
 const AnimateModule = ({content, title})=>{
-    console.log(content, title)
     const [animationIsVisible, setAnimationIsVisible] = useState(false)
-    const [isAnimationStart, animationStart] = useState(false)
-
     const wrapperEl = useRef(null);
-    const vueSize = () =>{
-        console.log(wrapperEl.current.getBoundingClientRect())
-    }
+
     useEffect(() => {
         window.addEventListener('scroll', function() {
                 setAnimationIsVisible(Visible(wrapperEl.current))
           });
     }, [])
-    console.log(animationIsVisible)
-    console.log(isAnimationStart)
-
     return(
-        <div className={style.wrapper} ref={wrapperEl} onClick={vueSize}>
+        <div className={style.wrapper} ref={wrapperEl}>
             <div dangerouslySetInnerHTML={{ __html: content.content[0] }} className={classNames(style.subTitle)}>
             </div>
             <div className={style.animationAreaWrapper}>

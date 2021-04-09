@@ -3,8 +3,6 @@ import style from'./threeColumn.module.scss'
 import {Link} from 'gatsby'
 
 const ThreeColumn = ({content})=>{
-    console.log(content)
-
     return(
         <div className={style.wrapper}>
             <div className={style.title} dangerouslySetInnerHTML={{ __html: content.title }}></div>

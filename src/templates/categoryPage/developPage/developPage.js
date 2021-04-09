@@ -60,10 +60,10 @@ class PageTemplate extends Component {
                 <AnimationList content={content[1]}/>
               </section>
               <section>
-                <Сontact />
+                <Сontact content={content[1].content[25]}/>
               </section>
-              <section className={classNames(style.wrapper, style.section)}>
-                <SomePersons content={content[2]}/>
+              <section className={classNames(style.wrapper, style.onlyBottomPaddingSection)}>
+                <SomePersons content={content[2]} image = {images.developYuri}/>
               </section>
               <section className={classNames(style.section, style.secondSection)}>
                 <div className={style.wrapper}>
@@ -72,7 +72,7 @@ class PageTemplate extends Component {
               </section>
               <section className={classNames(style.wrapper, style.section)}>
                   <ThreeColumn content={content[3]}/>
-                  <TwoRows content={content[4]}/>
+                  <TwoRows content={content[4]} />
               </section>
               <section>
                 <Reviews />

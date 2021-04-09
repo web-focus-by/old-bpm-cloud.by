@@ -20,13 +20,13 @@ const AnimationList = ({content})=>{
     useEffect(() => {
         itemsRef.current.map(elem =>{
             elem.current.addEventListener('mousemove', function(e){
-                const [rotateX, rotateY] = [(e.offsetX - e.target.offsetWidth / 2) / 6, (e.offsetY - e.target.offsetHeight / 2) / -3]
-                elem.current.firstChild.style.transform = `scale(1.1) rotateX(${rotateY}deg) rotateY(${rotateX}deg)`
+                const [rotateX, rotateY] = [-((e.target.offsetWidth / 2) - e.offsetX) / 6, (e.target.offsetHeight / 2 - e.offsetY) / 3]
+                elem.current.firstChild.style.transform = `perspective(500px) translateZ(25px)  rotateX(${rotateY}deg) rotateY(${rotateX}deg)`
             })
         })
         itemsRef.current.map(elem =>{
             elem.current.addEventListener('mouseout', function(e){
-                elem.current.firstChild.style.transform = `scale(1) rotateX(0deg) rotateY(0deg)`
+                elem.current.firstChild.style.transform = `translateZ(0) rotateX(0deg) rotateY(0deg)`
             })
         })
     }, [])
@@ -39,7 +39,9 @@ const AnimationList = ({content})=>{
                         return(
                             <div key={i} className={style.itemWrapper} >
                                 <div ref={itemsRef.current[i]}>
-                                    <div className={style.animation} style={{backgroundImage:`url(${cardArray[i]})`}}></div>
+                                    <div className={style.animation}>
+                                        <img src={cardArray[i]} />
+                                    </div>
                                 </div>
                                 <div className={style.textWrapper}>
                                     <div className={style.textNumber}  dangerouslySetInnerHTML={{ __html: e.listNumber }}></div>
