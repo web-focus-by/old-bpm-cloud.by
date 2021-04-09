@@ -26,7 +26,7 @@ const ContactForm = ()=>{
           [name]: value
         })    
       }
-      
+
       function encode(data) {
         return Object.keys(data)
           .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -40,7 +40,7 @@ const ContactForm = ()=>{
         //        Email: ${email} \n 
         //        Name: ${name} \n
         //        Phone: ${phone}`)
-        fetch('/', {
+        fetch('/no-cache=1', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
