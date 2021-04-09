@@ -1,0 +1,76 @@
+.wrapper{
+    max-width: calc(800px + 377px);
+    button{
+        width: 53px;
+        height: 120px;
+        transition: all 0.3s;
+        
+    }
+}
+.formAreaWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nextButton{
+    margin-right: 324px;
+    background: #FA5C45;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        &:hover{
+            background: #F14D35;
+        }
+        .buttonText{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+}
+.previousButton{
+    border: none;
+    background: rgba(106, 115, 128, 0.07);
+
+    &:hover{
+        background: rgba(106, 115, 128, 0.1);
+    }
+}
+.isActive{
+    width: 377px !important;
+    margin-right: 0px;
+}
+.formWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 114px;
+    width: 100%;
+    margin-left: 100px;
+    min-height: 120px;
+
+    &.isNotFirstStep{
+        margin-left: 46px;
+    }
+}
+.progressBar{
+    width: 100%;
+    max-width: 800px;
+    height: 4px;
+    background-color: rgba(106, 115, 128, 0.27);
+}
+.valueProgressBar{
+    height: 4px;
+    width: 0%;
+    transition: width 1s;
+    background-color:  #FA5C45;
+
+}

@@ -5,7 +5,6 @@ const FileStepForm = props => {
     return null
   }
   return (
-    <React.Fragment>
       <div className="form-group">
         <label htmlFor="file">technicalTask</label>
         <input
@@ -17,8 +16,6 @@ const FileStepForm = props => {
           onChange={props.handleChange}
         />
       </div>
-      <button >Sign up</button>
-    </React.Fragment>
   )
 }
 
