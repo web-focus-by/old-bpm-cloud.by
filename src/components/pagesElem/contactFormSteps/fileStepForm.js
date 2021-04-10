@@ -5,10 +5,9 @@ const FileStepForm = props => {
     return null
   }
   return (
-      <div className="form-group">
-        <label htmlFor="file">technicalTask</label>
+      <div >
+        <label>technicalTask</label>
         <input
-          id="file"
           name="file"
           type="file"
           placeholder="file"

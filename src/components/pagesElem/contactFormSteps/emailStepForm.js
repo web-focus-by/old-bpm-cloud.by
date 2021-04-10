@@ -5,10 +5,9 @@ const EmailStepForm = props => {
     return null
   }
   return (
-    <div className="form-group">
-      <label htmlFor="email">Email address</label>
+    <div>
+      <label>Email address</label>
       <input
-        id="email"
         name="email"
         type="text"
         placeholder="Enter email"

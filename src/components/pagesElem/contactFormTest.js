@@ -1,8 +1,12 @@
 
 import React, { useRef, useState, useEffect } from "react"
 import style from "./contactForm.module.scss"
-
+import NameStepForm from "./contactFormSteps/NameStepForm"
+import EmailStepForm from "./contactFormSteps/EmailStepForm"
+import PhoneStepForm from "./contactFormSteps/PhoneStepForm"
+import FileStepForm from "./contactFormSteps/FileStepForm"
 import classNames from "classnames"
+import SuccessStepForm from "./contactFormSteps/successStepForm"
 
 const ContactForm = () => {
       const [state, setState] = useState({
@@ -132,7 +136,34 @@ const ContactForm = () => {
     <div className={style.wrapper}>
       <div className={style.formAreaWrapper}>
       {previousButton()}
-   
+      <form onSubmit={handleSubmit} className={classNames(style.formWrapper, {[style.isNotFirstStep]:state.currentStep!==1})} ref={formEl}>
+        <NameStepForm
+          currentStep={state.currentStep}
+          handleChange={handleChange}
+          name={state.name}
+        />
+        <EmailStepForm
+          currentStep={state.currentStep}
+          handleChange={handleChange}
+          email={state.email}
+        />
+        <PhoneStepForm
+          currentStep={state.currentStep}
+          handleChange={handleChange}
+          phone={state.phone}
+        />
+        <FileStepForm
+          currentStep={state.currentStep}
+          handleChange={handleAttachment}
+          technicalTask={state.technicalTask}
+        />
+          <SuccessStepForm
+          currentStep={state.currentStep}
+          handleChange={handleAttachment}
+        />
+        {nextButton()}
+        {submitButton()}
+      </form>
       </div>
       <div className={style.progressBar}>
           {state.currentStep < 5 && <div style={{width:`${state.currentStep * 25}%`}} className={style.valueProgressBar}></div>}

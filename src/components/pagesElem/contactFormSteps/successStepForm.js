@@ -5,7 +5,7 @@ const SuccessStepForm = props => {
     return null
   }
   return (
-    <div className="form-group">
+    <div>
       <div>Отлично!</div>
       <div>Мы внимательно изучим Ваш бриф и свяжемся с Вами в ближайшее время!</div>
     </div>

@@ -5,10 +5,9 @@ const PhoneStepForm = props => {
     return null
   }
   return (
-    <div className="form-group">
-      <label htmlFor="phone">Phone</label>
+    <div >
+      <label>Phone</label>
       <input
-        id="phone"
         name="phone"
         type="tel"
         placeholder="Enter phone"
