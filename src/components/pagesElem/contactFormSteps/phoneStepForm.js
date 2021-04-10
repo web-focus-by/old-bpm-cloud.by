@@ -5,8 +5,16 @@ const PhoneStepForm = props => {
     return null
   }
   return (
-    <div >
-asdqwe
+    <div className="form-group">
+      <label htmlFor="phone">Phone</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        placeholder="Enter phone"
+        value={props.phone}
+        onChange={props.handleChange}
+      />
     </div>
   )
 }

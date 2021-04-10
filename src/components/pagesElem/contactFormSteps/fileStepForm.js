@@ -5,8 +5,16 @@ const FileStepForm = props => {
     return null
   }
   return (
-      <div >
-aqwer
+      <div className="form-group">
+        <label htmlFor="file">technicalTask</label>
+        <input
+          id="file"
+          name="file"
+          type="file"
+          placeholder="file"
+          value={props.technicalTask}
+          onChange={props.handleChange}
+        />
       </div>
   )
 }

@@ -1,12 +1,7 @@
 
 import React, { useRef, useState, useEffect } from "react"
 import style from "./contactForm.module.scss"
-import NameStepForm from "./contactFormSteps/NameStepForm"
-import EmailStepForm from "./contactFormSteps/EmailStepForm"
-import PhoneStepForm from "./contactFormSteps/PhoneStepForm"
-import FileStepForm from "./contactFormSteps/FileStepForm"
 import classNames from "classnames"
-import SuccessStepForm from "./contactFormSteps/successStepForm"
 
 const ContactForm = () => {
       const [state, setState] = useState({
@@ -131,6 +126,98 @@ const ContactForm = () => {
     }
     return null
   }
+
+
+  
+const NameStepForm = props => {
+    if (props.currentStep !== 1) {
+      return null
+    }
+    return (
+      <div className="form-group">
+        <label htmlFor="name">name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter name"
+          value={props.name}
+          onChange={props.handleChange}
+        />
+      </div>
+    )
+  }
+
+  const EmailStepForm = props => {
+    if (props.currentStep !== 2) {
+      return null
+    }
+    return (
+      <div>
+        <label htmlFor="email">Email address</label>
+        <input
+          name="email"
+          type="text"
+          placeholder="Enter email"
+          value={props.email}
+          onChange={props.handleChange}
+        />
+      </div>
+    )
+  }
+
+  const FileStepForm = props => {
+      if (props.currentStep !== 4) {
+          return null
+      }
+      return (
+          <div className="form-group">
+              <label htmlFor="file">technicalTask</label>
+              <input
+              id="file"
+              name="file"
+              type="file"
+              placeholder="file"
+              value={props.technicalTask}
+              onChange={props.handleChange}
+              />
+          </div>
+      )
+  }
+
+
+  const PhoneStepForm = props => {
+    if (props.currentStep !== 3) {
+      return null
+    }
+    return (
+      <div className="form-group">
+        <label htmlFor="phone">Phone</label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          placeholder="Enter phone"
+          value={props.phone}
+          onChange={props.handleChange}
+        />
+      </div>
+    )
+  }
+
+
+  const SuccessStepForm = props => {
+    if (props.currentStep !== 5) {
+      return null
+    }
+    return (
+      <div>
+        <div>Отлично!</div>
+        <div>Мы внимательно изучим Ваш бриф и свяжемся с Вами в ближайшее время!</div>
+      </div>
+    )
+  }
+
 
   return (
     <div className={style.wrapper}>

@@ -5,8 +5,16 @@ const NameStepForm = props => {
     return null
   }
   return (
-    <div>
-asdqwe
+    <div className="form-group">
+      <label htmlFor="name">name</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Enter name"
+        value={props.name}
+        onChange={props.handleChange}
+      />
     </div>
   )
 }
