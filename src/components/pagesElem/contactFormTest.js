@@ -4,7 +4,7 @@ import style from "./contactForm.module.scss"
 import classNames from "classnames"
 
 const ContactForm = () => {
-      const [state, setState] = useState({
+    const [state, setState] = useState({
     currentStep: 1,
     name: "",
     email: "",
@@ -12,6 +12,8 @@ const ContactForm = () => {
     technicalTask: "",
   })
   const [inputHaveValue, setInputHaveValue] = useState(false)
+  const [inputIsRequired, setInputIsRequired] = useState(false)
+  const itemsRef = useRef([...new Array(5)].map(() => React.createRef()))
   const formEl = useRef()
 
   const handleChange = event => {
@@ -26,6 +28,11 @@ const ContactForm = () => {
       [name]: value,
     })
   }
+
+  useEffect(() => {
+        console.log( itemsRef.current)
+        itemsRef.current[state.currentStep - 1].current.focus()
+    }, [itemsRef.current[state.currentStep - 1].current]);
   
   useEffect(() => {
     formEl.current.addEventListener('keydown', function(event) {
@@ -135,15 +142,20 @@ const NameStepForm = props => {
     }
     return (
       <div className="form-group">
-        <label htmlFor="name">name</label>
+        <label>
+        <div>Введите Ваше имя</div>
+        <div>Обязательное поле для заполнения</div>
         <input
-          id="name"
+          className={style.textInput}
           name="name"
           type="text"
-          placeholder="Enter name"
+          placeholder="Имя"
           value={props.name}
           onChange={props.handleChange}
+          required={true}
+          ref={itemsRef.current[state.currentStep - 1]}
         />
+        </label>
       </div>
     )
   }
@@ -161,6 +173,7 @@ const NameStepForm = props => {
           placeholder="Enter email"
           value={props.email}
           onChange={props.handleChange}
+          ref={itemsRef.current[state.currentStep - 1]}
         />
       </div>
     )
@@ -180,6 +193,8 @@ const NameStepForm = props => {
               placeholder="file"
               value={props.technicalTask}
               onChange={props.handleChange}
+          ref={itemsRef.current[state.currentStep - 1]}
+
               />
           </div>
       )
@@ -200,6 +215,7 @@ const NameStepForm = props => {
           placeholder="Enter phone"
           value={props.phone}
           onChange={props.handleChange}
+          ref={itemsRef.current[state.currentStep - 1]}
         />
       </div>
     )
@@ -211,7 +227,9 @@ const NameStepForm = props => {
       return null
     }
     return (
-      <div>
+      <div
+      ref={itemsRef.current[state.currentStep - 1]}
+      >
         <div>Отлично!</div>
         <div>Мы внимательно изучим Ваш бриф и свяжемся с Вами в ближайшее время!</div>
       </div>
