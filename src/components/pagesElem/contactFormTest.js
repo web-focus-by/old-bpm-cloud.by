@@ -135,11 +135,9 @@ const ContactForm = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.formAreaWrapper}>
-
+qwe
       </div>
-      <div className={style.progressBar}>
-          {state.currentStep < 5 && <div style={{width:`${state.currentStep * 25}%`}} className={style.valueProgressBar}></div>}
-        </div>
+
     </div>
   )
 }
