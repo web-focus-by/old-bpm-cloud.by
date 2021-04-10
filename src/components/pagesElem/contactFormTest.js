@@ -136,8 +136,7 @@ const ContactForm = () => {
     <div className={style.wrapper}>
       <div className={style.formAreaWrapper}>
       {previousButton()}
-      <form onSubmit={handleSubmit} className={classNames(style.formWrapper, {[style.isNotFirstStep]:state.currentStep!==1})} ref={formEl}>
-                {/* render the form steps and pass required props in */}
+      {/* <form onSubmit={handleSubmit} className={classNames(style.formWrapper, {[style.isNotFirstStep]:state.currentStep!==1})} ref={formEl}>
         <NameStepForm
           currentStep={state.currentStep}
           handleChange={handleChange}
@@ -164,7 +163,7 @@ const ContactForm = () => {
         />
         {nextButton()}
         {submitButton()}
-      </form>
+      </form> */}
       </div>
       <div className={style.progressBar}>
           {state.currentStep < 5 && <div style={{width:`${state.currentStep * 25}%`}} className={style.valueProgressBar}></div>}
