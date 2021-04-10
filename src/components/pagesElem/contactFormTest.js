@@ -134,10 +134,7 @@ const ContactForm = () => {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.formAreaWrapper}>
-qwe
-      </div>
-
+        qwer
     </div>
   )
 }
