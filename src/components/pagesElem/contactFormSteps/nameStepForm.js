@@ -6,14 +6,7 @@ const NameStepForm = props => {
   }
   return (
     <div>
-      <label>name</label>
-      <input
-        name="name"
-        type="text"
-        placeholder="Enter name"
-        value={props.name}
-        onChange={props.handleChange}
-      />
+asdqwe
     </div>
   )
 }

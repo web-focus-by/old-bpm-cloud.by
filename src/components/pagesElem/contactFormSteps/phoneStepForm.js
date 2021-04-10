@@ -6,14 +6,7 @@ const PhoneStepForm = props => {
   }
   return (
     <div >
-      <label>Phone</label>
-      <input
-        name="phone"
-        type="tel"
-        placeholder="Enter phone"
-        value={props.phone}
-        onChange={props.handleChange}
-      />
+asdqwe
     </div>
   )
 }

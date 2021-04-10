@@ -6,14 +6,7 @@ const FileStepForm = props => {
   }
   return (
       <div >
-        <label>technicalTask</label>
-        <input
-          name="file"
-          type="file"
-          placeholder="file"
-          value={props.technicalTask}
-          onChange={props.handleChange}
-        />
+aqwer
       </div>
   )
 }
