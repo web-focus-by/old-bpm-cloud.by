@@ -1,7 +1,7 @@
 import React from "react"
 import style from "./brief.module.scss"
 import { Link } from "gatsby"
-import ContactForm from "./contactForm"
+import ContactForm from "./contactFormTest"
 
 const Brief = ({ text, cost }) => {
   return (
