@@ -1,7 +1,7 @@
 import React from "react"
 import classnames from "classnames"
 import { ButtonGreen, ButtonSmall } from "../buttons"
-import styles from "./testStyle.module.scss"
+import styles from "./KeysBoxs.module.scss"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 function tagsArea(arr) {
@@ -79,17 +79,15 @@ const KeysBoxs = ({ casesNumber }) => {
       }
     }
   `)
-  console.log(data)
+  console.log(casesNumber)
   return (
     <div className={styles.wrapperKeys}>
       {data.allWpPost.nodes.map((item, index) => {
-        console.log(item)
         let gradientStyle;
         let bgStyle;
         let ImgSettings;
         if(Object.keys(customGradient).includes(item.id)){
           gradientStyle = customGradient[item.id]
-          console.log(customGradient[item.id])
         }
         if(Object.keys(customBG).includes(item.id)){
           ImgSettings = customImgSettings[item.id];
@@ -99,12 +97,10 @@ const KeysBoxs = ({ casesNumber }) => {
           backgroundImage: `url(${item.featuredImage.node.sourceUrl})`, //sourceUrl url(https://wp-server.bpm-cloud.by/${item.featuredImage.node.uri})
         }
         return (
-          <div className={styles.caseWrapper} key={item.id} style={bgStyle}>
+          <div className={classnames(styles.caseWrapper, {[styles.blockNone]: casesNumber && casesNumber > index}) } key={item.id} style={bgStyle}>
           <Link
             to={item.uri}
-            className={classnames(styles.box, {
-              [styles.blockNone]: casesNumber && casesNumber > index,
-            })}
+            className={classnames(styles.box)}
           >
             <div className={styles.gradient} style={gradientStyle}></div>
             <img className={styles.caseBgImg} src={item.featuredImage.node.sourceUrl} style={ImgSettings}/>

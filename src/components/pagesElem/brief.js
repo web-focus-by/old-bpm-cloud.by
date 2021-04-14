@@ -12,7 +12,7 @@ const Brief = ({ text, cost }) => {
           Оставьте заявку, или свяжитесь с нами по контактному телефону
         </div>
         <a className={style.phone} href="tel:+375291234567">
-          +375 (29) 123-45-67
+          +375 (29) 32 44 000
         </a>
       </div>
       <div className={style.briefWrapper}>

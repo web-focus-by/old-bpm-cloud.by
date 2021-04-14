@@ -11,6 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .nextButton {
   margin-right: 324px;
   background: #fa5c45;
@@ -187,4 +188,39 @@
   width: 100%;
   height: 100%;
   background-color: #fa5c45;
+}
+.animation{
+  .inputTitle, .subTitleInput, .textInput{
+    animation-duration: 1s;
+    animation-name: textAnimation;
+  }
+}
+
+@keyframes textAnimation {
+  from {
+    transform: translateY(-50px);
+    opacity: .0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.removed{
+  animation-duration: 1s;
+  animation-name: textAnimation2;
+}
+
+@keyframes textAnimation2 {
+  from {
+    transform: translateY(15px);
+    opacity: .5;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

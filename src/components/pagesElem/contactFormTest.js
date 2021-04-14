@@ -3,6 +3,8 @@ import React, { useRef, useState, useEffect } from "react"
 import style from "./contactForm.module.scss"
 import classNames from "classnames"
 
+const ALL_COUNT_STEP = 4;
+
 const ContactForm = () => {
     const [state, setState] = useState({
     currentStep: 1,
@@ -14,9 +16,9 @@ const ContactForm = () => {
   const [inputHaveValue, setInputHaveValue] = useState(false)
   const [inputIsRequired, setInputIsRequired] = useState(false)
   const [inputIsSelected, setInputIsSelected] = useState(false)
-  const itemsRef = useRef([...new Array(5)].map(() => React.createRef()))
+  const itemsRef = useRef([...new Array(ALL_COUNT_STEP)].map(() => React.createRef()))
   const formEl = useRef()
-
+  const wrapperRef = useRef([...new Array(ALL_COUNT_STEP)].map(() => React.createRef()))
   const handleChange = event => {
     const { name, value } = event.target
     setInputIsSelected(true)
@@ -32,12 +34,18 @@ const ContactForm = () => {
   }
 
   useEffect(() => {
-        console.log(state)
-        if(inputIsSelected){
+
+        if(inputIsSelected && state.currentStep !== ALL_COUNT_STEP){
           itemsRef.current[state.currentStep - 1].current.focus()
         }
     }, [itemsRef.current[state.currentStep - 1].current]);
   
+  useEffect(() => {
+    wrapperRef.current[state.currentStep - 1].current.classList.add(`${style.animation}`)
+    
+    console.log(wrapperRef.current[state.currentStep - 1].current.classList)
+  }, [state.currentStep])
+
   useEffect(() => {
     formEl.current.addEventListener('keydown', function(event) {
       if(event.keyCode == 13) {
@@ -64,7 +72,7 @@ const ContactForm = () => {
 
   const _next = () => {
     let currentStep = state.currentStep
-    currentStep = currentStep >= 4 ? 5 : currentStep + 1
+    currentStep = currentStep >= ALL_COUNT_STEP - 1 ? ALL_COUNT_STEP : currentStep + 1
     setInputHaveValue(false)
     setState({
       ...state,
@@ -83,7 +91,7 @@ const ContactForm = () => {
 
   const previousButton = () => {
     let currentStep = state.currentStep
-    if (currentStep !== 1) {
+    if (currentStep !== 1  && currentStep !== ALL_COUNT_STEP) {
       return (
         <button  type="button"
          onClick={_prev}
@@ -101,7 +109,7 @@ const ContactForm = () => {
 
   const nextButton = () => {
     let currentStep = state.currentStep
-    if (currentStep < 4) {
+    if (currentStep < ALL_COUNT_STEP - 1) {
       return (
         <button
           type="button"
@@ -121,7 +129,7 @@ const ContactForm = () => {
 
   const submitButton = () => {
     let currentStep = state.currentStep
-    if (currentStep == 4) {
+    if (currentStep == ALL_COUNT_STEP - 1) {
       return (
         <button
           type="submit"
@@ -145,7 +153,7 @@ const NameStepForm = props => {
       return null
     }
     return (
-      <div>
+      <div ref={wrapperRef.current[state.currentStep - 1]}>
         <label>
         <div className={style.inputTitle}>Введите Ваше имя</div>
         <div className={style.subTitleInput}>Обязательное поле для заполнения</div>
@@ -169,7 +177,7 @@ const NameStepForm = props => {
       return null
     }
     return (
-      <div>
+      <div ref={wrapperRef.current[state.currentStep - 1]}>
         <label htmlFor="email">
         <div className={style.inputTitle}>Введите Вашу эллектронную почту</div>
         <div className={style.subTitleInput}>Обязательное поле для заполнения</div>
@@ -192,7 +200,7 @@ const NameStepForm = props => {
       return null
     }
     return (
-      <div>
+      <div ref={wrapperRef.current[state.currentStep - 1]}>
         <label htmlFor="phone">
         <div className={style.inputTitle}>Введите Ваш номер</div>
         <div className={style.subTitleInput}>Обязательное поле для заполнения</div>
@@ -216,7 +224,7 @@ const NameStepForm = props => {
     }
     let __inputText = state.file !== undefined ? state.file.name : 'Прикрепить ТЗ';
     return (
-        <div className={style.inputAreaWrapper}>
+        <div className={style.inputAreaWrapper} ref={wrapperRef.current[state.currentStep - 1]}>
           <div className={style.textAreaWrapper}>
             <div className={style.inputTitle}>Загрузите файл с техническим заданием</div>
             <div className={style.subTitleInput}>Нажмите на “Прикрепить ТЗ” или перетащите файл в область</div>
@@ -249,12 +257,12 @@ const NameStepForm = props => {
 }
 
   const SuccessStepForm = props => {
-    if (props.currentStep !== 5) {
+    if (props.currentStep !== ALL_COUNT_STEP) {
       return null
     }
     return (
       <div
-      ref={itemsRef.current[state.currentStep - 1]}
+      ref={wrapperRef.current[state.currentStep - 1]}
       >
         <div>Отлично!</div>
         <div>Мы внимательно изучим Ваш бриф и свяжемся с Вами в ближайшее время!</div>
@@ -264,7 +272,7 @@ const NameStepForm = props => {
 
   const successLabel = () =>{
     let currentStep = state.currentStep
-    if (currentStep !== 5) {
+    if (currentStep !== ALL_COUNT_STEP) {
       return null
     }
     return (
@@ -298,11 +306,11 @@ const NameStepForm = props => {
           handleChange={handleChange}
           phone={state.phone}
         />
-        <FileStepForm
+        {/* <FileStepForm
           currentStep={state.currentStep}
           handleChange={handleAttachment}
           technicalTask={state.technicalTask}
-        />
+        /> */}
           <SuccessStepForm
           currentStep={state.currentStep}
           handleChange={handleAttachment}
@@ -313,7 +321,7 @@ const NameStepForm = props => {
       </form>
       </div>
       <div className={style.progressBar}>
-          {state.currentStep < 5 && <div style={{width:`${state.currentStep * 25}%`}} className={style.valueProgressBar}></div>}
+          {state.currentStep < ALL_COUNT_STEP && <div style={{width:`${state.currentStep * 25}%`}} className={style.valueProgressBar}></div>}
         </div>
     </div>
   )
