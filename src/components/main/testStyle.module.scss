@@ -86,8 +86,13 @@
         border-color: #FFFFFF;
         color:#FFFFFF;
         background: transparent;
+        transition: all .3s;
         &:nth-child(-n+2){
             margin-right: 30px;
+        }
+        &:hover{
+            background-color: #FFFFFF;
+            color: var(--textTitleBG-background) !important;
         }
     }
 }
@@ -100,6 +105,11 @@
             border-color: var(--textTitleBG-background);
             color: var(--textTitleBG-background);
             background: transparent;
+            transition: all .3s;
+            &:hover{
+                background-color: var(--textTitleBG-background);
+                color: #FFFFFF !important;
+            }
         }
     }
 }
@@ -222,6 +232,13 @@
     .titleLast{
         font-size: 30px !important;
     }
+    .titleLast{
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+}
+@media(max-width:400px){
     .boxLast{
         align-items: center;
     }
