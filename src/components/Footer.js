@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 
 import { images } from ".././images"
@@ -5,6 +6,25 @@ import { images } from ".././images"
 import styles from "./Footer.module.css"
 
 const Footer = () => {
+  const footerMenuItems = [
+    { name: "Разработка сайтов", url: "/razrabotka-sajtov/" },
+    { name: "SEO", url: "/seo/" },
+    { name: "SMM", url: "/smm/" },
+    { name: "PPC", url: "/ppc/" },
+    { name: "Брендинг и дизайн", url: "/brending-i-dizajn/" },
+    { name: "Разработка приложений", url: "/razrabotka-prilozhenij/" },
+    { name: "Прочие услуги", url: "/prochie-uslugi/" },
+    { name: "О нас", url: "/o-nas/" },
+  ]
+  const itemsFooter = footerMenuItems.map((footerItems, index) => {
+    console.log(footerItems.name)
+    return (
+      <div key={index} className={styles.text}>
+        <Link to={footerItems.url}>{footerItems.name}</Link>
+      </div>
+    )
+  })
+
   return (
     <div className={styles.wrapperFooter}>
       <div className={styles.container}>
@@ -18,8 +38,12 @@ const Footer = () => {
           />
           <div className={styles.wrapContacts}>
             <div className={styles.title}>Контакты</div>
-            <div className={styles.text}><a href='tel:+375293244000'>+375 (29) 32-44-000</a></div>
-            <div className={styles.text}><a href='mailto:info@bpm-cloud.by'>info@bpm-cloud.by</a></div>
+            <div className={styles.text}>
+              <a href="tel:+375293244000">+375 (29) 32-44-000</a>
+            </div>
+            <div className={styles.text}>
+              <a href="mailto:info@bpm-cloud.by">info@bpm-cloud.by</a>
+            </div>
             <div className={styles.text}>
               Пр-т Независимости, дом 77, офис 53
             </div>
@@ -31,19 +55,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.boxTwo}>
-          <div className={styles.text}><a>Разработка сайтов</a></div>
-          <div className={styles.text}><a>SEO</a></div>
-          <div className={styles.text}><a>SMM</a></div>
-          <div className={styles.text}><a>PPC</a></div>
-          <div className={styles.text}><a>Брендинг и дизайн</a></div>
-          <div className={styles.text}><a>Разработка приложений</a></div>
-          <div className={styles.text}><a>Прочие услуги</a></div>
-          <div className={styles.text}><a>О нас</a></div>
-        </div>
+        <div className={styles.boxTwo}>{itemsFooter}</div>
         <div className={styles.bottom}>
           <span>© 2010-2021 bpm-cloud.by</span>
-          <span><a>Политика конфиденциальности</a></span>
+          <span>
+            <a>Политика конфиденциальности</a>
+          </span>
         </div>
       </div>
     </div>
