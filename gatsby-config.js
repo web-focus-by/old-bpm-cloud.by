@@ -11,9 +11,11 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     {
       resolve:'gatsby-plugin-robots-txt',
-      env:{
-        production:{
-          policy: [{ userAgent: '*', allow: '/', disallow: ['/?six=']}]
+      options:{
+        env:{
+          production:{
+            policy: [{ userAgent: '*', allow: '/', disallow: ['/?six=']}]
+          }
         }
       }
     },
