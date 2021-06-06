@@ -13,7 +13,6 @@ import Breadcrumbs from "../../components/posts/breadcrumbs"
 
  class PageTemplate extends Component {
     render() {
-      console.log(this.props.data.wpPage)
       const StaticPage = this.props.data.wpPage
       return (
         <Layout>
