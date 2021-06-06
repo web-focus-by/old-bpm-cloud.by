@@ -58,11 +58,11 @@ const KeysBoxs = () => {
               className={styles.caseBgImg}
               style={divStyle}></div>
             <div className={styles.title}>Кейсы</div>
-              <div
+              <h3
                 className={classnames(styles.nameKeys)}
               >
                 {item.title}
-              </div>
+              </h3>
               <ButtonSmall
                 grey
                 className={classnames(styles.button)}

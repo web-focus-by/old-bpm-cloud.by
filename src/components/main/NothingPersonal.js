@@ -30,7 +30,7 @@ const NothingPersonal = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div>
-          <div className={styles.title}>«Ничего личного»</div>
+          <h2 className={styles.title}>«Ничего личного»</h2>
             <div className={styles.text}>
               <p>{content[0]}</p>
               {isMobile && <img className={styles.photo} src={images.PhotoYuri} alt="photo" />}

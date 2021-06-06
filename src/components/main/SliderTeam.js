@@ -99,7 +99,7 @@ const SliderTeam = ({ data = menuItems }) => {
   return (
     <div className={styles.wrapperSliderTeam}>
       <div className={styles.title}>
-        <div className={styles.textTitle}>Наша команда</div>
+        <h2 className={styles.textTitle}>Наша команда</h2>
         <ButtonSmall green className={styles.titleButton}>вся команда </ButtonSmall>
       </div>
       <Slider {...settings}>

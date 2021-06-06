@@ -30,7 +30,7 @@ const Quality = () => {
   return (
     <div className={styles.wrapperQuality}>
       <div className={styles.box}>
-        <div className={styles.title}>6:0 в пользу «BPM Cloud»!</div>
+        <h2 className={styles.title}>6:0 в пользу «BPM Cloud»!</h2>
         <div className={styles.desc}>
           Веб-студия в Минске – не редкость, но почему стоит обратиться
           непосредственно в нашу компанию? Список положительных сторон такого

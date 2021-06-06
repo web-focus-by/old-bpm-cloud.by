@@ -17,7 +17,6 @@ const Footer = () => {
     { name: "О нас", url: "/o-nas/" },
   ]
   const itemsFooter = footerMenuItems.map((footerItems, index) => {
-    console.log(footerItems.name)
     return (
       <div key={index} className={styles.text}>
         <Link to={footerItems.url}>{footerItems.name}</Link>

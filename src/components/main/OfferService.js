@@ -102,7 +102,7 @@ const OfferService = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.box}>
-        <div className={styles.title}>Рады предложить свои услуги!</div>
+        <h2 className={styles.title}>Рады предложить свои услуги!</h2>
         <div className={styles.text}>
           Белорусское диджитал-пространство многогранно. Как раз поэтому
           предусмотрено внушительное количество векторов приложения усилий. Наши

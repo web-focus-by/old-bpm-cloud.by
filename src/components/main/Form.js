@@ -42,9 +42,9 @@ const Form = () => {
   }
   return (
     <div className={styles.wrapperFrom}>
-      <div className={styles.title}>
+      <h2 className={styles.title}>
         Помогите нам лучше понять вас, заполнив форму ниже
-      </div>
+      </h2>
       <div className={styles.form}>
         <div className={styles.boxLine}>
           <div className={styles.line}>
