@@ -20,7 +20,6 @@ const Header = () => {
 
   return (
     <header className={styles.wrapper}>
-      <h1>bpm-cloud</h1>
       <div className={styles.container}>
         <Link to={"/"}>
           <img className={styles.BpmCloud} src={images.bpmCloud} alt="" />
