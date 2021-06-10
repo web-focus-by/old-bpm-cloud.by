@@ -53,7 +53,7 @@ const Reviews = ({ data = menuItems }) => {
     <div className={styles.wrapper}>
       <div className={styles.headReviews}>
         <div>
-          <div className={styles.title}>Отзывы наших клиентов</div>
+          <h2 className={styles.title}>Отзывы наших клиентов</h2>
           <div className={styles.text}>
             Непременно ознакомьтесь с тем, что пишут о нашей компании клиенты.
             Мнение тех, кто платит свои деньги, стоит дорого! Рады, что выбрали

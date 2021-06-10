@@ -6,6 +6,24 @@ import { images } from ".././images"
 import styles from "./Footer.module.css"
 
 const Footer = () => {
+  const footerMenuItems = [
+    { name: "Разработка сайтов", url: "/razrabotka-sajtov/" },
+    { name: "SEO", url: "/seo/" },
+    { name: "SMM", url: "/smm/" },
+    { name: "PPC", url: "/ppc/" },
+    { name: "Брендинг и дизайн", url: "/brending-i-dizajn/" },
+    { name: "Разработка приложений", url: "/razrabotka-prilozhenij/" },
+    { name: "Прочие услуги", url: "/prochie-uslugi/" },
+    { name: "О нас", url: "/o-nas/" },
+  ]
+  const itemsFooter = footerMenuItems.map((footerItems, index) => {
+    return (
+      <div key={index} className={styles.text}>
+        <Link to={footerItems.url}>{footerItems.name}</Link>
+      </div>
+    )
+  })
+
   return (
     <div className={styles.wrapperFooter}>
       <div className={styles.container}>
@@ -36,32 +54,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.boxTwo}>
-          <div className={styles.text}>
-            <Link to={"/razrabotka-sajtov/"}>Разработка сайтов</Link>
-          </div>
-          <div className={styles.text}>
-            <Link to={"/seo/"}>SEO</Link>
-          </div>
-          <div className={styles.text}>
-            <Link to={"/smm/"}>SMM</Link>
-          </div>
-          <div className={styles.text}>
-            <Link to={"/ppc/"}>PPC</Link>
-          </div>
-          <div className={styles.text}>
-            <Link to={"/brending-i-dizajn/"}>Брендинг и дизайн</Link>
-          </div>
-          <div className={styles.text}>
-            <Link to={"/razrabotka-prilozhenij/"}>Разработка приложений</Link>
-          </div>
-          <div className={styles.text}>
-            <Link to={"/prochie-uslugi/"}>Прочие услуги</Link>
-          </div>
-          <div className={styles.text}>
-            <Link to={"/"}>О нас</Link>
-          </div>
-        </div>
+        <div className={styles.boxTwo}>{itemsFooter}</div>
         <div className={styles.bottom}>
           <span>© 2010-2021 bpm-cloud.by</span>
           <span>

@@ -28,27 +28,25 @@ const NothingPersonal = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div>
-          <div className={styles.title}>«Ничего личного»</div>
-          <div className={styles.text}>
-            <p>{content[0]}</p>
-            {isMobile && (
-              <img
-                className={styles.photo}
-                src={images.PhotoYuri}
-                alt="photo"
-              />
-            )}
-            <p>{content[1]}</p>
-            {isMobile && (
-              <details>
-                <summary>Читать далее</summary>
-                <p>{content[2]}</p>
-                <p>{content[3]}</p>
-              </details>
-            )}
-            {!isMobile && <p>{content[2]}</p>}
-            {!isMobile && <p>{content[3]}</p>}
-          </div>
+          <h2 className={styles.title}>«Ничего личного»</h2>
+            <div className={styles.text}>
+              <p>{content[0]}</p>
+              {isMobile && <img className={styles.photo} src={images.PhotoYuri} alt="photo" />}
+              <p>{content[1]}</p>
+              {isMobile && (
+                <details>
+                  <summary>Читать далее</summary>
+                  <p>{content[2]}</p>
+                  <p>{content[3]}</p>
+                </details>
+              )}
+              {!isMobile && (
+                  <p>{content[2]}</p>
+              )}
+              {!isMobile && (
+                  <p>{content[3]}</p>
+              )}
+            </div>
         </div>
         {!isMobile && (
           <img className={styles.photo} src={images.PhotoYuri} alt="photo" />

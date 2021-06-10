@@ -16,7 +16,7 @@ const AboutUs = () => {
         <img src={images.DSC_0379} alt="" />
       </div>
       <div className={styles.description}>
-        <div className={styles.title}>О нас</div>
+        <h2 className={styles.title}>О нас</h2>
         <div className={styles.box}>
           <div className={styles.text}>
             Digital-агентство «BPM Cloud» – это комплексный подход к

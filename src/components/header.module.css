@@ -11,7 +11,14 @@ main {
   height: 777px;
   margin: 0 auto;
 }
-
+.wrapper h1 {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  visibility: hidden;
+}
 .BpmCloud {
   width: 183px;
   height: 70px;
