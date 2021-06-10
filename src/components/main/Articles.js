@@ -118,7 +118,7 @@ const Articles = () => {
     <div className={styles.wrapperArticles}>
       <div className={styles.container}>
         <div className={styles.head}>
-          <div className={styles.title}>Интересное</div>
+          <h2 className={styles.title}>Интересное</h2>
           <ButtonSmall red className={styles.bittonTitle}>
             все статьи и новости
           </ButtonSmall>

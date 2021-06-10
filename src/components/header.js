@@ -27,7 +27,9 @@ const Header = () => {
         <div className={styles.box}>
           <HeaderMenu />
           <div className={styles.yellowButton}>
-            <Button className={styles.buttonStyles}>+375 (29) 32 44 000</Button>
+            <Button className={styles.buttonStyles}>
+              <a href="tel:+375 (29) 32 44 000">+375 (29) 32 44 000</a>
+            </Button>
           </div>
         </div>
       </div>
