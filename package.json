@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Dmitry legakov <legankov95@gmail.com>",
+  "author": "Dmitry legakov <legankov95@gmail.com> ",
   "dependencies": {
     "@apollo/client": "^3.3.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
