@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import classnames from "classnames"
 import { ButtonGreen } from "../buttons"
 import { images } from "../../images"
-import { useForm, ValidationError } from "@formspree/react"
+import { useForm, ValidationError } from '@formspree/react';
 
 import styles from "./Сontact.module.css"
 
@@ -13,9 +13,9 @@ const ContactForm = ({ handlerGetForm }) => {
     name: "",
     phone: "",
   })
-  const [formState, handleSubmit] = useForm("mjvpndyv")
+  const [formState, handleSubmit] = useForm("mjvpndyv");
   if (formState.succeeded) {
-    setTimeout(handlerGetForm, 0)
+    setTimeout(handlerGetForm,0)
   }
 
   const handlerOnClick = () => {
@@ -83,12 +83,8 @@ const ContactForm = ({ handlerGetForm }) => {
           )}
         </div>
       </div>
-      <div className={styles.wrapf}>
-        <button
-          type="submit"
-          disabled={formState.submitting}
-          className={styles.button}
-        >
+      <div className={styles.wrapf} >
+        <button type="submit" disabled={formState.submitting} className={styles.button}>
           Позвоните мне
         </button>
         <div className={styles.textFormik}>
@@ -106,23 +102,17 @@ const ContactForm = ({ handlerGetForm }) => {
   )
 }
 
-const FrirstForm = ({ handlerGetForm, content }) => {
-  const textContent =
-    content !== undefined
-      ? content
-      : `
-  Свяжитесь с консультантом веб-студии — и мы раскроем каждый нюанс
-  сотрудничества. Интернет-продвижение с разумным подходом эффективно
-  решает поставленные задачи. Некоторые компании вовсе полностью
-  переходят в онлайн-режим.`
+const FrirstForm = ({ handlerGetForm }) => {
   return (
     <>
       <div className={styles.wrapContenContactForm}>
         <div className={styles.title}>Хотите узнать больше?</div>
-        <div
-          className={styles.text}
-          dangerouslySetInnerHTML={{ __html: textContent }}
-        ></div>
+        <div className={styles.text}>
+          Свяжитесь с консультантом веб-студии — и мы раскроем каждый нюанс
+          сотрудничества. Интернет-продвижение с разумным подходом эффективно
+          решает поставленные задачи. Некоторые компании вовсе полностью
+          переходят в онлайн-режим.
+        </div>
       </div>
       <button onClick={() => handlerGetForm()} className={styles.button}>
         Связаться
@@ -150,7 +140,7 @@ const LastForm = () => {
   )
 }
 
-const Сontact = ({ content }) => {
+const Сontact = () => {
   const [state, setState] = useState(1)
   const handlerGetForm = () => {
     setState(state + 1)
@@ -158,16 +148,13 @@ const Сontact = ({ content }) => {
   const getForm = state => {
     switch (state) {
       case 1:
-        return <FrirstForm handlerGetForm={handlerGetForm} content={content} />
-        break
+        return <FrirstForm handlerGetForm={handlerGetForm} />
       case 2:
         return <ContactForm handlerGetForm={handlerGetForm} />
-        break
       case 3:
         return <LastForm />
-        break
       default:
-        return <FrirstForm handlerGetForm={handlerGetForm} content={content} />
+        return <FrirstForm handlerGetForm={handlerGetForm} />
     }
   }
   return (

@@ -18,13 +18,13 @@ export default ({
   const colorGreen = green ? true : false
   return (
     <button
-      style={{ height: height }}
+      style={{ height: height}}
       onClick={onClick}
       className={classnames(styles.buttom, className, {
         [styles.white]: colorWhite,
         [styles.grey]: colorGrey,
         [styles.red]: colorRed,
-        [styles.green]: colorGreen,
+        [styles.green]: colorGreen,        
       })}
     >
       <div className={styles.text}>{children}</div>

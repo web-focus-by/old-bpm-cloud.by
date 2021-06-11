@@ -10,7 +10,7 @@ export default ({ children, activeButton, onClick, className, disable }) => {
       className={classnames(styles.button, className, {
         [styles.activeButton]: activeButton,
       })}
-      disabled={disable}
+      disabled={disable}     
     >
       <div
         className={classnames(styles.text, {
