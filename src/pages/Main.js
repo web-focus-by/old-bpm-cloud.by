@@ -27,7 +27,6 @@ const Main = () => {
       <Сontact />
       <Reviews />
       <Articles />
-      <Feedback />
     </div>
   )
 }

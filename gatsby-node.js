@@ -67,9 +67,9 @@ exports.createPages = async ({ graphql, actions }) => {
     // to interact with Gatsby.
     let template
     switch (edge.node.id) {
-      case "cG9zdDoxNjA=":
-        template = developPage
-        break
+      // case "cG9zdDoxNjA=":
+      //   template = developPage
+      //   break
       default:
         template = pageTemplate
     }
