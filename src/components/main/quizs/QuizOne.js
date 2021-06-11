@@ -5,7 +5,7 @@ import stylesGeneral from "./QuizGeneral.module.scss"
 import styles from "./QuizOne.module.css"
 import { ButtonQuiz } from "../../buttons"
 
-const QuizOne = ({ handlerLine }) => {
+const QuizOne = ({ handlerLine}) => {
   const [check, setCheck] = useState()
   const [activeButton, setActiveButton] = useState(false)
 
@@ -16,18 +16,13 @@ const QuizOne = ({ handlerLine }) => {
 
   const handlerOnClick = () => {
     if (activeButton) {
-      handlerLine([
-        document.querySelector(`.${stylesGeneral.formTitle}`).innerText,
-        document.querySelectorAll(`.${styles.text}`)[check - 1].innerText,
-      ])
+      handlerLine([document.querySelector(`.${stylesGeneral.formTitle}`).innerText, document.querySelectorAll(`.${styles.text}`)[check-1].innerText])
     }
   }
 
   return (
     <div className={stylesGeneral.wrapForm}>
-      <div className={stylesGeneral.formTitle}>
-        Вы определились с объемом затрат?
-      </div>
+      <div className={stylesGeneral.formTitle}>Вы определились с объемом затрат?</div>
       <div className={styles.wrap}>
         <div className={styles.box} onClick={() => handler(1)}>
           <div
@@ -81,8 +76,8 @@ const QuizOne = ({ handlerLine }) => {
         >
           Далее
         </ButtonQuiz>
+        </div>
       </div>
-    </div>
   )
 }
 

@@ -16,10 +16,7 @@ const QuizTwo = ({ handlerLine }) => {
 
   const handlerOnClick = () => {
     if (activeButton) {
-      handlerLine([
-        document.querySelector(`.${stylesGeneral.formTitle}`).innerText,
-        document.querySelectorAll(`.${styles.text}`)[check - 1].innerText,
-      ])
+      handlerLine([document.querySelector(`.${stylesGeneral.formTitle}`).innerText, document.querySelectorAll(`.${styles.text}`)[check-1].innerText])
     }
   }
 
@@ -30,113 +27,114 @@ const QuizTwo = ({ handlerLine }) => {
       </div>
       <div className={styles.wrap}>
         <div>
-          <div className={styles.box} onClick={() => handler(1)}>
-            <div
-              className={classnames(styles.checkBox, {
-                [styles.activeBox]: 1 === check,
-              })}
-            ></div>
-            <div
-              className={classnames(styles.text, {
-                [styles.activeText]: 1 === check,
-              })}
-            >
-              Государственная структура
-            </div>
-          </div>
+        <div className={styles.box} onClick={() => handler(1)}>
           <div
-            className={styles.box}
-            className={styles.box}
-            onClick={() => handler(2)}
-          >
-            <div
-              className={classnames(styles.checkBox, {
-                [styles.activeBox]: 2 === check,
-              })}
-            ></div>
-            <div
-              className={classnames(styles.text, {
-                [styles.activeText]: 2 === check,
-              })}
-            >
-              Бизнес
-            </div>
-          </div>
+            className={classnames(styles.checkBox, {
+              [styles.activeBox]: 1 === check,
+            })}
+          ></div>
           <div
-            className={styles.box}
-            className={styles.box}
-            onClick={() => handler(3)}
+            className={classnames(styles.text, {
+              [styles.activeText]: 1 === check,
+            })}
           >
-            <div
-              className={classnames(styles.checkBox, {
-                [styles.activeBox]: 3 === check,
-              })}
-            ></div>
-            <div
-              className={classnames(styles.text, {
-                [styles.activeText]: 3 === check,
-              })}
-            >
-              Образование
-            </div>
+            Государственная структура
           </div>
         </div>
+        <div
+          className={styles.box}
+          className={styles.box}
+          onClick={() => handler(2)}
+        >
+          <div
+            className={classnames(styles.checkBox, {
+              [styles.activeBox]: 2 === check,
+            })}
+          ></div>
+          <div
+            className={classnames(styles.text, {
+              [styles.activeText]: 2 === check,
+            })}
+          >
+            Бизнес
+          </div>
+        </div>
+        <div
+          className={styles.box}
+          className={styles.box}
+          onClick={() => handler(3)}
+        >
+          <div
+            className={classnames(styles.checkBox, {
+              [styles.activeBox]: 3 === check,
+            })}
+          ></div>
+          <div
+            className={classnames(styles.text, {
+              [styles.activeText]: 3 === check,
+            })}
+          >
+            Образование
+          </div>
+        </div>
+        
+        </div>
         <div>
+        <div
+          className={styles.box}
+          className={styles.box}
+          onClick={() => handler(4)}
+        >
           <div
-            className={styles.box}
-            className={styles.box}
-            onClick={() => handler(4)}
-          >
-            <div
-              className={classnames(styles.checkBox, {
-                [styles.activeBox]: 4 === check,
-              })}
-            ></div>
-            <div
-              className={classnames(styles.text, {
-                [styles.activeText]: 4 === check,
-              })}
-            >
-              Медицина
-            </div>
-          </div>
+            className={classnames(styles.checkBox, {
+              [styles.activeBox]: 4 === check,
+            })}
+          ></div>
           <div
-            className={styles.box}
-            className={styles.box}
-            onClick={() => handler(5)}
+            className={classnames(styles.text, {
+              [styles.activeText]: 4 === check,
+            })}
           >
-            <div
-              className={classnames(styles.checkBox, {
-                [styles.activeBox]: 5 === check,
-              })}
-            ></div>
-            <div
-              className={classnames(styles.text, {
-                [styles.activeText]: 5 === check,
-              })}
-            >
-              Стартап
-            </div>
+            Медицина
           </div>
+        </div>
+        <div
+          className={styles.box}
+          className={styles.box}
+          onClick={() => handler(5)}
+        >
+          <div
+            className={classnames(styles.checkBox, {
+              [styles.activeBox]: 5 === check,
+            })}
+          ></div>
+          <div
+            className={classnames(styles.text, {
+              [styles.activeText]: 5 === check,
+            })}
+          >
+            Стартап
+          </div>
+        </div>
 
+        <div
+          className={styles.box}
+          className={styles.box}
+          onClick={() => handler(6)}
+        >
           <div
-            className={styles.box}
-            className={styles.box}
-            onClick={() => handler(6)}
+            className={classnames(styles.checkBox, {
+              [styles.activeBox]: 6 === check,
+            })}
+          ></div>
+          <div
+            className={classnames(styles.text, {
+              [styles.activeText]: 6 === check,
+            })}
           >
-            <div
-              className={classnames(styles.checkBox, {
-                [styles.activeBox]: 6 === check,
-              })}
-            ></div>
-            <div
-              className={classnames(styles.text, {
-                [styles.activeText]: 6 === check,
-              })}
-            >
-              Другое
-            </div>
+            Другое
           </div>
+        </div>
         </div>
       </div>
       <ButtonQuiz
