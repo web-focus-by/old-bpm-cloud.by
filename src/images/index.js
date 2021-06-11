@@ -23,19 +23,33 @@ import BpmFooter from "./BpmFooter.svg"
 import circleMenu from "./circleMenu.svg"
 import Vector from "./Vector.svg"
 import burgerMenu from "./burgerMenusvg.svg"
-import readSpeed from './readSpeed.svg'
-import telegram from './telegram.svg'
-import whatsapp from './whatsapp.svg'
-import viber from './viber.svg'
-import vk from './vk.svg'
-import shareLink from './shareLink.svg'
-import telegramSubscr from './telegramSubscr.svg'
-import instagramSubscr from './instagramSubscr.svg'
-import vkSubscr from './vkSubscr.svg'
-import fb from './fb.svg'
-import ok from './ok.svg'
-import vk_is_login from './vk_is_login.svg'
-
+import readSpeed from "./readSpeed.svg"
+import telegram from "./telegram.svg"
+import whatsapp from "./whatsapp.svg"
+import viber from "./viber.svg"
+import vk from "./vk.svg"
+import shareLink from "./shareLink.svg"
+import telegramSubscr from "./telegramSubscr.svg"
+import instagramSubscr from "./instagramSubscr.svg"
+import vkSubscr from "./vkSubscr.svg"
+import fb from "./fb.svg"
+import ok from "./ok.svg"
+import vk_is_login from "./vk_is_login.svg"
+import someSVG1 from "./Frame 311.svg"
+import someSVG2 from "./Group 195.svg"
+import someSVG3 from "./Group 197.svg"
+import someSVG4 from "./Group 199.svg"
+import someSVG5 from "./Group 200.svg"
+import someSVG6 from "./Group 201.svg"
+import someSVG7 from "./Group 204.svg"
+import someSVG8 from "./Frame 312.svg"
+import developYuri from "./developYuri.png"
+import firstSvg22 from "./svg/Frame 22.svg"
+import firstSvg23 from "./svg/Frame 23.svg"
+import firstSvg24 from "./svg/Frame 24.svg"
+import firstSvg210 from "./svg/Group 210.svg"
+import firstSvg211 from "./svg/Group 211.svg"
+import firstSvg212 from "./svg/Group 212.svg"
 
 export const images = {
   CloseMenuYellow,
@@ -75,5 +89,19 @@ export const images = {
   fb,
   ok,
   vk_is_login,
-  
+  someSVG1,
+  someSVG2,
+  someSVG3,
+  someSVG4,
+  someSVG5,
+  someSVG6,
+  someSVG7,
+  someSVG8,
+  developYuri,
+  firstSvg22,
+  firstSvg23,
+  firstSvg24,
+  firstSvg210,
+  firstSvg211,
+  firstSvg212,
 }

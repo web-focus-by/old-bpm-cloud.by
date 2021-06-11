@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react"
 
 import classnames from "classnames"
 
@@ -7,7 +7,7 @@ import stylesGeneral from "./QuizGeneral.module.scss"
 import styles from "./QuizFive.module.css"
 import { ButtonQuiz } from "../../buttons"
 
-const QuizFive = ({handlerLine, answer}) => {
+const QuizFive = ({ handlerLine, answer }) => {
   const [activeButton, setActiveButton] = useState(false)
   const [stateInfo, setState] = useState({
     name: "",
@@ -16,13 +16,17 @@ const QuizFive = ({handlerLine, answer}) => {
     prim: "",
   })
 
-  const [state, handleSubmit] = useForm("mwkwgjej");
+  const [state, handleSubmit] = useForm("mwkwgjej")
   if (state.succeeded) {
-      setTimeout(handlerLine,0)
+    setTimeout(handlerLine, 0)
   }
 
   const handlerInput = e => {
-    if (stateInfo.name !== "" && stateInfo.email !== "" && stateInfo.phone !== "") {
+    if (
+      stateInfo.name !== "" &&
+      stateInfo.email !== "" &&
+      stateInfo.phone !== ""
+    ) {
       setActiveButton(true)
     }
     if (stateInfo.name.trim() === "") {
@@ -37,20 +41,20 @@ const QuizFive = ({handlerLine, answer}) => {
     setState({ ...stateInfo, [e.target.name]: e.target.value })
   }
 
-  const InvokeInputs = () =>{
-    return(
+  const InvokeInputs = () => {
+    return (
       <div className={styles.invokeInputs}>
-        {answer[0].map((items, index) =>{
-            return(
-                <input
-                  readOnly
-                  type='text'
-                  key={index}
-                  name={items !== undefined?items[0]:'name'}
-                  value={items !== undefined?items[1]:'name'}
-                />
-            )
-          })}
+        {answer[0].map((items, index) => {
+          return (
+            <input
+              readOnly
+              type="text"
+              key={index}
+              name={items !== undefined ? items[0] : "name"}
+              value={items !== undefined ? items[1] : "name"}
+            />
+          )
+        })}
       </div>
     )
   }
@@ -83,7 +87,7 @@ const QuizFive = ({handlerLine, answer}) => {
             placeholder="E-mail"
             required
           />
-          <InvokeInputs/>
+          <InvokeInputs />
         </div>
         <div>
           <div>
@@ -101,8 +105,12 @@ const QuizFive = ({handlerLine, answer}) => {
           </div>
         </div>
       </div>
-      <button type='submit' className={classnames(styles.button, stylesGeneral.button)} disabled={state.submitting}>
-      Отправить
+      <button
+        type="submit"
+        className={classnames(styles.button, stylesGeneral.button)}
+        disabled={state.submitting}
+      >
+        Отправить
       </button>
     </form>
   )

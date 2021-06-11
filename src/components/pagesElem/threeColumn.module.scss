@@ -1,0 +1,31 @@
+.contentArea {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+.wrapper {
+  padding-bottom: 200px;
+}
+.contentColumn {
+  max-width: 353px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #6a7380;
+}
+
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+  margin-bottom: 30px;
+}
