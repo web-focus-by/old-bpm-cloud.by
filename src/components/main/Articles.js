@@ -1,7 +1,7 @@
 import React from "react"
 import { ButtonGreen, ButtonSmall } from "../buttons"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive"
 import styles from "./Articles.module.scss"
 
 const data = [
@@ -22,51 +22,58 @@ const data = [
   },
 ]
 
-
 const Article = ({ title, text, count }) => {
   const data = useStaticQuery(graphql`
-  {
-    allWpPost(filter: {categories: {nodes: {elemMatch: {name: {in:["Статьи", "news"]}}}}}, sort: {fields: date, order: DESC}, limit: 3) {
-      nodes {
-        id
-        author {
-          node {
-            name
+    {
+      allWpPost(
+        filter: {
+          categories: {
+            nodes: { elemMatch: { name: { in: ["Статьи", "news"] } } }
           }
         }
-        date(formatString: "L", locale: "ru")
-        featuredImage {
-          node {
-            uri
-            sourceUrl
+        sort: { fields: date, order: DESC }
+        limit: 3
+      ) {
+        nodes {
+          id
+          author {
+            node {
+              name
+            }
           }
-        }
-        title
-        excerpt
-        uri
-        tags {
-          nodes {
-            name
+          date(formatString: "L", locale: "ru")
+          featuredImage {
+            node {
+              uri
+              sourceUrl
+            }
+          }
+          title
+          excerpt
+          uri
+          tags {
+            nodes {
+              name
+            }
           }
         }
       }
     }
-  }
   `)
   const divStyle = {
     backgroundImage: `url(${data.allWpPost.nodes[count].featuredImage.node.sourceUrl})`, // url(https://wp-server.bpm-cloud.by/${data.allWpPost.nodes[count].featuredImage.node.uri})
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   }
-  
-  
+
   const isDesktop = useMediaQuery({
-    query: '(max-width: 950px)'
+    query: "(max-width: 950px)",
   })
 
-
-
-  const tag = data.allWpPost.nodes[count].tags.nodes.length !== 0 ? data.allWpPost.nodes[count].tags.nodes[0].name : '#интересное'
+  const tag =
+    data.allWpPost.nodes[count].tags.nodes.length !== 0
+      ? data.allWpPost.nodes[count].tags.nodes[0].name
+      : "#интересное"
   return (
     <div className={styles.wrapArticle}>
       <div className={styles.BoxImg} style={divStyle}>
@@ -75,15 +82,33 @@ const Article = ({ title, text, count }) => {
         </ButtonSmall>
       </div>
       <div className={styles.descArticle}>
-        <div className={styles.titleArticle}>{data.allWpPost.nodes[count].title}</div>
-        <div className={styles.textArticle} dangerouslySetInnerHTML={{ __html: data.allWpPost.nodes[count].excerpt }}></div>
+        <div className={styles.titleArticle}>
+          {data.allWpPost.nodes[count].title}
+        </div>
+        <div
+          className={styles.textArticle}
+          dangerouslySetInnerHTML={{
+            __html: data.allWpPost.nodes[count].excerpt,
+          }}
+        ></div>
         <div className={styles.footerArticle}>
-          <div className={styles.avtor}>Автор: {data.allWpPost.nodes[count].author.node.name}</div>
+          <div className={styles.avtor}>
+            Автор: {data.allWpPost.nodes[count].author.node.name}
+          </div>
           <div className={styles.date}>{data.allWpPost.nodes[count].date}</div>
-          <Link to={data.allWpPost.nodes[count].uri}><ButtonSmall red className={styles.buttonDetailed}>подробнее</ButtonSmall></Link>
+          <Link to={data.allWpPost.nodes[count].uri}>
+            <ButtonSmall red className={styles.buttonDetailed}>
+              подробнее
+            </ButtonSmall>
+          </Link>
         </div>
       </div>
-      {isDesktop && <Link to={data.allWpPost.nodes[count].uri} className={styles.laptopAndMobileLink}></Link>}
+      {isDesktop && (
+        <Link
+          to={data.allWpPost.nodes[count].uri}
+          className={styles.laptopAndMobileLink}
+        ></Link>
+      )}
     </div>
   )
 }
@@ -95,12 +120,12 @@ const Articles = () => {
         <div className={styles.head}>
           <h2 className={styles.title}>Интересное</h2>
           <ButtonSmall red className={styles.bittonTitle}>
-          все статьи и новости
-        </ButtonSmall>
+            все статьи и новости
+          </ButtonSmall>
         </div>
         <div className={styles.Articles}>
           {(data || []).map((i, index) => (
-            <Article key={index} title={i.title} text={i.text} count={index}/>
+            <Article key={index} title={i.title} text={i.text} count={index} />
           ))}
         </div>
       </div>

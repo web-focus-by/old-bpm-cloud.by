@@ -1,0 +1,226 @@
+.wrapper {
+  max-width: calc(800px + 377px);
+  button {
+    width: 53px;
+    height: 120px;
+    transition: all 0.3s;
+  }
+}
+.formAreaWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nextButton {
+  margin-right: 324px;
+  background: #fa5c45;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  &:hover {
+    background: #f14d35;
+  }
+  .buttonText {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
+.previousButton {
+  border: none;
+  background: rgba(106, 115, 128, 0.07);
+
+  &:hover {
+    background: rgba(106, 115, 128, 0.1);
+  }
+}
+.isActive {
+  width: 377px !important;
+  margin-right: 0px;
+}
+.formWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 114px;
+  width: 100%;
+  margin-left: 100px;
+  min-height: 120px;
+
+  &.isNotFirstStep {
+    margin-left: 46px;
+  }
+}
+.progressBar {
+  width: 100%;
+  max-width: 800px;
+  height: 4px;
+  background-color: rgba(106, 115, 128, 0.27);
+}
+.valueProgressBar {
+  height: 4px;
+  width: 0%;
+  transition: width 1s;
+  background-color: #fa5c45;
+}
+
+.textInput {
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+  outline: none;
+  &::placeholder {
+    color: rgba(106, 115, 128, 0.27);
+  }
+}
+
+.inputTitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #3c424a;
+}
+.subTitleInput {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #6a7380;
+  margin-bottom: 24px;
+}
+.fileInput {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.textAreaWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  max-width: 255px;
+}
+.inputAreaWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 692px;
+}
+.inputWrapper {
+  max-width: 377px;
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fa5c45;
+
+  color: #fa5c45;
+
+  .fileInputText {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+
+    &.fileIsDownload {
+      text-transform: lowercase;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+      letter-spacing: 0.065em;
+      font-weight: 400;
+    }
+  }
+
+  .inputImage {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.fileIsDownload {
+  background-color: #fa5c45;
+  color: #ffffff;
+}
+.successLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 263px;
+  max-width: 120px;
+  max-height: 120px;
+  width: 100%;
+  height: 100%;
+  background-color: #fa5c45;
+}
+.animation{
+  .inputTitle, .subTitleInput, .textInput{
+    animation-duration: 1s;
+    animation-name: textAnimation;
+  }
+}
+
+@keyframes textAnimation {
+  from {
+    transform: translateY(-50px);
+    opacity: .0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.removed{
+  animation-duration: 1s;
+  animation-name: textAnimation2;
+}
+
+@keyframes textAnimation2 {
+  from {
+    transform: translateY(15px);
+    opacity: .5;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

@@ -13,67 +13,84 @@ import ShowCommentArea from "../../components/posts/showCommentArea"
 import OtherPostsArea from "../../components/posts/otherPostsArea"
 import DescriptionContent from "../../components/posts/decsrptionContent"
 import SEO from "../../components/seo"
-import style from'./post.module.scss'
+import style from "./post.module.scss"
 import { images } from "../../images"
 import Content from "../../components/posts/content"
 import SearchArea from "../../components/posts/searchArea"
+import Feedback from "../../components/main/Feedback"
 
 class Post extends Component {
   render() {
     const post = this.props.data.wpPost
-    const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`;
+    const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`
     //description, lang, meta, titles
     return (
       <Layout>
-        <SEO title={post.seo.title} description={post.seo.opengraphDescription} />
+        <SEO
+          title={post.seo.title}
+          description={post.seo.opengraphDescription}
+        />
         <div className={style.wrapper}>
-            <Breadcrumbs breadcrumbsArr={post.seo.breadcrumbs} />
-            <div className={style.headerAndSearchWrapper}>
-              <h1
-                dangerouslySetInnerHTML={{
-                  __html: post.title,
-                }}
-              />
-              <SearchArea />
-            </div>
-            <div className={style.contentArea}>
-              <div className={style.post}>
+          <Breadcrumbs breadcrumbsArr={post.seo.breadcrumbs} />
+          <div className={style.headerAndSearchWrapper}>
+            <h1
+              dangerouslySetInnerHTML={{
+                __html: post.title,
+              }}
+            />
+            <SearchArea />
+          </div>
+          <div className={style.contentArea}>
+            <div className={style.post}>
               <div className={style.postInfo}>
-                <ReadSpeed content={post.content}/>
+                <ReadSpeed content={post.content} />
                 <div className={style.dateInfo}>
                   <div>Дата публикации:</div>
                   <div>{post.date}</div>
                 </div>
               </div>
-              <div className={style.postImage} style={{backgroundImage:backgroundImageUrl}}>
-                <Tags tagsArr={post.tags.nodes}/>
+              <div
+                className={style.postImage}
+                style={{ backgroundImage: backgroundImageUrl }}
+              >
+                <Tags tagsArr={post.tags.nodes} />
               </div>
               <DescriptionContent content={post.content} />
-              <Content content={post.content}/>
-              </div> 
-              <Aside />  
+              <Content content={post.content} />
             </div>
-            <div className={style.authorArea}>
-              <AuthorArea authorInfo={post.author.node} />
-              <ShareWithFriends url={post.link}/>
+            <Aside />
+          </div>
+          <div className={style.authorArea}>
+            <AuthorArea authorInfo={post.author.node} />
+            <ShareWithFriends url={post.link} />
           </div>
           <div className={style.subscribeArea}>
-              <h2>Понравилась статья?</h2>
-              <span>ПОДПИШИСЬ НА НАШИ НОВОСТИ</span>
-              <div className={style.iconArea}>
-                <a href={'https://vk.com/bpm_cloud'} target='_blank'><img src={images.vkSubscr}></img></a>
-                <a href={'https://www.instagram.com/bpm_claud_minsk/'} target='_blank'><img src={images.instagramSubscr}></img></a>
-                <a href={'https://telegram.me/375293244000'} target='_blank'><img src={images.telegramSubscr}></img></a>
-              </div>
+            <h2>Понравилась статья?</h2>
+            <span>ПОДПИШИСЬ НА НАШИ НОВОСТИ</span>
+            <div className={style.iconArea}>
+              <a href={"https://vk.com/bpm_cloud"} target="_blank">
+                <img src={images.vkSubscr}></img>
+              </a>
+              <a
+                href={"https://www.instagram.com/bpm_claud_minsk/"}
+                target="_blank"
+              >
+                <img src={images.instagramSubscr}></img>
+              </a>
+              <a href={"https://telegram.me/375293244000"} target="_blank">
+                <img src={images.telegramSubscr}></img>
+              </a>
+            </div>
           </div>
           <div className={style.commentArea}>
             <AddCommentArea post={post} />
-            <ShowCommentArea commentArr={post.comments}/>
+            <ShowCommentArea commentArr={post.comments} />
           </div>
           <div className={style.otherPostsArea}>
             <OtherPostsArea />
           </div>
-          </div>
+        </div>
+        <Feedback />
       </Layout>
     )
   }
@@ -85,7 +102,6 @@ Post.propTypes = {
 }
 
 export default Post
-
 
 export const postQuery = graphql`
   query($id: String!) {
@@ -136,8 +152,6 @@ export const postQuery = graphql`
     }
   }
 `
-
-
 
 // const PostTemplate = props => {
 //   return (

@@ -22,20 +22,21 @@
   margin: 0px;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-a { 
+a {
   text-decoration: none;
-  color: inherit!important;
+  color: inherit !important;
   cursor: pointer;
- }
+}
 
- button:active{
+button {
   outline: none;
-  }
-.ReactModal__Overlay{
-    z-index: 1000;
-    background-color: rgba(251, 250, 250, .9) !important;
+}
+
+.ReactModal__Overlay {
+  z-index: 1000;
+  background-color: rgba(251, 250, 250, 0.9) !important;
 }

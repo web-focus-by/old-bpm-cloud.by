@@ -60,7 +60,7 @@
 }
 
 .text:hover a{
-  color: #FFCC00;
+  color: #FFCC00 !important;
 }
 
 .bottom {

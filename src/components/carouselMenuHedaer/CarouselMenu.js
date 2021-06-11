@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import Slider from "react-slick"
 
 import "slick-carousel/slick/slick.css"
@@ -11,13 +11,13 @@ import { Link } from "gatsby"
 import styles from "./CarouselMenu.module.css"
 
 const menuItems = [
-  { name: "SMM", url:'/smm/' },
-  { name: "Разработка сайтов", url:'/razrabotka-sajtov/'  },
-  { name: "Seo", url:'/seo/' },
-  { name: "Главная", url:'/' },
-  { name: "PPC", url:'/ppc/' },
-  { name: "Брендинг и дизайн", url:'/brending-i-dizajn/' },
-  { name: "Разработка приложений", url:'/razrabotka-prilozhenij/' },
+  { name: "SMM", url: "/smm/" },
+  { name: "Разработка сайтов", url: "/razrabotka-sajtov/" },
+  { name: "Seo", url: "/seo/" },
+  { name: "Главная", url: "/" },
+  { name: "PPC", url: "/ppc/" },
+  { name: "Брендинг и дизайн", url: "/brending-i-dizajn/" },
+  { name: "Разработка приложений", url: "/razrabotka-prilozhenij/" },
 ]
 
 const CarouselMenu = ({ data = menuItems }) => {
@@ -31,15 +31,14 @@ const CarouselMenu = ({ data = menuItems }) => {
     verticalSwiping: true,
     focusOnSelect: true,
     swipeToSlide: true,
-    draggable:true,
+    draggable: true,
     arrows: true,
     speed: 500,
     initialSlide: currentItem,
-    afterChange: function(currentSlide) {
+    afterChange: function (currentSlide) {
       setCurrentItem(currentSlide)
-    
     },
-/*     responsive: [
+    /*     responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -66,7 +65,14 @@ const CarouselMenu = ({ data = menuItems }) => {
         {(data || []).map((item, index) => (
           <div key={index} className={styles.itemMenu}>
             <img src={images.circleMenu} alt="" />
-            <Link to={item.url}><div className={styles.text} onClick={() => setCurrentItem(index)}>{item.name}</div></Link>
+            <Link to={item.url}>
+              <div
+                className={styles.text}
+                onClick={() => setCurrentItem(index)}
+              >
+                {item.name}
+              </div>
+            </Link>
           </div>
         ))}
       </Slider>
