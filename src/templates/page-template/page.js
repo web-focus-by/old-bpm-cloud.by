@@ -10,13 +10,11 @@ import Breadcrumbs from "../../components/posts/breadcrumbs"
 import { graphql } from "gatsby"
 import Feedback from "../../components/main/Feedback"
 
-
 class PageTemplate extends Component {
   render() {
-    // console.log(this.props.data.wpPage)
     const StaticPage = this.props.data.wpPage
     return (
-      <Layout>
+      <Layout pageInfo={StaticPage}>
         <SEO
           title={StaticPage.seo.title}
           description={StaticPage.seo.opengraphDescription}

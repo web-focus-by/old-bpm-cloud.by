@@ -28,7 +28,7 @@ html {
 
 a {
   text-decoration: none;
-  color: inherit !important;
+  color: inherit;
   cursor: pointer;
 }
 

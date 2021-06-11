@@ -14,10 +14,10 @@ import MenuHeader from "./newHeaderMenu/menu"
 import "./styles.css"
 import Feedback from "./main/Feedback"
 
-const Layout = ({ children }) => {
+const Layout = ({ pageInfo, children }) => {
   return (
     <div className={styles.wrap}>
-      <Header />
+      <Header pageInfo={pageInfo} />
       <Cirlce />
       <main>{children}</main>
       <Footer />

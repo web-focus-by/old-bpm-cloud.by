@@ -2,6 +2,7 @@
 
 header {
   background: #fbfafa;
+  position: relative;
 }
 main {
   background: #fbfafa;
@@ -48,6 +49,7 @@ main {
   color: #6a7380;
   max-width: 540px;
   margin-top: -5px;
+  min-height: 80px;
 }
 
 .boxLogo {
@@ -55,7 +57,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  margin-top: 169px;
+  margin-top: 89px;
 }
 
 .yellowButton {
