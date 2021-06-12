@@ -22,7 +22,34 @@ const Header = ({ pageInfo }) => {
     return num1 + Math.floor(Math.random() * num2)
   }
   let arr = []
-  for (let i = 0; i <= 9; i++) arr.push(getRandomIntegerNumbInRange(1, 6))
+  for (let i = 0; i <= 9; i++) {
+    if (pageInfo !== undefined) {
+      switch (pageInfo.title) {
+        case "Разработка сайтов":
+          arr.push(1)
+          break
+        case "SEO":
+          arr.push(2)
+          break
+        case "Брендинг и дизайн":
+          arr.push(3)
+          break
+        case "PPC":
+          arr.push(4)
+          break
+        case "SMM":
+          arr.push(5)
+          break
+        case "Разработка приложений":
+          arr.push(6)
+          break
+        default:
+          arr.push(getRandomIntegerNumbInRange(1, 6))
+      }
+    } else {
+      arr.push(getRandomIntegerNumbInRange(1, 6))
+    }
+  }
   console.log(arr)
 
   return (

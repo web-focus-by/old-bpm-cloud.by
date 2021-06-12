@@ -16,7 +16,6 @@ const HeaderMenu = () => {
   const closeMenu = () => {
     document.querySelector("header").style.background = "#FBFAFA"
     document.querySelector("header").style.minHeight = "auto"
-    document.querySelector("header>div:last-child").style.visibility = "visible"
     setShowOne(false)
     setActive(0)
     isMobileMenuOpen && setShowMobileMenu(false)
@@ -49,7 +48,7 @@ const HeaderMenu = () => {
   const handlerShowMenu = itemCase => {
     document.querySelector("header").style.background = "white"
     document.querySelector("header").style.minHeight = "840px"
-    document.querySelector("header>div:last-child").style.visibility = "hidden"
+
     if (showOne === false) {
       setShowOne(!showOne)
       setActive(itemCase)

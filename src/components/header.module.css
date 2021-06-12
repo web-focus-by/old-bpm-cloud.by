@@ -11,6 +11,8 @@ main {
   max-width: 1920px;
   height: 777px;
   margin: 0 auto;
+  z-index: 2;
+  position: relative;
 }
 .wrapper h1 {
   height: 1px;
