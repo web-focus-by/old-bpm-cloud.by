@@ -26,22 +26,22 @@ const Header = ({ pageInfo }) => {
     if (pageInfo !== undefined) {
       switch (pageInfo.title) {
         case "Разработка сайтов":
-          arr.push(1)
+          arr.push(3)
           break
         case "SEO":
           arr.push(2)
           break
         case "Брендинг и дизайн":
-          arr.push(3)
+          arr.push(1)
           break
         case "PPC":
-          arr.push(4)
+          arr.push(6)
           break
         case "SMM":
-          arr.push(5)
+          arr.push(4)
           break
         case "Разработка приложений":
-          arr.push(6)
+          arr.push(5)
           break
         default:
           arr.push(getRandomIntegerNumbInRange(1, 6))

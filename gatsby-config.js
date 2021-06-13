@@ -10,14 +10,14 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     {
-      resolve:'gatsby-plugin-robots-txt',
-      options:{
-        env:{
-          production:{
-            policy: [{ userAgent: '*', allow: '/', disallow: ['/?six=']}]
-          }
-        }
-      }
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        env: {
+          production: {
+            policy: [{ userAgent: "*", allow: "/", disallow: ["/?six="] }],
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -42,58 +42,57 @@ module.exports = {
     },
     {
       resolve: "gatsby-source-wordpress",
-      options:{
-        url:`https://wp-server-bpm-cloud.webfocus.by/graphql`, //  https://um2020.by/graphql https://wp-server-bpm-cloud.webfocus.by/graphql
-        },
-        schema: {
-          requestConcurrency: 5, // currently set to 15
-          previewRequestConcurrency: 2, // currently set to 5
-        }
+      options: {
+        url: `https://wp-server-bpm-cloud.webfocus.by/graphql`, //  https://um2020.by/graphql https://wp-server-bpm-cloud.webfocus.by/graphql
+      },
+      schema: {
+        requestConcurrency: 5, // currently set to 15
+        previewRequestConcurrency: 2, // currently set to 5
+      },
     },
     {
       resolve: `gatsby-plugin-modal-routing`,
       options: {
         // A selector to set react-modal's app root to, default is `#___gatsby`
         // See http://reactcommunity.org/react-modal/accessibility/#app-element
-        appElement: '#___gatsby',
+        appElement: "#___gatsby",
 
         // Object of props that will be passed to the react-modal container
         // See http://reactcommunity.org/react-modal/#usage
-        modalProps: { },
-      }
+        modalProps: {},
+      },
     },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-NTFQWLW",
-  
+
         // Include GTM in development.
         //
         // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
-  
-        // // datalayer to be set before GTM is loaded
-        // // should be an object or a function that is executed in the browser
-        // //
-        // // Defaults to null
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
         defaultDataLayer: function () {
           return {
             pageType: window.pageType,
           }
         },
-  
-        // // Specify optional GTM environment details.
+
+        // Specify optional GTM environment details.
         // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
         // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
         // dataLayerName: "YOUR_DATA_LAYER_NAME",
-  
-        // // Name of the event that is triggered
-        // // on every Gatsby route change.
-        // //
-        // // Defaults to gatsby-route-change
+
+        // Name of the event that is triggered
+        // on every Gatsby route change.
+        //
+        // Defaults to gatsby-route-change
         // routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
       },
     },
-
   ],
 }
