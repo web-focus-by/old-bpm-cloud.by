@@ -15,7 +15,6 @@ const MainBlock = ({ currentPage }) => {
     { name: "SMM-продвижение", url: "/smm/" },
     { name: "Разработка приложений", url: "/razrabotka-prilozhenij/" },
   ]
-  console.log(currentPage)
   return (
     <div className={style.wrapper}>
       {customArr.map((e, i) => {

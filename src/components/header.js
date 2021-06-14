@@ -13,7 +13,9 @@ import { getSubTitleText } from "./utils/headerSubTitle"
 import _ from "lodash"
 
 const Header = ({ pageInfo }) => {
-  let subTitle = "Реально работающий интернет-маркетинг"
+  let subTitle = (
+    <h1 className={styles.sabtext}>Реально работающий интернет-маркетинг</h1>
+  )
   let currentPage = "/"
   if (pageInfo) {
     subTitle = getSubTitleText(pageInfo.title)
@@ -48,8 +50,6 @@ const Header = ({ pageInfo }) => {
       arr.push({ img: _.random(1, 6), counter: i })
     }
   }
-  console.log(arr)
-
   return (
     <header>
       <div className={styles.wrapper}>

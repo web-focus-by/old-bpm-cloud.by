@@ -14,14 +14,7 @@ main {
   z-index: 2;
   position: relative;
 }
-.wrapper h1 {
-  height: 1px;
-  width: 1px;
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  visibility: hidden;
-}
+
 .BpmCloud {
   width: 183px;
   height: 70px;
@@ -230,7 +223,7 @@ main {
     align-items: start;
     padding-left: 30px;
     align-items: flex-start;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
   .container > a {
     z-index: 9999999;
@@ -244,7 +237,6 @@ main {
   .boxLogo {
     margin: 0;
     height: auto;
-    margin-bottom: 64px;
   }
   .conteinerTwo {
     flex-direction: column;
@@ -276,6 +268,16 @@ main {
   .yellowButton {
     display: none;
   }
+  .mobileButton {
+    display: block;
+    margin-top: 70px;
+    width: 65%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .mobileButton button {
+    width: 100%;
+  }
   .container {
     justify-content: space-between;
     margin: 0 auto;
@@ -288,7 +290,7 @@ main {
     z-index: 1000000;
   }
   .wrapper {
-    background-color: #fbfafa;
+    /* background-color: #fbfafa; */
   }
   .BpmCloud {
     width: 107px;
@@ -326,14 +328,19 @@ main {
   .mobileButton {
     display: block;
     margin-top: 70px;
-    margin-left: -22px;
+    width: 90%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .mobileButton button {
+    width: 100%;
   }
   .boxLogo {
     margin-bottom: 0px;
   }
   .conteinerTwo {
-    padding-bottom: 0;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
   }
 }
 

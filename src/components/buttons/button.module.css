@@ -22,7 +22,7 @@
 }
 
 .buttom:hover .color {
-  width: 294px;
+  width: 110%;
 }
 
 .color {
@@ -38,9 +38,8 @@
   transform: skew(30deg);
 }
 
-
-@media(max-width:1445px){
-  .buttom{
+@media (max-width: 1445px) {
+  .buttom {
     width: 214px;
     height: 38px;
     font-size: 14px;
@@ -48,8 +47,7 @@
   }
 }
 
-@media(max-width:1050px){
-  .buttom{
-    
+@media (max-width: 1050px) {
+  .buttom {
   }
 }
