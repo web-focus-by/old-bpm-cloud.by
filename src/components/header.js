@@ -10,6 +10,7 @@ import HeaderMenu from "./headerMenu/menuHeader"
 import classNames from "classnames"
 import MainBlock from "./mainBlock/mainBlock"
 import { getSubTitleText } from "./utils/headerSubTitle"
+import _ from "lodash"
 
 const Header = ({ pageInfo }) => {
   let subTitle = "Реально работающий интернет-маркетинг"
@@ -18,36 +19,33 @@ const Header = ({ pageInfo }) => {
     subTitle = getSubTitleText(pageInfo.title)
     currentPage = pageInfo.slug
   }
-  function getRandomIntegerNumbInRange(num1, num2) {
-    return num1 + Math.floor(Math.random() * num2)
-  }
   let arr = []
-  for (let i = 0; i <= 9; i++) {
+  for (let i = 1; i <= 20; i++) {
     if (pageInfo !== undefined) {
       switch (pageInfo.title) {
         case "Разработка сайтов":
-          arr.push(3)
+          arr.push({ img: 3, counter: i })
           break
         case "SEO":
-          arr.push(2)
+          arr.push({ img: 2, counter: i })
           break
         case "Брендинг и дизайн":
-          arr.push(1)
+          arr.push({ img: 1, counter: i })
           break
         case "PPC":
-          arr.push(6)
+          arr.push({ img: 6, counter: i })
           break
         case "SMM":
-          arr.push(4)
+          arr.push({ img: 4, counter: i })
           break
         case "Разработка приложений":
-          arr.push(5)
+          arr.push({ img: 5, counter: i })
           break
         default:
-          arr.push(getRandomIntegerNumbInRange(1, 6))
+          arr.push({ img: _.random(1, 6), counter: i })
       }
     } else {
-      arr.push(getRandomIntegerNumbInRange(1, 6))
+      arr.push({ img: _.random(1, 6), counter: i })
     }
   }
   console.log(arr)
@@ -149,8 +147,14 @@ const Header = ({ pageInfo }) => {
         </div>
       </div>
       <ul className={bgStyles.circles}>
-        {arr.map((e, i) => {
-          return <li key={i} data-index-number={e}></li>
+        {_.shuffle(arr).map((e, i) => {
+          return (
+            <li
+              key={i}
+              data-index-number={e.img}
+              data-counter-number={e.counter}
+            ></li>
+          )
         })}
       </ul>
     </header>

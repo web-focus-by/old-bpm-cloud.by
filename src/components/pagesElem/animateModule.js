@@ -9,10 +9,15 @@ const AnimateModule = ({ content, title }) => {
   const wrapperEl = useRef(null)
 
   useEffect(() => {
-    window.addEventListener("scroll", function () {
-      setAnimationIsVisible(Visible(wrapperEl.current))
-    })
+    window.addEventListener("scroll", _tempElementIsVisible)
+    return () => {
+      window.removeEventListener("scroll", _tempElementIsVisible)
+    }
   }, [])
+
+  function _tempElementIsVisible() {
+    setAnimationIsVisible(Visible(wrapperEl.current))
+  }
   return (
     <div className={style.wrapper} ref={wrapperEl}>
       <div

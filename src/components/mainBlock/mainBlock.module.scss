@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 81px;
-  margin-right: 109px;
+  margin-right: 9%;
 }
 .itemWrapper {
   padding: 8px 25px;
@@ -95,5 +95,11 @@
       color: #fa5c45;
       border-color: #fa5c45;
     }
+  }
+}
+
+@media (max-width: 1445px) {
+  .wrapper {
+    margin-top: 0px;
   }
 }

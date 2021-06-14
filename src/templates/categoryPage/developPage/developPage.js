@@ -33,7 +33,7 @@ class PageTemplate extends Component {
     const StaticPage = this.props.data.wpPage
     const content = fractionContent(StaticPage.content)
     return (
-      <Layout>
+      <Layout pageInfo={StaticPage}>
         <SEO
           title={StaticPage.seo.title}
           description={StaticPage.seo.opengraphDescription}

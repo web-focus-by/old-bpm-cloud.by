@@ -149,7 +149,7 @@ main {
   }
   .conteinerTwo {
     height: 443px;
-    max-width: 912px;
+    /* max-width: 912px; */
     width: 100%;
   }
 }
