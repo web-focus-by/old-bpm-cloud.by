@@ -12,7 +12,7 @@ import SliderTeam from "../components/main/SliderTeam"
 import Сontact from "../components/main/Сontact"
 import ComponentName from "../components/main/getCases"
 
-import styles from "./Main.module.css"
+import styles from "./Main.module.scss"
 
 const Main = () => {
   return (

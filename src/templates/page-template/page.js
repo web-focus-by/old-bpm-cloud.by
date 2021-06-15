@@ -23,7 +23,6 @@ class PageTemplate extends Component {
           <Breadcrumbs breadcrumbsArr={StaticPage.seo.breadcrumbs} />
           <div className={style.contentArea}>
             <div className={style.post}>
-              <h1 dangerouslySetInnerHTML={{ __html: StaticPage.title }} />
               <Content content={StaticPage.content} />
             </div>
             <Aside />
@@ -41,6 +40,7 @@ export const pageQuery = graphql`
   query($id: String!) {
     wpPage(id: { eq: $id }) {
       id
+      parentId
       title
       content
       slug
