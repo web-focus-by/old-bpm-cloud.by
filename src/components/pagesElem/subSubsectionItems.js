@@ -32,15 +32,28 @@ const SubSubsectionItems = ({ title }) => {
   tree.forEach(e => {
     if (e.title == title) {
       workArray.push(e)
+    } else {
+      if (getMenuItems(e)) {
+        workArray.push(e)
+      }
     }
   })
+
+  function getMenuItems(arr) {
+    if (arr.title == title) {
+      return true
+    } else {
+      return arr.routes.some(e => {
+        return getMenuItems(e)
+      })
+    }
+  }
 
   const clickHandler = index => {
     setListIndex(index)
 
     showSubMenu(status => !status)
   }
-
   return (
     <div className={style.wrapper}>
       {workArray[0].routes.map((item, index) => {
@@ -91,3 +104,24 @@ const SubSubsectionItems = ({ title }) => {
 }
 
 export default SubSubsectionItems
+
+// if (arr.title == title) {
+//   return true
+// } else if (arr.title !== title) {
+//   if (arr.routes == undefined) {
+//     return false
+//   }
+//   if (arr.routes.some(val => val.title === title)) {
+//     return true
+//   } else {
+//     return arr.routes.forEach(element => {
+//       if (element.title === title) {
+//         return true
+//       } else {
+//         return element.routes.some(val => val.title === title)
+//       }
+//     })
+//   }
+// } else {
+//   return false
+// }

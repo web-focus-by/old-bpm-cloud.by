@@ -17,7 +17,6 @@ const Header = ({ pageInfo }) => {
     <h1 className={styles.sabtext}>Реально работающий интернет-маркетинг</h1>
   )
   let currentPage = "/"
-  console.log(pageInfo)
   if (pageInfo) {
     subTitle = getSubTitleText(pageInfo.title)
     currentPage = pageInfo.slug

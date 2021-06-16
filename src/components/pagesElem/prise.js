@@ -6,7 +6,6 @@ const Prise = ({ text, cost }) => {
   return (
     <div className={style.wrapper}>
       <div>
-        {" "}
         <span>{text} от </span> <span className={style.cost}>{cost} BYN</span>
       </div>
     </div>
