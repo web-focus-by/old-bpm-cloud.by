@@ -4,7 +4,7 @@ import { ButtonGreen } from "../buttons"
 import { images } from "../../images"
 import { useForm, ValidationError } from "@formspree/react"
 
-import styles from "./Сontact.module.css"
+import styles from "./Contact.module.css"
 
 const ContactForm = ({ handlerGetForm }) => {
   const [checkName, setCheckName] = useState(false)
@@ -150,7 +150,7 @@ const LastForm = () => {
   )
 }
 
-const Сontact = ({ content }) => {
+const Contact = ({ content }) => {
   const [state, setState] = useState(1)
   const handlerGetForm = () => {
     setState(state + 1)
@@ -177,4 +177,4 @@ const Сontact = ({ content }) => {
   )
 }
 
-export default Сontact
+export default Contact

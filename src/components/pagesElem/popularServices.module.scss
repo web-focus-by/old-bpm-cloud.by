@@ -1,0 +1,91 @@
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/ ($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  font-size: calcFluidFontSize(12, 16, 1336, 1920);
+  line-height: 110%;
+  /* identical to box height */
+  color: #3c424a;
+
+  p {
+    &.subTitle {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17px;
+      letter-spacing: 0.065em;
+      text-align: left;
+      max-width: 593px;
+      padding-bottom: 60px;
+    }
+
+    &.h3 {
+      font-family: Montserrat;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 59px;
+      letter-spacing: 0.065em;
+      text-align: left;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.slide {
+  max-width: 377px;
+  width: 100%;
+  height: 157px;
+  background: #ffffff;
+  border-radius: 10px;
+  transform: translate3d(98%, 0px, 0px);
+  padding: 50px 30px 45px 30px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  .cardTitle {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: #6a7380;
+  }
+  .cardSubTitle {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #6a7380;
+  }
+  img {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

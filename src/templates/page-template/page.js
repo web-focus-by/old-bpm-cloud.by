@@ -15,13 +15,50 @@ import SubSubsectionItems from "../../components/pagesElem/subSubsectionItems"
 import KeysBoxs from "../../components/main/KeysBoxs"
 import { fractionContent } from "../../components/utils/fractionContent"
 import Brief from "../../components/pagesElem/brief"
+import GraphicSection from "../../components/pagesElem/graphicSection"
+import Contact from "../../components/main/Contact"
+import Reviews from "../../components/main/Reviews"
+import Articles from "../../components/main/Articles"
+import PopularServices from "../../components/pagesElem/popularServices"
 
 class PageTemplate extends Component {
   render() {
     const StaticPage = this.props.data.wpPage
-    console.log(StaticPage)
-    const content = fractionContent(StaticPage.content)
+    const content =
+      StaticPage.content !== null ? fractionContent(StaticPage.content) : false
     console.log(content)
+    const constantTemplatePart = [
+      <section className={style.wrapperWithPaddingButton200}>
+        <KeysBoxs casesNumber={3} />
+      </section>,
+      <section
+        className={classNames(style.wrapperWithPaddingButton200, style.wrapper)}
+      >
+        <Brief />
+      </section>,
+      <section
+        className={classNames(style.wrapperWithPaddingButton200, style.grayBg)}
+      >
+        <div className={style.wrapper}>
+          <GraphicSection />
+        </div>
+      </section>,
+      <section
+        className={classNames(style.wrapperWithPaddingButton200, style.grayBg)}
+      >
+        <PopularServices />
+      </section>,
+      <section className={classNames(style.grayBg)}>
+        <div className={style.wrapper}>
+          <Contact />
+        </div>
+      </section>,
+    ]
+    if (content) {
+      content.splice(1, 0, constantTemplatePart[0], constantTemplatePart[1])
+      content.splice(4, 0, constantTemplatePart[2])
+      content.splice(6, 0, constantTemplatePart[3], constantTemplatePart[4])
+    }
     return (
       <Layout pageInfo={StaticPage}>
         <SEO
@@ -49,20 +86,45 @@ class PageTemplate extends Component {
           </div>
           <SubSubsectionItems title={StaticPage.title} />
         </div>
-        <section className={classNames(style.wrapper, style.textWrapper)}>
-          <div
-            className={style.h2Wrapper}
-            dangerouslySetInnerHTML={{ __html: content[1].title }}
-          ></div>
-          <div
-            className={style.firstParagraphWrapper}
-            dangerouslySetInnerHTML={{ __html: content[1].content.join("") }}
-          ></div>
-        </section>
-        <KeysBoxs casesNumber={3} />
-        <section className={style.wrapper}>
-          <Brief />
-        </section>
+        {content ? (
+          content.map((elem, index) => {
+            console.log(elem)
+            if (elem.title !== undefined) {
+              return (
+                <section
+                  className={classNames(
+                    style.wrapperWithPaddingButton200,
+                    {
+                      [style.grayBg]: index >= 3,
+                    },
+                    { [style.wrapperWithPaddingTop200]: index == 3 }
+                  )}
+                  key={index}
+                >
+                  <div className={classNames(style.wrapper)}>
+                    <div
+                      className={style.h2Wrapper}
+                      dangerouslySetInnerHTML={{ __html: elem.title }}
+                    ></div>
+                    <div
+                      className={style.firstParagraphWrapper}
+                      dangerouslySetInnerHTML={{
+                        __html: elem.content.join(""),
+                      }}
+                    ></div>
+                  </div>
+                </section>
+              )
+            } else {
+              return elem
+            }
+          })
+        ) : (
+          <section className={style.wrapper}>
+            К сожалению, тут пока ничего нету(
+          </section>
+        )}
+        <Articles />
         <Feedback />
       </Layout>
     )
