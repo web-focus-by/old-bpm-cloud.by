@@ -4,7 +4,7 @@ import { Link, useStaticQuery } from "gatsby"
 import { flatListToHierarchical } from "../utils/utils"
 import classnames from "classnames"
 
-const SubSubsectionItems = ({ title }) => {
+const SubSubsectionItems = ({ uri }) => {
   const [subMenuIsShow, showSubMenu] = useState(false)
   const [listIndex, setListIndex] = useState("")
 
@@ -30,7 +30,9 @@ const SubSubsectionItems = ({ title }) => {
   })
 
   tree.forEach(e => {
-    if (e.title == title) {
+    // console.log([e.path, uri])
+    // console.log(e)
+    if (e.path == uri) {
       workArray.push(e)
     } else {
       if (getMenuItems(e)) {
@@ -40,7 +42,7 @@ const SubSubsectionItems = ({ title }) => {
   })
 
   function getMenuItems(arr) {
-    if (arr.title == title) {
+    if (arr.path == uri) {
       return true
     } else {
       return arr.routes.some(e => {
@@ -53,6 +55,9 @@ const SubSubsectionItems = ({ title }) => {
     setListIndex(index)
 
     showSubMenu(status => !status)
+  }
+  if (workArray[0] == undefined) {
+    workArray.push(tree[0])
   }
   return (
     <div className={style.wrapper}>
@@ -104,24 +109,3 @@ const SubSubsectionItems = ({ title }) => {
 }
 
 export default SubSubsectionItems
-
-// if (arr.title == title) {
-//   return true
-// } else if (arr.title !== title) {
-//   if (arr.routes == undefined) {
-//     return false
-//   }
-//   if (arr.routes.some(val => val.title === title)) {
-//     return true
-//   } else {
-//     return arr.routes.forEach(element => {
-//       if (element.title === title) {
-//         return true
-//       } else {
-//         return element.routes.some(val => val.title === title)
-//       }
-//     })
-//   }
-// } else {
-//   return false
-// }

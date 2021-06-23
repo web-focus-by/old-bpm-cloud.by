@@ -43,7 +43,7 @@ const ContactForm = () => {
   useEffect(() => {
     wrapperRef.current[state.currentStep - 1].current.classList.add(`${style.animation}`)
     
-    console.log(wrapperRef.current[state.currentStep - 1].current.classList)
+    // console.log(wrapperRef.current[state.currentStep - 1].current.classList)
   }, [state.currentStep])
 
   useEffect(() => {

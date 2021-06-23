@@ -24,9 +24,9 @@ import PopularServices from "../../components/pagesElem/popularServices"
 class PageTemplate extends Component {
   render() {
     const StaticPage = this.props.data.wpPage
+    console.log(StaticPage)
     const content =
       StaticPage.content !== null ? fractionContent(StaticPage.content) : false
-    console.log(content)
     const constantTemplatePart = [
       <section className={style.wrapperWithPaddingButton200}>
         <KeysBoxs casesNumber={3} />
@@ -59,6 +59,7 @@ class PageTemplate extends Component {
       content.splice(4, 0, constantTemplatePart[2])
       content.splice(6, 0, constantTemplatePart[3], constantTemplatePart[4])
     }
+    console.log(StaticPage.id)
     return (
       <Layout pageInfo={StaticPage}>
         <SEO
@@ -84,11 +85,10 @@ class PageTemplate extends Component {
               <button className={style.bottom}>заказать</button>
             </div>
           </div>
-          <SubSubsectionItems title={StaticPage.title} />
+          <SubSubsectionItems uri={StaticPage.uri} />
         </div>
         {content ? (
           content.map((elem, index) => {
-            console.log(elem)
             if (elem.title !== undefined) {
               return (
                 <section
@@ -116,7 +116,7 @@ class PageTemplate extends Component {
                 </section>
               )
             } else {
-              return elem
+              return <div key={index}>{elem}</div>
             }
           })
         ) : (
@@ -141,6 +141,7 @@ export const pageQuery = graphql`
       title
       content
       slug
+      uri
       costService {
         cost
         serviceName

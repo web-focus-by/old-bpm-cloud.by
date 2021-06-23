@@ -71,7 +71,7 @@ const PopularServices = () => {
         <Slider {...settings}>
           {arr.map((e, i) => {
             return (
-              <Link to={e.link} className={style.slide}>
+              <Link to={e.link} className={style.slide} key={i}>
                 <p className={style.cardTitle}>{e.title}</p>
                 <p className={style.cardSubTitle}>{e.content}</p>
                 <img src={e.img} />
