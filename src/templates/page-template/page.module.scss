@@ -1,11 +1,5 @@
-@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
-  $k: ($f-max - $f-min)/ ($v-max - $v-min);
-  $b: $f-min - $k * $v-min;
+@import "../../assets/style/_mixins.scss";
 
-  $b: $b * 1px;
-
-  @return calc(#{$k} * 100vw + #{$b});
-}
 main {
   background: #fff;
 }
@@ -49,6 +43,17 @@ main {
   padding-bottom: 98px;
   margin: 0 auto;
 }
+@media (max-width: 750px) {
+  .breadcrumbsAndPriseWrapper {
+    flex-direction: column;
+    padding-top: 36px;
+    padding-bottom: 50px;
+  }
+  .priseAreaWrapper {
+    flex-direction: column;
+    padding-top: 36px;
+  }
+}
 .bottom {
   height: 52px;
   max-width: 285px;
@@ -78,13 +83,18 @@ main {
 .h2Wrapper > h2 {
   padding-bottom: 30px;
   font-family: Montserrat;
-  font-size: calcFluidFontSize(36, 48, 1336, 1920);
+  @include fluidFontSize(36px, 48px, 1336px, 1920px, 36px);
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0.065em;
   text-align: left;
   color: #3c424a;
+}
+@media (max-width: 650px) {
+  .h2Wrapper > h2 {
+    @include fluidFontSize(30px, 36px, 320px, 650px, 30px);
+  }
 }
 
 .firstParagraphWrapper {
@@ -105,8 +115,7 @@ main {
   p {
     padding: 0 20px 20px 0;
     font-family: Montserrat;
-    font-size: calcFluidFontSize(12, 16, 1336, 1920);
-
+    @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
@@ -120,7 +129,7 @@ main {
       list-style: none;
       padding-left: 41px;
       font-family: Montserrat;
-      font-size: 16px;
+      @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
       font-style: normal;
       font-weight: 400;
       line-height: 180%;
@@ -146,6 +155,8 @@ main {
     li {
       list-style-type: none;
       position: relative;
+      @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
+
       &:not(:last-child) {
         padding-bottom: 20px;
       }
@@ -160,6 +171,38 @@ main {
         left: -30px;
         transform: rotate(90deg);
       }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .firstParagraphWrapper {
+    column-count: 1;
+    p,
+    ol li,
+    ul li {
+      @include fluidFontSize(13px, 14px, 320px, 650px, 13px);
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .wrapperWithPadding {
+    &Button200 {
+      padding-bottom: 10.45vw;
+    }
+    &Top200 {
+      padding-top: 10.45vw;
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 360px) {
+  .wrapperWithPadding {
+    &Button200 {
+      padding-bottom: 50px;
+    }
+    &Top200 {
+      padding-top: 50px;
     }
   }
 }

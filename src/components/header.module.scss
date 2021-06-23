@@ -1,14 +1,6 @@
 @import url(../../fonts/stylesheet.css);
 @import url(../pages/Main.module.scss);
-
-@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
-  $k: ($f-max - $f-min)/ ($v-max - $v-min);
-  $b: $f-min - $k * $v-min;
-
-  $b: $b * 1px;
-
-  @return calc(#{$k} * 100vw + #{$b});
-}
+@import "../assets/style/mixins";
 
 header {
   background: #fbfafa;
@@ -89,7 +81,8 @@ main {
   text-transform: uppercase;
   position: relative;
   font-family: Montserrat;
-  font-size: calcFluidFontSize(54, 72, 1336, 1920);
+  @include fluidFontSize(54px, 72px, 1336px, 1920px, 54px);
+  @include fluidFontSize(34px, 72px, 320px, 1336px, 45.8px);
   font-style: normal;
   font-weight: 900;
   line-height: 110%;
@@ -180,6 +173,9 @@ main {
   }
   .subPageContainerWrapper {
     max-width: 912px;
+    h1 {
+      word-wrap: break-word;
+    }
   }
 }
 
@@ -334,7 +330,7 @@ main {
   }
   .conteinerTwo {
     align-items: center;
-    padding-left: 0px;
+    padding-left: 20px;
     padding-bottom: 53px;
     padding-top: 90px;
   }
@@ -378,6 +374,9 @@ main {
     padding-bottom: 25px;
     margin-bottom: 0;
     padding-top: 33px;
+  }
+  .subPageContainerWrapper {
+    padding-top: 83px;
   }
 }
 

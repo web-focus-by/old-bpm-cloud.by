@@ -20,6 +20,7 @@ const Layout = ({ pageInfo, children }) => {
       <Header pageInfo={pageInfo} />
       <Cirlce />
       <main>{children}</main>
+      <Feedback />
       <Footer />
     </div>
   )

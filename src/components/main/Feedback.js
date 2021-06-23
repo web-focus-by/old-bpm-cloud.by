@@ -26,7 +26,7 @@ const socialNetwork = [
   {
     name: "behance",
     iconName: "behance",
-    url: "https://www.behance.net/",
+    url: "https://www.behance.net/bpm-cloud",
   },
   {
     name: "whatsapp",

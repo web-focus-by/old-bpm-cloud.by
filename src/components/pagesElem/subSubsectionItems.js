@@ -30,8 +30,6 @@ const SubSubsectionItems = ({ uri }) => {
   })
 
   tree.forEach(e => {
-    // console.log([e.path, uri])
-    // console.log(e)
     if (e.path == uri) {
       workArray.push(e)
     } else {
@@ -67,6 +65,7 @@ const SubSubsectionItems = ({ uri }) => {
             key={item.id}
             className={classnames(style.item, {
               [style.active]: subMenuIsShow && index == listIndex,
+              [style.menuIsOpen]: subMenuIsShow,
             })}
           >
             <Link to={item.path}>{item.title}</Link>

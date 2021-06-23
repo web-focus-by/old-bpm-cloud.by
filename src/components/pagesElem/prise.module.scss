@@ -1,17 +1,10 @@
-@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
-  $k: ($f-max - $f-min)/ ($v-max - $v-min);
-  $b: $f-min - $k * $v-min;
-
-  $b: $b * 1px;
-
-  @return calc(#{$k} * 100vw + #{$b});
-}
+@import "../../assets/style/_mixins.scss";
 
 .cost {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
-  font-size: calcFluidFontSize(13.5, 18, 1336, 1920);
+  @include fluidFontSize(13.5px, 18px, 1336px, 1920px, 13.5px);
   line-height: 110%;
   /* identical to box height */
   text-transform: uppercase;
@@ -22,8 +15,13 @@
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  font-size: calcFluidFontSize(12, 16, 1336, 1920);
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
   line-height: 110%;
   /* identical to box height */
   color: #6a7380;
+}
+@media (max-width: 750px) {
+  .wrapper {
+    padding-bottom: 36px;
+  }
 }

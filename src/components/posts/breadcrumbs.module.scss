@@ -1,8 +1,10 @@
+@import "../../assets/style/mixins";
+
 .wrapper {
   max-width: 430px;
 }
 .listItem {
-  font-size: 14px;
+  @include fluidFontSize(10.5px, 14px, 1336px, 1920px, 10.5px);
   font-style: normal;
   font-weight: 400;
   line-height: 17px;
@@ -12,4 +14,10 @@
 }
 .listItem:last-child {
   color: #fa5c45;
+}
+
+@media (max-width: 1024px) {
+  .listItem {
+    font-size: 12px;
+  }
 }

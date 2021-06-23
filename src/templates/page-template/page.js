@@ -24,7 +24,7 @@ import PopularServices from "../../components/pagesElem/popularServices"
 class PageTemplate extends Component {
   render() {
     const StaticPage = this.props.data.wpPage
-    console.log(StaticPage)
+    // console.log(StaticPage)
     const content =
       StaticPage.content !== null ? fractionContent(StaticPage.content) : false
     const constantTemplatePart = [
@@ -59,7 +59,7 @@ class PageTemplate extends Component {
       content.splice(4, 0, constantTemplatePart[2])
       content.splice(6, 0, constantTemplatePart[3], constantTemplatePart[4])
     }
-    console.log(StaticPage.id)
+    // console.log(StaticPage.id)
     return (
       <Layout pageInfo={StaticPage}>
         <SEO
@@ -125,7 +125,6 @@ class PageTemplate extends Component {
           </section>
         )}
         <Articles />
-        <Feedback />
       </Layout>
     )
   }

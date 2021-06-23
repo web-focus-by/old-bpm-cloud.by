@@ -189,8 +189,10 @@
   height: 100%;
   background-color: #fa5c45;
 }
-.animation{
-  .inputTitle, .subTitleInput, .textInput{
+.animation {
+  .inputTitle,
+  .subTitleInput,
+  .textInput {
     animation-duration: 1s;
     animation-name: textAnimation;
   }
@@ -199,7 +201,7 @@
 @keyframes textAnimation {
   from {
     transform: translateY(-50px);
-    opacity: .0;
+    opacity: 0;
   }
 
   to {
@@ -208,7 +210,7 @@
   }
 }
 
-.removed{
+.removed {
   animation-duration: 1s;
   animation-name: textAnimation2;
 }
@@ -216,11 +218,21 @@
 @keyframes textAnimation2 {
   from {
     transform: translateY(15px);
-    opacity: .5;
+    opacity: 0.5;
   }
 
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@media (max-width: 1000px) {
+  .isActive {
+    width: 20vw !important;
+  }
+}
+@media (max-width: 935px) {
+  .nextButton {
+    margin-right: 0px;
   }
 }
