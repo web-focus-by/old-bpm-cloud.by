@@ -100,3 +100,15 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .graphWrapper {
+    max-width: unset;
+    padding: 45px;
+
+    & {
+      width: 100% !important;
+      margin-bottom: 40px !important;
+    }
+  }
+}

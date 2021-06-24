@@ -280,6 +280,7 @@ form .button:not(:disabled):hover {
     line-height: 15px;
     margin-top: 9px;
     width: 415px;
+    height: auto;
   }
   .wrapContenContactForm {
     margin-left: 114px;
@@ -311,8 +312,9 @@ form .button:not(:disabled):hover {
   }
   .wrapContenContactForm {
     width: 520px;
-    height: 168px;
+    height: auto;
     margin: 0;
+    margin-bottom: 10vw;
   }
   .title {
     font-size: 16px;

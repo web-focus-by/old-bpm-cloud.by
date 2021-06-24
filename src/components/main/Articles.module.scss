@@ -63,13 +63,16 @@
   border-radius: 10px;
   width: 100%;
 }
-.textArticle>p:last-child{
+.textArticle > p:last-child {
   display: none;
 }
-.wrapArticle:hover{
-  background-color: #fbfafa;
-  transition: all .3s;
-  .buttonDetailed{
+.wrapArticle:hover {
+  .titleArticle {
+    transition: all 0.3s;
+
+    color: var(--green-color);
+  }
+  .buttonDetailed {
     opacity: 1;
   }
 }
@@ -104,7 +107,7 @@
 .buttonDetailed {
   padding: 0 28px;
   opacity: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .avtor {
   font-style: normal;
@@ -135,7 +138,7 @@
   margin: -7px 0px;
 }
 
-.laptopAndMobileLink{
+.laptopAndMobileLink {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -199,90 +202,89 @@
   }
 }
 
-
-@media (max-width: 950px){
-  .wrapperArticles{
+@media (max-width: 950px) {
+  .wrapperArticles {
     padding: 130px 0px 92px 0px;
   }
-  .wrapArticle{
+  .wrapArticle {
     width: auto;
   }
-  .container{
+  .container {
     max-width: 92%;
   }
-  .Articles{
+  .Articles {
     margin-top: 42px;
   }
-  .head{
+  .head {
     margin-bottom: 0px;
   }
-  .descArticle{
+  .descArticle {
     margin-left: 24px;
   }
-  .titleArticle{
+  .titleArticle {
     margin-top: 0px;
     font-size: 18px;
     line-height: 22px;
   }
-  .textArticle{
+  .textArticle {
     font-size: 14px;
     line-height: 26px;
   }
-  .bittonTitle{
+  .bittonTitle {
     margin-bottom: 9px;
   }
-  .bittonTitle>div{
+  .bittonTitle > div {
     font-size: 12px;
     line-height: 15px;
   }
-  .textArticle{
+  .textArticle {
     max-width: 400px;
   }
-  .buttonDetailed{
+  .buttonDetailed {
     display: none;
   }
-  .footerArticle{
+  .footerArticle {
     font-size: 12px;
     line-height: 15px;
     width: 95%;
   }
-  .BoxImg{
+  .BoxImg {
     width: 300px;
   }
 }
 
-@media(max-width:500px){
-  .wrapperArticles{
+@media (max-width: 500px) {
+  .wrapperArticles {
     padding: 89px 0px 92px 0px;
   }
-  .title{
+  .title {
     font-size: 30px;
     line-height: 37px;
     margin-left: 8px;
   }
-  .bittonTitle{
+  .bittonTitle {
     display: none;
   }
-  .Articles{
+  .Articles {
     display: flex;
   }
-  .wrapArticle{
+  .wrapArticle {
     display: flex;
     flex-direction: column;
     margin-right: 10px;
     box-sizing: border-box;
   }
-  .descArticle{
+  .descArticle {
     height: auto;
     position: relative;
     margin-left: 0px;
     margin-top: 20px;
     width: 100%;
   }
-  .Articles{
+  .Articles {
     overflow-x: auto;
   }
-  .titleArticle{
+  .titleArticle {
     position: absolute;
     top: -160px;
     width: 200px;

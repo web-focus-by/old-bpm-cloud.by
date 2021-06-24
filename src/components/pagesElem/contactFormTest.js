@@ -208,7 +208,10 @@ const ContactForm = () => {
       return null
     }
     return (
-      <div ref={wrapperRef.current[state.currentStep - 1]}>
+      <div
+        ref={wrapperRef.current[state.currentStep - 1]}
+        className={style.inputWrapperWithText}
+      >
         <label>
           <div className={style.inputTitle}>Введите Ваше имя</div>
           <div className={style.subTitleInput}>
@@ -234,7 +237,10 @@ const ContactForm = () => {
       return null
     }
     return (
-      <div ref={wrapperRef.current[state.currentStep - 1]}>
+      <div
+        ref={wrapperRef.current[state.currentStep - 1]}
+        className={style.inputWrapperWithText}
+      >
         <label htmlFor="email">
           <div className={style.inputTitle}>
             Введите Вашу эллектронную почту
@@ -261,7 +267,10 @@ const ContactForm = () => {
       return null
     }
     return (
-      <div ref={wrapperRef.current[state.currentStep - 1]}>
+      <div
+        ref={wrapperRef.current[state.currentStep - 1]}
+        className={style.inputWrapperWithText}
+      >
         <label htmlFor="phone">
           <div className={style.inputTitle}>Введите Ваш номер</div>
           <div className={style.subTitleInput}>
