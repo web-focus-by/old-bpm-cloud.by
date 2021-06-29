@@ -1,3 +1,5 @@
+@import "../../assets/style/mixins";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -5,12 +7,13 @@
   margin-right: 9%;
 }
 .itemWrapper {
-  padding: 8px 25px;
   border: 1px solid #6a7380;
   border-radius: 100px;
   width: max-content;
   font-family: Montserrat;
   font-size: 16px;
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
+  padding: clamp(6px, 0.45vw, 8px) clamp(18.75px, 1.45vw, 25px);
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
@@ -106,7 +109,6 @@
 
 @media (max-width: 500px) {
   .wrapper {
-    margin-top: -70px;
     margin-right: 34%;
   }
   .itemWrapper {

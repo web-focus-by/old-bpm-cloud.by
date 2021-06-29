@@ -20,9 +20,15 @@ const Form = () => {
       setState(0)
     }
   }
+  const handlerOnClick = e => {
+    console.log(e.currentTarget.textContent)
+    if (e.currentTarget.textContent <= state) {
+      setState(e.currentTarget.textContent)
+    }
+  }
 
-  const getQuiz = state => {
-    switch (state) {
+  const getQuiz = quizPage => {
+    switch (quizPage) {
       case 0:
         return <QuizOne handlerLine={handlerLine} />
       case 1:
@@ -61,6 +67,7 @@ const Form = () => {
               [styles.circle]: 1 <= state,
               [styles.circleBorder]: 0 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             1
           </div>
@@ -69,6 +76,7 @@ const Form = () => {
               [styles.circle]: 2 <= state,
               [styles.circleBorder]: 1 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             2
           </div>
@@ -77,6 +85,7 @@ const Form = () => {
               [styles.circle]: 3 <= state,
               [styles.circleBorder]: 2 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             3
           </div>
@@ -85,6 +94,7 @@ const Form = () => {
               [styles.circle]: 4 <= state,
               [styles.circleBorder]: 3 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             4
           </div>
@@ -93,6 +103,7 @@ const Form = () => {
               [styles.circle]: 5 === state,
               [styles.circleBorder]: 4 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             5
           </div>

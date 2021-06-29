@@ -1,10 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import classnames from "classnames"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { flatListToHierarchical } from "../utils/utils"
+import { Link } from "gatsby"
 import style from "./mainBlock.module.scss"
-import { images } from "../../images"
-import { element } from "prop-types"
 
 const MainBlock = ({ currentPage }) => {
   let customArr = [

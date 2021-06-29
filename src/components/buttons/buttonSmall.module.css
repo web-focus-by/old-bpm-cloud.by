@@ -1,4 +1,4 @@
-.buttom {
+.button {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
   margin-top: 2px;
 }
 
-.buttom:hover {
+.button:hover {
   background-color: var(--green-color);
   border: 1.5px solid var(--green-color);
   color: #ffffff !important;
@@ -53,9 +53,8 @@
   color: var(--green-color);
 }
 
-
-@media(max-width:1445px){
-  .text{
+@media (max-width: 1445px) {
+  .text {
     font-size: 12px;
     line-height: 15px;
   }

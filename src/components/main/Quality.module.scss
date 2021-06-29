@@ -1,38 +1,39 @@
+@import "../../assets/style/mixins";
+
 .wrapperQuality {
   background: #fbfafa;
-  height: 1013px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: clamp(150px, 10.5vw, 200px) 0px;
+  box-sizing: border-box;
 }
 
 .box {
   margin: 0 auto;
   max-width: 1206px;
   width: auto;
-  height: 682px;
+  height: auto;
 }
 .title {
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 59px;
+  @include fluidFontSize(36px, 48px, 1336px, 1920px, 36px);
+  line-height: 120%;
   letter-spacing: 0.065em;
   color: #3c424a;
-  margin-left: 12px;
-  margin-top: 33px;
 }
 
 .desc {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
+  @include fluidFontSize(12px, 14px, 1336px, 1920px, 12px);
+  line-height: 120%;
   letter-spacing: 0.065em;
   color: #6a7380;
   margin-top: 30px;
-  margin-left: 12px;
   width: 593px;
   height: 51px;
 }
@@ -81,24 +82,12 @@
 }
 
 @media (max-width: 1440px) {
-  .wrapperQuality {
-    height: 760px;
-  }
   .box {
     max-width: 938px;
   }
-  .title {
-    font-size: 36px;
-    line-height: 44px;
-    margin-top: 114px;
-    margin-left: 13px;
-  }
   .desc {
-    font-size: 11px;
-    line-height: 13px;
     width: 483px;
     margin-top: 22px;
-    margin-left: 16px;
   }
   .string {
     margin: 25px 0;
@@ -121,53 +110,40 @@
 
 @media (max-width: 1050px) {
   .wrapperQuality {
-    min-height: 682px;
     height: auto;
+    padding: clamp(50px, 14.3vw, 150px) clamp(20px, 3.1vw, 30px);
   }
-  .box{
+  .box {
     height: auto;
-  }
-  .title {
-    margin-top: 70px;
   }
 }
 
-@media(max-width: 950px){
-  .wrapperQuality{
-    padding-bottom: 90px;
-  }
-  .title{
-    margin-top: 130px;
-    margin-left: 28px;
-  }
-  .desc{
-    font-size: 12px;
-    line-height: 15px;
-    margin-left: 28px;
+@media (max-width: 950px) {
+  .desc {
     width: 450px;
     height: auto;
   }
-  .strings{
+  .strings {
     width: 86.8%;
     padding-left: 53px;
     padding-top: 26px;
     margin-top: 0px;
     margin-left: 0px;
   }
-  .boxString{
+  .boxString {
     margin-left: 48px;
     margin-top: 6px;
   }
-  .string>div:first-child{
-    transform: scale(.75);
+  .string > div:first-child {
+    transform: scale(0.75);
   }
-  .titleElem{
+  .titleElem {
     margin-top: 10px;
     font-size: 16px;
     line-height: 20px;
     width: 242px;
   }
-  .textElem{
+  .textElem {
     font-size: 14px;
     line-height: 17px;
     width: 240px;
@@ -180,66 +156,57 @@
   }
 }
 
-@media(max-width:500px){
-  .wrapperQuality{
-    padding-bottom: 36px;
-  }
-  .title{
-    margin-top: 30px;
-    margin-left: 0px;
-    font-size: 30px;
-    line-height: 37px;
-  }
-  .box{
+@media (max-width: 500px) {
+  .box {
     max-width: none;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 20px;
   }
-  .desc{
+  .desc {
     margin-left: 0px;
     width: 100%;
+    margin-bottom: 20px;
   }
-  .strings{
+  .strings {
     padding-top: 0px;
     padding-left: 0px;
   }
-  .string{
+  .string {
     margin-bottom: 0px;
   }
-  .string:nth-child(1){
+  .string:nth-child(1) {
     order: 1;
   }
-  .string:nth-child(2){
+  .string:nth-child(2) {
     order: 4;
   }
-  .string:nth-child(3){
+  .string:nth-child(3) {
     order: 2;
   }
-  .string:nth-child(4){
+  .string:nth-child(4) {
     order: 5;
   }
-  .string:nth-child(5){
+  .string:nth-child(5) {
     order: 3;
   }
-  .string:nth-child(6){
+  .string:nth-child(6) {
     order: 6;
   }
-  .titleElem{
+  .titleElem {
     font-size: 13px;
     line-height: 16px;
   }
-  .textElem{
+  .textElem {
     font-size: 12px;
     line-height: 15px;
   }
-  .string > div:first-child > div{
+  .string > div:first-child > div {
     width: 100%;
   }
 }
 
-@media(max-width:500px){
-  .boxString{
+@media (max-width: 500px) {
+  .boxString {
     margin-left: 40px;
   }
 }

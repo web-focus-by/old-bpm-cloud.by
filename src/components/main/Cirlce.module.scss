@@ -267,3 +267,9 @@
     width: 100%;
   }
 }
+
+@media (max-width: 450px) {
+  .circle {
+    display: none;
+  }
+}

@@ -14,7 +14,7 @@ import _ from "lodash"
 
 const Header = ({ pageInfo }) => {
   let subTitle = (
-    <h1 className={styles.sabtext}>Реально работающий интернет-маркетинг</h1>
+    <h1 className={styles.subText}>Реально работающий интернет-маркетинг</h1>
   )
   let currentPage = "/"
   if (pageInfo) {
@@ -72,8 +72,8 @@ const Header = ({ pageInfo }) => {
             <div className={styles.boxLogo}>
               <div className={styles.textBPM}>
                 <svg
-                  width="541"
-                  height="172"
+                  // width="541"
+                  // height="172"
                   viewBox="0 0 541 172"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ const Header = ({ pageInfo }) => {
                   {/* {setTimeout(rotateArrow, 1000)} */}
                 </div>
               </div>
-              <div className={styles.sabtext}>{subTitle}</div>
+              <div className={styles.subText}>{subTitle}</div>
             </div>
             <MainBlock currentPage={currentPage} />
             <div

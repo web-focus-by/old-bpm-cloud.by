@@ -2,7 +2,7 @@ import React from "react"
 
 import { images } from "../../images"
 
-import styles from "./AboutUs.module.css"
+import styles from "./AboutUs.module.scss"
 
 const AboutUs = () => {
   return (

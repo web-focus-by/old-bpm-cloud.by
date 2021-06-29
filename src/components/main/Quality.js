@@ -6,7 +6,7 @@ import Six from "./castomNumbers/Six"
 import Three from "./castomNumbers/Three"
 import Two from "./castomNumbers/Two"
 
-import styles from "./Quality.module.css"
+import styles from "./Quality.module.scss"
 
 const String = ({ title, text, number }) => {
   const [color, setColor] = useState(false)
