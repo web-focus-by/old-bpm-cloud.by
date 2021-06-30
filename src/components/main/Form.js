@@ -10,20 +10,21 @@ import QuizFive from "./quizs/QuizFive"
 import QuizSix from "./quizs/QuizSix"
 
 const Form = () => {
-  const [state, setState] = useState(0)
-  const [answer, setAnswer] = useState([])
+  const ALL_COUNT_STEP = 5
 
+  const [state, setState] = useState(0)
+  const [answer, setAnswer] = useState([...new Array(ALL_COUNT_STEP)])
   const handlerLine = arg => {
-    answer.push(arg)
+    answer.splice(state, 1, arg)
     setState(state + 1)
     if (state === 5) {
       setState(0)
     }
   }
   const handlerOnClick = e => {
-    console.log(e.currentTarget.textContent)
+    console.log(e.currentTarget.textContent - 1)
     if (e.currentTarget.textContent <= state) {
-      setState(e.currentTarget.textContent)
+      setState(e.currentTarget.textContent - 1)
     }
   }
 

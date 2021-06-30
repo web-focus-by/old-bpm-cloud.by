@@ -1,5 +1,16 @@
 @import "../../assets/style/mixins";
 
+header {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background: transparent;
+  }
+}
 .menu {
   font-family: Montserrat;
   font-weight: 600;
