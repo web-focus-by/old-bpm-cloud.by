@@ -11,7 +11,7 @@
   width: 60%;
   margin: 0 auto;
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
 }
@@ -44,6 +44,7 @@
   letter-spacing: 0.065em;
   color: #6a7380;
   padding-left: 20px;
+  border: 1px solid transparent;
 }
 
 .bigInput {
@@ -91,42 +92,67 @@
   transition: all 0.3s;
 }
 
-.button:disabled{
+.button:disabled {
   background-color: #ffffff;
   border-color: #309195;
-  color:#309195;
+  color: #309195;
 }
-.invokeInputs{
+.invokeInputs {
   visibility: hidden;
   position: absolute;
 }
-@media(max-width:1450px){
-  .wrap{
+
+.inputsWrapper {
+  position: relative;
+  label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 14px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+  }
+
+  input:placeholder-shown + label,
+  textarea:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  input:invalid {
+    border: 1px solid #fa5c45;
+  }
+  input:valid {
+    // border: 1px solid green;
+  }
+}
+@media (max-width: 1450px) {
+  .wrap {
     width: 95%;
   }
 }
-@media(max-width:950px){
-  .wrap{
+@media (max-width: 950px) {
+  .wrap {
     flex-direction: column;
     align-items: center;
   }
-  .inputs{
+  .inputs {
     width: auto;
   }
 }
 
-@media(max-width:500px){
-  .input{
+@media (max-width: 500px) {
+  .input {
     width: 240px;
   }
-  .bigInput{
+  .bigInput {
     width: 220px;
     margin-left: 0px;
   }
-  .text{
+  .text {
     width: 240px;
   }
-  .button{
+  .button {
     margin-top: 35px !important;
   }
 }

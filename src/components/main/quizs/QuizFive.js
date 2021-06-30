@@ -4,7 +4,7 @@ import { useForm, ValidationError } from "@formspree/react"
 import classnames from "classnames"
 
 import stylesGeneral from "./QuizGeneral.module.scss"
-import styles from "./QuizFive.module.css"
+import styles from "./QuizFive.module.scss"
 import { ButtonQuiz } from "../../buttons"
 
 const QuizFive = ({ handlerLine, answer }) => {
@@ -63,41 +63,56 @@ const QuizFive = ({ handlerLine, answer }) => {
       <div className={stylesGeneral.formTitle}>Укажите информацию о Вас</div>
       <div className={styles.wrap}>
         <div className={styles.inputs}>
-          <input
-            name="name"
-            onChange={handlerInput}
-            className={styles.input}
-            type="text"
-            placeholder="Имя"
-            required
-          />
-          <input
-            name="phone"
-            onChange={handlerInput}
-            className={styles.input}
-            type="tel"
-            placeholder="Номер телефона"
-            required
-          />
-          <input
-            name="email"
-            onChange={handlerInput}
-            className={styles.input}
-            type="email"
-            placeholder="E-mail"
-            required
-          />
+          <div className={styles.inputsWrapper}>
+            <input
+              name="name"
+              onChange={handlerInput}
+              className={styles.input}
+              type="text"
+              placeholder="Имя"
+              id="form-name"
+              required
+            />
+            <label for="form-name">Имя</label>
+          </div>
+          <div className={styles.inputsWrapper}>
+            <input
+              name="phone"
+              onChange={handlerInput}
+              className={styles.input}
+              type="tel"
+              placeholder="Номер телефона"
+              id="form-phone"
+              required
+              pattern=".{0,1}[0-9]{11,13}"
+            />
+            <label for="form-phone">Номер телефона</label>
+          </div>
+          <div className={styles.inputsWrapper}>
+            <input
+              name="email"
+              onChange={handlerInput}
+              className={styles.input}
+              type="email"
+              placeholder="E-mail"
+              id="form-E-mail"
+              required
+            />
+            <label for="form-E-mail">E-mail</label>
+          </div>
           <InvokeInputs />
         </div>
         <div>
-          <div>
+          <div className={styles.inputsWrapper}>
             <textarea
               name="prim"
               onChange={handlerInput}
               className={styles.bigInput}
               type="text"
+              id="form-text"
               placeholder="Примечание"
             />
+            <label for="form-text">Примечание</label>
           </div>
           <div className={styles.text}>
             Заполняя форму обратной связи, Вы соглашаетесь на обработку Ваших

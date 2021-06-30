@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import classnames from "classnames"
 
-import styles from "./Form.module.css"
+import styles from "./Form.module.scss"
 import QuizOne from "./quizs/QuizOne"
 import QuizTwo from "./quizs/QuizTwo"
 import QuizThree from "./quizs/QuizThree"
