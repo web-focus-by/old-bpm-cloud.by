@@ -11,6 +11,14 @@ header {
     background: transparent;
   }
 }
+header.active {
+  > div > div:last-child {
+    display: none;
+  }
+  &::after {
+    background: white;
+  }
+}
 .menu {
   font-family: Montserrat;
   font-weight: 600;
@@ -137,6 +145,9 @@ header {
 
 .showMobileMenu {
   transform: translateY(56%);
+}
+body.overflowScroll {
+  overflow: hidden;
 }
 
 @media (max-width: 1366px) {

@@ -4,7 +4,7 @@ import { ButtonGreen } from "../buttons"
 import { images } from "../../images"
 import { useForm, ValidationError } from "@formspree/react"
 
-import styles from "./Contact.module.css"
+import styles from "./Contact.module.scss"
 
 const ContactForm = ({ handlerGetForm }) => {
   const [checkName, setCheckName] = useState(false)
@@ -35,7 +35,7 @@ const ContactForm = ({ handlerGetForm }) => {
   }
   return (
     <form className={styles.wrapContactForm} onSubmit={handleSubmit}>
-      <div>
+      <div className={styles.inputsWrapper}>
         <div className={styles.title}>Заказать звонок</div>
         <div className={styles.textForm}>
           Введите Ваши данные и мы Вам перезвоним.

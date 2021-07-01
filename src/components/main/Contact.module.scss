@@ -1,11 +1,14 @@
+@import "../../assets/style/mixins";
+
 .wrapper {
   background: #fbfafa;
   padding-bottom: 200px;
 }
 
 .container {
-  width: 1206px;
-  height: 437px;
+  width: 100%;
+  max-width: clamp(904px, 63vw, 1200px);
+  height: clamp(327px, 23vw, 437px);
   background: #ffcc00;
   display: flex;
   justify-content: center;
@@ -16,8 +19,7 @@
 .title {
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
+  @include fluidFontSize(14px, 18px, 1336px, 1920px, 14px);
   letter-spacing: 0.065em;
   text-transform: uppercase;
   color: #3c424a;
@@ -29,8 +31,8 @@
   height: 100px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
+  line-height: 130%;
   letter-spacing: 0.065em;
   color: rgba(60, 66, 74, 0.7);
 }
@@ -293,6 +295,12 @@ form .button:not(:disabled):hover {
     font-size: 12px;
     line-height: 15px;
   }
+  .textForm {
+    width: auto;
+  }
+  .inputsWrapper {
+    margin-right: 20xp;
+  }
 }
 
 @media (max-width: 950px) {
@@ -403,12 +411,12 @@ form .button:not(:disabled):hover {
     height: auto;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .wrapContenContactForm {
     padding: 0px;
   }
   .container {
-    padding: 20px;
+    padding: 50px 20px;
   }
   .wrapf {
     margin-top: 30px;
