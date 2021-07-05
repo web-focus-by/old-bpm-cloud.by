@@ -21,7 +21,6 @@
   font-style: normal;
   font-weight: bold;
   @include fluidFontSize(36px, 48px, 1336px, 1920px, 36px);
-  @include fluidFontSize(30px, 36px, 320px, 768px, 30px);
   line-height: 120%;
   letter-spacing: 0.065em;
   color: #3c424a;

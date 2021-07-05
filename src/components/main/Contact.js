@@ -13,6 +13,7 @@ const ContactForm = ({ handlerGetForm }) => {
     name: "",
     phone: "",
   })
+  const [isSecondForm, setIsSecondForm] = useState(false)
   const [formState, handleSubmit] = useForm("mjvpndyv")
   if (formState.succeeded) {
     setTimeout(handlerGetForm, 0)
@@ -172,7 +173,13 @@ const Contact = ({ content }) => {
   }
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>{getForm(state)}</div>
+      <div
+        className={classnames(styles.container, {
+          [styles.secondForm]: state == 2,
+        })}
+      >
+        {getForm(state)}
+      </div>
     </div>
   )
 }
