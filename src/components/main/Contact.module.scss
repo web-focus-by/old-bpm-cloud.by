@@ -331,15 +331,16 @@ form .button:not(:disabled):hover {
   .container {
     width: 100%;
     max-width: 710px;
-    height: 357px;
+    height: auto;
     flex-direction: column;
     justify-content: center;
+    padding: 75px 96px 68px;
   }
   .wrapContenContactForm {
     width: 520px;
     height: auto;
     margin: 0;
-    margin-bottom: 10vw;
+    margin-bottom: 50px;
   }
   .title {
     font-size: 16px;
@@ -348,7 +349,9 @@ form .button:not(:disabled):hover {
   .text {
     font-size: 14px;
     line-height: 17px;
-    width: 500px;
+
+    max-width: unset;
+    width: 100%;
   }
   .button {
     font-size: 14px;
