@@ -57,6 +57,16 @@ const Reviews = ({ data = menuItems }) => {
     focusOnSelect: true,
     arrows: false,
     swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 5,
+          infinite: true,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
   return (
     <div className={styles.wrapper}>
@@ -90,7 +100,7 @@ const Reviews = ({ data = menuItems }) => {
                 </div>
                 <CustomScroll
                   className={styles.wrapperProducts}
-                  style={{ width: 335, height: 220 }}
+                  style={{ height: 220 }}
                   trackYProps={{
                     renderer: props => {
                       const { elementRef, ...restProps } = props
@@ -103,18 +113,18 @@ const Reviews = ({ data = menuItems }) => {
                       )
                     },
                   }}
-                  thumbYProps={{
-                    renderer: props => {
-                      const { elementRef, ...restProps } = props
-                      return (
-                        <span
-                          {...restProps}
-                          ref={elementRef}
-                          className={styles.wrapperThumb}
-                        />
-                      )
-                    },
-                  }}
+                  // thumbYProps={{
+                  //   renderer: props => {
+                  //     const { elementRef, ...restProps } = props
+                  //     return (
+                  //       <span
+                  //         {...restProps}
+                  //         ref={elementRef}
+                  //         className={styles.wrapperThumb}
+                  //       />
+                  //     )
+                  //   },
+                  // }}
                 >
                   {<div className={styles.textReview}>{item.text}</div>}
                 </CustomScroll>

@@ -62,13 +62,16 @@
 
 .items {
   position: relative;
+  box-sizing: border-box;
   border-radius: 10px;
-  width: 317px !important;
-  height: 312px !important;
+  // width: clamp(276px, 10vw, 337px) !important;
+  // height: clamp(282px, 10vw, 369px) !important;
+  width: 337px !important;
+  height: 369px !important;
   background: #ffffff;
   margin: 40px 40px 0px 40px !important;
   outline: none;
-  padding: 30px;
+  padding: clamp(22.5px, 1.6vw, 30px);
   display: flex !important;
   flex-direction: column;
   justify-content: space-between;
@@ -77,8 +80,8 @@
 }
 
 .items:hover {
-  width: 317px !important;
-  height: 309px;
+  // width: 317px !important;
+  // height: 309px;
   border: 1px solid var(--green-color);
 }
 
@@ -91,22 +94,24 @@
   fill: var(--redBG-background);
 }
 .textReview {
-  width: 318px;
-  height: 220px;
-  overflow-y: hidden scroll;
+  // width: 318px;
+  // height: 200px;
+  // overflow-y: hidden scroll;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
   line-height: 184%;
   color: #6a7380;
   margin-top: 3px;
+  padding-bottom: 20px;
 }
 
 .border {
   height: 30px;
   position: absolute;
-  width: 315px;
   bottom: 117px;
+  left: 0;
+  right: 33px;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -146,9 +151,12 @@
   }
 }
 .wrapperTrack {
-  background: rgba(106, 115, 128, 0.27) !important;
+  background: rgba(106, 115, 128, 0.27);
   width: 2px !important;
   display: none;
+  > div {
+    background: #ffcc00 !important;
+  }
 }
 
 .wrapperThumb {
@@ -220,7 +228,7 @@
 @media (max-width: 950px) {
   .headReviews {
     width: 100%;
-    max-width: 710px;
+    max-width: 89%;
   }
   .text {
     font-size: 14px;
@@ -238,6 +246,9 @@
   }
   .wrapper {
     height: auto;
+  }
+  .items {
+    transform: translate3d(0px, 0px, 0px);
   }
 }
 @media (max-width: 500px) {

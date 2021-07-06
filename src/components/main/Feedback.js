@@ -76,6 +76,7 @@ const Feedback = ({ content }) => {
       </div>
       <div className={styles.boxFeedback}>
         <div className={styles.tableTitle}>Свяжитесь с нами</div>
+
         <Form />
       </div>
     </div>
@@ -106,16 +107,20 @@ const Form = () => {
       onSubmit={handleSubmit}
       encType="multipart/form-data"
     >
+      <div className={styles.formDescription}>
+        *Обязательные поля для заполнения
+      </div>
+
       <input
         className={styles.input}
         id="TextInput-4"
-        placeholder="Имя"
+        placeholder="Имя*"
         type="text"
         required
       />
       <input
         className={styles.input}
-        placeholder="Номер телефона"
+        placeholder="Номер телефона*"
         type="text"
         name="phone"
         type="tel"
@@ -126,7 +131,6 @@ const Form = () => {
         placeholder="E-mail"
         name="E-mail"
         type="email"
-        required
       />
       <input
         className={styles.input}
@@ -138,7 +142,6 @@ const Form = () => {
         placeholder="Опишите задачу"
         className={styles.textarea}
         name="Описание задачи"
-        required
       />
       <input
         className={styles.invisibleInput}

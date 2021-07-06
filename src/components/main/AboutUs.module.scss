@@ -101,7 +101,7 @@
 
 @media (max-width: 950px) {
   .photo {
-    max-width: 336px;
+    max-width: 320px;
   }
   .photo > img {
     width: 160px;
@@ -113,8 +113,8 @@
   .description {
     width: 44%;
     padding-right: 0px;
-    padding-left: 48px;
-    margin-top: 4px;
+    padding-left: clamp(10px, 11vw, 84px);
+    margin: 0;
   }
   .text {
     font-size: 14px;
@@ -122,7 +122,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 660px) {
   .wrapperAboutUs {
     flex-direction: column-reverse;
   }

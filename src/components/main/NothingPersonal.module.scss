@@ -58,6 +58,7 @@
     font-size: 36px;
     line-height: 44px;
     margin-bottom: 20px;
+    white-space: nowrap;
   }
   .text {
     font-size: 12px;
@@ -76,10 +77,10 @@
 
 @media (max-width: 950px) {
   .wrapper {
-    padding: 0px 0px 160px 0px;
+    padding: 0px 0px 130px 0px;
   }
   .photo {
-    margin-left: 30px;
+    margin-left: 0px;
     margin-top: 41px;
     width: 290px;
     height: 349px;
@@ -95,6 +96,9 @@
   .text > p:nth-last-child(-n + 2) {
     width: 680px;
   }
+  .container {
+    max-width: 89%;
+  }
 }
 @media (max-width: 730px) {
   .text > p:nth-last-child(-n + 2) {
@@ -107,7 +111,7 @@
     margin-left: 0px;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 740px) {
   .wrapper {
     height: auto;
     padding-bottom: 50px;
