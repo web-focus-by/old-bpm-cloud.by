@@ -311,6 +311,7 @@ main {
     padding-bottom: 53px;
     padding-top: 90px;
     justify-content: space-between;
+    height: 100vh;
   }
   .box {
     width: auto;
@@ -339,6 +340,14 @@ main {
   }
   .subPageContainerWrapper {
     padding-top: 83px;
+  }
+  .textBPM {
+    svg {
+      width: 100%;
+      height: 100%;
+      max-width: 430px;
+      max-height: 300px;
+    }
   }
 }
 

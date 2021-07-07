@@ -111,38 +111,58 @@ const Form = () => {
         *Обязательные поля для заполнения
       </div>
 
-      <input
-        className={styles.input}
-        id="TextInput-4"
-        placeholder="Имя*"
-        type="text"
-        required
-      />
-      <input
-        className={styles.input}
-        placeholder="Номер телефона*"
-        type="text"
-        name="phone"
-        type="tel"
-        required
-      />
-      <input
-        className={styles.input}
-        placeholder="E-mail"
-        name="E-mail"
-        type="email"
-      />
-      <input
-        className={styles.input}
-        placeholder="Компания"
-        type="text"
-        name="Компания"
-      />
-      <textarea
-        placeholder="Опишите задачу"
-        className={styles.textarea}
-        name="Описание задачи"
-      />
+      <div className={styles.inputsWrapper}>
+        <input
+          className={styles.input}
+          id="TextInput-4"
+          placeholder="Имя*"
+          type="text"
+          required
+        />
+        <label for={"TextInput-4"}>Имя*</label>
+      </div>
+      <div className={styles.inputsWrapper}>
+        <input
+          className={styles.input}
+          placeholder="Номер телефона*"
+          id="phoneInput"
+          type="text"
+          name="phone"
+          pattern=".{0,1}[0-9]{11,13}"
+          type="tel"
+          required
+        />
+        <label for={"phoneInput"}>Номер телефона*</label>
+      </div>
+      <div className={styles.inputsWrapper}>
+        <input
+          className={styles.input}
+          placeholder="E-mail"
+          name="E-mail"
+          type="email"
+          id="emailInput"
+        />
+        <label for={"emailInput"}>E-mail</label>
+      </div>
+      <div className={styles.inputsWrapper}>
+        <input
+          className={styles.input}
+          placeholder="Компания"
+          type="text"
+          name="Компания"
+          id="companyNameInput"
+        />
+        <label for={"companyNameInput"}>Компания</label>
+      </div>
+      <div className={styles.inputsWrapper}>
+        <textarea
+          placeholder="Опишите задачу"
+          className={styles.textarea}
+          name="Описание задачи"
+          id="taskDescriptionInput"
+        />
+        <label for={"taskDescriptionInput"}>Опишите задачу</label>
+      </div>
       <input
         className={styles.invisibleInput}
         type="file"
