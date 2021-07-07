@@ -192,10 +192,18 @@
 }
 
 @media (max-width: 500px) {
+  .string {
+    padding-bottom: 20px;
+    margin-bottom: 0px !important;
+  }
   .box {
     max-width: none;
     width: 100%;
     box-sizing: border-box;
+    padding: 0px;
+  }
+  .changingText {
+    height: 180px;
   }
   .desc {
     margin-left: 0px;
