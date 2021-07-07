@@ -120,10 +120,6 @@
     max-width: 450px;
     margin-top: 25px;
   }
-  .changingText {
-    font-size: 12px;
-    line-height: 15px;
-  }
   .boxTexts {
     margin-top: 0px;
     margin-left: -50px;
@@ -148,11 +144,15 @@
     margin-top: -45px;
   }
 }
-
+@media (max-width: 1366px) {
+  .title {
+    @include fluidFontSize(30px, 36px, 500px, 1336px, 30px);
+  }
+}
 @media (max-width: 1300px) {
   .box {
-    // width: 100%;
-    padding: 0 30px;
+    width: 100%;
+    // padding: 0 30px;
   }
   .animationAndPage {
     > div:first-child {
@@ -204,8 +204,7 @@
   }
   .changingText {
     margin-top: 16px;
-    font-size: 14px;
-    line-height: 17px;
+    @include fluidFontSize(13px, 14px, 500px, 768px, 13px);
     width: 365px;
     height: 146px;
   }
@@ -297,6 +296,11 @@
   .button > div:last-child {
     font-size: 12px;
     line-height: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .changingText {
+    height: 170px;
   }
 }
 @media (max-width: 400px) {

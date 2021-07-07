@@ -7,7 +7,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-import styles from "./SliderTeam.module.css"
+import styles from "./SliderTeam.module.scss"
 import { func } from "prop-types"
 
 const menuItems = [
@@ -103,10 +103,10 @@ const SliderTeam = ({ data = menuItems }) => {
   return (
     <div className={styles.wrapperSliderTeam}>
       <div className={styles.title}>
-
         <h2 className={styles.textTitle}>Наша команда</h2>
-        <ButtonSmall green className={styles.titleButton}>вся команда </ButtonSmall>
-
+        <ButtonSmall green className={styles.titleButton}>
+          вся команда{" "}
+        </ButtonSmall>
       </div>
       <Slider {...settings}>
         {(data || []).map((item, index) => {

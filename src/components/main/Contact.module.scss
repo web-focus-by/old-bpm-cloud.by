@@ -407,10 +407,11 @@ form .button:not(:disabled):hover {
     padding-top: 20px;
   }
   .button {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
   .container {
     height: auto;
+    max-width: 100%;
   }
   .textForm {
     // width: 240px;

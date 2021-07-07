@@ -105,7 +105,11 @@
     width: 301px;
   }
 }
-
+@media (max-width: 1366px) {
+  .title {
+    @include fluidFontSize(30px, 36px, 500px, 1336px, 30px);
+  }
+}
 @media (max-width: 1050px) {
   .wrapperQuality {
     height: auto;
