@@ -252,6 +252,10 @@
   }
 }
 @media (max-width: 500px) {
+  .headReviews {
+    width: 100%;
+    max-width: unset;
+  }
   .wrapper {
     height: auto;
     padding-top: 5px;
@@ -283,6 +287,9 @@
   }
   .wrapperSlider > div > div > div > div {
     transform: scale(0.8);
+  }
+  .items {
+    transform: translate3d(40px, 0px, 0px);
   }
 }
 

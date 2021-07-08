@@ -24,7 +24,7 @@
 }
 
 .buttom:hover .color {
-  width: 294px;
+  width: 110%;
 }
 
 .color {
@@ -42,15 +42,21 @@
   display: none;
 }
 
-@media(max-width:1445px){
-  .text{
+@media (max-width: 1445px) {
+  .text {
     font-size: 12px;
     line-height: 15px;
   }
 }
-@media(max-width:950px){
-  .text{
+@media (max-width: 950px) {
+  .text {
     font-size: 14px;
     line-height: 17px;
+  }
+}
+
+@media (max-width: 500px) {
+  .buttom {
+    width: 100%;
   }
 }

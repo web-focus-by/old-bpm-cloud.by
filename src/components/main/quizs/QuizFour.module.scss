@@ -99,9 +99,9 @@
 
 @media (max-width: 500px) {
   .buttonOne {
-    width: 140px;
+    width: calc(50vw - 50px);
   }
   .buttonTwo {
-    width: 140px;
+    width: calc(50vw - 50px);
   }
 }

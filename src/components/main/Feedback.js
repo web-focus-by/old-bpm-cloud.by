@@ -119,7 +119,7 @@ const Form = () => {
           type="text"
           required
         />
-        <label for={"TextInput-4"}>Имя*</label>
+        <label htmlFor={"TextInput-4"}>Имя*</label>
       </div>
       <div className={styles.inputsWrapper}>
         <input
@@ -132,7 +132,7 @@ const Form = () => {
           type="tel"
           required
         />
-        <label for={"phoneInput"}>Номер телефона*</label>
+        <label htmlFor={"phoneInput"}>Номер телефона*</label>
       </div>
       <div className={styles.inputsWrapper}>
         <input
@@ -142,7 +142,7 @@ const Form = () => {
           type="email"
           id="emailInput"
         />
-        <label for={"emailInput"}>E-mail</label>
+        <label htmlFor={"emailInput"}>E-mail</label>
       </div>
       <div className={styles.inputsWrapper}>
         <input
@@ -152,7 +152,7 @@ const Form = () => {
           name="Компания"
           id="companyNameInput"
         />
-        <label for={"companyNameInput"}>Компания</label>
+        <label htmlFor={"companyNameInput"}>Компания</label>
       </div>
       <div className={styles.inputsWrapper}>
         <textarea
@@ -161,7 +161,7 @@ const Form = () => {
           name="Описание задачи"
           id="taskDescriptionInput"
         />
-        <label for={"taskDescriptionInput"}>Опишите задачу</label>
+        <label htmlFor={"taskDescriptionInput"}>Опишите задачу</label>
       </div>
       <input
         className={styles.invisibleInput}

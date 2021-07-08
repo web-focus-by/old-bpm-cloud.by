@@ -194,9 +194,18 @@ details[open] > summary {
   .photo {
     margin-top: 30px;
     margin-left: 0px;
+    margin-bottom: 30px;
   }
   .title {
     padding: 0;
     white-space: unset;
+  }
+  .title {
+    margin-bottom: 15px;
+  }
+  .wrapper {
+    p {
+      margin-top: 0px;
+    }
   }
 }

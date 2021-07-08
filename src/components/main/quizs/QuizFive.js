@@ -73,7 +73,7 @@ const QuizFive = ({ handlerLine, answer }) => {
               id="form-name"
               required
             />
-            <label for="form-name">Имя</label>
+            <label htmlFor="form-name">Имя</label>
           </div>
           <div className={styles.inputsWrapper}>
             <input
@@ -86,7 +86,7 @@ const QuizFive = ({ handlerLine, answer }) => {
               required
               pattern=".{0,1}[0-9]{11,13}"
             />
-            <label for="form-phone">Номер телефона</label>
+            <label htmlFor="form-phone">Номер телефона</label>
           </div>
           <div className={styles.inputsWrapper}>
             <input
@@ -98,7 +98,7 @@ const QuizFive = ({ handlerLine, answer }) => {
               id="form-E-mail"
               required
             />
-            <label for="form-E-mail">E-mail</label>
+            <label htmlFor="form-E-mail">E-mail</label>
           </div>
           <InvokeInputs />
         </div>
@@ -112,7 +112,7 @@ const QuizFive = ({ handlerLine, answer }) => {
               id="form-text"
               placeholder="Примечание"
             />
-            <label for="form-text">Примечание</label>
+            <label htmlFor="form-text">Примечание</label>
           </div>
           <div className={styles.text}>
             Заполняя форму обратной связи, Вы соглашаетесь на обработку Ваших
