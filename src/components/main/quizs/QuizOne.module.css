@@ -55,7 +55,7 @@
   color: #3c424a;
 }
 
-.wrap{
+.wrap {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -67,76 +67,87 @@
   background: url(../../../images/arrowButton.png) no-repeat center right;
 }
 
-
-
-@media(max-width:1445px){
-  .box{
+@media (max-width: 1445px) {
+  .box {
     width: 630px;
   }
 
-  .formTitle{
+  .formTitle {
     font-size: 14px;
     line-height: 17px;
     padding-top: 43px;
   }
-  .text{
+  .text {
     font-size: 12px;
     line-height: 16px;
     margin-bottom: 0px;
   }
-  .checkBox{
+  .checkBox {
     min-width: 15px;
     height: 15px;
     margin-right: 27px;
   }
 }
 
-@media(max-width:950px){
-  .formTitle{
+@media (max-width: 950px) {
+  .formTitle {
     padding-top: 60px;
     font-size: 16px;
     line-height: 20px;
     margin-left: -76px;
   }
 
-  .box{
+  .box {
     width: 613px;
-    padding-bottom: 50px
+    padding-bottom: 50px;
   }
-  .text{
+  .text {
     width: 540px;
     font-size: 14px;
     line-height: 18px;
   }
-  .checkBox{
+  .checkBox {
     min-width: 15px;
     height: 20px;
     margin-right: 27px;
   }
 }
-@media(max-width:730px){
-  .box{
+@media (max-width: 730px) {
+  .box {
     width: auto;
   }
-  .text{
+  .text {
     width: 90%;
   }
 }
-@media(max-width:500px){
-  .formTitle{
+@media (max-width: 500px) {
+  .formTitle {
     padding-top: 25px;
     font-size: 13px;
     line-height: 16px;
     width: 80%;
     margin-left: 30px;
   }
-  .box{
+  .box {
     width: 100%;
   }
-  .text{
+  .text {
     font-size: 13px;
     line-height: 17px;
     width: 240px;
     height: auto;
+  }
+  .wrap {
+    padding-top: 37px;
+  }
+  .box {
+    padding-bottom: 20px;
+  }
+  .checkBox {
+    height: 16px;
+    width: 16px;
+  }
+  .button {
+    margin-top: 28px !important;
   }
 }

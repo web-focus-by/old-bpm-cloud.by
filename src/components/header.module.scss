@@ -1,7 +1,13 @@
 @import url(../../fonts/stylesheet.css);
+@import url(../pages/Main.module.scss);
+@import "../assets/style/mixins";
 
 header {
   background: #fbfafa;
+  position: relative;
+}
+body {
+  overflow-x: hidden;
 }
 main {
   background: #fbfafa;
@@ -10,15 +16,10 @@ main {
   max-width: 1920px;
   height: 777px;
   margin: 0 auto;
+  z-index: 2;
+  position: relative;
 }
-.wrapper h1 {
-  height: 1px;
-  width: 1px;
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  visibility: hidden;
-}
+
 .BpmCloud {
   width: 183px;
   height: 70px;
@@ -36,18 +37,19 @@ main {
   margin-bottom: 35px;
 }
 
-.sabtext {
+.subText {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 27px;
+  @include fluidFontSize(18px, 27px, 1336px, 1920px, 18px);
   line-height: 150%;
   /* or 40px */
   letter-spacing: 0.065em;
   text-transform: uppercase;
   color: #6a7380;
-  max-width: 540px;
+  max-width: clamp(400px, 29vw, 540px);
   margin-top: -5px;
+  min-height: 80px;
 }
 
 .boxLogo {
@@ -55,7 +57,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  margin-top: 169px;
+  margin-top: 89px;
 }
 
 .yellowButton {
@@ -66,9 +68,7 @@ main {
   margin-top: 9px;
   margin-right: 49px;
 }
-.buttonStyles {
-  letter-spacing: 0.065em;
-}
+
 .conteinerTwo {
   height: 500px;
   justify-content: space-between;
@@ -78,8 +78,33 @@ main {
   max-width: 1190px;
   margin: 0 auto;
 }
+.conteinerTwo h1.subPage {
+  text-transform: uppercase;
+  position: relative;
+  font-family: Montserrat;
+  @include fluidFontSize(54px, 72px, 1336px, 1920px, 54px);
+  @include fluidFontSize(34px, 72px, 320px, 1336px, 34px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0.065em;
+  text-align: left;
+  color: rgba(48, 145, 149, 1);
+  transform-style: preserve-3d;
+  max-width: 100%;
 
-.active {
+  &::after {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background: #3c424a;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    transform: translateZ(-1px);
+  }
+}
+.conteinerTwo h1.subPage .active {
   color: var(--green-color);
 }
 
@@ -91,24 +116,15 @@ main {
 .displayNone {
   display: none;
 }
-/* #arrowGroupWrapper{
-  animation-name: rotate;
-  animation-delay: .5s;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-}
 
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(1080deg);
-  }
-}
- */
 .mobileButton {
   display: none;
+}
+.textBPM {
+  svg {
+    width: clamp(400px, 29vw, 541px);
+    height: clamp(126px, 10vw, 172px);
+  }
 }
 @media (max-width: 1445px) {
   .wrapper {
@@ -129,33 +145,29 @@ main {
     margin-bottom: 30px;
   }
   .textBPM {
-    font-size: 60px;
+    // font-size: 60px;
     line-height: 73px;
     margin-top: -7px;
   }
-  .sabtext {
-    font-size: 14px;
-    line-height: 17px;
-  }
+
   .boxLogo {
     margin-top: 0px;
     margin-bottom: 22px;
     height: auto;
-    transform: scale(0.9);
   }
   .conteinerTwo {
     height: 443px;
-    max-width: 912px;
     width: 100%;
+  }
+  .subPageContainerWrapper {
+    max-width: 900px;
+    h1 {
+      word-wrap: break-word;
+    }
   }
 }
 
 @media (max-width: 1366px) {
-  .buttonStyles {
-    width: 213.75px;
-    height: 39px;
-    font-size: 14px;
-  }
   .BpmCloud {
     width: 137.25px;
     height: 52.5px;
@@ -163,18 +175,17 @@ main {
   }
   .textBPM {
     width: 429px;
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 73px;
+    // font-weight: 800;
+    // font-size: 60px;
+    // line-height: 73px;
   }
-  .sabtext {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-  }
+
   .yellowButton {
-    width: 45%;
     margin-top: 0px;
+  }
+  .conteinerTwo {
+    box-sizing: border-box;
+    padding: 0 30px;
   }
 }
 
@@ -191,29 +202,20 @@ main {
     margin-top: 2px;
     margin-right: 23px;
   }
-  .buttonStyles {
-    width: 160.23px;
-    height: 29.24px;
-    font-size: 10px;
-    line-height: 13px;
-  }
+
   .yellowButton {
     margin-right: 26px;
   }
   .textBPM {
     width: auto;
-    font-size: 45px;
-    line-height: 55px;
+    // font-size: 45px;
+    // line-height: 55px;
     margin-top: 0px;
   }
   .boxLogo {
     margin-top: 0px;
     margin-bottom: 32px;
     height: auto;
-  }
-  .sabtext {
-    font-size: 10.5px;
-    line-height: 13px;
   }
 }
 @media (max-width: 950px) {
@@ -222,15 +224,19 @@ main {
   }
   .conteinerTwo {
     height: auto;
-    padding-top: 48px;
     align-items: start;
     padding-left: 30px;
     align-items: flex-start;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    padding-top: 130px;
   }
-  .container > a {
-    z-index: 9999999;
+  .container {
+    margin-bottom: 0px;
+    > a {
+      z-index: 9999999;
+    }
   }
+
   .BpmCloud {
     width: 135px;
     margin-left: 31px;
@@ -240,18 +246,18 @@ main {
   .boxLogo {
     margin: 0;
     height: auto;
-    margin-bottom: 64px;
   }
   .conteinerTwo {
     flex-direction: column;
     max-width: 768px;
     box-sizing: border-box;
+    overflow: hidden;
   }
   .textBPM {
-    font-size: 80px;
-    line-height: 98px;
+    // font-size: 80px;
+    // line-height: 98px;
   }
-  .sabtext {
+  .subText {
     font-size: 18px;
     line-height: 22px;
   }
@@ -259,18 +265,31 @@ main {
     margin-right: 31px;
     align-items: flex-end;
   }
-  .buttonStyles {
-    width: 213px;
-    height: 48px;
-    font-size: 14px;
-    line-height: 13px;
-    margin-bottom: 4px;
+  .textBPM {
+    svg {
+      width: clamp(280px, 57vw, 541px);
+      height: clamp(88px, 19vw, 172px);
+    }
   }
 }
-
 @media (max-width: 750px) {
   .yellowButton {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 570px) {
+  .yellowButton {
     display: none;
+  }
+  .mobileButton {
+    display: block;
+    margin-top: 70px;
+    max-width: unset;
+    width: 100%;
+    button {
+      width: 100% !important;
+      max-width: unset;
+    }
   }
   .container {
     justify-content: space-between;
@@ -283,18 +302,16 @@ main {
     position: fixed;
     z-index: 1000000;
   }
-  .wrapper {
-    background-color: #fbfafa;
-  }
   .BpmCloud {
     width: 107px;
     margin: 0px;
   }
   .conteinerTwo {
-    align-items: center;
-    padding-left: 0px;
+    padding-left: 20px;
     padding-bottom: 53px;
     padding-top: 90px;
+    justify-content: space-between;
+    height: 100vh;
   }
   .box {
     width: auto;
@@ -303,50 +320,45 @@ main {
     height: auto;
   }
   .textBPM {
-    font-size: 37px;
-    line-height: 45px;
-  }
-  .sabtext {
-    font-size: 14px;
-    line-height: 11px;
+    // font-size: 37px;
+    // line-height: 45px;
   }
   .container > a {
     background: white;
   }
-}
 
-@media (max-width: 560px) {
   .boxLogo {
-    transform: scale(0.7);
-  }
-  .mobileButton {
-    display: block;
-    margin-top: 70px;
-    margin-left: -22px;
-  }
-  .boxLogo {
+    margin-top: 50px;
     margin-bottom: 0px;
   }
   .conteinerTwo {
-    padding-bottom: 0;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+    padding-top: 56px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .subPageContainerWrapper {
+    padding-top: 83px;
+  }
+  .textBPM {
+    svg {
+      width: 100%;
+      height: 100%;
+      max-width: 430px;
+      max-height: 300px;
+    }
   }
 }
 
 @media (max-width: 430px) {
-  .boxLogo {
-    transform: scale(0.6);
-  }
-  .sabtext {
-    font-size: 16px;
+  .mobileButton {
+    margin-top: 30px;
   }
 }
 
 @media (max-width: 375px) {
-  .boxLogo {
-    transform: scale(0.5);
-  }
-  .sabtext {
-    font-size: 18px;
+  .subText {
+    font-size: 13px;
   }
 }

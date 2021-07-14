@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useMediaQuery } from "react-responsive"
 import classnames from "classnames"
 import { flatListToHierarchical } from "../utils/utils"
@@ -16,40 +16,32 @@ const HeaderMenu = () => {
   const closeMenu = () => {
     document.querySelector("header").style.background = "#FBFAFA"
     document.querySelector("header").style.minHeight = "auto"
-    document.querySelector("header>div:last-child").style.visibility = "visible"
+    document.querySelector("header").classList.remove(styles.active)
+
     setShowOne(false)
     setActive(0)
+    // if (isMobileMenuOpen) {
+    //   document.querySelector("body").style.overflow = "hidden"
+    // }
     isMobileMenuOpen && setShowMobileMenu(false)
   }
+  useEffect(() => {
+    console.log("render")
+    if (isMobileMenuOpen) {
+      document.querySelector("body").classList.add(styles.overflowScroll)
+    } else {
+      document.querySelector("body").classList.remove(styles.overflowScroll)
+    }
+  }, [isMobileMenuOpen])
 
   const isDesckpotOrLaptop = useMediaQuery({
     query: "(min-width: 1050px)",
   })
 
-  const getMenuData = useStaticQuery(graphql`
-    {
-      allWpMenuItem(sort: { fields: order, order: ASC }) {
-        nodes {
-          id
-          title: label
-          path
-          target
-          parent: parentId
-        }
-      }
-    }
-  `)
-
-  let tree = flatListToHierarchical(getMenuData.allWpMenuItem.nodes, {
-    idKey: "id",
-    childrenKey: "routes",
-    parentKey: "parent",
-  })
-
   const handlerShowMenu = itemCase => {
     document.querySelector("header").style.background = "white"
     document.querySelector("header").style.minHeight = "840px"
-    document.querySelector("header>div:last-child").style.visibility = "hidden"
+    document.querySelector("header").classList.add(styles.active)
     if (showOne === false) {
       setShowOne(!showOne)
       setActive(itemCase)

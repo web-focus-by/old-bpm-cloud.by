@@ -1,7 +1,8 @@
+@import "../../assets/style/mixins";
 .wrapperArticles {
   width: 100%;
   height: auto;
-  padding: 208px 0px 200px 0px;
+  padding: clamp(150px, 11vw, 200px) 0px;
   background: #ffffff;
 }
 
@@ -10,15 +11,15 @@
 }
 
 .container {
-  max-width: 63%;
+  max-width: clamp(900px, 63%, 1210px);
   height: auto;
   margin: 0 auto;
 }
 .title {
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 45px;
+  @include fluidFontSize(36px, 48px, 1336px, 1920px, 36px);
+  line-height: 120%;
   letter-spacing: 0.065em;
   color: #3c424a;
 }
@@ -33,8 +34,8 @@
 
 .BoxImg {
   position: relative;
-  width: 377px;
-  height: 236px;
+  width: clamp(282px, 20vw, 377px);
+  height: clamp(177px, 13vw, 236px);
   background: #e3e3e3;
   border-radius: 10px;
 }
@@ -63,13 +64,16 @@
   border-radius: 10px;
   width: 100%;
 }
-.textArticle>p:last-child{
+.textArticle > p:last-child {
   display: none;
 }
-.wrapArticle:hover{
-  background-color: #fbfafa;
-  transition: all .3s;
-  .buttonDetailed{
+.wrapArticle:hover {
+  .titleArticle {
+    transition: all 0.3s;
+
+    color: var(--green-color);
+  }
+  .buttonDetailed {
     opacity: 1;
   }
 }
@@ -77,19 +81,23 @@
   margin-top: 10px;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  @include fluidFontSize(14px, 18px, 1336px, 1920px, 14px);
+
   line-height: 22px;
+  max-width: 35vw;
   color: #6a7380;
   text-transform: uppercase;
 }
 
 .textArticle {
-  max-width: 800px;
+  max-width: clamp(600px, 42vw, 800px);
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 14px);
+
   line-height: 184%;
   color: #6a7380;
+  margin-top: -40px;
 }
 
 .buttonImg {
@@ -104,7 +112,7 @@
 .buttonDetailed {
   padding: 0 28px;
   opacity: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .avtor {
   font-style: normal;
@@ -135,7 +143,7 @@
   margin: -7px 0px;
 }
 
-.laptopAndMobileLink{
+.laptopAndMobileLink {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -199,90 +207,89 @@
   }
 }
 
-
-@media (max-width: 950px){
-  .wrapperArticles{
+@media (max-width: 950px) {
+  .wrapperArticles {
     padding: 130px 0px 92px 0px;
   }
-  .wrapArticle{
+  .wrapArticle {
     width: auto;
   }
-  .container{
+  .container {
     max-width: 92%;
   }
-  .Articles{
+  .Articles {
     margin-top: 42px;
   }
-  .head{
+  .head {
     margin-bottom: 0px;
   }
-  .descArticle{
+  .descArticle {
     margin-left: 24px;
   }
-  .titleArticle{
+  .titleArticle {
     margin-top: 0px;
     font-size: 18px;
     line-height: 22px;
   }
-  .textArticle{
+  .textArticle {
     font-size: 14px;
     line-height: 26px;
   }
-  .bittonTitle{
+  .bittonTitle {
     margin-bottom: 9px;
   }
-  .bittonTitle>div{
+  .bittonTitle > div {
     font-size: 12px;
     line-height: 15px;
   }
-  .textArticle{
-    max-width: 400px;
+  .textArticle {
+    max-width: clamp(400px, 55vw, 512px);
   }
-  .buttonDetailed{
+  .buttonDetailed {
     display: none;
   }
-  .footerArticle{
+  .footerArticle {
     font-size: 12px;
     line-height: 15px;
     width: 95%;
   }
-  .BoxImg{
+  .BoxImg {
     width: 300px;
   }
 }
 
-@media(max-width:500px){
-  .wrapperArticles{
-    padding: 89px 0px 92px 0px;
+@media (max-width: 500px) {
+  .wrapperArticles {
+    padding: 50px 0px;
   }
-  .title{
+  .title {
     font-size: 30px;
     line-height: 37px;
     margin-left: 8px;
   }
-  .bittonTitle{
+  .bittonTitle {
     display: none;
   }
-  .Articles{
+  .Articles {
     display: flex;
   }
-  .wrapArticle{
+  .wrapArticle {
     display: flex;
     flex-direction: column;
     margin-right: 10px;
     box-sizing: border-box;
   }
-  .descArticle{
+  .descArticle {
     height: auto;
     position: relative;
     margin-left: 0px;
     margin-top: 20px;
     width: 100%;
   }
-  .Articles{
+  .Articles {
     overflow-x: auto;
   }
-  .titleArticle{
+  .titleArticle {
     position: absolute;
     top: -160px;
     width: 200px;

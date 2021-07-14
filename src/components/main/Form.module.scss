@@ -1,3 +1,5 @@
+@import "../../assets/style/mixins";
+
 .wrapperFrom {
   width: 100%;
   height: auto;
@@ -16,8 +18,8 @@
   height: 118px;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 59px;
+  @include fluidFontSize(36px, 48px, 1336px, 1920px, 36px);
+
   letter-spacing: 0.065em;
   color: #3c424a;
   margin-right: 189px;
@@ -25,7 +27,9 @@
 
 .form {
   position: relative;
-  min-width: 1200px;
+  width: 100%;
+  max-width: clamp(904px, 63vw, 1200px);
+
   height: auto;
   /* margin: 0 auto; */
   background-color: #ffff;
@@ -50,8 +54,8 @@
   height: 2px;
   background-color: var(--textSub-color);
 }
-.bodyLine{
-  transition: all .5s;
+.bodyLine {
+  transition: all 0.5s;
 }
 .bodyLineOne {
   background-color: var(--yellow-color);
@@ -137,76 +141,77 @@
   z-index: 2;
 }
 
-
-@media(max-width:1445px){
-  .wrapperFrom{
+@media (max-width: 1445px) {
+  .wrapperFrom {
     justify-content: start;
     padding-top: 150px;
   }
-  .title{
+  .title {
     font-size: 36px;
     line-height: 44px;
     margin-right: 186px;
     width: 718px;
   }
-  .form{
+  .form {
     margin-top: 55px;
     min-width: 904.5px;
     padding-bottom: 30px;
   }
-  .boxLine{
+  .boxLine {
     left: 130px;
   }
 }
 
-@media(max-width:950px){
-  .wrapperFrom{
+@media (max-width: 950px) {
+  .wrapperFrom {
     padding-top: 130px;
     padding-bottom: 105px;
   }
-  .title{
+  .title {
     width: 93%;
     margin-right: 0px;
     margin-left: 6px;
   }
-  .form{
+  .form {
     margin-top: 37px;
     padding-bottom: 55px;
     min-width: 280px;
     width: 89%;
   }
-  .boxLine{
+  .boxLine {
     left: 36px;
     width: 90%;
   }
-  .circleActive{
+  .circleActive {
     box-sizing: border-box;
   }
-  .circle, .circleActive{
+  .circle,
+  .circleActive {
     width: 22.81px;
     height: 22.81px;
     font-size: 10.5px;
     line-height: 13px;
   }
-  .line{
+  .line {
     top: 11px;
-    
   }
 }
-@media(max-width:500px){
-  .wrapperFrom{
+@media (max-width: 500px) {
+  .wrapperFrom {
     padding-top: 49px;
     padding-bottom: 50px;
   }
-  .title{
+  .title {
     font-size: 30px;
     line-height: 37px;
     margin-left: 16px;
   }
-  .form{
+  .form {
     margin-top: 72px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .boxLine{
+  .boxLine {
     left: 2px;
     width: 93%;
   }

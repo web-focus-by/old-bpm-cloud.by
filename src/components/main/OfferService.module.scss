@@ -1,8 +1,9 @@
+@import "../../assets/style/mixins";
 .wrapper {
   background-color: #fbfafa;
-  height: 700px;
-  padding-top: 188px;
-  padding-bottom: 100px;
+  height: auto;
+  padding-top: clamp(145px, 11vw, 200px);
+  padding-bottom: clamp(145px, 11vw, 200px);
 }
 
 .box {
@@ -14,17 +15,17 @@
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
-  line-height: 59px;
+  @include fluidFontSize(36px, 48px, 1336px, 1920px, 36px);
+  line-height: 120%;
   letter-spacing: 0.065em;
   color: var(--textTitle-color);
-  margin-top: 10px;
 }
 
 .text {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
+  @include fluidFontSize(12px, 14px, 1336px, 1920px, 12px);
+  line-height: 120%;
   margin-top: 30px;
   max-width: 600px;
   letter-spacing: 0.065em;
@@ -34,7 +35,7 @@
 
 .animationAndPage {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   width: 100%;
 }
 
@@ -49,7 +50,8 @@
   margin-bottom: 30px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 22px;
+  @include fluidFontSize(14px, 18px, 1336px, 1920px, 14px);
+  line-height: 120%;
   text-transform: uppercase;
   color: var(--textTitle-color);
   margin-left: 30px;
@@ -79,23 +81,24 @@
 
 .boxTexts {
   width: 35%;
-  margin-top: 50px;
+  margin-top: clamp(0px, 3.4vw, 50px);
+  margin-left: clamp(50px, 3.4vw, 65px);
 }
 
 .number {
   font-weight: 900;
-  font-size: 36px;
-  line-height: 20px;
+  @include fluidFontSize(27px, 36px, 1336px, 1920px, 27px);
+  line-height: 120%;
   text-transform: uppercase;
   color: var(--yellow-color);
 }
 
 .changingText {
-  margin-top: 33px;
+  margin-top: 10px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
+  line-height: 120%;
   letter-spacing: 0.065em;
   width: 272px;
   height: 200px;
@@ -103,97 +106,109 @@
 }
 
 .button {
-  margin-top: 60px;
+  margin-top: clamp(45px, 3.1vw, 60px);
   width: 230px;
 }
-
+.hoverText {
+  margin-bottom: clamp(22px, 1.6vw, 30px);
+}
 @media (max-width: 1445px) {
   .box {
     width: 70%;
   }
-  .wrapper {
-    padding-top: 136px;
-    padding-bottom: 0px;
-  }
-  .title {
-    font-size: 36px;
-    line-height: 44px;
-  }
   .text {
-    font-size: 11px;
-    line-height: 13px;
     max-width: 450px;
     margin-top: 25px;
   }
-  .changingText {
-    font-size: 12px;
-    line-height: 15px;
+  .boxTexts {
+    margin-top: 0px;
+    margin-left: -50px;
   }
-  .hoverText {
-    font-size: 14px;
-    line-height: 17px;
-  }
-}
-
-@media (max-width: 1445px) {
   .box {
-    width: 95%;
+    width: 74%;
+  }
+  .animationAndPage {
+    > div:first-child {
+      transform: scale(0.75) translate(-2.5vw);
+      margin-top: -20px;
+    }
+  }
+  .changingText {
+    width: 200px;
+  }
+  .button {
+    width: 173px;
+    height: 39px;
+  }
+  .boxButtons {
+    margin-top: -45px;
   }
 }
-
-@media(max-width:950px){
-  .wrapper{
-    padding-top: 120px;
+@media (max-width: 1366px) {
+  .title {
+    @include fluidFontSize(30px, 36px, 500px, 1336px, 30px);
+  }
+}
+@media (max-width: 1300px) {
+  .box {
+    width: 100%;
+    // padding: 0 30px;
+  }
+  .animationAndPage {
+    > div:first-child {
+      transform: scale(0.75);
+    }
+  }
+}
+@media (max-width: 950px) {
+  .wrapper {
+    padding-top: clamp(130px, 16vw, 145px);
+    padding-bottom: clamp(64px, 16vw, 145px);
+    // padding-top: clamp(64px, 16vw, 145px);
+    // padding-bottom: clamp(64px, 16vw, 145px);
     height: auto;
   }
   .box {
     width: 92%;
-    padding-bottom: 55px;
   }
-  .text{
-    font-size: 12px;
-    line-height: 15px;
+  .text {
     margin-top: 23px;
   }
-  .animationAndPage{
+  .animationAndPage {
     flex-wrap: wrap;
   }
-  .boxTexts{
+  .boxTexts {
     order: 3;
   }
-  .boxButtons{
+  .boxButtons {
     order: 2;
     margin-top: 32px;
     width: 45%;
   }
-  .active{
+  .active {
     margin-left: -11px;
   }
-  .hoverText{
+  .hoverText {
     margin-right: -8px;
     margin-bottom: 22.5px;
-    font-size: 14px;
-    line-height: 17px;
+
     margin-left: 18px;
   }
-  .hoverText > div{
+  .hoverText > div {
     margin-right: 30px;
   }
-  .boxTexts{
+  .boxTexts {
     margin-top: -26px;
     position: relative;
+    margin-left: 0px;
   }
-  .number{
-    font-size: 27px;
-    line-height: 33px;
-  }
-  .changingText{
+  .changingText {
     margin-top: 16px;
-    font-size: 14px;
-    line-height: 17px;
+    @include fluidFontSize(13px, 14px, 500px, 768px, 13px);
     width: 365px;
+    height: 146px;
   }
-  .button{
+  .button {
     position: absolute;
     margin-top: 0px;
     right: -384px;
@@ -202,66 +217,64 @@
     width: 173px;
   }
 }
-@media(max-width:720px){
-  .button{
+@media (max-width: 720px) {
+  .wrapper {
+    padding-top: clamp(64px, 16vw, 130px);
+
+    height: auto;
+  }
+  .button {
     right: -345px;
   }
 }
-@media(max-width:615px){
-  .wrapper{
-    padding-top: 41px;
-  }
-  .title{
-    font-size: 30px;
-    line-height: 37px;
-  }
-  .text{
+@media (max-width: 615px) {
+  .text {
     height: auto;
     margin-top: 20px;
   }
-  .box{
+  .box {
     width: 87%;
   }
-  .animationAndPage{
+  .animationAndPage {
     flex-direction: column;
   }
-  .boxButtons{
+  .boxButtons {
     order: 1;
     display: flex;
     margin-top: 28px;
     width: 100%;
     overflow-x: auto;
   }
-  .hoverText{
-    font-size: 12px;
-    line-height: 15px;
+  .hoverText {
     margin-left: 0px;
     padding: 8px 12px 9px;
     margin-right: 10px;
     border-radius: 30px;
     background: white;
   }
-  .changingText{
+  .changingText {
+    height: 100px;
     width: auto;
+    margin-top: 30px;
   }
-  .hoverText > div{
+  .hoverText > div {
     margin-right: 10px;
-    font-size: 12px;
-    line-height: 15px;
+    // font-size: 12px;
+    // line-height: 15px;
   }
-  .hoverText > span{
+  .hoverText > span {
     width: max-content;
   }
-  .number{
+  .number {
     font-size: 36px;
     line-height: 44px;
     margin-left: -80%;
   }
-  .active{
+  .active {
     animation-name: none;
     margin-left: auto;
   }
-  .boxTexts{
+  .boxTexts {
     margin-top: -78px;
     width: auto;
     align-items: center;
@@ -269,21 +282,33 @@
     display: flex;
     flex-direction: column;
   }
-  .button{
+  .button {
     position: relative;
     right: auto;
-    top:auto;
+    top: auto;
     margin-top: 40px;
-    width: 280px;
+    width: 100%;
     height: 47px;
   }
-  .button>div:last-child{
+  .buttonWrapper {
+    width: 100%;
+  }
+  .button > div:last-child {
     font-size: 12px;
     line-height: 15px;
   }
 }
-@media(max-width:400px){
-  .boxTexts{
-   max-width: 280px; 
+@media (max-width: 450px) {
+  .changingText {
+    height: 170px;
+  }
+}
+@media (max-width: 400px) {
+  .boxTexts {
+    max-width: 100%;
+  }
+  .wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }

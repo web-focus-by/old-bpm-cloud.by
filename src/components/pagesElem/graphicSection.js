@@ -23,10 +23,15 @@ const GraphicSection = () => {
   const [animationIsVisible, setAnimationIsVisible] = useState(false)
   const wrapperEl = useRef(null)
   useEffect(() => {
-    window.addEventListener("scroll", function () {
-      setAnimationIsVisible(Visible(wrapperEl.current))
-    })
+    window.addEventListener("scroll", _tempElementIsVisible)
+    return () => {
+      window.removeEventListener("scroll", _tempElementIsVisible)
+    }
   }, [])
+
+  function _tempElementIsVisible() {
+    setAnimationIsVisible(Visible(wrapperEl.current))
+  }
   return (
     <div className={style.wrapper} ref={wrapperEl}>
       <h2>

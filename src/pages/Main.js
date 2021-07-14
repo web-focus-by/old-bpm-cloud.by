@@ -9,10 +9,10 @@ import OfferService from "../components/main/OfferService"
 import Quality from "../components/main/Quality"
 import Reviews from "../components/main/Reviews"
 import SliderTeam from "../components/main/SliderTeam"
-import Сontact from "../components/main/Сontact"
+import Contact from "../components/main/Contact"
 import ComponentName from "../components/main/getCases"
 
-import styles from "./Main.module.css"
+import styles from "./Main.module.scss"
 
 const Main = () => {
   return (
@@ -24,7 +24,7 @@ const Main = () => {
       <SliderTeam />
       <Form />
       <NothingPersonal />
-      <Сontact />
+      <Contact />
       <Reviews />
       <Articles />
     </div>

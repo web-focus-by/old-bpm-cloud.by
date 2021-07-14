@@ -18,7 +18,7 @@ import { fractionContent } from "../../../components/utils/fractionContent"
 import AnimateModule from "../../../components/pagesElem/animateModule"
 import GraphicSection from "../../../components/pagesElem/graphicSection"
 import AnimationList from "../../../components/pagesElem/animationList"
-import Сontact from "../../../components/main/Сontact"
+import Contact from "../../../components/main/Contact"
 import SomePersons from "../../../components/pagesElem/somePersons"
 import Brief from "../../../components/pagesElem/brief"
 import ThreeColumn from "../../../components/pagesElem/threeColumn"
@@ -33,7 +33,7 @@ class PageTemplate extends Component {
     const StaticPage = this.props.data.wpPage
     const content = fractionContent(StaticPage.content)
     return (
-      <Layout>
+      <Layout pageInfo={StaticPage}>
         <SEO
           title={StaticPage.seo.title}
           description={StaticPage.seo.opengraphDescription}
@@ -71,7 +71,7 @@ class PageTemplate extends Component {
           <AnimationList content={content[1]} />
         </section>
         <section>
-          <Сontact content={content[1].content[25]} />
+          <Contact content={content[1].content[25]} />
         </section>
         <section
           className={classNames(style.wrapper, style.onlyBottomPaddingSection)}
@@ -107,6 +107,7 @@ export const pageQuery = graphql`
   query($id: String!) {
     wpPage(id: { eq: $id }) {
       id
+      parentId
       title
       content
       slug

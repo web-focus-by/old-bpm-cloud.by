@@ -3,6 +3,7 @@ import { ButtonGreen, ButtonSmall } from "../buttons"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { useMediaQuery } from "react-responsive"
 import styles from "./Articles.module.scss"
+import _ from "lodash"
 
 const data = [
   {
@@ -74,6 +75,17 @@ const Article = ({ title, text, count }) => {
     data.allWpPost.nodes[count].tags.nodes.length !== 0
       ? data.allWpPost.nodes[count].tags.nodes[0].name
       : "#интересное"
+
+  let postExcerpt = data.allWpPost.nodes[count].excerpt.split("p>")
+  postExcerpt[1] = _.concat(
+    _.dropRight(postExcerpt[1].split(" "), 30),
+    postExcerpt[1]
+      .split(" ")
+      .slice(
+        postExcerpt[1].split(" ").length - 2,
+        postExcerpt[1].split(" ").length
+      )
+  ).join(" ")
   return (
     <div className={styles.wrapArticle}>
       <div className={styles.BoxImg} style={divStyle}>
@@ -82,13 +94,16 @@ const Article = ({ title, text, count }) => {
         </ButtonSmall>
       </div>
       <div className={styles.descArticle}>
-        <div className={styles.titleArticle}>
+        <Link
+          className={styles.titleArticle}
+          to={data.allWpPost.nodes[count].uri}
+        >
           {data.allWpPost.nodes[count].title}
-        </div>
+        </Link>
         <div
           className={styles.textArticle}
           dangerouslySetInnerHTML={{
-            __html: data.allWpPost.nodes[count].excerpt,
+            __html: postExcerpt.join("p>"),
           }}
         ></div>
         <div className={styles.footerArticle}>
@@ -96,11 +111,6 @@ const Article = ({ title, text, count }) => {
             Автор: {data.allWpPost.nodes[count].author.node.name}
           </div>
           <div className={styles.date}>{data.allWpPost.nodes[count].date}</div>
-          <Link to={data.allWpPost.nodes[count].uri}>
-            <ButtonSmall red className={styles.buttonDetailed}>
-              подробнее
-            </ButtonSmall>
-          </Link>
         </div>
       </div>
       {isDesktop && (

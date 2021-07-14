@@ -77,7 +77,7 @@ const QuizOne = ({ handlerLine }) => {
         <ButtonQuiz
           activeButton={activeButton}
           onClick={() => handlerOnClick()}
-          className={stylesGeneral.button}
+          className={classnames(stylesGeneral.button, styles.button)}
         >
           Далее
         </ButtonQuiz>

@@ -4,7 +4,7 @@ import { ButtonGreen } from "../buttons"
 import { images } from "../../images"
 import { useForm, ValidationError } from "@formspree/react"
 
-import styles from "./Сontact.module.css"
+import styles from "./Contact.module.scss"
 
 const ContactForm = ({ handlerGetForm }) => {
   const [checkName, setCheckName] = useState(false)
@@ -13,6 +13,7 @@ const ContactForm = ({ handlerGetForm }) => {
     name: "",
     phone: "",
   })
+  const [isSecondForm, setIsSecondForm] = useState(false)
   const [formState, handleSubmit] = useForm("mjvpndyv")
   if (formState.succeeded) {
     setTimeout(handlerGetForm, 0)
@@ -35,7 +36,7 @@ const ContactForm = ({ handlerGetForm }) => {
   }
   return (
     <form className={styles.wrapContactForm} onSubmit={handleSubmit}>
-      <div>
+      <div className={styles.inputsWrapper}>
         <div className={styles.title}>Заказать звонок</div>
         <div className={styles.textForm}>
           Введите Ваши данные и мы Вам перезвоним.
@@ -150,7 +151,7 @@ const LastForm = () => {
   )
 }
 
-const Сontact = ({ content }) => {
+const Contact = ({ content }) => {
   const [state, setState] = useState(1)
   const handlerGetForm = () => {
     setState(state + 1)
@@ -172,9 +173,15 @@ const Сontact = ({ content }) => {
   }
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>{getForm(state)}</div>
+      <div
+        className={classnames(styles.container, {
+          [styles.secondForm]: state == 2,
+        })}
+      >
+        {getForm(state)}
+      </div>
     </div>
   )
 }
 
-export default Сontact
+export default Contact

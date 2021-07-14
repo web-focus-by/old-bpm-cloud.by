@@ -1,13 +1,14 @@
+@import "../../assets/style/mixins";
 .wrapper {
   h2 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 59px;
+    @include fluidFontSize(36px, 48px, 1336px, 1920px, 36px);
+    @include fluidFontSize(30px, 36px, 320px, 1336px, 30px);
+    line-height: 110%;
     text-align: center;
     letter-spacing: 0.065em;
-
     color: #3c424a;
     margin-bottom: 50px;
   }
@@ -16,19 +17,19 @@
   max-width: 360px;
   padding: 60px;
   box-sizing: border-box;
-  background: #fbfafa;
+  background: #fff;
   border-radius: 10px;
   border: 3px solid transparent;
-  .value{
+  width: 30%;
+  .value {
     transition: width 4s;
-    &.unsetWidth{
+    &.unsetWidth {
       width: 0% !important;
     }
   }
-  &:last-child{
+  &:last-child {
     border-color: #fa5c45;
     cursor: pointer;
-    background: transparent;
 
     .value {
       background-color: #fa5c45;
@@ -37,7 +38,7 @@
 }
 
 .line {
-  width: 250px;
+  width: 100%;
   height: 2px;
   background: rgba(104, 104, 104, 0.1);
   margin-bottom: 10px;
@@ -46,8 +47,8 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
+  @include fluidFontSize(10.5px, 14px, 1336px, 1920px, 10.5px);
+  line-height: 120%;
   /* identical to box height */
 
   color: #6a7380;
@@ -66,7 +67,7 @@
 .areaWrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 }
 .cardTitle {
@@ -74,9 +75,40 @@
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  line-height: 22px;
+  @include fluidFontSize(13.5px, 18px, 1336px, 1920px, 13.5px);
+  line-height: 120%;
   /* identical to box height */
   text-transform: uppercase;
   color: #6a7380;
   margin-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+  .areaWrapper {
+    flex-wrap: wrap;
+  }
+  .graphWrapper {
+    max-width: unset;
+    padding: 45px;
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: calc(50% - 25px);
+      margin-bottom: 40px;
+    }
+    &:nth-child(3) {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .graphWrapper {
+    max-width: unset;
+    padding: 45px;
+
+    & {
+      width: 100% !important;
+      margin-bottom: 40px !important;
+    }
+  }
 }

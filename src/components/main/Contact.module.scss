@@ -1,23 +1,31 @@
+@import "../../assets/style/mixins";
+
 .wrapper {
   background: #fbfafa;
   padding-bottom: 200px;
 }
 
 .container {
-  width: 1206px;
-  height: 437px;
+  width: 100%;
+  max-width: clamp(904px, 63vw, 1200px);
+  height: clamp(327px, 23vw, 437px);
+  box-sizing: border-box;
+  padding: clamp(112px, 7.8vw, 150px);
   background: #ffcc00;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
+  &.secondForm {
+    padding: clamp(83px, 7.8vw, 112px) clamp(112px, 7.8vw, 150px);
+  }
 }
 
 .title {
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
+  @include fluidFontSize(14px, 18px, 1336px, 1920px, 14px);
   letter-spacing: 0.065em;
   text-transform: uppercase;
   color: #3c424a;
@@ -25,12 +33,12 @@
 
 .text {
   margin-top: 15px;
-  width: 545px;
+  max-width: clamp(408px, 29vw, 545px);
   height: 100px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
+  line-height: 130%;
   letter-spacing: 0.065em;
   color: rgba(60, 66, 74, 0.7);
 }
@@ -49,7 +57,7 @@
   letter-spacing: 0.065em;
   text-transform: uppercase;
   color: #3c424a;
-  margin-left: 130px;
+  // margin-left: 130px;
   margin-bottom: 12px;
   cursor: pointer;
   transition: all 0.3s;
@@ -77,12 +85,12 @@ form .button:not(:disabled):hover {
 
 .textForm {
   margin-top: 15px;
-  width: 545px;
+  // width: 545px;
   height: 20px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
+  @include fluidFontSize(12px, 14px, 1336px, 1920px, 12px);
+  line-height: 120%;
   letter-spacing: 0.065em;
   color: rgba(60, 66, 74, 0.7);
 }
@@ -92,18 +100,18 @@ form .button:not(:disabled):hover {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .wrapInputs {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 450px;
+  // width: 450px;
 }
 
 .input {
-  width: 396px;
+  // width: 396px;
   height: 52px;
   border: none;
   outline: none;
@@ -115,7 +123,9 @@ form .button:not(:disabled):hover {
   color: var(--textSubtitle-color);
   padding: 0px 22px;
 }
-
+.inputsWrapper {
+  max-width: clamp(330px, 23vw, 440px);
+}
 .bad {
   width: 394px;
   height: 50px;
@@ -151,16 +161,17 @@ form .button:not(:disabled):hover {
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 40px;
+  max-width: clamp(231px, 15vw, 308px);
 }
 
 .textFormik {
   margin-top: 20px;
-  width: 350px;
+  max-width: 350px;
   height: 20px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
+  @include fluidFontSize(12px, 14px, 1336px, 1920px, 12px);
+  line-height: 120%;
   letter-spacing: 0.065em;
   color: rgba(60, 66, 74, 0.7);
 }
@@ -280,11 +291,12 @@ form .button:not(:disabled):hover {
     line-height: 15px;
     margin-top: 9px;
     width: 415px;
+    height: auto;
   }
-  .wrapContenContactForm {
-    margin-left: 114px;
-    margin-top: 29px;
-  }
+  // .wrapContenContactForm {
+  //   margin-left: 114px;
+  //   margin-top: 29px;
+  // }
   .button {
     width: 175px;
     height: 40px;
@@ -292,27 +304,43 @@ form .button:not(:disabled):hover {
     font-size: 12px;
     line-height: 15px;
   }
+  .textForm {
+    width: auto;
+  }
+  .inputsWrapper {
+    margin-right: 20xp;
+  }
 }
 
 @media (max-width: 950px) {
   .wrapper {
-    padding-bottom: 131px;
+    padding-bottom: 130px;
   }
   .wrapContactForm {
     flex-direction: column;
     align-items: center;
   }
+  .inputsWrapper {
+    width: 100%;
+    max-width: unset;
+  }
+  .wrapf {
+    width: 100%;
+    max-width: unset;
+  }
   .container {
     width: 100%;
-    max-width: 710px;
-    height: 357px;
+    max-width: 89%;
+    height: auto;
     flex-direction: column;
     justify-content: center;
+    padding: 75px 96px 68px;
   }
   .wrapContenContactForm {
     width: 520px;
-    height: 168px;
+    height: auto;
     margin: 0;
+    margin-bottom: 50px;
   }
   .title {
     font-size: 16px;
@@ -321,7 +349,9 @@ form .button:not(:disabled):hover {
   .text {
     font-size: 14px;
     line-height: 17px;
-    width: 500px;
+
+    max-width: unset;
+    width: 100%;
   }
   .button {
     font-size: 14px;
@@ -336,9 +366,9 @@ form .button:not(:disabled):hover {
     box-sizing: border-box;
     flex-direction: column;
   }
-  .container {
+  .container.secondForm {
     height: auto;
-    padding: 75px 85px 68px;
+    padding: clamp(30px, 9vw, 68px) clamp(20px, 13vw, 96px);
     box-sizing: border-box;
   }
   .text {
@@ -347,6 +377,11 @@ form .button:not(:disabled):hover {
   }
   .textForm {
     width: auto;
+    font-size: 14px;
+  }
+  .textFormik {
+    font-size: 14px;
+    max-width: unset;
   }
   .button {
     width: 90%;
@@ -365,28 +400,33 @@ form .button:not(:disabled):hover {
   .wrapper {
     padding-bottom: 50px;
   }
+  .container.secondForm {
+    padding: clamp(30px, 9vw, 68px) clamp(20px, 7vw, 96px);
+  }
   .wrapContenContactForm {
     padding-top: 20px;
   }
   .button {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
   .container {
     height: auto;
+    max-width: 100%;
   }
   .textForm {
-    width: 240px;
+    // width: 240px;
     height: auto;
   }
   .wrapInputs {
-    width: 290px;
+    // width: 290px;
   }
   .input {
-    width: 240px;
+    // width: 240px;
   }
   .textFormik {
-    width: 280px;
+    // width: 280px;
     height: auto;
+    margin-top: unset;
   }
   .wrapLastForm {
     flex-direction: column;
@@ -401,12 +441,12 @@ form .button:not(:disabled):hover {
     height: auto;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .wrapContenContactForm {
     padding: 0px;
   }
   .container {
-    padding: 20px;
+    padding: 50px 20px;
   }
   .wrapf {
     margin-top: 30px;

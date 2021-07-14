@@ -90,7 +90,6 @@ class Post extends Component {
             <OtherPostsArea />
           </div>
         </div>
-        <Feedback />
       </Layout>
     )
   }

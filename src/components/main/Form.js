@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import classnames from "classnames"
 
-import styles from "./Form.module.css"
+import styles from "./Form.module.scss"
 import QuizOne from "./quizs/QuizOne"
 import QuizTwo from "./quizs/QuizTwo"
 import QuizThree from "./quizs/QuizThree"
@@ -10,19 +10,26 @@ import QuizFive from "./quizs/QuizFive"
 import QuizSix from "./quizs/QuizSix"
 
 const Form = () => {
-  const [state, setState] = useState(0)
-  const [answer, setAnswer] = useState([])
+  const ALL_COUNT_STEP = 5
 
+  const [state, setState] = useState(0)
+  const [answer, setAnswer] = useState([...new Array(ALL_COUNT_STEP)])
   const handlerLine = arg => {
-    answer.push(arg)
+    answer.splice(state, 1, arg)
     setState(state + 1)
     if (state === 5) {
       setState(0)
     }
   }
+  const handlerOnClick = e => {
+    console.log(e.currentTarget.textContent - 1)
+    if (e.currentTarget.textContent <= state) {
+      setState(e.currentTarget.textContent - 1)
+    }
+  }
 
-  const getQuiz = state => {
-    switch (state) {
+  const getQuiz = quizPage => {
+    switch (quizPage) {
       case 0:
         return <QuizOne handlerLine={handlerLine} />
       case 1:
@@ -61,6 +68,7 @@ const Form = () => {
               [styles.circle]: 1 <= state,
               [styles.circleBorder]: 0 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             1
           </div>
@@ -69,6 +77,7 @@ const Form = () => {
               [styles.circle]: 2 <= state,
               [styles.circleBorder]: 1 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             2
           </div>
@@ -77,6 +86,7 @@ const Form = () => {
               [styles.circle]: 3 <= state,
               [styles.circleBorder]: 2 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             3
           </div>
@@ -85,6 +95,7 @@ const Form = () => {
               [styles.circle]: 4 <= state,
               [styles.circleBorder]: 3 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             4
           </div>
@@ -93,6 +104,7 @@ const Form = () => {
               [styles.circle]: 5 === state,
               [styles.circleBorder]: 4 <= state,
             })}
+            onClick={e => handlerOnClick(e)}
           >
             5
           </div>

@@ -50,6 +50,12 @@ import firstSvg24 from "./svg/Frame 24.svg"
 import firstSvg210 from "./svg/Group 210.svg"
 import firstSvg211 from "./svg/Group 211.svg"
 import firstSvg212 from "./svg/Group 212.svg"
+import Group957 from "./Group 957.svg"
+import Ellipse184 from "./Ellipse 184.svg"
+import Rectangle974 from "./Rectangle 974.svg"
+import Ellipse181 from "./Ellipse 181.svg"
+import Polygon20 from "./Polygon 20.svg"
+import Vector159 from "./Vector159.svg"
 
 export const images = {
   CloseMenuYellow,
@@ -104,4 +110,10 @@ export const images = {
   firstSvg210,
   firstSvg211,
   firstSvg212,
+  Group957,
+  Ellipse184,
+  Rectangle974,
+  Ellipse181,
+  Polygon20,
+  Vector159,
 }

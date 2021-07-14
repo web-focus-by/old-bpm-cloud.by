@@ -20,7 +20,7 @@ export default ({
     <button
       style={{ height: height }}
       onClick={onClick}
-      className={classnames(styles.buttom, className, {
+      className={classnames(styles.button, className, {
         [styles.white]: colorWhite,
         [styles.grey]: colorGrey,
         [styles.red]: colorRed,

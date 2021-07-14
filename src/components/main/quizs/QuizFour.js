@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import classnames from "classnames"
 
 import stylesGeneral from "./QuizGeneral.module.scss"
-import styles from "./QuizFour.module.css"
+import styles from "./QuizFour.module.scss"
 import { ButtonQuiz } from "../../buttons"
 
 const QuizFour = ({ handlerLine }) => {
@@ -38,7 +38,7 @@ const QuizFour = ({ handlerLine }) => {
         >
           Да
         </div>
-        <div className={styles.border}></div>
+        {!check && <div className={styles.border}></div>}
         <div
           onClick={() => handler(2)}
           className={classnames(styles.buttonTwo, {

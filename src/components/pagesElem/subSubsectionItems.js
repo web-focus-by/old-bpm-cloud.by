@@ -4,7 +4,7 @@ import { Link, useStaticQuery } from "gatsby"
 import { flatListToHierarchical } from "../utils/utils"
 import classnames from "classnames"
 
-const SubSubsectionItems = ({ title }) => {
+const SubSubsectionItems = ({ uri }) => {
   const [subMenuIsShow, showSubMenu] = useState(false)
   const [listIndex, setListIndex] = useState("")
 
@@ -30,17 +30,33 @@ const SubSubsectionItems = ({ title }) => {
   })
 
   tree.forEach(e => {
-    if (e.title == title) {
+    if (e.path == uri) {
       workArray.push(e)
+    } else {
+      if (getMenuItems(e)) {
+        workArray.push(e)
+      }
     }
   })
+
+  function getMenuItems(arr) {
+    if (arr.path == uri) {
+      return true
+    } else {
+      return arr.routes.some(e => {
+        return getMenuItems(e)
+      })
+    }
+  }
 
   const clickHandler = index => {
     setListIndex(index)
 
     showSubMenu(status => !status)
   }
-
+  if (workArray[0] == undefined) {
+    workArray.push(tree[0])
+  }
   return (
     <div className={style.wrapper}>
       {workArray[0].routes.map((item, index) => {
@@ -49,6 +65,7 @@ const SubSubsectionItems = ({ title }) => {
             key={item.id}
             className={classnames(style.item, {
               [style.active]: subMenuIsShow && index == listIndex,
+              [style.menuIsOpen]: subMenuIsShow,
             })}
           >
             <Link to={item.path}>{item.title}</Link>

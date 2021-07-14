@@ -1,5 +1,8 @@
+@import "../../assets/style/mixins";
 .wrapper {
+  // max-width: calc(800px + 377px);
   max-width: calc(800px + 377px);
+  width: 100%;
   button {
     width: 53px;
     height: 120px;
@@ -13,7 +16,8 @@
 }
 
 .nextButton {
-  margin-right: 324px;
+  // margin-right: 324px;
+  margin-right: 20vw;
   background: #fa5c45;
   border: none;
   display: flex;
@@ -27,8 +31,8 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    @include fluidFontSize(14px, 18px, 320px, 1336px, 14px);
+    line-height: 120%;
     /* identical to box height */
     text-align: center;
     text-transform: uppercase;
@@ -52,7 +56,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 114px;
+  // margin-bottom: 114px;
+  margin-bottom: 6vw;
   width: 100%;
   margin-left: 100px;
   min-height: 120px;
@@ -79,8 +84,8 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 44px;
+  @include fluidFontSize(27px, 36px, 1336px, 1920px, 36px);
+  line-height: 120%;
   /* identical to box height */
 
   letter-spacing: 0.065em;
@@ -94,8 +99,8 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
+  @include fluidFontSize(12px, 16px, 1336px, 1920px, 12px);
+  line-height: 120%;
   /* identical to box height */
 
   color: #3c424a;
@@ -104,8 +109,8 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
+  @include fluidFontSize(11px, 14px, 320px, 1336px, 11px);
+  line-height: 120%;
   /* identical to box height */
 
   color: #6a7380;
@@ -182,15 +187,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 263px;
+  // margin-right: 263px;
+  margin-right: 20vw;
+  margin-left: 10px;
   max-width: 120px;
   max-height: 120px;
   width: 100%;
   height: 100%;
   background-color: #fa5c45;
 }
-.animation{
-  .inputTitle, .subTitleInput, .textInput{
+.inputWrapperWithText,
+.animation {
+  &,
+  * {
+    max-width: 40vw;
+  }
+}
+.animation {
+  .inputTitle,
+  .subTitleInput,
+  .textInput {
     animation-duration: 1s;
     animation-name: textAnimation;
   }
@@ -199,7 +215,7 @@
 @keyframes textAnimation {
   from {
     transform: translateY(-50px);
-    opacity: .0;
+    opacity: 0;
   }
 
   to {
@@ -208,7 +224,7 @@
   }
 }
 
-.removed{
+.removed {
   animation-duration: 1s;
   animation-name: textAnimation2;
 }
@@ -216,11 +232,33 @@
 @keyframes textAnimation2 {
   from {
     transform: translateY(15px);
-    opacity: .5;
+    opacity: 0.5;
   }
 
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@media (max-width: 1000px) {
+  .isActive {
+    width: 20vw !important;
+  }
+}
+@media (max-width: 935px) {
+  .nextButton {
+    margin-right: 0px;
+  }
+  .successLabel {
+    margin-right: 10px;
+  }
+  .formWrapper {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .formWrapper.isNotFirstStep {
+    margin-left: 16px;
   }
 }
