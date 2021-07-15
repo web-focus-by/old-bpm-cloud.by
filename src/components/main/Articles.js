@@ -77,7 +77,7 @@ const Article = ({ title, text, count }) => {
       : "#интересное"
 
   let postExcerpt = data.allWpPost.nodes[count].excerpt.split("p>")
-  console.log(postExcerpt[1])
+  // console.log(postExcerpt[1])
   // postExcerpt[1] = _.concat(
   //   _.dropRight(postExcerpt[1].split(" "), 30),
   //   postExcerpt[1]
@@ -87,7 +87,7 @@ const Article = ({ title, text, count }) => {
   //       postExcerpt[1].split(" ").length
   //     )
   // ).join(" ")
-  console.log(postExcerpt[1])
+  // console.log(postExcerpt[1])
   return (
     <div className={styles.wrapArticle}>
       <div className={styles.BoxImg} style={divStyle}>
