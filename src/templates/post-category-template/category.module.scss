@@ -1,0 +1,30 @@
+@import "../../assets/style/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: clamp(1000px, 63vw, 1200px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.categoryWrapper,
+.headerAndSearchWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.headerAndSearchWrapper {
+  align-items: center;
+}
+.mainTitle {
+  margin-top: 30px;
+  line-height: 120%;
+  @include fluidFontSize(36px, 48px, 1366px, 1920px, 36px);
+}

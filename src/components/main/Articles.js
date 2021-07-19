@@ -77,15 +77,17 @@ const Article = ({ title, text, count }) => {
       : "#интересное"
 
   let postExcerpt = data.allWpPost.nodes[count].excerpt.split("p>")
-  postExcerpt[1] = _.concat(
-    _.dropRight(postExcerpt[1].split(" "), 30),
-    postExcerpt[1]
-      .split(" ")
-      .slice(
-        postExcerpt[1].split(" ").length - 2,
-        postExcerpt[1].split(" ").length
-      )
-  ).join(" ")
+  // console.log(postExcerpt[1])
+  // postExcerpt[1] = _.concat(
+  //   _.dropRight(postExcerpt[1].split(" "), 30),
+  //   postExcerpt[1]
+  //     .split(" ")
+  //     .slice(
+  //       postExcerpt[1].split(" ").length - 2,
+  //       postExcerpt[1].split(" ").length
+  //     )
+  // ).join(" ")
+  // console.log(postExcerpt[1])
   return (
     <div className={styles.wrapArticle}>
       <div className={styles.BoxImg} style={divStyle}>

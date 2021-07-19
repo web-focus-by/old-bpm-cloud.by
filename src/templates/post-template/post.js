@@ -24,6 +24,7 @@ class Post extends Component {
     const post = this.props.data.wpPost
     const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`
     //description, lang, meta, titles
+    console.log(this.props)
     return (
       <Layout>
         <SEO
