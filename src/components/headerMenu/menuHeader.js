@@ -78,7 +78,7 @@ const HeaderMenu = () => {
         <div
           className={classnames(styles.item, { [styles.active]: active === 5 })}
         >
-          Интересное
+          <Link to={"/category/stati/"}>Интересное</Link>
         </div>
       </div>
     )
