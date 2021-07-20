@@ -51,6 +51,16 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allWpTag {
+        edges {
+          node {
+            id
+            name
+            description
+            uri
+          }
+        }
+      }
     }
   `)
 
@@ -60,7 +70,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Access query results via object destructuring
-  const { allWpPage, allWpPost, allWpCategory } = result.data
+  const { allWpPage, allWpPost, allWpCategory, allWpTag } = result.data
 
   // Create Page pages.
   const pageTemplate = path.resolve(`./src/templates/page-template/page.js`)
@@ -116,12 +126,23 @@ exports.createPages = async ({ graphql, actions }) => {
   const categoryTemplate = path.resolve(
     `./src/templates/post-category-template/category.js`
   )
-  console.log(allWpCategory)
 
   allWpCategory.edges.forEach(edge => {
     createPage({
       path: edge.node.uri,
       component: slash(categoryTemplate),
+      context: {
+        id: edge.node.id,
+      },
+    })
+  })
+  const tagTemplate = path.resolve(
+    `./src/templates/post-category-template/tagTemplate.js`
+  )
+  allWpTag.edges.forEach(edge => {
+    createPage({
+      path: edge.node.uri,
+      component: slash(tagTemplate),
       context: {
         id: edge.node.id,
       },
