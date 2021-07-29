@@ -148,7 +148,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 280px;
+  max-width: 345px;
 }
 
 .icons a:hover {
@@ -430,7 +430,7 @@
     box-sizing: border-box;
     max-width: unset;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     // column-gap: 40px;
     row-gap: 30px;

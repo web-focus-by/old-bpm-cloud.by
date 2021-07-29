@@ -53,6 +53,11 @@ const socialNetwork = [
     iconName: "vk",
     url: "https://vk.com/bpm_cloud",
   },
+  {
+    name: "youtube",
+    iconName: "youtube",
+    url: "https://www.youtube.com/channel/UCxEwvIDsfcOpUKIL7v5SmZg",
+  },
 ]
 
 const templateText =
