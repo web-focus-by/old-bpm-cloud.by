@@ -132,7 +132,7 @@ const Articles = () => {
         <div className={styles.head}>
           <h2 className={styles.title}>Интересное</h2>
           <ButtonSmall red className={styles.bittonTitle}>
-            все статьи и новости
+            <Link to={"/category/stati/"}>все статьи и новости</Link>
           </ButtonSmall>
         </div>
         <div className={styles.Articles}>

@@ -37,7 +37,7 @@ const Aside = ({}) => {
       </div>
       <div className={style.title}>Новости</div>
       <div className={style.tagsArea}>
-        <TagsArea tagsArr={data.allWpCategory.nodes[0]} />
+        <TagsArea tagsArr={data.allWpCategory.nodes[0]} isNews={true} />
       </div>
       <div className={style.articleArea}>
         <AsideNews />
