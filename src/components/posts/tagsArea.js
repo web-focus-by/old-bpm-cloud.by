@@ -2,13 +2,13 @@ import React from "react"
 import style from "./tagsArea.module.scss"
 import { Link } from "gatsby"
 
-const TagsArea = ({ tagsArr }) => {
+const TagsArea = ({ tagsArr, isNews }) => {
   const tegArr = []
   const infoTegArr = []
   const allPosts = {
     id: "12345qwe",
-    name: "все статьи",
-    uri: "/",
+    name: !isNews ? "все статьи" : "все новости",
+    uri: "/category/stati/",
   }
 
   tagsArr.posts.nodes.map(item => {
