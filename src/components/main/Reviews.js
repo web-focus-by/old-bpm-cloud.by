@@ -59,7 +59,7 @@ const Reviews = ({ data = menuItems }) => {
     swipeToSlide: true,
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 5,
           infinite: true,

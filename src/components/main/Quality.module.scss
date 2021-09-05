@@ -40,7 +40,7 @@
 
 .string {
   height: 77px;
-  width: 591px;
+  width: clamp(300px, 40%, 591px);
   display: flex;
   margin: 45px 0px 46px 0px;
 }
