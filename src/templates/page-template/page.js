@@ -61,7 +61,7 @@ class PageTemplate extends Component {
     }
     // console.log(StaticPage.id)
     return (
-      <Layout pageInfo={StaticPage}>
+      <Layout pageInfo={StaticPage} customStyle={style.whiteMainColor}>
         <SEO
           title={StaticPage.seo.title}
           description={StaticPage.seo.opengraphDescription}
