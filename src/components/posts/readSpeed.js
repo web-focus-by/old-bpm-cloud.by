@@ -4,10 +4,11 @@ import { images } from "../../images"
 
 const ReadSpeed = ({ content }) => {
   const speed = 100
-  const textLength = content.split(" ").length !== undefined ? content.split(" ").length : 100;
+  const textLength =
+    content.split(" ").length !== undefined ? content.split(" ").length : 100
   const timeForRead = Math.round(textLength / speed)
   const text = {
-    mainText: "Время прочтенния:",
+    mainText: "Время прочтения:",
     time: "мин.",
   }
 
