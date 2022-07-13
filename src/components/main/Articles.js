@@ -62,7 +62,7 @@ const Article = ({ title, text, count }) => {
     }
   `)
   const divStyle = {
-    backgroundImage: `url(${data.allWpPost.nodes[count].featuredImage.node.sourceUrl})`, // url(https://wp-server.bpm-cloud.by/${data.allWpPost.nodes[count].featuredImage.node.uri})
+    backgroundImage: `url(${data?.allWpPost?.nodes[count]?.featuredImage?.node?.sourceUrl ?? 'https://wp-server-bpm-cloud.webfocus.by/wp-content/uploads/2021/02/Frame206.svg'})`, // url(https://wp-server.bpm-cloud.by/${data.allWpPost.nodes[count].featuredImage.node.uri})
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   }
