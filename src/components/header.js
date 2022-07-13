@@ -61,7 +61,7 @@ const Header = ({ pageInfo }) => {
             <HeaderMenu />
             <div className={styles.yellowButton}>
               <Button className={styles.buttonStyles}>
-                <a href="tel:+375 (29) 32 44 000">+375 (29) 32 44 000</a>
+                <a href="tel:+375 (33) 32 44 000">+375 (33) 32 44 000</a>
               </Button>
             </div>
           </div>
@@ -151,7 +151,7 @@ const Header = ({ pageInfo }) => {
               className={classnames(styles.yellowButton, styles.mobileButton)}
             >
               <Button className={styles.buttonStyles}>
-                +375 (29) 32 44 000
+                +375 (33) 32 44 000
               </Button>
             </div>
           </div>
@@ -167,7 +167,7 @@ const Header = ({ pageInfo }) => {
               className={classnames(styles.yellowButton, styles.mobileButton)}
             >
               <Button className={styles.buttonStyles}>
-                +375 (29) 32 44 000
+                +375 (33) 32 44 000
               </Button>
             </div>
           </div>

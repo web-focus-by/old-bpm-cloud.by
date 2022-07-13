@@ -38,7 +38,7 @@ const Footer = () => {
           <div className={styles.wrapContacts}>
             <div className={styles.title}>Контакты</div>
             <div className={styles.text}>
-              <a href="tel:+375293244000">+375 (29) 32-44-000</a>
+              <a href="tel:+375333244000">+375 (33) 32-44-000</a>
             </div>
             <div className={styles.text}>
               <a href="mailto:info@bpm-cloud.by">info@bpm-cloud.by</a>
