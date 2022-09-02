@@ -58,7 +58,7 @@ const Footer = () => {
         <div className={styles.bottom}>
           <span>© 2010-2021 bpm-cloud.by</span>
           <span>
-            <a>Политика конфиденциальности</a>
+            <a href="/politika-konfidencialnosti">Политика конфиденциальности</a>
           </span>
         </div>
       </div>
