@@ -95,9 +95,9 @@ const KeysBoxs = ({ casesNumber }) => {
           ImgSettings = customImgSettings[item.id]
           bgStyle = customBG[item.id]
         }
-        const divStyle = {
-          backgroundImage: `url(${item.featuredImage.node.sourceUrl})`, //sourceUrl url(https://wp-server.bpm-cloud.by/${item.featuredImage.node.uri})
-        }
+        // const divStyle = {
+        //   backgroundImage: `url(${item.featuredImage.node.sourceUrl})`, //sourceUrl url(https://wp-server.bpm-cloud.by/${item.featuredImage.node.uri})
+        // }
         return (
           <div
             className={classnames(styles.caseWrapper, {
