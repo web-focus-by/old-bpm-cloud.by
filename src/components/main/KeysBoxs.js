@@ -110,7 +110,7 @@ const KeysBoxs = ({ casesNumber }) => {
               <div className={styles.gradient} style={gradientStyle}></div>
               <img
                 className={styles.caseBgImg}
-                src={item.featuredImage.node.sourceUrl}
+                src={item.featuredImage?.node?.sourceUrl}
                 style={ImgSettings}
               />
               <div className={classnames(styles.title, styles.text)}>Кейсы</div>
