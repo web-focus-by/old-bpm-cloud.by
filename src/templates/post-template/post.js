@@ -22,7 +22,7 @@ import Feedback from "../../components/main/Feedback"
 class Post extends Component {
   render() {
     const post = this.props.data.wpPost
-    const backgroundImageUrl = `url(${post.featuredImage.node.sourceUrl})`
+    const backgroundImageUrl = `url(${post.featuredImage?.node?.sourceUrl})`
     //description, lang, meta, titles
     console.log(this.props)
     return (
