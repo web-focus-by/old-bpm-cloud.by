@@ -25,7 +25,7 @@ const Category = ({ posts }) => {
             <div
               key={post.id}
               style={{
-                background: `url(${post.featuredImage.node.sourceUrl})`,
+                background: `url(${post.featuredImage?.node?.sourceUrl})`,
               }}
               className={classNames(
                 styles.postWrapper,
@@ -71,7 +71,7 @@ const Category = ({ posts }) => {
               <div
                 className={styles.imageWrapper}
                 style={{
-                  background: `url(${post.featuredImage.node.sourceUrl})`,
+                  background: `url(${post.featuredImage?.node?.sourceUrl})`,
                 }}
               >
                 <div className={styles.tagWrapper}>
