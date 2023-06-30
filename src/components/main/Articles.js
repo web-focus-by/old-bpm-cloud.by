@@ -91,9 +91,6 @@ const Article = ({ title, text, count }) => {
   return (
     <div className={styles.wrapArticle}>
       <div className={styles.BoxImg} style={divStyle}>
-        <ButtonSmall grey className={styles.buttonImg} displayNone>
-          {tag}
-        </ButtonSmall>
       </div>
       <div className={styles.descArticle}>
         <Link
@@ -102,6 +99,9 @@ const Article = ({ title, text, count }) => {
         >
           {data.allWpPost.nodes[count].title}
         </Link>
+        <ButtonSmall grey className={styles.buttonImg} displayNone>
+          {tag}
+        </ButtonSmall>
         <div
           className={styles.textArticle}
           dangerouslySetInnerHTML={{
