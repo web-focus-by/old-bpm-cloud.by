@@ -101,7 +101,7 @@
 }
 
 .buttonImg {
-  margin-top: 20px;
+  width: max-content;
   background: transparent;
   border: 2px solid #6a7380;
   padding: 0 23px;
@@ -184,8 +184,6 @@
   .buttonImg {
     padding: 0px 16px;
     height: 28px;
-    bottom: 12px;
-    left: 16px;
   }
   .buttonImg > div {
     font-size: 12px;
