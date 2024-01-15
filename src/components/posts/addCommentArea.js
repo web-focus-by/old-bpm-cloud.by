@@ -3,7 +3,7 @@ import style from "./addCommentArea.module.scss"
 import classnames from "classnames"
 import { images } from "../../images"
 // import FacebookLogin from 'react-facebook-login';
-import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
+// import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
 import { client } from "../../context/ApolloContext"
 
 import { useStaticQuery, qraphql, Link } from "gatsby"
@@ -228,7 +228,7 @@ const AddCommentArea = ({ post }) => {
             >
               <img src={loginIcons[0].imgSrc}></img>
             </div>
-            <FacebookLogin
+            {/* <FacebookLogin
               appId="484774379541257"
               // autoLoad={true}
               fields="name,email,picture.height(480)"
@@ -242,7 +242,7 @@ const AddCommentArea = ({ post }) => {
                   <img src={loginIcons[1].imgSrc}></img>
                 </div>
               )}
-            />
+            /> */}
             <div className={style.socialLinItemWrapper}>
               <a href={loginIcons[2].url} target="_blank">
                 <img src={loginIcons[2].imgSrc}></img>

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql } from 'gatsby'
 import style from "./subSubsectionItems.module.scss"
 import { Link, useStaticQuery } from "gatsby"
 import { flatListToHierarchical } from "../utils/utils"

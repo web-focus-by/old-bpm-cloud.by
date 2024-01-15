@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql } from 'gatsby'
 import style from "./searchArea.module.scss"
 import classnames from "classnames"
 import { useStaticQuery, qraphql, Link } from "gatsby"

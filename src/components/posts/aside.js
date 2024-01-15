@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import style from "./aside.module.scss"
 import AsideArticle from "./asideArticle"
 import AsideNews from "./asideNews"
